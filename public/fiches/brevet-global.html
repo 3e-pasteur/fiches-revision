@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brevet 3ème : toutes les notions</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#4b5a73;--soft:#e8ecf4;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#4b5a73;--kobg:#e8ecf4;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9fb0d0;--soft:#232c44;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#232c44;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9fb0d0;--soft:#232c44;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#232c44;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Brevet 3ème : toutes les notions</h1>
+<p class="meta">Vue d’ensemble à cocher au fur et à mesure des révisions</p>
+<section>
+<h2>1. Comment se passe le brevet</h2>
+<ul>
+<li><b>Contrôle continu</b> : les notes et la maîtrise des compétences de l’année (environ la moitié du total).</li>
+<li><b>Épreuves finales</b> : français, mathématiques, histoire-géographie-EMC, sciences, et un oral de projet.</li>
+<li>Les sciences portent sur deux disciplines tirées parmi SVT, physique-chimie et technologie.</li>
+<li>À vérifier sur le site officiel (education.gouv.fr) : dates, durées et coefficients de la session visée, car ils peuvent évoluer.</li>
+</ul>
+</section>
+<section>
+<h2>2. Français</h2>
+<h3>Grammaire et langue</h3>
+<ul>
+<li>Nature et fonction des mots : sujet, COD, COI, COS, attribut, complément circonstanciel, complément du nom, épithète, apposition.</li>
+<li>Phrase simple et phrase complexe : proposition indépendante, principale, subordonnée (relative, conjonctive, circonstancielle), coordination, juxtaposition.</li>
+<li>Types et formes de phrases, discours direct et indirect.</li>
+<li>Conjugaison : présent, imparfait, passé simple, futur, conditionnel, subjonctif, plus-que-parfait, impératif. Valeurs des temps.</li>
+<li>Accords : participe passé (être, avoir, verbes pronominaux), accord sujet-verbe, accord de l’adjectif.</li>
+<li>Homophones : a/à, et/est, on/ont, son/sont, ces/ses/c’est/s’est, leur/leurs, quel(le)(s)/qu’elle(s)...</li>
+<li>Vocabulaire : préfixes, suffixes, champs lexicaux et sémantiques, synonymes, antonymes, registres de langue, sens propre et figuré.</li>
+</ul>
+<h3>Réécriture et dictée</h3>
+<ul>
+<li>Réécriture : changer le temps, la personne, le nombre ou le genre, et accorder tout ce qui doit l’être.</li>
+<li>Dictée : relire pour chasser les accords et les homophones.</li>
+</ul>
+<h3>Analyse de texte et littérature</h3>
+<ul>
+<li>Repérer le genre, le registre, le point de vue et les figures de style.</li>
+<li>Les grands thèmes du programme : se chercher, se construire ; vivre en société, participer à la société ; regarder le monde, inventer des mondes ; agir sur le monde ; dénoncer les travers de la société.</li>
+<li>Genres à connaître : roman, nouvelle, théâtre, poésie, autobiographie, texte argumentatif.</li>
+<li>Question sur l’image : décrire, interpréter, relier au texte.</li>
+</ul>
+<h3>Rédaction</h3>
+<ul>
+<li>Deux sujets au choix : imagination ou réflexion.</li>
+<li>Faire un plan, soigner l’introduction et la conclusion, utiliser des connecteurs, respecter le temps du récit, relire pour l’orthographe.</li>
+</ul>
+</section>
+<section>
+<h2>3. Mathématiques</h2>
+<h3>Nombres et calculs</h3>
+<ul>
+<li>Priorités opératoires, fractions (opérations, simplification), nombres relatifs.</li>
+<li>Puissances, puissances de 10, notation scientifique. Racines carrées.</li>
+<li>Nombres premiers, décomposition en facteurs premiers, diviseurs, PGCD, fractions irréductibles.</li>
+<li>Calcul littéral : développer, factoriser, identités remarquables ((a+b)², (a−b)², (a+b)(a−b)).</li>
+<li>Équations du premier degré, équations produit nul, inéquations, mise en équation, systèmes de deux équations à deux inconnues.</li>
+</ul>
+<h3>Fonctions et proportionnalité</h3>
+<ul>
+<li>Notion de fonction, image et antécédent, tableau de valeurs, représentation graphique.</li>
+<li>Fonctions linéaires et affines : expression, coefficient directeur, ordonnée à l’origine.</li>
+<li>Proportionnalité, pourcentages, vitesse, débit, échelles, grandeurs composées et conversions d’unités.</li>
+</ul>
+<h3>Statistiques et probabilités</h3>
+<ul>
+<li>Moyenne, médiane, étendue, quartiles, effectifs, fréquences, diagrammes.</li>
+<li>Probabilités : expérience aléatoire, événements, probabilité d’un événement et de son contraire, expériences à deux épreuves.</li>
+</ul>
+<h3>Géométrie</h3>
+<ul>
+<li><b>Théorème de Pythagore</b> et sa réciproque. <b>Théorème de Thalès</b> et sa réciproque, triangles semblables.</li>
+<li><b>Trigonométrie</b> dans le triangle rectangle : sinus, cosinus, tangente.</li>
+<li>Transformations : symétries axiale et centrale, translation, rotation, homothétie, agrandissement et réduction.</li>
+<li>Aires et volumes : prisme, cylindre, pyramide, cône, boule.</li>
+</ul>
+<h3>Algorithmique et outils</h3>
+<ul>
+<li>Programmation avec Scratch : variables, boucles, conditions, scripts, fonctions. Tableur : formules, recopie.</li>
+</ul>
+</section>
+<section>
+<h2>4. Histoire-géographie-enseignement moral et civique</h2>
+<h3>Histoire</h3>
+<ul>
+<li><b>Le monde entre 1914 et 1945</b> : la Première Guerre mondiale (causes, guerre de tranchées, guerre totale, Verdun, génocide des Arméniens, traité de Versailles) ; les régimes totalitaires (URSS, Italie fasciste, Allemagne nazie, crise de 1929) ; la Seconde Guerre mondiale (phases, Shoah et génocide des Tsiganes, résistance, Libération).</li>
+<li><b>Le monde depuis 1945</b> : Guerre froide, décolonisation, construction européenne, monde multipolaire depuis 1989.</li>
+<li><b>Françaises et Français dans une République repensée</b> : Vichy, Résistance, Libération et refondation de la République, IVe puis Ve République, évolutions de la société.</li>
+</ul>
+<h3>Géographie</h3>
+<ul>
+<li><b>Dynamiques territoriales de la France contemporaine</b> : métropolisation, espaces productifs, ruraux, touristiques, outre-mer, France dans l’Union européenne et dans la mondialisation.</li>
+<li><b>Pourquoi et comment aménager le territoire</b> : acteurs, inégalités, transports, développement durable.</li>
+<li>Savoir lire un document, une carte, un croquis, et rédiger un paragraphe argumenté.</li>
+</ul>
+<h3>EMC</h3>
+<ul>
+<li>Valeurs de la République : liberté, égalité, fraternité, laïcité.</li>
+<li>Démocratie, droits et devoirs du citoyen, justice, défense et sécurité nationales, engagement citoyen, égalité, médias et esprit critique.</li>
+</ul>
+</section>
+<section>
+<h2>5. Sciences (deux disciplines tirées parmi trois)</h2>
+<h3>Physique-chimie</h3>
+<ul>
+<li>Matière et transformations : atomes, ions, molécules, réaction chimique, pH, équation bilan, conservation de la masse.</li>
+<li>Mouvement et interactions : vitesse, forces, poids, gravitation, énergie cinétique.</li>
+<li>Énergie : formes, conversions, conservation, puissance.</li>
+<li>Électricité : tension, intensité, loi d’Ohm (U = R × I), circuits en série et en dérivation.</li>
+<li>Signaux : lumière, son, signaux d’information.</li>
+</ul>
+<h3>SVT</h3>
+<ul>
+<li>Génétique : ADN, chromosomes, gènes, mutations, hérédité, reproduction.</li>
+<li>Évolution du vivant : sélection naturelle, biodiversité.</li>
+<li>Corps humain et santé : système nerveux, immunité, vaccins, microbiote, reproduction humaine, alimentation.</li>
+<li>Planète Terre : climat, effet de serre, risques naturels, tectonique des plaques, ressources.</li>
+<li>Écologie : écosystèmes, impact de l’être humain, développement durable.</li>
+</ul>
+<h3>Technologie</h3>
+<ul>
+<li>Analyse d’un objet technique : besoin, fonction, structure, énergie, chaîne d’information.</li>
+<li>Matériaux, conception, cahier des charges, modélisation. Programmation et objets connectés.</li>
+</ul>
+</section>
+<section>
+<h2>6. Oral</h2>
+<ul>
+<li>Présenter un projet (EPI, parcours avenir, parcours citoyen, parcours d’éducation artistique et culturelle) en 5 minutes, puis répondre aux questions du jury.</li>
+<li>Préparer : problématique, démarche, difficultés rencontrées, bilan personnel, support visuel soigné.</li>
+<li>S’entraîner à voix haute, chronométré.</li>
+</ul>
+</section>
+<section>
+<h2>7. Méthode de révision</h2>
+<ul>
+<li>Faire un planning : 3 ou 4 semaines avant, une matière par jour, du plus faible au plus fort.</li>
+<li>Réviser avec des annales (sujets des années précédentes, corrigés sur le site officiel) en conditions réelles.</li>
+<li>Fiches courtes, schémas, cartes mentales, frises chronologiques, flashcards pour les dates et les définitions.</li>
+<li>Dormir suffisamment la semaine précédant les épreuves.</li>
+<li>Le jour J : lire tout le sujet, gérer le temps, relire.</li>
+</ul>
+</section>
+</main>
+</body>
+</html>

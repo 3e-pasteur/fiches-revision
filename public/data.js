@@ -1,0 +1,22 @@
+/* Liste des fiches du classeur.
+   Pour ajouter une fiche : créer le fichier dans public/fiches/, puis ajouter une entrée ici. */
+const FICHES = [
+  {id:"brevet-global",title:"Brevet 3ème : toutes les notions",subject:"Général",level:"3ème",date:"2026-11-17",
+   desc:"Vue d’ensemble du brevet : français, maths, histoire-géo-EMC, sciences, oral et méthode de révision.",
+   url:"fiches/brevet-global.html"},
+  {id:"fr-grammaire",title:"Grammaire : nature, fonction, propositions",subject:"Français",level:"3ème",date:"2026-11-17",
+   desc:"Cours court, méthode d’analyse sur un exemple et quiz de 8 questions avec correction immédiate.",
+   url:"fiches/francais-grammaire.html"},
+  {id:"fr-conjugaison",title:"Conjugaison et accords",subject:"Français",level:"3ème",date:"2026-11-17",
+   desc:"Temps du récit, accord sujet-verbe, participe passé, méthode de réécriture et quiz de 9 questions.",
+   url:"fiches/francais-conjugaison-accords.html"},
+  {id:"fr-orthographe",title:"Orthographe et vocabulaire",subject:"Français",level:"3ème",date:"2026-11-17",
+   desc:"Homophones avec leurs tests, pluriels, vocabulaire (champs lexicaux, registres), méthode de dictée et quiz de 9 questions.",
+   url:"fiches/francais-orthographe-vocabulaire.html"},
+  {id:"fr-analyse",title:"Analyse de texte",subject:"Français",level:"3ème",date:"2026-11-17",
+   desc:"Registres, point de vue, figures de style, genres littéraires, méthode pour répondre et quiz de 9 questions.",
+   url:"fiches/francais-analyse-texte.html"},
+  {id:"fr-redaction",title:"Rédaction",subject:"Français",level:"3ème",date:"2026-11-17",
+   desc:"Sujet d’imagination et sujet de réflexion : schéma narratif, plan, connecteurs, relecture et quiz de 9 questions.",
+   url:"fiches/francais-redaction.html"}
+];
