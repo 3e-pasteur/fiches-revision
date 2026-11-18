@@ -18,5 +18,20 @@ const FICHES = [
    url:"fiches/francais-analyse-texte.html"},
   {id:"fr-redaction",title:"Rédaction",subject:"Français",level:"3ème",date:"2026-11-17",
    desc:"Sujet d’imagination et sujet de réflexion : schéma narratif, plan, connecteurs, relecture et quiz de 9 questions.",
-   url:"fiches/francais-redaction.html"}
+   url:"fiches/francais-redaction.html"},
+  {id:"ma-nombres",title:"Nombres et calculs",subject:"Maths",level:"3ème",date:"2026-11-17",
+   desc:"Priorités, fractions, puissances, racines carrées, PGCD, calcul littéral, équations et quiz de 10 questions.",
+   url:"fiches/maths-nombres-calculs.html"},
+  {id:"ma-fonctions",title:"Fonctions et proportionnalité",subject:"Maths",level:"3ème",date:"2026-11-17",
+   desc:"Proportionnalité, pourcentages, vitesse et conversions, fonctions linéaires et affines, avec quiz de 10 questions.",
+   url:"fiches/maths-fonctions-proportionnalite.html"},
+  {id:"ma-geometrie",title:"Géométrie",subject:"Maths",level:"3ème",date:"2026-11-17",
+   desc:"Pythagore, Thalès, trigonométrie, transformations, aires et volumes, avec figures et quiz de 10 questions.",
+   url:"fiches/maths-geometrie.html"},
+  {id:"ma-stats",title:"Statistiques et probabilités",subject:"Maths",level:"3ème",date:"2026-11-18",
+   desc:"Moyenne, médiane, quartiles, fréquences, probabilités, arbres, avec quiz de 10 questions.",
+   url:"fiches/maths-statistiques-probabilites.html"},
+  {id:"ma-algo",title:"Algorithmique et tableur",subject:"Maths",level:"3ème",date:"2026-11-18",
+   desc:"Scratch (variables, boucles, conditions, dessins) et formules de tableur, avec quiz de 10 questions.",
+   url:"fiches/maths-algorithmique-tableur.html"}
 ];
