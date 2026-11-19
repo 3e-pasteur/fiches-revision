@@ -26,7 +26,7 @@ public/
 
 1. Copiez une fiche existante dans `public/fiches/` et modifiez-la (le cours, le tableau `QS` du quiz, le titre).
 2. Ajoutez une entrée dans `public/data.js` (identifiant unique, titre, matière, niveau, date, description, `url: "fiches/mon-fichier.html"`).
-3. Les matières reconnues, avec leur couleur : Français, Maths, Histoire-Géo-EMC, Sciences, Oral, Général.
+3. Les matières reconnues, avec leur couleur : Français, Maths, Histoire, Géographie, EMC, SVT, Physique-chimie, Technologie, Général.
 4. Envoyez la modification sur le dépôt.
 
 ## À savoir
