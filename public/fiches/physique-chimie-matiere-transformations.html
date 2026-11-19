@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : matière et transformations chimiques</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#2b8a5e;--soft:#e5f5ec;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : matière et transformations chimiques</h1>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="atome" class="on">Atomes, ions, molécules</button><button data-t="transfo">Transformations</button><button data-t="ph">Acides et bases, tests</button><button data-t="combustion">Combustion</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="atome">
+<h2>1. De l’atome à la molécule</h2>
+<div class="tw"><table>
+<tr><th>Notion</th><th>À retenir</th></tr>
+<tr><td>Atome</td><td>Un <b>noyau</b> (protons chargés +, neutrons non chargés) entouré d’<b>électrons</b> (charge −). Un atome est électriquement neutre : il a autant de protons que d’électrons.</td></tr>
+<tr><td>Numéro atomique Z</td><td>Nombre de protons du noyau, qui identifie l’élément chimique</td></tr>
+<tr><td>Ion</td><td>Atome (ou groupe d’atomes) qui a <b>gagné ou perdu des électrons</b> : un <b>cation</b> est positif (Na⁺, Cu²⁺), un <b>anion</b> est négatif (Cl⁻)</td></tr>
+<tr><td>Molécule</td><td>Assemblage d’atomes : eau H₂O, dioxyde de carbone CO₂, méthane CH₄, dioxygène O₂</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>un atome a une taille de l’ordre de 10<sup>−10</sup> m. Presque toute sa masse est concentrée dans son noyau.</div>
+</section>
+
+<section id="transfo">
+<h2>2. Les transformations chimiques</h2>
+<p>Dans une transformation chimique, des <b>réactifs</b> disparaissent et de nouvelles espèces chimiques, les <b>produits</b>, apparaissent. Un changement d’état (fusion, ébullition…) est une transformation <b>physique</b> : l’espèce chimique ne change pas.</p>
+<p><b>Indices d’une transformation chimique :</b> dégagement de gaz, changement de couleur, formation d’un solide, variation de température.</p>
+<h3>Conservation de la masse et équation bilan</h3>
+<p>Lors d’une transformation, les <b>atomes se conservent</b> et la masse totale aussi. On écrit une <b>équation équilibrée</b> : il y a autant d’atomes de chaque élément avant et après la flèche.</p>
+<div class="ex">Combustion du méthane : CH₄ + 2 O₂ → CO₂ + 2 H₂O<br>Formation de l’eau : 2 H₂ + O₂ → 2 H₂O</div>
+<div class="keep"><b>À retenir : </b>on équilibre une équation en ajustant les <b>nombres devant les formules</b> (coefficients), jamais les petits nombres à l’intérieur des formules.</div>
+</section>
+
+<section id="ph">
+<h2>3. Acides, bases et tests d’identification</h2>
+<p>Le <b>pH</b> mesure l’acidité d’une solution, sur une échelle de 0 à 14.</p>
+<div class="tw"><table>
+<tr><th>pH</th><th>Solution</th><th>Ions présents en plus grand nombre</th></tr>
+<tr><td>Inférieur à 7</td><td>Acide (jus de citron, vinaigre)</td><td>Ions hydrogène H⁺</td></tr>
+<tr><td>Égal à 7</td><td>Neutre (eau pure)</td><td></td></tr>
+<tr><td>Supérieur à 7</td><td>Basique (savon, soude)</td><td>Ions hydroxyde HO⁻</td></tr>
+</table></div>
+<h3>Quelques tests à connaître</h3>
+<div class="tw"><table>
+<tr><th>On cherche</th><th>Test</th><th>Résultat</th></tr>
+<tr><td>Dioxyde de carbone</td><td>Eau de chaux</td><td>Elle se trouble</td></tr>
+<tr><td>Dihydrogène</td><td>Flamme près du tube</td><td>Petite détonation (« pop »)</td></tr>
+<tr><td>Eau</td><td>Sulfate de cuivre anhydre</td><td>Il devient bleu</td></tr>
+<tr><td>Ion cuivre Cu²⁺</td><td>Solution de soude</td><td>Précipité bleu</td></tr>
+<tr><td>Ion fer II Fe²⁺</td><td>Solution de soude</td><td>Précipité vert</td></tr>
+<tr><td>Ion fer III Fe³⁺</td><td>Solution de soude</td><td>Précipité rouille (orangé)</td></tr>
+<tr><td>Ion chlorure Cl⁻</td><td>Nitrate d’argent</td><td>Précipité blanc</td></tr>
+</table></div>
+<p>L’<b>acide chlorhydrique</b> attaque le fer : la réaction produit du <b>dihydrogène</b> et des ions fer II.</p>
+</section>
+
+<section id="combustion">
+<h2>4. La combustion</h2>
+<p>Une combustion nécessite un <b>combustible</b>, un <b>comburant</b> (le dioxygène) et de la <b>chaleur</b> pour démarrer : c’est le triangle du feu. Si l’un des trois manque, le feu s’éteint.</p>
+<ul>
+<li><b>Combustion complète</b> (assez de dioxygène) : elle produit du <b>dioxyde de carbone</b> et de l’<b>eau</b>.</li>
+<li><b>Combustion incomplète</b> (manque de dioxygène) : elle produit du <b>monoxyde de carbone</b>, gaz toxique, inodore et invisible, et de la suie.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>il faut toujours aérer une pièce où fonctionne un appareil à combustion, pour éviter l’intoxication au monoxyde de carbone.</div>
+</section>
+
+<section id="quiz">
+<h2>5. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelles particules se trouvent dans le noyau d’un atome ?",o:["Protons et neutrons","Électrons et neutrons","Électrons seulement"],a:0,w:"Le noyau contient des protons (+) et des neutrons. Les électrons (−) sont autour."},
+{q:"Pourquoi un atome est-il électriquement neutre ?",o:["Il n’a pas de charge","Il a autant de protons que d’électrons","Il n’a pas d’électrons"],a:1,w:"Les charges positives des protons compensent les charges négatives des électrons."},
+{q:"L’ion Cl⁻ est…",o:["Un anion, car l’atome a gagné un électron","Un cation, car l’atome a gagné un proton","Un atome neutre"],a:0,w:"L’ion Cl⁻ est négatif : l’atome de chlore a gagné un électron."},
+{q:"Quelle est la formule de l’eau ?",o:["H₂O","CO₂","O₂"],a:0,w:"Une molécule d’eau contient deux atomes d’hydrogène et un atome d’oxygène."},
+{q:"Que dit la conservation de la masse ?",o:["La masse des réactifs est égale à celle des produits","La masse augmente toujours","Les atomes disparaissent"],a:0,w:"Les atomes se conservent, donc la masse aussi, au cours d’une transformation chimique."},
+{q:"Une solution a un pH de 3. Elle est…",o:["Acide","Neutre","Basique"],a:0,w:"Un pH inférieur à 7 indique une solution acide."},
+{q:"Comment identifie-t-on le dioxyde de carbone ?",o:["Avec de l’eau de chaux qui se trouble","Avec une flamme","Avec du sulfate de cuivre anhydre"],a:0,w:"Le CO₂ trouble l’eau de chaux."},
+{q:"Que produit la combustion complète du méthane ?",o:["Du dioxyde de carbone et de l’eau","Du monoxyde de carbone et de la suie","Du dihydrogène"],a:0,w:"CH₄ + 2 O₂ → CO₂ + 2 H₂O."}
+];
+const $ = id => document.getElementById(id);
+const box = $("qbox");
+let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
+function hl(el, s){
+  s.split(/(\[\[.*?\]\])/).forEach(p => {
+    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
+    else el.appendChild(document.createTextNode(p));
+  });
+}
+function show(){
+  box.textContent = "";
+  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
+  $("pb").style.width = (i / pool.length * 100) + "%";
+  const q = QS[pool[i]];
+  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
+  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
+  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
+  q.o.forEach((txt, k) => {
+    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
+    b.onclick = () => {
+      const ok = k === q.a;
+      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
+      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
+      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
+      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
+      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
+      n.onclick = () => { i++; i < pool.length ? show() : end(); };
+      box.appendChild(n); n.focus();
+    };
+    g.appendChild(b);
+  });
+}
+function end(){
+  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
+  box.textContent = "";
+  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
+  const m = document.createElement("p");
+  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
+  box.appendChild(m);
+  try { const b = Math.max(score, +(localStorage.getItem("pc-matiere-best") || 0)); localStorage.setItem("pc-matiere-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
+  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
+  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
+  box.appendChild(again);
+  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
+    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
+}
+function reset(){ i = 0; score = 0; wrong = []; show(); }
+show();
+
+const btns = Array.from(document.querySelectorAll("#nav button"));
+btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
+btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
+</script>
+</body>
+</html>
