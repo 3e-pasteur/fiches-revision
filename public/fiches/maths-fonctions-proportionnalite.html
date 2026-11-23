@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Maths : fonctions et proportionnalité</title>
+<title>Maths : proportionnalité, pourcentages et fonctions</title>
 <meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,90 +58,99 @@ mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-wei
 button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
-<h1>Maths : fonctions et proportionnalité</h1>
-<p class="meta">Brevet 3ème · lecture 15 min, puis quiz de 10 questions</p>
+<h1>Maths : proportionnalité, pourcentages et fonctions</h1>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 20 min, puis quiz de 28 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="prop" class="on">Proportionnalité</button><button data-t="pourcent">Pourcentages</button><button data-t="vitesse">Vitesse et conversions</button><button data-t="fonction">Fonctions</button><button data-t="affine">Linéaires et affines</button><button data-t="quiz">Quiz</button>
+<button data-t="prop" class="on">Proportionnalité</button><button data-t="ratio">Ratios et partages</button><button data-t="pourcent">Pourcentages</button><button data-t="grandeurs">Vitesse, échelles, conversions</button><button data-t="fonction">Notion de fonction</button><button data-t="affine">Fonctions linéaires et affines</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="prop">
 <h2>1. La proportionnalité</h2>
-<p>Deux grandeurs sont <b>proportionnelles</b> si on passe de l’une à l’autre en multipliant par un même nombre, le <b>coefficient de proportionnalité</b>.</p>
+<p>Deux grandeurs sont <b>proportionnelles</b> si l’on passe de l’une à l’autre en multipliant toujours par le même nombre, le <b>coefficient de proportionnalité</b> k : y = k × x.</p>
 <div class="tw"><table>
 <tr><th>Masse (kg)</th><th>3</th><th>5</th></tr>
 <tr><th>Prix (€)</th><td>4,50</td><td><mark>?</mark></td></tr>
 </table></div>
-<p><b>Par le coefficient :</b> 4,50 ÷ 3 = 1,5 €/kg, donc 5 × 1,5 = <mark>7,50 €</mark>.</p>
-<p><b>Par le produit en croix :</b> 4,50 × 5 ÷ 3 = <mark>7,50 €</mark>.</p>
-<div class="keep"><b>À retenir : </b>dans un graphique, une situation de proportionnalité est représentée par une droite qui passe par l’origine du repère.</div>
+<ul>
+<li><b>Par le coefficient :</b> 4,50 ÷ 3 = 1,5 €/kg, donc 5 × 1,5 = <mark>7,50 €</mark>.</li>
+<li><b>Par la quatrième proportionnelle (produit en croix) :</b> 4,50 × 5 ÷ 3 = <mark>7,50 €</mark>.</li>
+<li><b>Reconnaître la proportionnalité :</b> tous les quotients y ÷ x sont égaux. Le tableau 2→6 ; 5→15 ; 7→21 l’est (k = 3). Le tableau 2→5 ; 4→9 ne l’est pas (2,5 et 2,25).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>un graphique de proportionnalité est une <b>droite qui passe par l’origine</b>. Attention : l’âge d’un enfant et sa taille ne sont pas proportionnels, ni le côté d’un carré et son aire.</div>
+</section>
+
+<section id="ratio">
+<h2>2. Ratios et partages proportionnels</h2>
+<p>Un <b>ratio</b> exprime la façon de répartir un total. Partager 100 € dans le ratio 2 : 3 : on fait 2 + 3 = 5 parts, une part vaut 100 ÷ 5 = 20 €, donc les deux parts sont <mark>40 €</mark> et <mark>60 €</mark>.</p>
+<div class="ex">Un béton se prépare avec du ciment, du sable et du gravier dans le ratio 1 : 2 : 7. Pour 500 kg, il y a 1 + 2 + 7 = 10 parts de 50 kg : <mark>50 kg</mark> de ciment, <mark>100 kg</mark> de sable et <mark>350 kg</mark> de gravier.</div>
 </section>
 
 <section id="pourcent">
-<h2>2. Les pourcentages</h2>
+<h2>3. Les pourcentages et les évolutions</h2>
 <div class="tw"><table>
 <tr><th>Calcul</th><th>Méthode</th><th>Exemple</th></tr>
-<tr><td>Prendre p % de A</td><td>A × p ÷ 100</td><td>20 % de 150 = 150 × 20 ÷ 100 = <mark>30</mark></td></tr>
-<tr><td>Augmenter de p %</td><td>Multiplier par 1 + p/100</td><td>150 augmenté de 20 % : 150 × 1,2 = <mark>180</mark></td></tr>
-<tr><td>Diminuer de p %</td><td>Multiplier par 1 − p/100</td><td>80 diminué de 15 % : 80 × 0,85 = <mark>68</mark></td></tr>
-<tr><td>Évolution en %</td><td>(finale − initiale) ÷ initiale × 100</td><td>De 40 à 46 : 6 ÷ 40 = 0,15, soit <mark>+15 %</mark></td></tr>
+<tr><td>Prendre p % de A</td><td>A × p ÷ 100</td><td>20 % de 150 = <mark>30</mark></td></tr>
+<tr><td>Coefficient multiplicateur</td><td>Hausse de p % : 1 + p/100 ; baisse de p % : 1 − p/100</td><td>Hausse de 20 % : × 1,2 ; baisse de 30 % : × <mark>0,7</mark></td></tr>
+<tr><td>Appliquer une évolution</td><td>Valeur initiale × coefficient</td><td>80 € baissé de 15 % : 80 × 0,85 = <mark>68 €</mark></td></tr>
+<tr><td>Calculer un taux d’évolution</td><td>(finale − initiale) ÷ initiale</td><td>De 40 à 46 : 6 ÷ 40 = 0,15, soit <mark>+15 %</mark></td></tr>
+<tr><td>Retrouver la valeur initiale</td><td>Diviser par le coefficient</td><td>56 € après une baisse de 20 % : 56 ÷ 0,8 = <mark>70 €</mark></td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>deux évolutions successives ne s’additionnent pas. Un prix de 100 € qui augmente de 10 % puis baisse de 10 % vaut 110 × 0,9 = <mark>99 €</mark>, et non 100 €.</div>
+<h3>Évolutions successives</h3>
+<p>Les coefficients se <b>multiplient</b> ; les pourcentages ne s’additionnent pas.</p>
+<div class="ex">+10 % puis −10 % : 1,1 × 0,9 = 0,99, soit <mark>−1 %</mark> (100 € devient 99 €).<br>−20 % puis +25 % : 0,8 × 1,25 = 1, le prix revient à sa <mark>valeur initiale</mark>.</div>
 </section>
 
-<section id="vitesse">
-<h2>3. Vitesse, débit et conversions</h2>
+<section id="grandeurs">
+<h2>4. Vitesse, échelles, débit et conversions</h2>
 <div class="tw"><table>
 <tr><th>Formule</th><th>Exemple</th></tr>
-<tr><td>v = d ÷ t</td><td>150 km en 2 h : v = 150 ÷ 2 = <mark>75 km/h</mark></td></tr>
-<tr><td>d = v × t</td><td>À 60 km/h pendant 1,5 h : d = <mark>90 km</mark></td></tr>
-<tr><td>t = d ÷ v</td><td>120 km à 80 km/h : t = <mark>1,5 h</mark></td></tr>
-<tr><td>Débit = volume ÷ temps</td><td>300 L en 5 min : <mark>60 L/min</mark></td></tr>
+<tr><td>v = d ÷ t ; d = v × t ; t = d ÷ v</td><td>150 km en 2 h : <mark>75 km/h</mark> ; 150 km à 90 km/h : t = 1,666… h = <mark>1 h 40 min</mark></td></tr>
+<tr><td>Débit = volume ÷ temps</td><td>Remplir 90 L à 12 L/min : t = <mark>7,5 min</mark></td></tr>
+<tr><td>Échelle = longueur sur la carte ÷ longueur réelle</td><td>À l’échelle 1/50 000, 3,5 cm représentent 3,5 × 50 000 = 175 000 cm = <mark>1,75 km</mark></td></tr>
+<tr><td>km/h → m/s : diviser par 3,6</td><td>72 km/h = <mark>20 m/s</mark></td></tr>
+<tr><td>Durées décimales</td><td>2,25 h = 2 h + 0,25 × 60 min = <mark>2 h 15 min</mark></td></tr>
 </table></div>
-<h3>Les conversions utiles</h3>
-<div class="tw"><table>
-<tr><th>Conversion</th><th>À retenir</th></tr>
-<tr><td>km/h en m/s</td><td>Diviser par 3,6 : 72 km/h = <mark>20 m/s</mark></td></tr>
-<tr><td>Heures décimales</td><td>0,25 h = 15 min ; 1,5 h = 1 h 30 ; 2 h 15 = 2,25 h</td></tr>
-<tr><td>Volumes</td><td>1 L = 1 dm³ ; 1 m³ = 1 000 L</td></tr>
-<tr><td>Aires</td><td>1 m² = 100 dm² = 10 000 cm²</td></tr>
-</table></div>
-<div class="keep"><b>À retenir : </b>0,25 h n’est pas 25 minutes. Pour convertir une durée décimale, multipliez la partie décimale par 60.</div>
+<div class="keep"><b>À retenir : </b>une vitesse, un débit ou une masse volumique sont des <b>grandeurs quotients</b>. Une consommation d’énergie en kWh est une <b>grandeur produit</b> (puissance × durée).</div>
 </section>
 
 <section id="fonction">
-<h2>4. La notion de fonction</h2>
-<p>Une fonction f associe à chaque nombre x un unique nombre f(x), noté <b>x ↦ f(x)</b>. Le nombre f(x) est l’<b>image</b> de x, et x est un <b>antécédent</b> de f(x).</p>
-<p>Exemple avec <b>f(x) = 2x + 3</b> :</p>
-<div class="ex">Image de 4 : f(4) = 2 × 4 + 3 = <mark>11</mark><br>Antécédent de 7 : 2x + 3 = 7, donc 2x = 4, <mark>x = 2</mark></div>
+<h2>5. La notion de fonction</h2>
+<p>Une fonction f associe à chaque nombre x un unique nombre f(x), noté <b>x ↦ f(x)</b>. f(x) est l’<b>image</b> de x ; x est un <b>antécédent</b> de f(x). Une fonction peut être donnée par une <b>expression</b>, un <b>tableau de valeurs</b>, un <b>graphique</b> ou un <b>programme de calcul</b>.</p>
+<div class="ex"><b>f(x) = 2x + 3</b><br>Image de 4 : f(4) = 2 × 4 + 3 = <mark>11</mark> &nbsp;·&nbsp; Antécédent de 7 : 2x + 3 = 7, donc x = <mark>2</mark>.<br>Le programme « choisir un nombre, le multiplier par 3, soustraire 4 » correspond à g(x) = 3x − 4 ; g(5) = <mark>11</mark>.</div>
 <div class="tw"><table>
 <tr><th>x</th><th>−1</th><th>0</th><th>2</th><th>4</th></tr>
 <tr><th>f(x)</th><td>1</td><td>3</td><td>7</td><td>11</td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>sur un graphique, on lit l’<b>image</b> en cherchant l’ordonnée d’un point (axe vertical), et l’<b>antécédent</b> en cherchant l’abscisse (axe horizontal).</div>
+<div class="keep"><b>À retenir : </b>sur un graphique, on lit l’<b>image</b> en cherchant l’ordonnée d’un point (axe vertical) ; on lit un <b>antécédent</b> en cherchant l’abscisse (axe horizontal).</div>
 </section>
 
 <section id="affine">
-<h2>5. Fonctions linéaires et affines</h2>
+<h2>6. Fonctions linéaires et affines</h2>
 <div class="tw"><table>
 <tr><th>Fonction</th><th>Expression</th><th>Représentation</th></tr>
-<tr><td>Linéaire</td><td>f(x) = ax</td><td>Droite passant par l’origine (proportionnalité)</td></tr>
-<tr><td>Affine</td><td>f(x) = ax + b</td><td>Droite ; <b>b</b> est l’ordonnée à l’origine</td></tr>
+<tr><td>Linéaire</td><td>f(x) = ax</td><td>Droite <b>passant par l’origine</b> : situation de proportionnalité</td></tr>
+<tr><td>Affine</td><td>f(x) = ax + b</td><td>Droite ; <b>b</b> est l’ordonnée à l’origine (valeur en x = 0)</td></tr>
 </table></div>
-<p>Le nombre <b>a</b> est le <b>coefficient directeur</b> (la pente) : si a &gt; 0, la fonction est croissante ; si a &lt; 0, elle est décroissante ; si a = 0, elle est constante.</p>
+<p>Le nombre <b>a</b> est le <b>coefficient directeur</b> : si a &gt; 0, la fonction est <b>croissante</b> ; si a &lt; 0, elle est <b>décroissante</b> ; si a = 0, elle est constante. Une fonction linéaire est un cas particulier de fonction affine (b = 0).</p>
 <h3>Trouver l’expression d’une fonction affine</h3>
-<p>Si l’on connaît f(1) = 5 et f(3) = 11 :</p>
-<div class="ex">a = (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = <mark>3</mark><br>f(1) = 3 × 1 + b = 5, donc <mark>b = 2</mark><br>Donc f(x) = <mark>3x + 2</mark> (vérification : f(3) = 11)</div>
-<div class="keep"><b>À retenir : </b>pour tracer une droite, deux points suffisent. Calculez deux images, placez les points et reliez-les.</div>
+<div class="ex">On sait que f(1) = 5 et f(3) = 11.<br>a = (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = <mark>3</mark>. Puis 3 × 1 + b = 5, donc <mark>b = 2</mark> : f(x) = 3x + 2.<br>Vérification : f(3) = 3 × 3 + 2 = 11.</div>
+<div class="keep"><b>À retenir : </b>pour tracer une droite, deux points suffisent. Calculez deux images, placez les points, puis reliez-les.</div>
 </section>
 
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -149,70 +158,36 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"3 kg de pommes coûtent 4,50 €. Quel est le prix de 5 kg ?",o:["6,50 €","7,50 €","9 €"],a:1,w:"Le coefficient est 4,50 ÷ 3 = 1,5 €/kg, donc 5 × 1,5 = 7,50 €."},
-{q:"Combien font 20 % de 150 ?",o:["15","30","130"],a:1,w:"150 × 20 ÷ 100 = 30."},
-{q:"Un article à 80 € baisse de 15 %. Quel est son nouveau prix ?",o:["65 €","68 €","72 €"],a:1,w:"On multiplie par 0,85 : 80 × 0,85 = 68 €."},
-{q:"Quel est le pourcentage d’évolution de 40 à 46 ?",o:["+6 %","+15 %","+46 %"],a:1,w:"(46 − 40) ÷ 40 = 0,15, soit +15 %."},
-{q:"Un prix de 100 € augmente de 10 % puis baisse de 10 %. Quel est le prix final ?",o:["100 €","99 €","110 €"],a:1,w:"100 × 1,1 = 110, puis 110 × 0,9 = 99. Les pourcentages ne s’annulent pas."},
-{q:"Quelle est la vitesse moyenne d’un trajet de 150 km en 2 h ?",o:["300 km/h","75 km/h","50 km/h"],a:1,w:"v = d ÷ t = 150 ÷ 2 = 75 km/h."},
-{q:"72 km/h, c’est combien en m/s ?",o:["20 m/s","259,2 m/s","7,2 m/s"],a:0,w:"Pour passer de km/h à m/s, on divise par 3,6 : 72 ÷ 3,6 = 20 m/s."},
-{q:"Soit f(x) = 2x + 3. Quelle est l’image de 4 ?",o:["9","11","14"],a:1,w:"f(4) = 2 × 4 + 3 = 11."},
-{q:"Soit f(x) = 2x + 3. Quel est l’antécédent de 7 ?",o:["2","5","17"],a:0,w:"On résout 2x + 3 = 7, donc 2x = 4 et x = 2."},
-{q:"Une fonction affine vérifie f(1) = 5 et f(3) = 11. Quelle est son expression ?",o:["f(x) = 3x + 2","f(x) = 5x","f(x) = 2x + 3"],a:0,w:"a = (11 − 5) ÷ (3 − 1) = 3 ; puis 3 × 1 + b = 5 donne b = 2."}
+{q:"3 kg de pommes coûtent 4,50 €. Quel est le prix de 5 kg ?",num:7.5,u:"€",w:"Coefficient : 4,50 ÷ 3 = 1,5 €/kg, donc 5 × 1,5 = 7,50 €.",l:1,t:"Proportionnalité"},
+{q:"Lesquelles de ces situations sont proportionnelles ?",o:["Le prix en fonction de la masse, à prix au kilo constant", "La taille d’un enfant en fonction de son âge", "La distance parcourue en fonction du temps, à vitesse constante", "L’aire d’un carré en fonction de son côté"],a:[0, 2],w:"L’âge et la taille ne sont pas proportionnels, ni le côté et l’aire (A = c²).",l:2,t:"Proportionnalité"},
+{q:"Quelle est la représentation graphique d’une situation de proportionnalité ?",o:["Une droite passant par l’origine", "Une droite quelconque", "Une parabole", "Une courbe qui monte puis descend"],a:0,w:"La proportionnalité correspond à une fonction linéaire.",l:1,t:"Proportionnalité"},
+{q:"On partage 100 € dans le ratio 2 : 3. Quelle est la plus petite part ?",num:40,u:"€",w:"2 + 3 = 5 parts de 20 €. La plus petite part vaut 2 × 20 = 40 €.",l:2,t:"Ratios"},
+{q:"On prépare 500 kg de béton dans le ratio 1 : 2 : 7 (ciment, sable, gravier). Quelle masse de gravier faut-il ?",num:350,u:"kg",w:"10 parts de 50 kg, donc 7 × 50 = 350 kg.",l:3,t:"Ratios"},
+{q:"Combien font 20 % de 150 ?",num:30,w:"150 × 20 ÷ 100 = 30.",l:1,t:"Pourcentages"},
+{q:"Un article à 80 € baisse de 15 %. Quel est son nouveau prix ?",num:68,u:"€",w:"80 × 0,85 = 68 €.",l:2,t:"Pourcentages"},
+{q:"Quel est le taux d’évolution, en pourcentage, de 40 à 46 ?",num:15,u:"%",w:"(46 − 40) ÷ 40 = 0,15, soit +15 %.",l:2,t:"Pourcentages"},
+{q:"Quel est le coefficient multiplicateur d’une baisse de 30 % ?",o:["0,7", "0,3", "1,3", "−0,3"],a:0,w:"1 − 30/100 = 0,7.",l:2,t:"Pourcentages"},
+{q:"Un prix de 100 € augmente de 10 % puis baisse de 10 %. Quel est le prix final ?",num:99,u:"€",w:"100 × 1,1 × 0,9 = 99 €.",l:2,t:"Pourcentages"},
+{q:"Un prix baisse de 20 % puis augmente de 25 %. Que devient-il ?",o:["Il revient à son prix initial", "Il est plus bas qu’au départ", "Il est plus haut qu’au départ", "On ne peut pas savoir"],a:0,w:"0,8 × 1,25 = 1 : le coefficient global vaut 1.",l:3,t:"Pourcentages"},
+{q:"Après une baisse de 20 %, un article coûte 56 €. Quel était son prix initial ?",num:70,u:"€",w:"56 ÷ 0,8 = 70 €.",l:3,t:"Pourcentages"},
+{q:"Quelle vitesse en m/s correspond à 72 km/h ?",num:20,u:"m/s",w:"72 ÷ 3,6 = 20 m/s.",l:2,t:"Grandeurs"},
+{q:"Quelle est la vitesse moyenne d’un trajet de 150 km en 2 h ?",num:75,u:"km/h",w:"v = d ÷ t = 150 ÷ 2 = 75 km/h.",l:1,t:"Grandeurs"},
+{q:"Combien de temps dure un trajet de 150 km à 90 km/h ?",o:["1 h 40 min", "1 h 66 min", "1 h 30 min", "2 h 40 min"],a:0,w:"150 ÷ 90 = 1,666… h, soit 1 h + 0,666… × 60 min = 1 h 40 min.",l:3,t:"Grandeurs"},
+{q:"À l’échelle 1/50 000, 3,5 cm sur la carte représentent combien de kilomètres ?",num:1.75,tol:0.001,u:"km",w:"3,5 × 50 000 = 175 000 cm = 1 750 m = 1,75 km.",l:3,t:"Grandeurs"},
+{q:"Un robinet débite 12 L/min. En combien de minutes remplit-il 90 L ?",num:7.5,u:"min",w:"t = 90 ÷ 12 = 7,5 min.",l:2,t:"Grandeurs"},
+{q:"Combien de temps représentent 2,25 h ?",o:["2 h 15 min", "2 h 25 min", "2 h 45 min", "2 h 30 min"],a:0,w:"0,25 h = 0,25 × 60 min = 15 min.",l:2,t:"Grandeurs"},
+{q:"Soit f(x) = 2x + 3. Quelle est l’image de 4 ?",num:11,w:"f(4) = 2 × 4 + 3 = 11.",l:1,t:"Fonctions"},
+{q:"Soit f(x) = 2x + 3. Quel est l’antécédent de 7 ?",num:2,w:"2x + 3 = 7 donne 2x = 4, donc x = 2.",l:2,t:"Fonctions"},
+{q:"Sur la courbe d’une fonction, comment lit-on l’image d’un nombre ?",o:["On lit l’ordonnée du point d’abscisse ce nombre", "On lit l’abscisse du point d’ordonnée ce nombre", "On mesure la pente de la courbe"],a:0,w:"L’image se lit sur l’axe vertical.",l:1,t:"Fonctions"},
+{q:"Le programme « choisir un nombre, le multiplier par 3, soustraire 4 » est appliqué à 5. Quel résultat obtient-on ?",num:11,w:"g(5) = 3 × 5 − 4 = 11.",l:2,t:"Fonctions"},
+{q:"Une fonction affine vérifie f(1) = 5 et f(3) = 11. Quelle est son expression ?",o:["f(x) = 3x + 2", "f(x) = 5x", "f(x) = 2x + 3", "f(x) = 3x + 5"],a:0,w:"a = (11 − 5) ÷ (3 − 1) = 3, puis 3 × 1 + b = 5 donne b = 2.",l:3,t:"Affines"},
+{q:"Laquelle de ces fonctions est linéaire ?",o:["f(x) = 5x", "g(x) = 2x + 1", "h(x) = x²", "k(x) = 3"],a:0,w:"Une fonction linéaire s’écrit ax. Les autres ne sont pas de cette forme.",l:2,t:"Affines"},
+{q:"Quel est le coefficient directeur de f(x) = −2x + 1 ?",num:-2,w:"Dans ax + b, le coefficient directeur est a = −2. La fonction est décroissante.",l:1,t:"Affines"},
+{q:"Soit f(x) = −2x + 1. Quel est l’antécédent de 7 ?",num:-3,w:"−2x + 1 = 7 donne −2x = 6, donc x = −3.",l:3,t:"Affines"},
+{q:"Une droite passe par les points (0 ; 4) et (2 ; 10). Quelle fonction affine représente-t-elle ?",o:["f(x) = 3x + 4", "f(x) = 4x + 3", "f(x) = 5x + 4", "f(x) = 3x + 10"],a:0,w:"b = 4 (valeur en 0) et a = (10 − 4) ÷ 2 = 3.",l:3,t:"Affines"},
+{q:"Quelle est la particularité de la représentation d’une fonction linéaire ?",o:["C’est une droite passant par l’origine", "C’est une droite horizontale", "C’est une droite verticale", "C’est une courbe"],a:0,w:"f(0) = 0 pour une fonction linéaire.",l:1,t:"Affines"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 5, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-fonctions-best") || 0)); localStorage.setItem("maths-fonctions-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

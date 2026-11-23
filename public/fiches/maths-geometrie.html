@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Maths : géométrie</title>
+<title>Maths : Pythagore, Thalès, trigonométrie et transformations</title>
 <meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,16 +59,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
-<h1>Maths : géométrie</h1>
-<p class="meta">Brevet 3ème · lecture 15 min, puis quiz de 10 questions</p>
+<h1>Maths : Pythagore, Thalès, trigonométrie et transformations</h1>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 20 min, puis quiz de 27 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="pyth" class="on">Pythagore</button><button data-t="thales">Thalès</button><button data-t="trigo">Trigonométrie</button><button data-t="transfo">Transformations</button><button data-t="aires">Aires et volumes</button><button data-t="quiz">Quiz</button>
+<button data-t="pyth" class="on">Pythagore</button><button data-t="thales">Thalès</button><button data-t="egalite">Triangles égaux et semblables</button><button data-t="trigo">Trigonométrie</button><button data-t="transfo">Transformations</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="pyth">
@@ -78,88 +83,89 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <polyline points="30,98 42,98 42,110" fill="none" stroke="currentColor" stroke-width="1.5"/>
 <g fill="currentColor" font-size="13" font-family="Figtree,sans-serif" font-weight="700"><text x="14" y="118">A</text><text x="174" y="118">B</text><text x="14" y="25">C</text><text x="108" y="60">BC</text><text x="92" y="128">AB</text><text x="6" y="70">AC</text></g>
 </svg>
-<p>Dans un triangle <b>rectangle</b>, le carré de l’hypoténuse (le côté opposé à l’angle droit) est égal à la somme des carrés des deux autres côtés. Pour le triangle ci-dessus, rectangle en A :</p>
+<p>Dans un triangle <b>rectangle</b>, le carré de l’hypoténuse (le côté opposé à l’angle droit, toujours le plus long) est égal à la somme des carrés des deux autres côtés. Pour le triangle rectangle en A :</p>
 <div class="ex"><mark>BC² = AB² + AC²</mark></div>
 <div class="tw"><table>
 <tr><th>Cas</th><th>Exemple</th></tr>
 <tr><td>Calculer l’hypoténuse</td><td>AB = 3 et AC = 4 : BC² = 9 + 16 = 25, donc BC = <mark>5</mark></td></tr>
-<tr><td>Calculer un côté</td><td>BC = 13 et AB = 5 : AC² = 169 − 25 = 144, donc AC = <mark>12</mark></td></tr>
-<tr><td>Réciproque : prouver qu’un triangle est rectangle</td><td>Côtés 6, 8, 10 : 10² = 100 et 6² + 8² = 100, donc le triangle est rectangle</td></tr>
+<tr><td>Calculer un côté de l’angle droit</td><td>BC = 13 et AB = 5 : AC² = 169 − 25 = 144, donc AC = <mark>12</mark></td></tr>
+<tr><td>Valeur approchée</td><td>AB = 5 et AC = 7 : BC = √74 ≈ <mark>8,6</mark></td></tr>
+<tr><td>Diagonale d’un rectangle de 6 sur 8</td><td>d² = 36 + 64 = 100, donc d = <mark>10</mark></td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>dans la réciproque, on compare le carré du plus grand côté à la somme des carrés des deux autres. Si les deux nombres sont égaux, le triangle est rectangle ; sinon, il ne l’est pas.</div>
+<h3>La réciproque</h3>
+<p>Si, dans un triangle, le carré du plus grand côté est égal à la somme des carrés des deux autres, alors le triangle est <b>rectangle</b>. Côtés 6, 8, 10 : 10² = 100 = 36 + 64, donc rectangle. Côtés 5, 6, 8 : 8² = 64 mais 5² + 6² = 61, donc <b>pas rectangle</b>.</p>
+<div class="keep"><b>À retenir : </b>on applique Pythagore pour <b>calculer</b> une longueur, la réciproque pour <b>prouver</b> qu’un triangle est rectangle. Rédigez : « Dans le triangle ABC rectangle en A, d’après le théorème de Pythagore… ».</div>
 </section>
 
 <section id="thales">
 <h2>2. Le théorème de Thalès</h2>
-<svg class="fig" viewBox="0 0 200 140" role="img" aria-label="Configuration de Thalès" style="color:var(--ink)">
+<p>Si les points A, M, B sont alignés, si A, N, C sont alignés, et si les droites <b>(MN) et (BC) sont parallèles</b>, alors :</p>
+<div class="ex"><mark>AM ÷ AB = AN ÷ AC = MN ÷ BC</mark></div>
+<p>Il existe deux configurations : les triangles <b>emboîtés</b> (M et N du même côté de A que B et C) et la configuration en <b>papillon</b> (A est situé entre B et M, et entre C et N).</p>
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-label="Thalès : triangles emboîtés" style="color:var(--ink)">
 <polygon points="100,15 30,115 170,115" fill="none" stroke="currentColor" stroke-width="2"/>
 <line x1="77" y1="48" x2="123" y2="48" stroke="var(--c)" stroke-width="2.5"/>
 <g fill="currentColor" font-size="13" font-family="Figtree,sans-serif" font-weight="700"><text x="95" y="12">A</text><text x="16" y="124">B</text><text x="174" y="124">C</text><text x="60" y="46">M</text><text x="127" y="46">N</text></g>
+</svg><svg class="fig" viewBox="0 0 200 150" role="img" aria-label="Thalès : configuration en papillon" style="color:var(--ink)">
+<line x1="50" y1="30" x2="150" y2="120" stroke="currentColor" stroke-width="2"/>
+<line x1="150" y1="30" x2="50" y2="120" stroke="currentColor" stroke-width="2"/>
+<line x1="50" y1="30" x2="150" y2="30" stroke="var(--c)" stroke-width="2.5"/>
+<line x1="50" y1="120" x2="150" y2="120" stroke="var(--c)" stroke-width="2.5"/>
+<g fill="currentColor" font-size="13" font-family="Figtree,sans-serif" font-weight="700"><text x="36" y="26">B</text><text x="154" y="26">C</text><text x="96" y="68">A</text><text x="36" y="136">N</text><text x="154" y="136">M</text></g>
 </svg>
-<p>Si les points A, M, B sont alignés, si A, N, C sont alignés, et si les droites <b>(MN) et (BC) sont parallèles</b>, alors :</p>
-<div class="ex"><mark>AM ÷ AB = AN ÷ AC = MN ÷ BC</mark></div>
-<p><b>Exemple :</b> AM = 2, AB = 6, AN = 3, MN = 4.</p>
-<div class="ex">AC = AN × AB ÷ AM = 3 × 6 ÷ 2 = <mark>9</mark><br>BC = MN × AB ÷ AM = 4 × 6 ÷ 2 = <mark>12</mark></div>
-<p><b>Réciproque :</b> si les points sont alignés dans le même ordre et si AM ÷ AB = AN ÷ AC, alors (MN) et (BC) sont parallèles.</p>
-<div class="keep"><b>À retenir : </b>on utilise Thalès pour calculer une longueur quand deux droites sont parallèles, et sa réciproque pour <i>démontrer</i> un parallélisme. Citez toujours les alignements et le parallélisme dans votre rédaction.</div>
+<div class="ex"><b>Triangles emboîtés.</b> AM = 2, AB = 6, AN = 3, MN = 4.<br>AC = AN × AB ÷ AM = 3 × 6 ÷ 2 = <mark>9</mark> &nbsp;·&nbsp; BC = MN × AB ÷ AM = 4 × 6 ÷ 2 = <mark>12</mark><br><b>Papillon.</b> Mêmes rapports : AM ÷ AB = AN ÷ AC = MN ÷ BC (sur la figure, A est entre B et M).</div>
+<h3>La réciproque</h3>
+<p>Si les points sont alignés <b>dans le même ordre</b> et si <b>AM ÷ AB = AN ÷ AC</b>, alors (MN) et (BC) sont parallèles.</p>
+<div class="tw"><table>
+<tr><th>Cas</th><th>Calcul</th><th>Conclusion</th></tr>
+<tr><td>AM = 3, AB = 5, AN = 4,5, AC = 7,5</td><td>3 ÷ 5 = 0,6 et 4,5 ÷ 7,5 = 0,6</td><td>Rapports égaux : (MN) ∥ (BC)</td></tr>
+<tr><td>AM = 2, AB = 6, AN = 2, AC = 7</td><td>2 ÷ 6 = 1/3 et 2 ÷ 7</td><td>Rapports différents : (MN) <b>n’est pas</b> parallèle à (BC)</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>avant d’appliquer Thalès, vérifiez les <b>alignements</b> et le <b>parallélisme</b> et citez-les dans la rédaction. Thalès permet de calculer une longueur, sa réciproque de prouver un parallélisme.</div>
+</section>
+
+<section id="egalite">
+<h2>3. Triangles égaux et triangles semblables</h2>
+<p>Deux triangles sont <b>égaux</b> (superposables) dans trois cas :</p>
+<ul>
+<li><b>CCC</b> : les trois côtés sont égaux deux à deux ;</li>
+<li><b>CAC</b> : un angle égal compris entre deux côtés égaux deux à deux ;</li>
+<li><b>ACA</b> : un côté égal et les deux angles adjacents égaux deux à deux.</li>
+</ul>
+<p>Deux triangles sont <b>semblables</b> si leurs <b>angles sont égaux deux à deux</b> ; on peut alors montrer que leurs <b>côtés sont proportionnels</b>. Le rapport de similitude k multiplie les longueurs par k et les aires par k².</p>
+<div class="keep"><b>À retenir : </b>« AAA » (trois angles égaux) suffit pour des triangles <b>semblables</b>, pas pour des triangles <b>égaux</b> : deux triangles équilatéraux de tailles différentes ont les mêmes angles.</div>
 </section>
 
 <section id="trigo">
-<h2>3. La trigonométrie</h2>
-<p>Dans un triangle <b>rectangle</b>, pour un angle aigu donné :</p>
+<h2>4. La trigonométrie dans le triangle rectangle</h2>
 <div class="tw"><table>
 <tr><th>Rapport</th><th>Formule</th></tr>
 <tr><td>Cosinus</td><td><mark>cos = côté adjacent ÷ hypoténuse</mark></td></tr>
 <tr><td>Sinus</td><td><mark>sin = côté opposé ÷ hypoténuse</mark></td></tr>
 <tr><td>Tangente</td><td><mark>tan = côté opposé ÷ côté adjacent</mark></td></tr>
 </table></div>
-<p>Moyen mnémotechnique : <b>CAH SOH TOA</b> (Cosinus = Adjacent ÷ Hypoténuse, Sinus = Opposé ÷ Hypoténuse, Tangente = Opposé ÷ Adjacent).</p>
+<p>Moyen mnémotechnique : <b>CAH SOH TOA</b>. Le côté « adjacent » et le côté « opposé » dépendent de l’angle choisi.</p>
 <div class="tw"><table>
-<tr><th>Cas</th><th>Exemple (triangle ABC rectangle en A)</th></tr>
-<tr><td>Calculer une longueur</td><td>BC = 10 et B = 30° : AC = BC × sin 30° = 10 × 0,5 = <mark>5</mark></td></tr>
-<tr><td>Calculer un angle</td><td>AB = 4 et BC = 5 : cos B = 4 ÷ 5 = 0,8, donc B = cos⁻¹(0,8) ≈ <mark>37°</mark></td></tr>
+<tr><th>Cas (triangle ABC rectangle en A)</th><th>Calcul</th></tr>
+<tr><td>BC = 10 et B = 30° : calculer AC</td><td>AC = BC × sin 30° = 10 × 0,5 = <mark>5</mark></td></tr>
+<tr><td>AB = 6 et B = 60° : calculer BC</td><td>cos 60° = AB ÷ BC, donc BC = 6 ÷ 0,5 = <mark>12</mark></td></tr>
+<tr><td>AB = 4 et BC = 5 : calculer B</td><td>cos B = 4 ÷ 5 = 0,8, donc B = cos⁻¹(0,8) ≈ <mark>37°</mark></td></tr>
+<tr><td>AB = AC : calculer B</td><td>tan B = AC ÷ AB = 1, donc B = <mark>45°</mark></td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>réglez la calculatrice en <b>degrés</b> (mode DEG). Pour trouver un angle, utilisez les touches cos⁻¹, sin⁻¹ ou tan⁻¹. La somme des angles d’un triangle vaut 180°.</div>
+<div class="keep"><b>À retenir : </b>réglez la calculatrice en <b>degrés</b> (DEG). Pour trouver un angle, utilisez cos⁻¹, sin⁻¹ ou tan⁻¹ ; pour trouver une longueur, utilisez cos, sin ou tan. La somme des angles d’un triangle vaut 180°.</div>
 </section>
 
 <section id="transfo">
-<h2>4. Les transformations</h2>
+<h2>5. Les transformations du plan</h2>
 <div class="tw"><table>
-<tr><th>Transformation</th><th>Description</th></tr>
-<tr><td>Symétrie axiale</td><td>Retournement par rapport à une droite (l’axe)</td></tr>
-<tr><td>Symétrie centrale</td><td>Demi-tour autour d’un point (le centre)</td></tr>
-<tr><td>Translation</td><td>Glissement dans une direction, un sens et d’une longueur donnés</td></tr>
-<tr><td>Rotation</td><td>Rotation autour d’un centre, d’un angle et dans un sens donnés</td></tr>
-<tr><td>Homothétie</td><td>Agrandissement ou réduction de centre O et de rapport k</td></tr>
+<tr><th>Transformation</th><th>Définition de l’image M′ de M</th><th>Propriétés</th></tr>
+<tr><td>Symétrie axiale</td><td>La droite (d) est la médiatrice de [MM′]</td><td>Conserve longueurs, angles et aires ; échange la droite et son image symétrique</td></tr>
+<tr><td>Symétrie centrale</td><td>O est le milieu de [MM′]</td><td>Conserve longueurs, angles et aires ; l’image d’une droite est une droite parallèle</td></tr>
+<tr><td>Translation</td><td>Glissement : même direction, même sens, même longueur pour tous les points</td><td>Conserve longueurs, angles et aires ; l’image d’une droite est une droite parallèle</td></tr>
+<tr><td>Rotation</td><td>Centre O, angle et sens donnés : OM′ = OM</td><td>Conserve longueurs, angles et aires</td></tr>
+<tr><td>Homothétie de centre O et de rapport k</td><td>M′ est sur la droite (OM) avec OM′ = |k| × OM ; du même côté de O si k &gt; 0, de l’autre côté si k &lt; 0</td><td>Conserve les angles et le parallélisme ; longueurs × |k|, aires × k²</td></tr>
 </table></div>
-<p>Les quatre premières <b>conservent</b> les longueurs, les angles et les aires. Pour une homothétie de rapport k : si |k| &gt; 1, c’est un agrandissement ; si |k| &lt; 1, une réduction ; si k est négatif, l’image est de l’autre côté du centre.</p>
-<div class="tw"><table>
-<tr><th>Rapport k d’agrandissement ou de réduction</th><th>Effet</th></tr>
-<tr><td>Longueurs</td><td>multipliées par <mark>k</mark></td></tr>
-<tr><td>Aires</td><td>multipliées par <mark>k²</mark></td></tr>
-<tr><td>Volumes</td><td>multipliés par <mark>k³</mark></td></tr>
-</table></div>
-<div class="keep"><b>À retenir : </b>avec k = 2, les longueurs doublent, mais les aires sont multipliées par 4 et les volumes par 8.</div>
-</section>
-
-<section id="aires">
-<h2>5. Aires et volumes</h2>
-<div class="tw"><table>
-<tr><th>Figure</th><th>Aire</th></tr>
-<tr><td>Rectangle</td><td>longueur × largeur</td></tr>
-<tr><td>Triangle</td><td>base × hauteur ÷ 2</td></tr>
-<tr><td>Parallélogramme</td><td>base × hauteur</td></tr>
-<tr><td>Trapèze</td><td>(grande base + petite base) × hauteur ÷ 2</td></tr>
-<tr><td>Disque</td><td>π × r² (périmètre du cercle : 2 × π × r)</td></tr>
-</table></div>
-<div class="tw"><table>
-<tr><th>Solide</th><th>Volume</th><th>Exemple</th></tr>
-<tr><td>Prisme droit</td><td>aire de la base × hauteur</td><td></td></tr>
-<tr><td>Cylindre</td><td>π × r² × h</td><td>r = 3 et h = 10 : <mark>90π ≈ 282,7</mark></td></tr>
-<tr><td>Pyramide, cône</td><td>⅓ × aire de la base × hauteur</td><td>Base carrée de côté 6, h = 5 : ⅓ × 36 × 5 = <mark>60</mark></td></tr>
-<tr><td>Boule</td><td>4/3 × π × r³</td><td>r = 3 : 36π ≈ <mark>113,1</mark></td></tr>
-</table></div>
-<div class="keep"><b>À retenir : </b>un volume s’exprime en unités cubes (cm³, m³), une aire en unités carrées. Dans un sujet, certaines formules peuvent être rappelées, mais il vaut mieux les connaître.</div>
+<div class="keep"><b>À retenir : </b>un agrandissement ou une réduction de rapport k multiplie les longueurs par k, les <b>aires par k²</b> et les <b>volumes par k³</b>. Avec k = 3 : aires × 9, volumes × 27.</div>
 </section>
 
 <section id="quiz">
@@ -171,70 +177,35 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"ABC est rectangle en A, avec AB = 3 et AC = 4. Que vaut BC ?",o:["7","5","25"],a:1,w:"BC² = 3² + 4² = 25, donc BC = 5."},
-{q:"Un triangle a pour côtés 6, 8 et 10. Est-il rectangle ?",o:["Oui","Non","On ne peut pas savoir"],a:0,w:"10² = 100 et 6² + 8² = 36 + 64 = 100 : d’après la réciproque de Pythagore, il est rectangle."},
-{q:"ABC est rectangle en A, avec BC = 13 et AB = 5. Que vaut AC ?",o:["8","12","18"],a:1,w:"AC² = 13² − 5² = 169 − 25 = 144, donc AC = 12."},
-{q:"(MN) est parallèle à (BC), avec AM = 2, AB = 6 et AN = 3. Que vaut AC ?",o:["4","9","12"],a:1,w:"AM ÷ AB = AN ÷ AC, donc AC = AN × AB ÷ AM = 3 × 6 ÷ 2 = 9."},
-{q:"Dans un triangle rectangle, que vaut le cosinus d’un angle aigu ?",o:["côté opposé ÷ hypoténuse","côté adjacent ÷ hypoténuse","côté opposé ÷ côté adjacent"],a:1,w:"CAH : Cosinus = Adjacent ÷ Hypoténuse."},
-{q:"ABC est rectangle en A, avec BC = 10 et B = 30°. Que vaut AC ?",o:["5","8,7","20"],a:0,w:"AC est le côté opposé à B : AC = BC × sin 30° = 10 × 0,5 = 5."},
-{q:"Dans un triangle rectangle, cos B = 0,8. Quelle est la mesure de B, arrondie au degré ?",o:["53°","37°","0,8°"],a:1,w:"On utilise cos⁻¹(0,8) ≈ 36,87°, soit environ 37°."},
-{q:"On agrandit une figure avec un rapport 3. Par quel nombre l’aire est-elle multipliée ?",o:["3","9","27"],a:1,w:"Les aires sont multipliées par k² = 3² = 9."},
-{q:"Quel est le volume d’une pyramide de base carrée de côté 6 cm et de hauteur 5 cm ?",o:["180 cm³","60 cm³","30 cm³"],a:1,w:"V = ⅓ × aire de la base × hauteur = ⅓ × 36 × 5 = 60 cm³."},
-{q:"Dans une homothétie de centre O et de rapport −2, où se trouve l’image M′ d’un point M ?",o:["Du même côté de O, deux fois plus près","De l’autre côté de O, deux fois plus loin","Sur le point O"],a:1,w:"Le rapport est négatif, donc M′ est de l’autre côté de O, et |k| = 2 : deux fois plus loin."}
+{q:"ABC est rectangle en A, avec AB = 3 et AC = 4. Calculez BC.",num:5,w:"BC² = 3² + 4² = 25, donc BC = 5.",l:1,t:"Pythagore"},
+{q:"Un triangle a pour côtés 6, 8 et 10. Est-il rectangle ?",o:["Oui", "Non", "On ne peut pas savoir"],a:0,w:"10² = 100 = 6² + 8² : d’après la réciproque de Pythagore, il est rectangle.",l:2,t:"Pythagore"},
+{q:"Un triangle a pour côtés 5, 6 et 8. Est-il rectangle ?",o:["Non", "Oui", "On ne peut pas savoir"],a:0,w:"8² = 64 mais 5² + 6² = 61 : l’égalité n’est pas vérifiée.",l:3,t:"Pythagore"},
+{q:"ABC est rectangle en A, avec BC = 13 et AB = 5. Calculez AC.",num:12,w:"AC² = 169 − 25 = 144, donc AC = 12.",l:2,t:"Pythagore"},
+{q:"ABC est rectangle en A, avec AB = 5 et AC = 7. Donnez BC arrondi au dixième.",num:8.6,tol:0.05,w:"BC² = 25 + 49 = 74, BC = √74 ≈ 8,6.",l:3,t:"Pythagore"},
+{q:"Quelle est la longueur de la diagonale d’un rectangle de 6 cm sur 8 cm ?",num:10,u:"cm",w:"d² = 6² + 8² = 100, donc d = 10 cm.",l:2,t:"Pythagore"},
+{q:"Dans un triangle rectangle, que peut-on dire de l’hypoténuse ?",o:["C’est le plus grand côté, opposé à l’angle droit", "C’est le plus petit côté", "C’est le côté adjacent à l’angle droit"],a:0,w:"L’hypoténuse est toujours le côté le plus long.",l:1,t:"Pythagore"},
+{q:"(MN) ∥ (BC), AM = 2, AB = 6 et AN = 3 (triangles emboîtés). Calculez AC.",num:9,w:"AM ÷ AB = AN ÷ AC, donc AC = AN × AB ÷ AM = 3 × 6 ÷ 2 = 9.",l:2,t:"Thalès"},
+{q:"Même figure, avec MN = 4. Calculez BC.",num:12,w:"BC = MN × AB ÷ AM = 4 × 6 ÷ 2 = 12.",l:2,t:"Thalès"},
+{q:"Configuration en papillon, (MN) ∥ (BC), AB = 6, AC = 9 et AM = 2. Calculez AN.",num:3,w:"AM ÷ AB = AN ÷ AC, donc AN = AC × AM ÷ AB = 9 × 2 ÷ 6 = 3.",l:3,t:"Thalès"},
+{q:"Quelles conditions faut-il vérifier pour appliquer le théorème de Thalès ?",o:["Les points sont alignés", "Les droites (MN) et (BC) sont parallèles", "Le triangle est rectangle", "AM = AN"],a:[0, 1],w:"Thalès demande des alignements et un parallélisme, pas un angle droit.",l:2,t:"Thalès"},
+{q:"AM = 3, AB = 5, AN = 4,5, AC = 7,5, points alignés dans le même ordre. Que dit la réciproque de Thalès ?",o:["(MN) est parallèle à (BC)", "(MN) n’est pas parallèle à (BC)", "Le triangle est rectangle", "On ne peut pas conclure"],a:0,w:"3 ÷ 5 = 0,6 et 4,5 ÷ 7,5 = 0,6 : les rapports sont égaux.",l:3,t:"Thalès"},
+{q:"AM = 2, AB = 6, AN = 2, AC = 7. Les droites (MN) et (BC) sont-elles parallèles ?",o:["Non, car 2/6 ≠ 2/7", "Oui, car AM = AN", "Oui, car 2/6 = 2/7", "On ne peut pas savoir"],a:0,w:"Si elles l’étaient, les rapports seraient égaux. 1/3 est différent de 2/7.",l:3,t:"Thalès"},
+{q:"Quels sont les cas d’égalité des triangles ?",o:["CCC (trois côtés)", "CAC (côté, angle, côté)", "ACA (angle, côté, angle)", "AAA (trois angles)"],a:[0, 1, 2],w:"Trois angles égaux ne donnent que des triangles semblables.",l:2,t:"Triangles"},
+{q:"Quand deux triangles sont-ils semblables ?",o:["Quand leurs angles sont égaux deux à deux", "Quand ils ont la même aire", "Quand ils ont le même périmètre", "Quand ils sont rectangles"],a:0,w:"On peut alors montrer que leurs côtés sont proportionnels.",l:2,t:"Triangles"},
+{q:"Deux triangles sont semblables de rapport 3. Par combien l’aire est-elle multipliée ?",num:9,w:"Les aires sont multipliées par k² = 9.",l:2,t:"Triangles"},
+{q:"Dans un triangle rectangle, que vaut le cosinus d’un angle aigu ?",o:["Côté adjacent ÷ hypoténuse", "Côté opposé ÷ hypoténuse", "Côté opposé ÷ côté adjacent", "Hypoténuse ÷ côté adjacent"],a:0,w:"CAH : Cosinus = Adjacent ÷ Hypoténuse.",l:1,t:"Trigonométrie"},
+{q:"ABC est rectangle en A, BC = 10 et B = 30°. Calculez AC.",num:5,w:"AC est opposé à B : AC = BC × sin 30° = 10 × 0,5 = 5.",l:2,t:"Trigonométrie"},
+{q:"ABC est rectangle en A, AB = 6 et B = 60°. Calculez BC.",num:12,w:"cos 60° = AB ÷ BC, donc BC = 6 ÷ 0,5 = 12.",l:3,t:"Trigonométrie"},
+{q:"Dans un triangle rectangle, cos B = 0,8. Donnez B arrondi au degré.",num:37,tol:0.5,u:"°",w:"B = cos⁻¹(0,8) ≈ 36,87°, soit 37°.",l:3,t:"Trigonométrie"},
+{q:"ABC est rectangle en A avec AB = AC. Quelle est la mesure de l’angle B ?",num:45,u:"°",w:"tan B = AC ÷ AB = 1, donc B = 45°.",l:2,t:"Trigonométrie"},
+{q:"Quel réglage de la calculatrice faut-il utiliser pour la trigonométrie du collège ?",o:["Degrés", "Radians", "Grades"],a:0,w:"Les angles sont mesurés en degrés.",l:1,t:"Trigonométrie"},
+{q:"Que signifie « O est le milieu de [MM′] » ?",o:["M′ est l’image de M par la symétrie de centre O", "M′ est l’image de M par une translation", "M′ est l’image de M par la symétrie d’axe (OM)", "M′ est l’image de M par une rotation de 90°"],a:0,w:"C’est la définition de la symétrie centrale.",l:1,t:"Transformations"},
+{q:"Dans une homothétie de centre O et de rapport −2, où se trouve M′ ?",o:["De l’autre côté de O, deux fois plus loin", "Du même côté de O, deux fois plus loin", "Du même côté de O, deux fois plus près", "Sur O"],a:0,w:"Rapport négatif : de l’autre côté ; |k| = 2 : deux fois plus loin.",l:2,t:"Transformations"},
+{q:"Quelles transformations transforment toute droite en une droite parallèle ?",o:["La translation", "La symétrie centrale", "L’homothétie", "La rotation d’angle 30°"],a:[0, 1, 2],w:"La rotation d’angle 30° modifie la direction des droites.",l:3,t:"Transformations"},
+{q:"On agrandit une figure avec un rapport 3. Par quel nombre le volume d’un solide est-il multiplié ?",num:27,w:"Les volumes sont multipliés par k³ = 27.",l:2,t:"Transformations"},
+{q:"Quelle propriété est conservée par toutes les transformations de cette fiche, sauf l’homothétie ?",o:["Les longueurs", "Les angles", "Le parallélisme", "L’alignement"],a:0,w:"Une homothétie de rapport k multiplie les longueurs par |k|.",l:3,t:"Transformations"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 5, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-geo-best") || 0)); localStorage.setItem("maths-geo-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

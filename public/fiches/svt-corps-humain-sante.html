@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SVT : corps humain et santé</title>
+<title>SVT : système nerveux, cerveau et hygiène de vie</title>
 <meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,67 +61,75 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
 .tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
-<h1>SVT : corps humain et santé</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<h1>SVT : système nerveux, cerveau et hygiène de vie</h1>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 20 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="nerveux" class="on">Système nerveux</button><button data-t="immunite">Immunité et vaccin</button><button data-t="repro">Reproduction</button><button data-t="microbiote">Microbiote et santé</button><button data-t="quiz">Quiz</button>
+<button data-t="neurone" class="on">Neurones et message nerveux</button><button data-t="systeme">Centres nerveux et nerfs</button><button data-t="reflexe">Réflexe et mouvement volontaire</button><button data-t="cerveau">Cerveau et hygiène de vie</button><button data-t="substances">Substances psychoactives</button><button data-t="quiz">Quiz</button>
 </nav>
 
-<section id="nerveux">
-<h2>1. Le système nerveux</h2>
-<p>Le système nerveux comprend les <b>centres nerveux</b> (cerveau, moelle épinière), les <b>nerfs</b> et les <b>récepteurs sensoriels</b> (œil, oreille, peau…). Il est formé de cellules spécialisées, les <b>neurones</b>, qui transmettent un <b>message nerveux</b> sous forme de signaux électriques.</p>
+<section id="neurone">
+<h2>1. Les neurones et le message nerveux</h2>
+<p>Le système nerveux est formé de cellules spécialisées, les <b>neurones</b>, qui transmettent un <b>message nerveux</b> sous forme de signaux électriques, de neurone à neurone.</p>
+<div class="chain"><span>Récepteur sensoriel</span><i>→</i><span>Nerf sensitif</span><i>→</i><span>Centre nerveux</span><i>→</i><span>Nerf moteur</span><i>→</i><span>Muscle</span></div>
+<p>Les <b>récepteurs sensoriels</b> (œil, oreille, peau, langue, nez) transforment une information du milieu en message nerveux.</p>
+</section>
+
+<section id="systeme">
+<h2>2. Les centres nerveux et les nerfs</h2>
 <div class="tw"><table>
-<tr><th>Type de réaction</th><th>Caractéristiques</th></tr>
-<tr><td>Mouvement volontaire</td><td>Décidé par le <b>cerveau</b> ; plus lent</td></tr>
-<tr><td>Réflexe</td><td>Involontaire et rapide ; commandé par la <b>moelle épinière</b> (ex. retirer la main d’une surface brûlante)</td></tr>
+<tr><th>Élément</th><th>Rôle</th></tr>
+<tr><td>Cerveau</td><td>Traite les informations, élabore les mouvements volontaires, siège de la conscience, de la mémoire et des émotions</td></tr>
+<tr><td>Cervelet</td><td>Coordonne les mouvements et l’équilibre</td></tr>
+<tr><td>Moelle épinière</td><td>Relie le cerveau au reste du corps ; commande les réflexes</td></tr>
+<tr><td>Nerfs sensitifs</td><td>Conduisent le message des récepteurs vers les centres nerveux</td></tr>
+<tr><td>Nerfs moteurs</td><td>Conduisent l’ordre des centres nerveux vers les muscles</td></tr>
 </table></div>
-<p>Trajet du message lors d’un réflexe :</p>
-<div class="chain"><span>Récepteur</span><i>→</i><span>Nerf sensitif</span><i>→</i><span>Moelle épinière</span><i>→</i><span>Nerf moteur</span><i>→</i><span>Muscle</span></div>
-<div class="keep"><b>À retenir : </b>le sommeil, l’alimentation et l’activité physique influencent le fonctionnement du cerveau. L’alcool et les drogues perturbent le système nerveux.</div>
 </section>
 
-<section id="immunite">
-<h2>2. L’immunité et la vaccination</h2>
-<p>Les <b>micro-organismes</b> (bactéries, virus, champignons) peuvent provoquer des infections. Le corps se défend en plusieurs étapes :</p>
+<section id="reflexe">
+<h2>3. Réflexe et mouvement volontaire</h2>
+<div class="tw"><table>
+<tr><th></th><th>Mouvement volontaire</th><th>Réflexe</th></tr>
+<tr><td>Commande</td><td>Le <b>cerveau</b></td><td>La <b>moelle épinière</b> (le cerveau est informé ensuite)</td></tr>
+<tr><td>Rapidité</td><td>Plus lent</td><td>Très rapide</td></tr>
+<tr><td>Conscience</td><td>Voulu</td><td>Involontaire</td></tr>
+<tr><td>Exemple</td><td>Lancer un ballon</td><td>Retirer la main d’une plaque brûlante</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>le réflexe est une réaction <b>protectrice</b> : sa rapidité vient du fait que le message n’a pas besoin de passer par le cerveau.</div>
+</section>
+
+<section id="cerveau">
+<h2>4. Le cerveau et l’hygiène de vie</h2>
 <ul>
-<li><b>Barrières naturelles</b> : peau et muqueuses.</li>
-<li><b>Réaction immunitaire rapide</b> : des cellules (les phagocytes) détruisent les micro-organismes, avec inflammation.</li>
-<li><b>Réaction immunitaire spécifique</b> : les <b>lymphocytes B</b> fabriquent des <b>anticorps</b> adaptés à l’<b>antigène</b> ; les <b>lymphocytes T</b> détruisent les cellules infectées.</li>
-<li><b>Mémoire immunitaire</b> : après une infection, des cellules gardent le souvenir de l’antigène, et une seconde infection est combattue plus vite.</li>
+<li>Le cerveau est très actif et consomme beaucoup de dioxygène et de glucose. Son fonctionnement dépend de l’alimentation, du <b>sommeil</b> et de l’activité physique.</li>
+<li>Pendant le <b>sommeil</b>, le cerveau consolide la mémoire et l’organisme récupère. Un adolescent a besoin d’environ <b>8 à 10 heures</b> de sommeil par nuit. Le manque de sommeil diminue l’attention et la mémoire.</li>
+<li>L’usage excessif des <b>écrans</b>, surtout le soir, perturbe l’endormissement.</li>
+<li>Les <b>sons très forts</b> (casque, concert) abîment l’audition de façon irréversible.</li>
+<li>Le cerveau continue de mûrir jusqu’à l’âge adulte : il est particulièrement sensible aux substances toxiques à l’adolescence.</li>
 </ul>
-<p>Un <b>vaccin</b> contient des antigènes (micro-organisme inactivé ou affaibli, ou fragments) : il provoque une réponse immunitaire <b>sans la maladie</b> et crée la <b>mémoire immunitaire</b>. Des rappels peuvent être nécessaires.</p>
-<div class="keep"><b>À retenir : </b>les <b>antibiotiques</b> agissent contre les bactéries, <b>pas contre les virus</b>. Leur usage inutile favorise les bactéries résistantes.</div>
 </section>
 
-<section id="repro">
-<h2>3. La reproduction humaine</h2>
+<section id="substances">
+<h2>5. Les substances psychoactives</h2>
+<p>Alcool, tabac (nicotine), cannabis et autres drogues agissent sur le fonctionnement du système nerveux : elles modifient la perception, l’humeur, l’attention et les réflexes.</p>
 <ul>
-<li>À la <b>puberté</b>, les organes reproducteurs deviennent fonctionnels sous l’action d’<b>hormones</b>.</li>
-<li>Les <b>testicules</b> produisent des spermatozoïdes en continu ; les <b>ovaires</b> libèrent un ovule environ tous les 28 jours (cycle menstruel).</li>
-<li>La <b>fécondation</b> a lieu dans la <b>trompe</b> ; la cellule-œuf descend dans l’<b>utérus</b>, où a lieu la <b>nidation</b>. La grossesse dure environ neuf mois.</li>
-</ul>
-<h3>Contraception et prévention</h3>
-<p>La <b>contraception</b> (pilule, implant, préservatif…) permet de choisir de ne pas avoir d’enfant. Le <b>préservatif</b> protège à la fois d’une grossesse non désirée et des <b>infections sexuellement transmissibles (IST)</b>. Le dépistage permet de détecter et de soigner les IST.</p>
-</section>
-
-<section id="microbiote">
-<h2>4. Microbiote et mode de vie</h2>
-<p>Le <b>microbiote</b> est l’ensemble des micro-organismes (surtout des bactéries) qui vivent sur et dans le corps, en particulier dans l’<b>intestin</b>. Il aide à digérer et participe à la défense contre les micro-organismes dangereux.</p>
-<ul>
-<li>Une <b>alimentation variée</b>, l’<b>activité physique</b> et le <b>sommeil</b> favorisent la santé.</li>
-<li>L’<b>hygiène</b> (lavage des mains) limite la transmission des infections.</li>
-<li>Les antibiotiques, utiles contre les bactéries pathogènes, perturbent aussi le microbiote.</li>
+<li>Elles peuvent créer une <b>dépendance</b> : le besoin impérieux d’en consommer, malgré les risques.</li>
+<li>Elles augmentent le risque d’<b>accidents</b> (alcool et cannabis au volant) et de <b>maladies</b>.</li>
+<li>Même une consommation occasionnelle présente des risques, d’autant plus que le cerveau est en maturation. Des structures d’aide existent pour les personnes concernées.</li>
 </ul>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -129,68 +137,28 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Comment s’appellent les cellules du système nerveux qui transmettent le message nerveux ?",o:["Les neurones","Les globules rouges","Les lymphocytes"],a:0,w:"Les neurones transmettent le message nerveux sous forme de signaux électriques."},
-{q:"Quel organe commande un réflexe comme retirer la main d’une surface brûlante ?",o:["La moelle épinière","Le cœur","L’estomac"],a:0,w:"Un réflexe est rapide et involontaire : il est commandé par la moelle épinière."},
-{q:"Quelles cellules fabriquent les anticorps ?",o:["Les lymphocytes B","Les neurones","Les spermatozoïdes"],a:0,w:"Les lymphocytes B produisent des anticorps adaptés à l’antigène."},
-{q:"Que provoque un vaccin ?",o:["Une réponse immunitaire et une mémoire immunitaire, sans la maladie","La maladie complète","La destruction des bactéries utiles"],a:0,w:"Il contient des antigènes qui déclenchent la réponse du système immunitaire sans provoquer la maladie."},
-{q:"Contre quels micro-organismes les antibiotiques sont-ils efficaces ?",o:["Les bactéries","Les virus","Les champignons microscopiques uniquement"],a:0,w:"Les antibiotiques agissent sur les bactéries, pas sur les virus."},
-{q:"Où se produit la fécondation chez la femme ?",o:["Dans la trompe","Dans l’utérus","Dans le vagin"],a:0,w:"La fécondation a lieu dans la trompe ; la nidation se fait dans l’utérus."},
-{q:"Quel moyen protège à la fois d’une grossesse non désirée et des IST ?",o:["Le préservatif","La pilule","Le dépistage"],a:0,w:"Seul le préservatif protège contre les deux."},
-{q:"Que désigne le microbiote ?",o:["L’ensemble des micro-organismes vivant sur et dans le corps","Un organe du système immunitaire","Un type de vaccin"],a:0,w:"Le microbiote intestinal participe à la digestion et à la défense."}
+{q:"Comment s’appellent les cellules du système nerveux qui transmettent le message nerveux ?",o:["Les neurones", "Les globules rouges", "Les lymphocytes", "Les hématies"],a:0,w:"Les neurones transmettent le message nerveux sous forme de signaux électriques.",l:1,t:"Neurones"},
+{q:"Quel est le rôle d’un récepteur sensoriel ?",o:["Transformer une information du milieu en message nerveux", "Commander un muscle", "Stocker la mémoire", "Digérer"],a:0,w:"Œil, oreille, peau, langue et nez sont des organes sensoriels.",l:2,t:"Neurones"},
+{q:"Quel est le trajet du message nerveux lors d’une réaction ?",o:["Récepteur, nerf sensitif, centre nerveux, nerf moteur, muscle", "Muscle, nerf moteur, centre nerveux, récepteur", "Centre nerveux, muscle, récepteur", "Récepteur, muscle, centre nerveux"],a:0,w:"L’information va du récepteur vers le centre nerveux, puis l’ordre va vers le muscle.",l:2,t:"Neurones"},
+{q:"Quelles structures font partie des centres nerveux ?",o:["Le cerveau", "Le cervelet", "La moelle épinière", "Les nerfs"],a:[0, 1, 2],w:"Les nerfs relient les centres nerveux aux organes.",l:2,t:"Centres nerveux"},
+{q:"Quel est le rôle des nerfs moteurs ?",o:["Conduire l’ordre des centres nerveux vers les muscles", "Conduire l’information des récepteurs vers les centres nerveux", "Produire le message nerveux", "Stocker la mémoire"],a:0,w:"Les nerfs sensitifs vont des récepteurs vers les centres nerveux.",l:2,t:"Centres nerveux"},
+{q:"Quel organe coordonne l’équilibre et les mouvements ?",o:["Le cervelet", "Le cœur", "Le foie", "Les reins"],a:0,w:"Le cervelet est situé sous le cerveau.",l:3,t:"Centres nerveux"},
+{q:"Quel organe commande un réflexe comme retirer la main d’une surface brûlante ?",o:["La moelle épinière", "Le cœur", "L’estomac", "Le cerveau seul"],a:0,w:"Le cerveau n’intervient qu’ensuite, pour informer.",l:1,t:"Réflexe"},
+{q:"Pourquoi un réflexe est-il plus rapide qu’un mouvement volontaire ?",o:["Le message n’a pas besoin de passer par le cerveau", "Les muscles sont plus puissants", "Les nerfs sont plus gros", "Le sang circule plus vite"],a:0,w:"Le trajet est plus court.",l:2,t:"Réflexe"},
+{q:"Lequel est un mouvement volontaire ?",o:["Lancer un ballon", "Cligner des yeux devant un objet", "Retirer sa main d’une plaque brûlante", "Avoir un hoquet"],a:0,w:"Il est décidé par le cerveau.",l:1,t:"Réflexe"},
+{q:"Quel est l’intérêt biologique du réflexe ?",o:["Protéger rapidement l’organisme", "Fabriquer des souvenirs", "Digérer les aliments", "Dormir"],a:0,w:"Il évite des lésions.",l:2,t:"Réflexe"},
+{q:"De quoi le cerveau a-t-il besoin pour fonctionner ?",o:["De dioxygène et de glucose", "Uniquement d’eau", "De dioxyde de carbone", "De lumière"],a:0,w:"Il consomme beaucoup de dioxygène et de glucose apportés par le sang.",l:2,t:"Cerveau"},
+{q:"Combien d’heures de sommeil conseille-t-on environ à un adolescent ?",o:["8 à 10 heures", "4 à 5 heures", "12 à 14 heures", "1 à 2 heures"],a:0,w:"Le sommeil est essentiel à la mémoire et à la récupération.",l:1,t:"Cerveau"},
+{q:"Quel est l’effet du manque de sommeil ?",o:["Une baisse de l’attention et de la mémoire", "Une meilleure mémoire", "Un cœur plus fort", "Aucun effet"],a:0,w:"Le cerveau a besoin de dormir pour consolider la mémoire.",l:2,t:"Cerveau"},
+{q:"Quel effet les écrans ont-ils sur le sommeil s’ils sont utilisés tard le soir ?",o:["Ils peuvent retarder l’endormissement", "Ils favorisent l’endormissement", "Ils n’ont aucun effet", "Ils allongent le sommeil"],a:0,w:"La lumière et les contenus stimulants perturbent l’endormissement.",l:2,t:"Cerveau"},
+{q:"Quel danger présente l’écoute de sons très forts ?",o:["Des lésions irréversibles de l’audition", "Une meilleure audition", "Aucun", "Une vue plus perçante"],a:0,w:"Les cellules sensorielles de l’oreille ne se régénèrent pas.",l:2,t:"Cerveau"},
+{q:"Pourquoi le cerveau d’un adolescent est-il plus sensible aux substances toxiques ?",o:["Il est encore en maturation", "Il est trop gros", "Il n’est pas actif", "Il est protégé"],a:0,w:"La maturation se poursuit jusqu’à l’âge adulte.",l:3,t:"Substances"},
+{q:"Qu’est-ce que la dépendance ?",o:["Le besoin impérieux de consommer une substance malgré les risques", "Une habitude saine", "Un manque de sommeil", "Un réflexe"],a:0,w:"Elle est liée à l’effet de certaines substances sur le cerveau.",l:2,t:"Substances"},
+{q:"Quels sont des risques liés à l’alcool ?",o:["Accidents de la route", "Perte d’attention et de réflexes", "Dépendance", "Amélioration des réflexes"],a:[0, 1, 2],w:"L’alcool ralentit les réflexes et perturbe le jugement.",l:2,t:"Substances"},
+{q:"Quel effet les substances psychoactives ont-elles sur le système nerveux ?",o:["Elles modifient la perception, l’humeur et les réflexes", "Elles accélèrent la digestion", "Elles renforcent les muscles", "Elles ne l’affectent pas"],a:0,w:"Elles agissent sur les neurones.",l:2,t:"Substances"},
+{q:"Que faire si l’on a du mal à s’arrêter de consommer une substance ?",o:["Demander de l’aide à des adultes ou à des structures spécialisées", "Continuer seul", "Augmenter la dose", "Éviter d’en parler"],a:0,w:"Des professionnels peuvent accompagner.",l:3,t:"Substances"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("svt-corps-best") || 0)); localStorage.setItem("svt-corps-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

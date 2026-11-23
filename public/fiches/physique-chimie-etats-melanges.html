@@ -61,76 +61,102 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
 .tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Physique-chimie : états de la matière, mélanges et solutions</h1>
-<p class="meta">Brevet · notions du cycle 4 (5e et 4e) · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="etats" class="on">États de la matière</button><button data-t="changements">Changements d’état</button><button data-t="melanges">Mélanges et solutions</button><button data-t="separer">Séparer et mesurer</button><button data-t="quiz">Quiz</button>
+<button data-t="etats" class="on">États de la matière</button><button data-t="changements">Changements d’état</button><button data-t="masse">Masse volumique</button><button data-t="melanges">Corps purs et mélanges</button><button data-t="solutions">Solutions et solubilité</button><button data-t="separer">Séparer, traiter l’eau</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="etats">
 <h2>1. Les trois états de la matière</h2>
 <div class="tw"><table>
-<tr><th>État</th><th>Forme et volume</th><th>Les particules</th></tr>
-<tr><td>Solide</td><td>Forme propre, volume propre</td><td>Très proches, ordonnées, elles vibrent sur place</td></tr>
-<tr><td>Liquide</td><td>Volume propre, forme du récipient</td><td>Proches, désordonnées, elles glissent les unes sur les autres</td></tr>
-<tr><td>Gaz</td><td>Ni forme propre ni volume propre ; compressible</td><td>Très éloignées et très agitées</td></tr>
+<tr><th>État</th><th>Forme et volume</th><th>Modèle particulaire</th></tr>
+<tr><td>Solide</td><td>Forme propre, volume propre</td><td>Particules très proches, ordonnées, qui vibrent sur place</td></tr>
+<tr><td>Liquide</td><td>Volume propre, forme du récipient</td><td>Particules proches, désordonnées, qui glissent les unes sur les autres</td></tr>
+<tr><td>Gaz</td><td>Ni forme propre ni volume propre ; compressible</td><td>Particules très éloignées et très agitées</td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>dans le modèle particulaire, la matière est faite de particules (atomes, molécules) en mouvement. Un changement d’état modifie l’agitation et la distance entre les particules, mais pas leur nature.</div>
+<div class="keep"><b>À retenir : </b>un changement d’état modifie l’agitation et la distance entre les particules, mais pas leur nature : l’eau liquide, la glace et la vapeur sont constituées des mêmes molécules H₂O.</div>
 </section>
 
 <section id="changements">
-<h2>2. Les changements d’état</h2>
+<h2>2. Les changements d’état d’un corps pur</h2>
 <div class="chain"><span>Solide</span><i>⇄</i><span>Liquide</span><i>⇄</i><span>Gaz</span></div>
 <div class="tw"><table>
-<tr><th>Changement</th><th>Nom</th></tr>
-<tr><td>Solide → liquide</td><td><b>Fusion</b></td></tr>
-<tr><td>Liquide → solide</td><td><b>Solidification</b></td></tr>
-<tr><td>Liquide → gaz</td><td><b>Vaporisation</b> (ébullition ou évaporation)</td></tr>
-<tr><td>Gaz → liquide</td><td><b>Liquéfaction</b> (condensation)</td></tr>
-<tr><td>Solide → gaz</td><td><b>Sublimation</b></td></tr>
-<tr><td>Gaz → solide</td><td><b>Condensation solide</b></td></tr>
+<tr><th>Changement</th><th>Nom</th><th>Énergie</th></tr>
+<tr><td>Solide → liquide</td><td><b>Fusion</b></td><td>Le corps reçoit de l’énergie</td></tr>
+<tr><td>Liquide → solide</td><td><b>Solidification</b></td><td>Le corps cède de l’énergie</td></tr>
+<tr><td>Liquide → gaz</td><td><b>Vaporisation</b> (ébullition ou évaporation)</td><td>Le corps reçoit de l’énergie</td></tr>
+<tr><td>Gaz → liquide</td><td><b>Liquéfaction</b> (condensation)</td><td>Le corps cède de l’énergie</td></tr>
+<tr><td>Solide → gaz</td><td><b>Sublimation</b></td><td>Le corps reçoit de l’énergie</td></tr>
+<tr><td>Gaz → solide</td><td><b>Condensation solide</b></td><td>Le corps cède de l’énergie</td></tr>
 </table></div>
 <ul>
 <li>Pour l’<b>eau</b>, à la pression atmosphérique normale : fusion à <b>0 °C</b>, ébullition à <b>100 °C</b>.</li>
-<li>Pendant le changement d’état d’un <b>corps pur</b>, la <b>température reste constante</b> (palier).</li>
-<li>La <b>masse se conserve</b> mais le <b>volume</b> peut changer : l’eau qui gèle augmente de volume.</li>
+<li>Pendant le changement d’état d’un <b>corps pur</b>, la <b>température reste constante</b> (palier). Cette température caractérise le corps : un liquide pur qui bout à 78 °C n’est pas de l’eau.</li>
+<li>La <b>masse se conserve</b>, mais le <b>volume</b> peut changer : l’eau qui gèle augmente de volume (d’environ 9 %), ce qui fait éclater des canalisations.</li>
+</ul>
+<p><b>Lien avec le climat :</b> la fonte des glaciers continentaux (Groenland, Antarctique) ajoute de l’eau aux océans et fait monter le niveau des mers. La fonte de la banquise, qui flotte déjà, ne le modifie presque pas. La <b>dilatation</b> de l’eau qui se réchauffe y contribue aussi.</p>
+</section>
+
+<section id="masse">
+<h2>3. La masse volumique</h2>
+<div class="ex"><mark>ρ = m ÷ V</mark> (ou m = ρ × V) &nbsp;·&nbsp; unités : g/cm³ = kg/L = t/m³<br>200 g occupant 50 cm³ : ρ = 200 ÷ 50 = <mark>4 g/cm³</mark> &nbsp;·&nbsp; 100 cm³ d’aluminium (ρ = 2,7 g/cm³) : m = 2,7 × 100 = <mark>270 g</mark></div>
+<div class="tw"><table>
+<tr><th>Substance</th><th>Masse volumique (g/cm³)</th></tr>
+<tr><td>Éthanol</td><td>environ 0,79</td></tr>
+<tr><td>Eau</td><td>1</td></tr>
+<tr><td>Aluminium</td><td>2,7</td></tr>
+<tr><td>Fer</td><td>7,9</td></tr>
+<tr><td>Or</td><td>19,3</td></tr>
+</table></div>
+<ul>
+<li>Un objet <b>flotte</b> dans un liquide si sa masse volumique est <b>inférieure</b> à celle du liquide.</li>
+<li>La masse volumique permet de <b>distinguer des espèces chimiques</b> : on la compare aux valeurs de référence.</li>
+<li>Elle <b>diminue quand la température augmente</b> (dilatation), ce qui explique en partie la montée du niveau des océans.</li>
 </ul>
 </section>
 
 <section id="melanges">
-<h2>3. Corps purs, mélanges et solutions</h2>
+<h2>4. Espèces chimiques, corps purs et mélanges</h2>
 <ul>
-<li>Un <b>corps pur</b> est constitué d’une seule espèce chimique (eau distillée, dioxygène).</li>
-<li>Un <b>mélange</b> contient plusieurs espèces : <b>homogène</b> si on ne distingue qu’une seule phase (eau sucrée), <b>hétérogène</b> sinon (eau et huile, eau et sable).</li>
-<li>L’<b>air</b> est un mélange, composé d’environ 78 % de diazote et 21 % de dioxygène.</li>
+<li>Une <b>espèce chimique</b> est une substance constituée d’une seule sorte d’entités (molécules, atomes ou ions). Un <b>corps pur</b> ne contient qu’une espèce chimique (eau distillée, dioxygène).</li>
+<li>Un <b>mélange</b> contient plusieurs espèces : <b>homogène</b> si l’on ne distingue qu’une seule phase (eau sucrée), <b>hétérogène</b> sinon (eau et huile, eau et sable).</li>
+<li>Deux liquides sont <b>miscibles</b> s’ils forment un mélange homogène (eau et alcool), <b>non miscibles</b> sinon (eau et huile).</li>
+<li>L’<b>air</b> est un mélange de gaz : environ <b>78 % de diazote</b>, <b>21 % de dioxygène</b> et 1 % d’autres gaz (argon, dioxyde de carbone…).</li>
 </ul>
-<p>Dans une <b>solution</b>, le <b>soluté</b> (sucre, sel) est dissous dans le <b>solvant</b> (eau). Au-delà d’une certaine quantité, la solution est <b>saturée</b>.</p>
-<div class="ex">Concentration en masse : <mark>c = m ÷ V</mark> (g/L)<br>10 g de sel dissous pour 0,5 L de solution : c = 10 ÷ 0,5 = <mark>20 g/L</mark></div>
+</section>
+
+<section id="solutions">
+<h2>5. Solutions, solubilité et dissolution des gaz</h2>
+<p>Dans une <b>solution</b>, le <b>soluté</b> (sel, sucre) est dissous dans le <b>solvant</b> (eau). La <b>solubilité</b> est la masse maximale de soluté que l’on peut dissoudre dans 1 L de solvant (en g/L). Au-delà, la solution est <b>saturée</b> : le soluté en excès reste solide. Le sel se dissout jusqu’à environ 360 g/L à 20 °C.</p>
+<div class="ex">Concentration en masse : <mark>c = m ÷ V</mark> (g/L)<br>10 g de sel dissous pour 0,5 L de solution : c = 10 ÷ 0,5 = <mark>20 g/L</mark>.<br>Masse de sel dans 250 mL d’une solution à 40 g/L : m = c × V = 40 × 0,25 = <mark>10 g</mark>.</div>
+<p>Les <b>gaz</b> aussi se dissolvent dans l’eau. Le <b>dioxyde de carbone</b> dissous dans les océans forme un acide faible : c’est l’<b>acidification des océans</b>, qui menace les coraux et les coquillages. La dissolution est plus importante dans l’eau froide.</p>
 </section>
 
 <section id="separer">
-<h2>4. Séparer des mélanges et mesurer</h2>
+<h2>6. Séparer un mélange, traiter l’eau</h2>
 <div class="tw"><table>
 <tr><th>Technique</th><th>Pour séparer</th></tr>
 <tr><td>Filtration</td><td>Un solide non dissous d’un liquide (sable et eau)</td></tr>
-<tr><td>Décantation</td><td>Des liquides non mélangeables, ou un solide qui se dépose</td></tr>
+<tr><td>Décantation</td><td>Des liquides non miscibles, ou un solide qui se dépose</td></tr>
 <tr><td>Évaporation</td><td>Un soluté (sel) du solvant (eau)</td></tr>
-<tr><td>Distillation</td><td>Des liquides d’après leurs températures d’ébullition</td></tr>
+<tr><td>Distillation</td><td>Des liquides d’après leurs températures d’ébullition, ou l’eau d’un sel dissous</td></tr>
 <tr><td>Chromatographie</td><td>Des colorants dans un mélange</td></tr>
 </table></div>
-<h3>La masse volumique</h3>
-<div class="ex"><mark>ρ = m ÷ V</mark> (g/cm³ ou kg/L)<br>200 g occupant 50 cm³ : ρ = 200 ÷ 50 = <mark>4 g/cm³</mark></div>
-<p>L’eau a une masse volumique de 1 g/cm³ (1 kg/L). Un objet <b>flotte</b> si sa masse volumique est <b>inférieure</b> à celle du liquide.</p>
+<p><b>Traitement de l’eau :</b> pour rendre l’eau potable, on enchaîne décantation, filtration et désinfection. La <b>désalinisation</b> de l’eau de mer se fait par distillation ou par d’autres procédés. Les eaux usées sont traitées avant d’être rejetées dans le milieu naturel (<b>dépollution</b>).</p>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -138,68 +164,32 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel état de la matière n’a ni forme propre ni volume propre ?",o:["Le gaz","Le liquide","Le solide"],a:0,w:"Un gaz occupe tout l’espace disponible et est compressible."},
-{q:"Comment s’appelle le passage de l’état solide à l’état liquide ?",o:["La fusion","La solidification","La vaporisation"],a:0,w:"La fusion est le passage du solide au liquide."},
-{q:"À quelle température l’eau bout-elle à la pression atmosphérique normale ?",o:["100 °C","0 °C","50 °C"],a:0,w:"L’eau bout à 100 °C et fond à 0 °C."},
-{q:"Que devient la température pendant le changement d’état d’un corps pur ?",o:["Elle reste constante","Elle augmente","Elle diminue"],a:0,w:"On observe un palier de température."},
-{q:"Lequel est un mélange homogène ?",o:["L’eau sucrée","L’eau et l’huile","L’eau et le sable"],a:0,w:"Dans l’eau sucrée, on ne distingue qu’une seule phase."},
-{q:"Quelle technique sépare le sable de l’eau ?",o:["La filtration","La distillation","La chromatographie"],a:0,w:"Le sable est un solide non dissous : on le retient avec un filtre."},
-{q:"On dissout 10 g de sel dans 0,5 L de solution. Quelle est la concentration en masse ?",o:["20 g/L","5 g/L","10 g/L"],a:0,w:"c = m ÷ V = 10 ÷ 0,5 = 20 g/L."},
-{q:"Quelle est la masse volumique d’un objet de 200 g qui occupe 50 cm³ ?",o:["4 g/cm³","0,25 g/cm³","250 g/cm³"],a:0,w:"ρ = m ÷ V = 200 ÷ 50 = 4 g/cm³."}
+{q:"Quel état de la matière n’a ni forme propre ni volume propre ?",o:["Le gaz", "Le liquide", "Le solide", "Le plasma"],a:0,w:"Un gaz occupe tout l’espace disponible et est compressible.",l:1,t:"États"},
+{q:"Comment s’appelle le passage de l’état solide à l’état liquide ?",o:["La fusion", "La solidification", "La vaporisation", "La sublimation"],a:0,w:"Le solide reçoit de l’énergie et devient liquide.",l:1,t:"États"},
+{q:"Comment s’appelle le passage direct de l’état gazeux à l’état solide ?",o:["La condensation solide", "La sublimation", "La fusion", "La liquéfaction"],a:0,w:"La sublimation est le passage solide → gaz ; c’est le changement inverse.",l:2,t:"États"},
+{q:"Que se passe-t-il pour la température pendant le changement d’état d’un corps pur ?",o:["Elle reste constante", "Elle augmente", "Elle diminue", "Elle oscille"],a:0,w:"On observe un palier de température.",l:2,t:"Changements d’état"},
+{q:"Un liquide pur bout à 78 °C sous pression normale. Peut-il s’agir d’eau ?",o:["Non, l’eau bout à 100 °C", "Oui", "Oui, si on chauffe lentement", "On ne peut pas savoir"],a:0,w:"La température d’ébullition caractérise un corps pur.",l:3,t:"Changements d’état"},
+{q:"Que devient la masse d’une substance lors d’un changement d’état ?",o:["Elle se conserve", "Elle augmente", "Elle diminue", "Elle s’annule"],a:0,w:"La masse se conserve, même si le volume peut changer.",l:2,t:"Changements d’état"},
+{q:"Quand l’eau gèle, que devient son volume ?",o:["Il augmente", "Il diminue", "Il ne change pas"],a:0,w:"La glace occupe un volume plus grand que l’eau liquide (environ 9 % de plus).",l:2,t:"Changements d’état"},
+{q:"Parmi ces phénomènes, lesquels font monter le niveau des océans ?",o:["La fonte des glaciers continentaux", "La dilatation de l’eau qui se réchauffe", "La fonte de la banquise flottante (effet négligeable)", "L’évaporation de l’eau"],a:[0, 1],w:"La banquise flotte déjà : sa fonte ne change presque pas le niveau.",l:3,t:"Changements d’état"},
+{q:"Dans le modèle particulaire, comment sont les particules d’un gaz ?",o:["Très éloignées et très agitées", "Serrées et ordonnées", "Serrées et immobiles", "Collées à la paroi"],a:0,w:"Dans un gaz, les particules sont très espacées et en mouvement rapide.",l:2,t:"États"},
+{q:"Un objet de 200 g occupe 50 cm³. Quelle est sa masse volumique ?",num:4,u:"g/cm³",w:"ρ = m ÷ V = 200 ÷ 50 = 4 g/cm³.",l:1,t:"Masse volumique"},
+{q:"Quelle est la masse de 100 cm³ d’aluminium (ρ = 2,7 g/cm³) ?",num:270,u:"g",w:"m = ρ × V = 2,7 × 100 = 270 g.",l:2,t:"Masse volumique"},
+{q:"Dans quel cas un objet flotte-t-il dans un liquide ?",o:["Si sa masse volumique est inférieure à celle du liquide", "Si sa masse est faible", "Si son volume est grand", "Si sa masse volumique est supérieure à celle du liquide"],a:0,w:"La flottaison dépend de la masse volumique, pas de la masse seule.",l:2,t:"Masse volumique"},
+{q:"Quand la température d’un liquide augmente, que devient sa masse volumique ?",o:["Elle diminue", "Elle augmente", "Elle ne change pas"],a:0,w:"Le liquide se dilate : un même volume contient moins de matière.",l:3,t:"Masse volumique"},
+{q:"L’air est…",o:["Un mélange de gaz", "Un corps pur", "Une seule espèce chimique", "Un liquide"],a:0,w:"L’air contient notamment du diazote, du dioxygène et d’autres gaz.",l:1,t:"Mélanges"},
+{q:"Quelle est la composition approximative de l’air ?",o:["78 % de diazote et 21 % de dioxygène", "21 % de diazote et 78 % de dioxygène", "50 % de diazote et 50 % de dioxygène", "100 % de dioxygène"],a:0,w:"Il reste environ 1 % d’autres gaz.",l:2,t:"Mélanges"},
+{q:"Lequel est un mélange homogène ?",o:["L’eau sucrée", "L’eau et l’huile", "L’eau et le sable", "L’eau et les glaçons"],a:0,w:"Dans l’eau sucrée, on ne distingue qu’une seule phase.",l:1,t:"Mélanges"},
+{q:"Que peut-on dire de l’huile et de l’eau ?",o:["Elles ne sont pas miscibles", "Elles sont miscibles", "Elles forment un mélange homogène", "Elles sont solubles"],a:0,w:"Elles forment deux phases distinctes.",l:2,t:"Mélanges"},
+{q:"Qu’est-ce que la solubilité d’un soluté dans l’eau ?",o:["La masse maximale de soluté dissoute dans 1 L d’eau", "La masse d’eau nécessaire", "La température de dissolution", "Le volume de la solution"],a:0,w:"Au-delà, la solution est saturée.",l:2,t:"Solutions"},
+{q:"On dissout 10 g de sel dans 0,5 L de solution. Quelle est la concentration en masse ?",num:20,u:"g/L",w:"c = m ÷ V = 10 ÷ 0,5 = 20 g/L.",l:2,t:"Solutions"},
+{q:"Quelle masse de sel y a-t-il dans 250 mL d’une solution à 40 g/L ?",num:10,u:"g",w:"m = c × V = 40 × 0,25 = 10 g.",l:3,t:"Solutions"},
+{q:"Quelle conséquence a la dissolution du dioxyde de carbone dans les océans ?",o:["Une acidification", "Une augmentation de la salinité", "Une disparition des vagues", "Un refroidissement"],a:0,w:"Le CO₂ dissous forme un acide faible, ce qui diminue le pH.",l:3,t:"Solutions"},
+{q:"Quelle technique sépare le sable de l’eau ?",o:["La filtration", "La distillation", "La chromatographie", "L’évaporation"],a:0,w:"Le sable est un solide non dissous : on le retient avec un filtre.",l:1,t:"Séparations"},
+{q:"Quelle technique permet d’obtenir de l’eau pure à partir d’eau salée ?",o:["La distillation", "La filtration simple", "La décantation", "L’ajout de sucre"],a:0,w:"On vaporise l’eau, puis on la condense : le sel reste.",l:2,t:"Séparations"},
+{q:"Dans quel ordre traite-t-on typiquement l’eau pour la rendre potable ?",o:["Décantation, filtration, désinfection", "Désinfection, décantation, filtration", "Filtration, ébullition, congélation", "Distillation, congélation"],a:0,w:"On retire d’abord les grosses particules, puis on désinfecte.",l:3,t:"Séparations"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("pc-etats-best") || 0)); localStorage.setItem("pc-etats-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

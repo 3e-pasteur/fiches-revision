@@ -73,6 +73,7 @@ select,.btn{padding:10px 12px;border:1px solid var(--line);border-radius:12px;ba
 .fiche.done .stamp{opacity:.9;animation:stamp .35s cubic-bezier(.3,1.6,.5,1)}
 .fiche.done{border-color:#2b8a5e;border-left-color:#2b8a5e}
 @keyframes stamp{from{transform:rotate(-7deg) scale(2.2);opacity:0}to{transform:rotate(-7deg) scale(1);opacity:.9}}
+.qbadge{margin-top:2px;font-size:.82rem;font-weight:600;color:#2b8a5e}.qbadge.low{color:#e8590c}
 .empty{text-align:center;padding:44px 12px;color:var(--muted)}
 .empty b{display:block;color:var(--ink);font:700 1.7rem Caveat,cursive;margin-bottom:4px}
 .theme{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font-size:1.15rem;cursor:pointer;box-shadow:0 4px 12px var(--shadow)}
@@ -206,6 +207,9 @@ function render(){
     const h = document.createElement("h2"); h.textContent = f.title;
     const p = document.createElement("p"); p.textContent = f.desc;
     body.append(top, h, p);
+    let qr = null;
+    try { qr = JSON.parse(localStorage.getItem("quiz:" + f.url.split("/").pop()) || "null"); } catch(e){}
+    if (qr) { const qb = document.createElement("div"); qb.className = "qbadge" + (qr.best < 70 ? " low" : ""); qb.textContent = "Quiz : meilleur score " + qr.best + " %"; body.appendChild(qb); }
     const foot = document.createElement("div"); foot.className = "foot";
     const a = document.createElement("a"); a.className = "open"; a.href = f.url; a.textContent = "Ouvrir la fiche";
     const lab = document.createElement("label"); lab.className = "check";

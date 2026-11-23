@@ -59,86 +59,99 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Maths : algorithmique et tableur</h1>
-<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 10 questions</p>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 21 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="briques" class="on">Les briques</button><button data-t="lire">Lire un script</button><button data-t="dessin">Dessiner</button><button data-t="tableur">Tableur</button><button data-t="quiz">Quiz</button>
+<button data-t="bases" class="on">Briques d’un programme</button><button data-t="controle">Conditions et boucles</button><button data-t="dessin">Dessiner et se repérer</button><button data-t="trace">Exécuter un script</button><button data-t="tableur">Le tableur</button><button data-t="quiz">Quiz</button>
 </nav>
 
-<section id="briques">
-<h2>1. Les briques de Scratch</h2>
+<section id="bases">
+<h2>1. Les briques d’un programme</h2>
+<p>Un <b>algorithme</b> est une suite d’instructions qui résout un problème. Un <b>programme</b> (par exemple en Scratch) traduit cet algorithme dans un langage.</p>
 <div class="tw"><table>
 <tr><th>Brique</th><th>Rôle</th><th>Exemple</th></tr>
-<tr><td>Séquence</td><td>Les instructions s’exécutent l’une après l’autre, de haut en bas</td><td>avancer, puis tourner</td></tr>
+<tr><td>Événement</td><td>Déclenche le script</td><td>quand le drapeau vert est cliqué ; quand la touche espace est pressée</td></tr>
+<tr><td>Séquence</td><td>Instructions exécutées l’une après l’autre, de haut en bas</td><td>avancer de 10, puis tourner de 90°</td></tr>
 <tr><td>Variable</td><td>Mémorise une valeur qui peut changer</td><td>mettre <i>score</i> à 0 ; ajouter 1 à <i>score</i></td></tr>
-<tr><td>Condition</td><td>Choisit entre deux chemins</td><td>si <i>x</i> &gt; 10 alors … sinon …</td></tr>
-<tr><td>Boucle « répéter n fois »</td><td>Répète un nombre de fois connu</td><td>répéter 4 fois</td></tr>
-<tr><td>Boucle « répéter jusqu’à »</td><td>Répète tant que la condition n’est pas vraie</td><td>répéter jusqu’à <i>x</i> = 10</td></tr>
-<tr><td>Événement</td><td>Déclenche le script</td><td>quand le drapeau vert est cliqué</td></tr>
-<tr><td>Bloc personnalisé</td><td>Regroupe des instructions réutilisables (une fonction)</td><td>carré(côté)</td></tr>
+<tr><td>Bloc personnalisé</td><td>Regroupe des instructions réutilisables, éventuellement avec un <b>paramètre</b></td><td>carré(côté)</td></tr>
+<tr><td>Hasard</td><td>Produit une valeur imprévisible</td><td>nombre aléatoire entre 1 et 6</td></tr>
 </table></div>
-<h3>Le repère et les directions</h3>
-<p>Le centre de la scène est le point (0 ; 0) : <b>x</b> croît vers la droite, <b>y</b> croît vers le haut. L’orientation d’un lutin est mesurée en degrés : <b>90 = droite, 0 = haut, 180 = bas, −90 = gauche</b>.</p>
-<div class="keep"><b>À retenir : </b>on distingue <b>« mettre x à 3 »</b> (affecter une valeur) et <b>« ajouter 2 à x »</b> (augmenter la valeur actuelle).</div>
+<div class="keep"><b>À retenir : </b>« mettre x à 3 » <b>affecte</b> une valeur ; « ajouter 2 à x » <b>augmente</b> la valeur actuelle de x. Ce ne sont pas les mêmes instructions.</div>
 </section>
 
-<section id="lire">
-<h2>2. Lire et exécuter un script</h2>
-<p>Pour prévoir ce que fait un script, on le « fait tourner à la main » avec un <b>tableau de suivi</b> des variables.</p>
-<pre class="code">quand le drapeau vert est cliqué
-mettre [x] à [3]
-répéter [4] fois
-    ajouter [2] à [x]
-fin
-si &lt;(x) &gt; [10]&gt; alors
+<section id="controle">
+<h2>2. Conditions et boucles</h2>
+<div class="tw"><table>
+<tr><th>Structure</th><th>Description</th></tr>
+<tr><td>Condition</td><td><b>si</b> la condition est vraie <b>alors</b> … <b>sinon</b> … (comparaisons &lt;, &gt;, =, et opérateurs <i>et</i>, <i>ou</i>, <i>non</i>)</td></tr>
+<tr><td>Boucle avec compteur</td><td><b>répéter n fois</b> : nombre de répétitions connu</td></tr>
+<tr><td>Boucle avec condition d’arrêt</td><td><b>répéter jusqu’à</b> ce que la condition soit vraie : nombre de répétitions inconnu</td></tr>
+<tr><td>Boucle infinie</td><td><b>répéter indéfiniment</b> : ne s’arrête jamais, sauf si on arrête le programme</td></tr>
+</table></div>
+<pre class="code">si &lt;(x) &gt; [10]&gt; alors
     dire [grand]
 sinon
     dire [petit]
+fin</pre>
+<div class="keep"><b>À retenir : </b>attention aux conditions limites : si x vaut exactement 10, « x &gt; 10 » est fausse et le lutin dit « petit ».</div>
+</section>
+
+<section id="dessin">
+<h2>3. Dessiner et se repérer dans Scratch</h2>
+<p>Le centre de la scène est le point (0 ; 0) : <b>x</b> augmente vers la droite, <b>y</b> vers le haut. L’orientation d’un lutin se mesure en degrés : <b>90 = droite, 0 = haut, 180 = bas, −90 = gauche</b>. « aller à x : 100 y : 50 » envoie le lutin à droite et en haut du centre.</p>
+<div class="tw"><table>
+<tr><th>Figure</th><th>Script</th></tr>
+<tr><td>Carré de côté 50</td><td>répéter 4 fois : avancer de 50, tourner de <mark>90°</mark></td></tr>
+<tr><td>Triangle équilatéral</td><td>répéter 3 fois : avancer de 50, tourner de <mark>120°</mark></td></tr>
+<tr><td>Hexagone régulier</td><td>répéter 6 fois : avancer de 50, tourner de <mark>60°</mark></td></tr>
+<tr><td>Polygone régulier à n côtés</td><td>répéter n fois : avancer, tourner de <mark>360 ÷ n</mark> degrés (octogone : 45°)</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>l’angle dont on tourne n’est pas l’angle intérieur de la figure. Dans un triangle équilatéral, les angles intérieurs valent 60°, mais le lutin tourne de 120°.</div>
+</section>
+
+<section id="trace">
+<h2>4. Exécuter un script « à la main »</h2>
+<p>Pour prévoir le résultat d’un programme ou le corriger, on remplit un <b>tableau de suivi</b> des variables à chaque tour de boucle.</p>
+<pre class="code">mettre [x] à [3]
+répéter [4] fois
+    ajouter [2] à [x]
 fin</pre>
 <div class="tw"><table>
 <tr><th>Étape</th><th>Départ</th><th>Tour 1</th><th>Tour 2</th><th>Tour 3</th><th>Tour 4</th></tr>
 <tr><th>x</th><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td></tr>
 </table></div>
-<p>À la fin, x = <mark>11</mark> et, comme 11 &gt; 10, le lutin dit <mark>« grand »</mark>.</p>
-<div class="keep"><b>À retenir : </b>attention aux conditions limites. Si x valait exactement 10, la condition « x &gt; 10 » serait fausse et le lutin dirait « petit ».</div>
-</section>
-
-<section id="dessin">
-<h2>3. Dessiner avec Scratch</h2>
-<p>Avec le stylo, on trace des polygones en répétant « avancer » puis « tourner ». Pour un polygone régulier à <b>n côtés</b>, on tourne de <b>360 ÷ n</b> degrés.</p>
-<div class="tw"><table>
-<tr><th>Figure</th><th>Script</th></tr>
-<tr><td>Carré de côté 50</td><td>répéter 4 fois : avancer de 50, tourner de <mark>90</mark></td></tr>
-<tr><td>Triangle équilatéral</td><td>répéter 3 fois : avancer de 50, tourner de <mark>120</mark></td></tr>
-<tr><td>Hexagone régulier</td><td>répéter 6 fois : avancer de 50, tourner de <mark>60</mark></td></tr>
-</table></div>
-<div class="keep"><b>À retenir : </b>l’angle dont on tourne n’est pas l’angle intérieur de la figure. Pour un triangle équilatéral, les angles intérieurs valent 60°, mais le lutin tourne de 120°.</div>
+<div class="ex"><b>Boucle avec condition d’arrêt.</b> x = 3 au départ ; répéter jusqu’à (x &gt; 20) : ajouter 5 à x. Valeurs de x : 3, 8, 13, 18, 23. À 23, la condition est vraie : <mark>x = 23</mark>.</div>
+<div class="ex"><b>Somme.</b> s = 0 et i = 1 ; répéter 5 fois : ajouter i à s, puis ajouter 1 à i. On obtient s = 1 + 2 + 3 + 4 + 5 = <mark>15</mark>.</div>
+<p><b>Déboguer :</b> si le script ne fait pas ce qu’on attend, on le teste pas à pas, on affiche la valeur des variables, on vérifie les valeurs de départ, l’ordre des instructions et les conditions.</p>
 </section>
 
 <section id="tableur">
-<h2>4. Le tableur</h2>
+<h2>5. Le tableur</h2>
 <p>Une cellule est repérée par sa colonne et sa ligne (B2). Une formule commence toujours par <b>=</b>.</p>
 <div class="tw"><table>
 <tr><th>Formule</th><th>Effet</th></tr>
 <tr><td>=B2+C2</td><td>Additionne deux cellules</td></tr>
 <tr><td>=SOMME(B2:B10)</td><td>Additionne toutes les cellules de B2 à B10</td></tr>
 <tr><td>=MOYENNE(B2:B10)</td><td>Calcule la moyenne</td></tr>
-<tr><td>=MIN(B2:B10) et =MAX(B2:B10)</td><td>Plus petite et plus grande valeurs (étendue = MAX − MIN)</td></tr>
+<tr><td>=MIN(B2:B10) et =MAX(B2:B10)</td><td>Plus petite et plus grande valeur (étendue = MAX − MIN)</td></tr>
 </table></div>
 <h3>Recopier une formule</h3>
-<p>Quand on recopie une formule vers le bas, les références <b>relatives</b> se décalent : =B2*1,2 devient =B3*1,2 sur la ligne suivante. Pour <b>figer</b> une cellule, on écrit des <b>$</b> : =B2*<mark>$E$1</mark> garde toujours E1.</p>
-<div class="keep"><b>À retenir : </b>pour un prix TTC avec un taux en E1, écrivez =B2*(1+$E$1) puis recopiez vers le bas.</div>
+<p>Quand on recopie une formule vers le bas, les références <b>relatives</b> se décalent : =B2*1,2 devient =B3*1,2 sur la ligne suivante. Pour <b>figer</b> une cellule, on écrit des <b>$</b> : =B2*(1+<mark>$E$1</mark>) garde toujours E1, par exemple un taux de TVA.</p>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -146,70 +159,29 @@ fin</pre>
 
 <script>
 const QS = [
-{q:"Quelle est la valeur de x à la fin ? « mettre x à 3, puis répéter 4 fois : ajouter 2 à x »",o:["8","11","14"],a:1,w:"x passe de 3 à 5, 7, 9, puis 11."},
-{q:"Pour tracer un carré, de combien de degrés tourne-t-on à chaque tour de boucle ?",o:["45","90","360"],a:1,w:"360 ÷ 4 = 90 degrés."},
-{q:"Pour tracer un triangle équilatéral, de combien de degrés tourne-t-on à chaque tour ?",o:["60","90","120"],a:2,w:"360 ÷ 3 = 120 degrés. Les 60° sont l’angle intérieur, pas l’angle de rotation."},
-{q:"Dans Scratch, quelle direction correspond à l’orientation 90 ?",o:["Vers le haut","Vers la droite","Vers le bas"],a:1,w:"90 correspond à la droite, 0 au haut, 180 au bas et −90 à la gauche."},
-{q:"« si x > 10 alors dire grand, sinon dire petit ». Que dit le lutin quand x vaut 10 ?",o:["grand","petit","rien"],a:1,w:"10 n’est pas strictement supérieur à 10 : la condition est fausse, donc « petit »."},
-{q:"Quelle brique répète des instructions un nombre de fois connu à l’avance ?",o:["répéter 10 fois","répéter jusqu’à","quand le drapeau vert est cliqué"],a:0,w:"« Répéter n fois » correspond à un nombre de répétitions connu."},
-{q:"Quelle formule additionne les cellules de B2 à B10 ?",o:["=B2+B10","=SOMME(B2:B10)","SOMME(B2:B10)"],a:1,w:"Une formule commence par « = », et « B2:B10 » désigne toute la plage de cellules."},
-{q:"La cellule C2 contient =B2*1,2. On la recopie vers le bas en C3. Que contient C3 ?",o:["=B2*1,2","=B3*1,2","=C3*1,2"],a:1,w:"La référence relative se décale d’une ligne : B2 devient B3."},
-{q:"Quel symbole permet de figer une cellule lors de la recopie, comme dans $E$1 ?",o:["$","#","%"],a:0,w:"Le signe $ fige la colonne et la ligne de la référence."},
-{q:"À quoi sert une variable ?",o:["À dessiner une figure","À mémoriser une valeur qui peut changer","À répéter des instructions"],a:1,w:"Une variable garde en mémoire une valeur (un score, un compteur…) qu’on peut modifier."}
+{q:"x = 3, puis « répéter 4 fois : ajouter 2 à x ». Quelle est la valeur finale de x ?",num:11,w:"3, puis 5, 7, 9 et 11.",l:1,t:"Exécution"},
+{q:"x = 3, puis « répéter jusqu’à x > 20 : ajouter 5 à x ». Quelle est la valeur finale de x ?",num:23,w:"x prend les valeurs 3, 8, 13, 18, 23. La boucle s’arrête quand x dépasse 20.",l:2,t:"Exécution"},
+{q:"s = 0, i = 1. « Répéter 5 fois : ajouter i à s, puis ajouter 1 à i ». Quelle est la valeur finale de s ?",num:15,w:"s = 1 + 2 + 3 + 4 + 5 = 15.",l:2,t:"Exécution"},
+{q:"« Si x > 10 alors dire grand, sinon dire petit ». Que dit le lutin quand x vaut 10 ?",o:["petit", "grand", "rien", "grand puis petit"],a:0,w:"10 n’est pas strictement supérieur à 10 : la condition est fausse.",l:2,t:"Conditions"},
+{q:"Quelle brique répète des instructions un nombre de fois connu à l’avance ?",o:["répéter 10 fois", "répéter jusqu’à", "répéter indéfiniment", "si … alors"],a:0,w:"« Répéter n fois » correspond à un nombre de répétitions connu.",l:1,t:"Boucles"},
+{q:"Que fait un script « répéter indéfiniment » ?",o:["Il ne s’arrête jamais, sauf si on l’arrête", "Il s’arrête au bout d’un tour", "Il s’arrête quand la variable vaut 0", "Il ne démarre pas"],a:0,w:"Sans condition d’arrêt, la boucle tourne en permanence.",l:2,t:"Boucles"},
+{q:"Pour tracer un carré, de combien de degrés tourne-t-on à chaque tour de boucle ?",num:90,u:"°",w:"360 ÷ 4 = 90.",l:1,t:"Dessin"},
+{q:"Pour tracer un triangle équilatéral, de combien de degrés tourne-t-on à chaque tour ?",o:["120°", "60°", "90°", "30°"],a:0,w:"360 ÷ 3 = 120°. Les 60° sont l’angle intérieur.",l:2,t:"Dessin"},
+{q:"Pour tracer un octogone régulier, de combien de degrés tourne-t-on à chaque tour ?",num:45,u:"°",w:"360 ÷ 8 = 45.",l:2,t:"Dessin"},
+{q:"Quelle direction correspond à l’orientation 90 dans Scratch ?",o:["Vers la droite", "Vers le haut", "Vers le bas", "Vers la gauche"],a:0,w:"90 = droite, 0 = haut, 180 = bas, −90 = gauche.",l:1,t:"Dessin"},
+{q:"« Aller à x : 100 y : 50 » place le lutin…",o:["À droite et en haut du centre", "À gauche et en haut du centre", "À droite et en bas du centre", "Au centre"],a:0,w:"x positif : à droite ; y positif : en haut.",l:2,t:"Dessin"},
+{q:"Quelle instruction « mettre » ou « ajouter » augmente de 1 la valeur actuelle de score ?",o:["ajouter 1 à score", "mettre score à 1", "mettre score à 0", "dire score"],a:0,w:"« Mettre score à 1 » remplace la valeur, tandis que « ajouter 1 » l’augmente.",l:2,t:"Variables"},
+{q:"Quel bloc de départ lance un script lorsqu’on clique sur le drapeau vert ?",o:["Quand le drapeau vert est cliqué", "Répéter indéfiniment", "Attendre 1 seconde", "Aller à x : 0 y : 0"],a:0,w:"C’est un bloc de type « événement ».",l:1,t:"Briques"},
+{q:"À quoi sert un bloc personnalisé avec un paramètre, comme carré(côté) ?",o:["À réutiliser un même ensemble d’instructions avec des valeurs différentes", "À répéter indéfiniment", "À effacer les variables", "À changer la couleur du fond"],a:0,w:"On peut l’appeler avec carré(50), carré(100), etc.",l:2,t:"Briques"},
+{q:"Un script ne fait pas ce qu’on attend. Quelle démarche est la plus efficace ?",o:["Le tester pas à pas en surveillant les variables", "Le supprimer et recommencer", "Ajouter des boucles au hasard", "Changer l’ordinateur"],a:0,w:"Observer l’état des variables à chaque étape permet de repérer l’erreur.",l:2,t:"Exécution"},
+{q:"Pour simuler le lancer d’un dé à 6 faces, quelle instruction utilise-t-on ?",o:["nombre aléatoire entre 1 et 6", "répéter 6 fois", "avancer de 6", "attendre 6 secondes"],a:0,w:"Le bloc donne un entier au hasard entre 1 et 6.",l:1,t:"Briques"},
+{q:"Quelle formule additionne les cellules de B2 à B10 ?",o:["=SOMME(B2:B10)", "=B2+B10", "SOMME(B2:B10)", "=B2:B10"],a:0,w:"Une formule commence par « = », et B2:B10 désigne la plage de cellules.",l:1,t:"Tableur"},
+{q:"La cellule C2 contient =B2*1,2. On la recopie vers le bas en C3. Que contient C3 ?",o:["=B3*1,2", "=B2*1,2", "=C3*1,2", "=B3*2,1"],a:0,w:"La référence relative se décale d’une ligne : B2 devient B3.",l:2,t:"Tableur"},
+{q:"Quel symbole permet de figer une cellule lors de la recopie, comme dans $E$1 ?",o:["$", "#", "%", "&"],a:0,w:"Le signe $ fige la colonne et la ligne de la référence.",l:1,t:"Tableur"},
+{q:"La cellule C2 contient =B2*(1+$E$1). On la recopie en C3. Que contient C3 ?",o:["=B3*(1+$E$1)", "=B3*(1+$E$2)", "=B2*(1+$E$1)", "=B3*(1+E2)"],a:0,w:"B2 devient B3, mais $E$1 reste inchangé.",l:3,t:"Tableur"},
+{q:"Un tableur contient les notes 8, 12, 12, 15 en B2:B5. Quelle valeur renvoie =MOYENNE(B2:B5) ?",num:11.75,tol:0.001,w:"(8 + 12 + 12 + 15) ÷ 4 = 47 ÷ 4 = 11,75.",l:2,t:"Tableur"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-algo-best") || 0)); localStorage.setItem("maths-algo-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SVT : météo, climat et changement climatique</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#2b8a5e;--soft:#e5f5ec;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>SVT : météo, climat et changement climatique</h1>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 20 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="meteo" class="on">Météo et climat</button><button data-t="circulation">Circulation et zones climatiques</button><button data-t="serre">Effet de serre</button><button data-t="actuel">Changement climatique actuel</button><button data-t="passe">Climats passés</button><button data-t="agir">Atténuer et s’adapter</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="meteo">
+<h2>1. Météo et climat</h2>
+<div class="tw"><table>
+<tr><th></th><th>Météo</th><th>Climat</th></tr>
+<tr><td>Définition</td><td>État de l’atmosphère à un moment et en un lieu donnés</td><td>Moyenne des conditions météorologiques sur une longue période, environ <b>30 ans</b></td></tr>
+<tr><td>Exemple</td><td>Il pleut aujourd’hui à Lille</td><td>Le climat de Lille est tempéré océanique</td></tr>
+</table></div>
+<p>Les facteurs qui déterminent le climat d’un lieu sont la <b>latitude</b>, l’<b>altitude</b> et la <b>proximité de l’océan</b>.</p>
+</section>
+
+<section id="circulation">
+<h2>2. Circulation atmosphérique et océanique</h2>
+<p>Le Soleil chauffe la Terre de façon <b>inégale</b> : à l’équateur, ses rayons arrivent presque perpendiculairement et chauffent une petite surface ; vers les pôles, ils arrivent en oblique et étalent la même énergie sur une grande surface.</p>
+<ul>
+<li>Ces écarts de température créent des différences de pression qui déplacent les <b>masses d’air</b> : ce sont les <b>vents</b>.</li>
+<li>Les <b>courants océaniques</b> transportent aussi la chaleur : le Gulf Stream tempère le climat de l’Europe de l’Ouest.</li>
+<li>Grandes <b>zones climatiques</b> : chaude (équatoriale, tropicale), tempérée, froide (polaire), à laquelle s’ajoutent les climats arides.</li>
+</ul>
+</section>
+
+<section id="serre">
+<h2>3. L’effet de serre naturel</h2>
+<p>Certains gaz de l’atmosphère (la <b>vapeur d’eau</b>, le <b>dioxyde de carbone</b>, le <b>méthane</b>) retiennent une partie de la chaleur émise par la Terre : c’est l’<b>effet de serre</b>. Sans lui, la température moyenne serait d’environ <b>−18 °C</b> ; avec lui, elle est d’environ <b>15 °C</b>. Il est indispensable à la vie.</p>
+</section>
+
+<section id="actuel">
+<h2>4. Le changement climatique actuel</h2>
+<ul>
+<li>Depuis l’ère industrielle, les activités humaines émettent beaucoup de <b>gaz à effet de serre</b> : combustion de charbon, de pétrole et de gaz (CO₂), déforestation, élevage et rizières (méthane).</li>
+<li>La teneur de l’atmosphère en CO₂ est passée d’environ <b>280 ppm</b> avant l’ère industrielle à plus de <b>420 ppm</b> aujourd’hui.</li>
+<li>La température moyenne a augmenté de plus de <b>1 °C</b>.</li>
+<li>Les <b>océans</b> et la végétation absorbent une partie du CO₂ (puits de carbone), mais l’absorption par les océans les rend plus acides.</li>
+</ul>
+<div class="tw"><table>
+<tr><th>Conséquences</th></tr>
+<tr><td>Fonte des glaciers et des calottes ; élévation du niveau de la mer (fonte et dilatation de l’eau) ; canicules, sécheresses et fortes pluies plus fréquentes ; recul de la biodiversité ; menace sur les littoraux et l’agriculture</td></tr>
+</table></div>
+</section>
+
+<section id="passe">
+<h2>5. Les climats du passé</h2>
+<p>Le climat a toujours varié : il y a eu des <b>périodes glaciaires</b> et des périodes plus chaudes (le dernier maximum glaciaire date d’environ 20 000 ans). On reconstitue ces climats grâce aux <b>carottes de glace</b> (bulles d’air qui contiennent d’anciens gaz), aux <b>sédiments</b>, aux <b>cernes des arbres</b> et aux <b>fossiles</b>.</p>
+<div class="keep"><b>À retenir : </b>les variations naturelles sont <b>lentes</b> (des milliers d’années). Le réchauffement actuel est beaucoup <b>plus rapide</b> et s’explique par les émissions humaines.</div>
+</section>
+
+<section id="agir">
+<h2>6. Atténuer et s’adapter</h2>
+<div class="tw"><table>
+<tr><th>Atténuer</th><th>S’adapter</th></tr>
+<tr><td>Réduire les émissions : énergies renouvelables, isolation des bâtiments, transports moins polluants, sobriété, reboisement</td><td>Protéger les littoraux, adapter l’agriculture, les villes et les habitudes aux canicules et aux sécheresses</td></tr>
+</table></div>
+<p>Le <b>GIEC</b> est un groupe d’experts qui évalue les connaissances scientifiques sur le climat. L’<b>accord de Paris</b> (2015) vise à limiter le réchauffement bien en dessous de 2 °C, en poursuivant l’objectif de 1,5 °C.</p>
+</section>
+
+<section id="quiz">
+<h2>7. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelle est la différence entre météo et climat ?",o:["Le climat est la moyenne des conditions météo sur une longue période", "La météo dure plus longtemps que le climat", "Il n’y en a aucune", "Le climat ne concerne que les pôles"],a:0,w:"La météo décrit un moment précis, le climat une moyenne sur environ 30 ans.",l:1,t:"Météo et climat"},
+{q:"Sur combien d’années calcule-t-on en général le climat d’un lieu ?",num:30,u:"ans",w:"Une période d’environ 30 ans.",l:1,t:"Météo et climat"},
+{q:"Quel facteur détermine le plus la température moyenne d’un lieu ?",o:["La latitude", "La couleur du sol", "Le nombre d’habitants", "La saison seulement"],a:0,w:"La latitude détermine l’énergie solaire reçue.",l:2,t:"Météo et climat"},
+{q:"Quels facteurs influencent le climat d’un lieu ?",o:["La latitude", "L’altitude", "La proximité de l’océan", "La taille de la ville"],a:[0, 1, 2],w:"Plus on monte en altitude, plus il fait froid ; l’océan adoucit les températures.",l:2,t:"Météo et climat"},
+{q:"Pourquoi fait-il plus chaud à l’équateur qu’aux pôles ?",o:["Les rayons du Soleil arrivent presque perpendiculairement, sur une petite surface", "La Terre est plus proche du Soleil à l’équateur", "Il n’y a pas d’atmosphère aux pôles", "Les océans sont plus chauds aux pôles"],a:0,w:"Au pôle, la même énergie est répartie sur une plus grande surface.",l:2,t:"Circulation"},
+{q:"Quelle est l’origine des vents ?",o:["Les différences de température et de pression entre régions", "La rotation de la Lune", "Les marées", "Les volcans"],a:0,w:"L’air se déplace des hautes vers les basses pressions.",l:2,t:"Circulation"},
+{q:"Quel est le rôle des courants océaniques ?",o:["Redistribuer la chaleur à la surface de la Terre", "Produire de la pluie", "Refroidir le noyau", "Créer les saisons"],a:0,w:"Le Gulf Stream tempère le climat de l’Europe de l’Ouest.",l:3,t:"Circulation"},
+{q:"Que fait l’effet de serre naturel ?",o:["Il retient une partie de la chaleur, ce qui rend la Terre habitable", "Il refroidit la Terre", "Il détruit la couche d’ozone", "Il n’existe pas sans activité humaine"],a:0,w:"Sans lui, la température moyenne serait d’environ −18 °C.",l:1,t:"Effet de serre"},
+{q:"Quelle est la température moyenne de la Terre avec l’effet de serre naturel, en °C ?",num:15,tol:1,u:"°C",w:"Environ 15 °C, contre −18 °C sans effet de serre.",l:1,t:"Effet de serre"},
+{q:"Lesquels sont des gaz à effet de serre ?",o:["Le dioxyde de carbone", "Le méthane", "La vapeur d’eau", "Le dioxygène"],a:[0, 1, 2],w:"Le dioxygène n’est pas un gaz à effet de serre.",l:2,t:"Effet de serre"},
+{q:"Quelle est la principale cause de l’augmentation récente du CO₂ dans l’atmosphère ?",o:["La combustion des énergies fossiles", "Les volcans", "Les marées", "La respiration des habitants uniquement"],a:0,w:"Charbon, pétrole et gaz libèrent du CO₂ stocké depuis des millions d’années.",l:2,t:"Changement actuel"},
+{q:"Quelle teneur en CO₂ atteint aujourd’hui l’atmosphère ?",o:["Plus de 420 ppm, contre environ 280 avant l’ère industrielle", "Environ 280 ppm", "Environ 100 ppm", "Environ 1 000 000 ppm"],a:0,w:"La teneur a fortement augmenté depuis l’ère industrielle.",l:3,t:"Changement actuel"},
+{q:"Quelle est une conséquence du réchauffement climatique ?",o:["L’élévation du niveau de la mer", "La diminution des canicules", "L’augmentation des glaciers", "La disparition des vents"],a:0,w:"Fonte des glaces et dilatation de l’eau font monter le niveau des mers.",l:2,t:"Changement actuel"},
+{q:"Pourquoi le réchauffement actuel est-il préoccupant par rapport aux variations passées ?",o:["Il est beaucoup plus rapide et dû aux activités humaines", "Il est plus lent", "Il a toujours eu lieu au même rythme", "Il touche uniquement les pôles"],a:0,w:"Les changements naturels du passé se déroulaient sur des milliers d’années.",l:3,t:"Climats passés"},
+{q:"Comment connaît-on la composition de l’atmosphère passée ?",o:["Grâce aux bulles d’air emprisonnées dans les carottes de glace", "Grâce aux sondages d’opinion", "Grâce aux photographies satellite du passé", "On ne peut pas la connaître"],a:0,w:"La glace piège de l’air ancien.",l:3,t:"Climats passés"},
+{q:"Que signifie « atténuer » le changement climatique ?",o:["Réduire les émissions de gaz à effet de serre", "Construire des digues", "Changer de métier", "Arrêter de mesurer la température"],a:0,w:"S’adapter, c’est se préparer aux conséquences ; atténuer, c’est limiter les causes.",l:2,t:"Atténuer et s’adapter"},
+{q:"Lequel est un exemple d’adaptation ?",o:["Protéger les littoraux contre la montée des eaux", "Développer l’énergie solaire", "Isoler les bâtiments", "Réduire la consommation de pétrole"],a:0,w:"S’adapter consiste à limiter les dégâts des changements déjà engagés.",l:2,t:"Atténuer et s’adapter"},
+{q:"Que fait le GIEC ?",o:["Il évalue l’état des connaissances scientifiques sur le climat", "Il impose des lois aux États", "Il mesure la météo quotidienne", "Il fabrique des panneaux solaires"],a:0,w:"C’est un groupe d’experts, pas un organisme qui fait les lois.",l:1,t:"Atténuer et s’adapter"},
+{q:"Que vise l’accord de Paris de 2015 ?",o:["Limiter le réchauffement bien en dessous de 2 °C, en visant 1,5 °C", "Supprimer tous les pétroliers", "Réchauffer la planète", "Fermer les frontières"],a:0,w:"C’est un accord international sur le climat.",l:3,t:"Atténuer et s’adapter"},
+{q:"Que se passe-t-il quand les océans absorbent du CO₂ ?",o:["Ils deviennent plus acides", "Ils se refroidissent", "Ils deviennent plus salés", "Rien"],a:0,w:"Cela menace les organismes à coquille ou à squelette calcaire.",l:3,t:"Changement actuel"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

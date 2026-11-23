@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SVT : classification, parenté et évolution</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#2b8a5e;--soft:#e5f5ec;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>SVT : classification, parenté et évolution</h1>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 22 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="classif" class="on">Classer les êtres vivants</button><button data-t="arbre">Arbres de parenté</button><button data-t="selection">Sélection naturelle</button><button data-t="extinction">Extinctions et apparition d’espèces</button><button data-t="humain">Lignée humaine</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="classif">
+<h2>1. Classer les êtres vivants</h2>
+<p>On regroupe les êtres vivants d’après les <b>caractères</b> qu’ils partagent. Les caractères partagés sont <b>hérités d’un ancêtre commun</b> : plus deux espèces en partagent, plus leur parenté est étroite. Les groupes sont <b>emboîtés</b> comme des poupées russes.</p>
+<div class="chain"><span>Vertébrés</span><i>⊃</i><span>Tétrapodes</span><i>⊃</i><span>Amniotes</span><i>⊃</i><span>Mammifères</span><i>⊃</i><span>Primates</span></div>
+<div class="tw"><table>
+<tr><th>Groupe</th><th>Caractère qui le définit</th></tr>
+<tr><td>Vertébrés</td><td>Squelette interne avec colonne vertébrale</td></tr>
+<tr><td>Tétrapodes</td><td>Quatre membres (même quand ils sont devenus des ailes ou des nageoires)</td></tr>
+<tr><td>Amniotes</td><td>Embryon protégé par une membrane (amnios)</td></tr>
+<tr><td>Mammifères</td><td>Poils et glandes mammaires (lait)</td></tr>
+<tr><td>Primates</td><td>Mains à pouce opposable, ongles</td></tr>
+</table></div>
+</section>
+
+<section id="arbre">
+<h2>2. Les arbres de parenté</h2>
+<p>Un <b>arbre de parenté</b> (arbre phylogénétique) représente la parenté entre espèces. Chaque nœud correspond à un <b>ancêtre commun</b> ; chaque groupe regroupe les espèces qui en descendent.</p>
+<div class="ex">Une grenouille, un lézard, une souris et un humain sont des tétrapodes. La souris et l’humain partagent en plus des poils et du lait : ils ont un <mark>ancêtre commun plus récent</mark> entre eux qu’avec le lézard, et sont donc plus apparentés.</div>
+<div class="keep"><b>À retenir : </b>le critère n’est pas l’apparence (une baleine ressemble à un poisson) mais les <b>caractères hérités</b> d’un ancêtre commun (la baleine est un mammifère : poils embryonnaires, lait, poumons).</div>
+</section>
+
+<section id="selection">
+<h2>3. L’évolution et la sélection naturelle</h2>
+<p>Les êtres vivants évoluent : les espèces se modifient au fil des générations. Le mécanisme proposé par <b>Darwin</b> (1859) repose sur trois éléments :</p>
+<ul>
+<li>les individus d’une population <b>varient</b> (mutations, brassage) ;</li>
+<li>certains caractères sont <b>héréditaires</b> ;</li>
+<li>les individus <b>les mieux adaptés</b> à leur milieu survivent mieux et ont <b>plus de descendants</b> : leurs allèles deviennent plus fréquents. C’est la <b>sélection naturelle</b>.</li>
+</ul>
+<div class="tw"><table>
+<tr><th>Exemple</th><th>Explication</th></tr>
+<tr><td>Phalène du bouleau</td><td>Au XIXe siècle, la pollution noircit les troncs. Les papillons sombres, mieux camouflés, sont moins mangés par les oiseaux et deviennent plus nombreux.</td></tr>
+<tr><td>Résistance aux antibiotiques</td><td>Parmi des bactéries, certaines résistent par mutation. L’antibiotique tue les autres : les résistantes se multiplient.</td></tr>
+</table></div>
+<p>Le <b>hasard</b> joue aussi un rôle : les mutations sont aléatoires, et des événements imprévisibles peuvent faire disparaître ou prospérer des individus.</p>
+</section>
+
+<section id="extinction">
+<h2>4. Extinctions et apparition d’espèces</h2>
+<ul>
+<li>Des espèces <b>apparaissent</b> et d’autres <b>disparaissent</b> au cours des temps géologiques. Si une population est isolée (par une montagne, un bras de mer), elle peut évoluer différemment et devenir une nouvelle espèce.</li>
+<li>La Terre a connu plusieurs <b>extinctions massives</b>. La dernière, il y a <b>66 millions d’années</b>, a fait disparaître les dinosaures non aviaires.</li>
+<li>Les <b>oiseaux</b> descendent de dinosaures : ils partagent avec eux de nombreux caractères hérités.</li>
+</ul>
+</section>
+
+<section id="humain">
+<h2>5. La lignée humaine</h2>
+<ul>
+<li>L’espèce humaine, <i>Homo sapiens</i>, appartient au groupe des <b>primates</b>, des <b>mammifères</b> et des <b>vertébrés</b>.</li>
+<li>Les chimpanzés sont nos plus proches parents actuels : leur ADN est très semblable au nôtre (plus de 98 %). Nous partageons avec eux un <b>ancêtre commun</b> qui a vécu il y a environ 7 millions d’années. L’humain ne descend pas du chimpanzé.</li>
+<li><i>Homo sapiens</i> est apparu en Afrique il y a environ <b>300 000 ans</b>. Plusieurs autres espèces humaines ont existé (comme Néandertal) ; elles ont disparu.</li>
+</ul>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Sur quels critères classe-t-on les êtres vivants ?",o:["Sur les caractères hérités d’un ancêtre commun", "Sur leur apparence générale uniquement", "Sur leur lieu de vie", "Sur leur taille"],a:0,w:"Les caractères partagés sont hérités d’un ancêtre commun.",l:1,t:"Classification"},
+{q:"Quel caractère définit les mammifères ?",o:["Des poils et des glandes mammaires", "Des plumes", "Des écailles", "Des branchies"],a:0,w:"Ils allaitent leurs petits.",l:1,t:"Classification"},
+{q:"Quel est le groupe le plus large ?",o:["Les vertébrés", "Les mammifères", "Les primates", "Les amniotes"],a:0,w:"Les groupes sont emboîtés : les vertébrés contiennent tous les autres.",l:2,t:"Classification"},
+{q:"Une baleine est…",o:["Un mammifère", "Un poisson", "Un reptile", "Un oiseau"],a:0,w:"Elle a des poils embryonnaires, allaite ses petits et respire par des poumons.",l:2,t:"Classification"},
+{q:"Lesquels sont des tétrapodes ?",o:["Une grenouille", "Un lézard", "Un humain", "Un poisson-clown"],a:[0, 1, 2],w:"Les tétrapodes ont quatre membres (même modifiés).",l:2,t:"Classification"},
+{q:"Que représente un nœud dans un arbre de parenté ?",o:["Un ancêtre commun", "Une espèce actuelle", "Un fossile", "Un milieu de vie"],a:0,w:"Les espèces qui en descendent forment un groupe.",l:2,t:"Arbre"},
+{q:"La souris et l’humain partagent des poils et du lait. Que peut-on en conclure ?",o:["Ils ont un ancêtre commun plus récent que celui qu’ils partagent avec le lézard", "Ils descendent l’un de l’autre", "Ils ont exactement les mêmes gènes", "Ils sont de la même espèce"],a:0,w:"Partager plus de caractères signifie une parenté plus étroite.",l:3,t:"Arbre"},
+{q:"Une ressemblance d’apparence suffit-elle à prouver une parenté étroite ?",o:["Non, ce sont les caractères hérités qui comptent", "Oui", "Oui, si les animaux vivent au même endroit", "Oui, s’ils ont la même taille"],a:0,w:"Une baleine ressemble à un poisson mais est un mammifère.",l:3,t:"Arbre"},
+{q:"Quels éléments sont nécessaires à la sélection naturelle ?",o:["Variation entre individus", "Caractères héréditaires", "Individus mieux adaptés ayant plus de descendants", "Une décision volontaire des individus"],a:[0, 1, 2],w:"Le milieu ne « demande » rien aux individus : il sélectionne.",l:2,t:"Sélection"},
+{q:"Qui a proposé le mécanisme de la sélection naturelle en 1859 ?",o:["Darwin", "Mendel", "Pasteur", "Lavoisier"],a:0,w:"Charles Darwin a publié « L’origine des espèces » en 1859.",l:1,t:"Sélection"},
+{q:"Pourquoi les phalènes sombres sont-elles devenues majoritaires au XIXe siècle en Angleterre industrielle ?",o:["Elles étaient mieux camouflées sur les troncs noircis et moins mangées par les oiseaux", "Elles ont changé de couleur volontairement", "Elles étaient plus rapides", "Les oiseaux ont disparu"],a:0,w:"Le milieu a changé : le caractère « sombre » est devenu un avantage.",l:2,t:"Sélection"},
+{q:"Comment les bactéries deviennent-elles résistantes aux antibiotiques ?",o:["Certaines résistent par mutation et se multiplient quand les autres sont tuées", "Les antibiotiques les rendent résistantes volontairement", "Elles apprennent à résister", "Elles ne deviennent jamais résistantes"],a:0,w:"C’est un exemple de sélection naturelle.",l:3,t:"Sélection"},
+{q:"Une mutation est-elle voulue par l’être vivant pour s’adapter ?",o:["Non, elle est aléatoire", "Oui, toujours", "Oui, chez les bactéries", "Oui, chez les animaux"],a:0,w:"C’est le milieu qui sélectionne ensuite les variants qui survivent le mieux.",l:3,t:"Sélection"},
+{q:"Qu’est-ce qui peut conduire une population isolée à devenir une nouvelle espèce ?",o:["Une évolution différente dans un milieu isolé", "Un changement de nom", "Un voyage", "Une greffe"],a:0,w:"L’isolement empêche les croisements avec le reste de l’espèce.",l:3,t:"Extinctions"},
+{q:"Il y a combien de millions d’années les dinosaures non aviaires ont-ils disparu ?",num:66,u:"millions d’années",w:"Une extinction massive a eu lieu il y a 66 millions d’années.",l:2,t:"Extinctions"},
+{q:"Quel animal actuel descend des dinosaures ?",o:["Les oiseaux", "Les lézards", "Les mammifères", "Les serpents"],a:0,w:"Les oiseaux sont les descendants de dinosaures à plumes.",l:2,t:"Extinctions"},
+{q:"Qui sont les plus proches parents actuels de l’humain ?",o:["Les chimpanzés", "Les gorilles uniquement", "Les lémuriens", "Les dauphins"],a:0,w:"Notre ancêtre commun avec les chimpanzés vivait il y a environ 7 millions d’années.",l:2,t:"Lignée humaine"},
+{q:"L’humain descend-il du chimpanzé ?",o:["Non : ils partagent un ancêtre commun", "Oui", "Oui, directement", "Oui, mais pas le chimpanzé actuel"],a:0,w:"Les deux lignées se sont séparées il y a environ 7 millions d’années.",l:3,t:"Lignée humaine"},
+{q:"Il y a combien de temps Homo sapiens est-il apparu ?",o:["Environ 300 000 ans", "Environ 3 000 ans", "Environ 3 millions d’années", "Environ 30 millions d’années"],a:0,w:"Il est apparu en Afrique.",l:2,t:"Lignée humaine"},
+{q:"Néandertal était…",o:["Une autre espèce humaine, aujourd’hui disparue", "Un ancêtre direct du chimpanzé", "Un singe", "Un mammifère marin"],a:0,w:"Plusieurs espèces humaines ont coexisté, puis ont disparu.",l:3,t:"Lignée humaine"},
+{q:"L’évolution des espèces est-elle un mécanisme volontaire ?",o:["Non : variation aléatoire et sélection par le milieu", "Oui, les êtres vivants choisissent leurs caractères", "Oui, au sein d’une même génération", "Oui, mais seulement chez les animaux"],a:0,w:"Il n’y a pas d’intention : c’est le résultat de variations et de sélection.",l:3,t:"Sélection"},
+{q:"Qu’est-ce qu’un caractère dérivé partagé ?",o:["Un caractère hérité d’un ancêtre commun et partagé par un groupe", "Un caractère acquis pendant la vie", "Un caractère que tous les êtres vivants possèdent", "Un caractère inutile"],a:0,w:"Il sert à construire les groupes emboîtés.",l:3,t:"Classification"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technologie : matériaux, fabrication, modélisation et simulation</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#5f3dc4;--soft:#f3f0ff;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Technologie : matériaux, fabrication, modélisation et simulation</h1>
+<p class="meta">Brevet · programme de technologie du cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 19 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="materiaux" class="on">Matériaux</button><button data-t="choix">Choisir un matériau</button><button data-t="procedes">Procédés de fabrication</button><button data-t="modelisation">Modélisation et simulation</button><button data-t="realisation">Réaliser un objet</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="materiaux">
+<h2>1. Les familles de matériaux</h2>
+<div class="tw"><table>
+<tr><th>Famille</th><th>Exemples et propriétés</th></tr>
+<tr><td>Métaux</td><td>Acier, aluminium, cuivre : résistants, bons conducteurs de chaleur et d’électricité, recyclables</td></tr>
+<tr><td>Plastiques</td><td><b>Thermoplastiques</b> (PET, PVC, polyéthylène) : ramollis par la chaleur, donc recyclables ; <b>thermodurcissables</b> : ne se refondent pas</td></tr>
+<tr><td>Bois</td><td>Matériau d’origine naturelle, renouvelable, facile à usiner</td></tr>
+<tr><td>Céramiques et verres</td><td>Durs, résistants à la chaleur, fragiles</td></tr>
+<tr><td>Composites</td><td>Association de plusieurs matériaux (fibre de carbone et résine) : légers et très résistants</td></tr>
+</table></div>
+</section>
+
+<section id="choix">
+<h2>2. Choisir un matériau</h2>
+<p>On choisit un matériau en fonction du <b>cahier des charges</b> et de ses <b>propriétés</b> :</p>
+<ul>
+<li><b>Mécaniques</b> : résistance, dureté, élasticité ;</li>
+<li><b>Physiques</b> : masse volumique, conductivité thermique ou électrique ;</li>
+<li><b>Chimiques</b> : résistance à la corrosion ;</li>
+<li><b>Économiques et écologiques</b> : coût, disponibilité, recyclabilité, énergie nécessaire à la fabrication.</li>
+</ul>
+<div class="ex">Un cadre de vélo doit être <b>résistant</b> et <b>léger</b> : on choisit l’aluminium (masse volumique de 2,7 g/cm³ contre 7,9 g/cm³ pour l’acier) ou des composites.</div>
+</section>
+
+<section id="procedes">
+<h2>3. Les procédés de fabrication</h2>
+<div class="tw"><table>
+<tr><th>Procédé</th><th>Principe</th></tr>
+<tr><td>Usinage (fraisage, tournage, perçage)</td><td>On <b>enlève</b> de la matière, souvent avec une machine à commande numérique</td></tr>
+<tr><td>Découpe (laser, jet d’eau)</td><td>On découpe une plaque selon un tracé numérique</td></tr>
+<tr><td>Pliage, formage</td><td>On déforme la matière sans en enlever</td></tr>
+<tr><td>Moulage</td><td>On coule ou injecte une matière liquide dans un moule</td></tr>
+<tr><td>Impression 3D</td><td>Fabrication <b>additive</b> : on <b>ajoute</b> de la matière par couches successives</td></tr>
+</table></div>
+</section>
+
+<section id="modelisation">
+<h2>4. Modélisation et simulation</h2>
+<ul>
+<li>La <b>CAO</b> (conception assistée par ordinateur) permet de dessiner l’objet en 3D : c’est la <b>maquette numérique</b>.</li>
+<li>La <b>simulation</b> teste le comportement de l’objet (résistance, mouvement) avant de le fabriquer, ce qui réduit les coûts et les essais réels.</li>
+<li>Une <b>maquette</b> ou un <b>prototype</b> permet de réaliser des <b>essais</b> et de comparer les résultats avec ceux de la simulation.</li>
+<li>Les modèles ont des <b>limites</b> : un modèle simplifie la réalité.</li>
+</ul>
+</section>
+
+<section id="realisation">
+<h2>5. Réaliser un objet</h2>
+<ul>
+<li>On suit une <b>gamme de fabrication</b> : liste ordonnée des opérations, avec les matériaux, outils et machines nécessaires.</li>
+<li>Respecter les consignes de <b>sécurité</b> à l’atelier : lunettes, protection des mains, machines utilisées avec précaution.</li>
+<li>On <b>contrôle</b> l’objet par rapport au cahier des charges : dimensions, fonctionnement, qualité.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>l’impression 3D ajoute de la matière couche par couche, alors que l’usinage en enlève. On parle de fabrication additive pour l’impression 3D.</div>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelle est la particularité d’un plastique thermoplastique ?",o:["Il se ramollit sous l’effet de la chaleur et peut être recyclé", "Il ne change jamais de forme", "Il conduit l’électricité", "Il est toujours transparent"],a:0,w:"Les thermoplastiques peuvent être refondus.",l:2,t:"Matériaux"},
+{q:"Qu’est-ce qu’un matériau composite ?",o:["Un matériau associant plusieurs matériaux", "Un métal pur", "Un plastique recyclé", "Un matériau naturel uniquement"],a:0,w:"Par exemple fibre de carbone et résine : léger et résistant.",l:2,t:"Matériaux"},
+{q:"Quelle est une propriété des métaux ?",o:["Bons conducteurs de chaleur et d’électricité", "Mauvais conducteurs de chaleur", "Toujours très légers", "Jamais recyclables"],a:0,w:"Cuivre et aluminium sont de bons conducteurs.",l:1,t:"Matériaux"},
+{q:"Quel matériau est dur, résistant à la chaleur mais fragile ?",o:["La céramique", "Le bois", "Le plastique souple", "Le caoutchouc"],a:0,w:"Les céramiques supportent bien la chaleur mais cassent sous un choc.",l:2,t:"Matériaux"},
+{q:"Que doit-on regarder en premier pour choisir un matériau ?",o:["Le cahier des charges", "La couleur", "Le nom du fournisseur", "La mode"],a:0,w:"Les propriétés doivent répondre aux fonctions et aux contraintes.",l:1,t:"Choix"},
+{q:"Pourquoi choisit-on l’aluminium pour un cadre de vélo ?",o:["Il est léger et résistant", "Il est plus lourd que l’acier", "Il est isolant électrique", "Il est mou"],a:0,w:"Sa masse volumique est plus faible que celle de l’acier.",l:2,t:"Choix"},
+{q:"Lesquelles de ces propriétés sont mécaniques ?",o:["La résistance", "La dureté", "L’élasticité", "La couleur"],a:[0, 1, 2],w:"La couleur est une propriété d’aspect.",l:2,t:"Choix"},
+{q:"Quel critère écologique doit-on regarder pour choisir un matériau ?",o:["Sa recyclabilité", "Son nom commercial", "Sa mode", "Sa couleur"],a:0,w:"Un matériau recyclable limite les déchets.",l:2,t:"Choix"},
+{q:"Comment appelle-t-on la fabrication par ajout de matière couche par couche ?",o:["Fabrication additive", "Usinage", "Moulage", "Pliage"],a:0,w:"L’impression 3D fonctionne ainsi.",l:1,t:"Procédés"},
+{q:"Quel procédé consiste à enlever de la matière ?",o:["L’usinage", "L’impression 3D", "Le moulage", "Le soudage"],a:0,w:"Le fraisage, le tournage et le perçage enlèvent de la matière.",l:2,t:"Procédés"},
+{q:"En quoi consiste le moulage ?",o:["Couler ou injecter une matière dans un moule", "Enlever de la matière avec un outil", "Plier une tôle", "Assembler avec des vis"],a:0,w:"On obtient une pièce à la forme du moule.",l:2,t:"Procédés"},
+{q:"À quoi sert une machine à commande numérique ?",o:["À réaliser une pièce à partir d’un fichier numérique", "À dessiner à la main", "À stocker l’énergie", "À mesurer la température"],a:0,w:"Elle suit un programme issu de la CAO.",l:2,t:"Procédés"},
+{q:"Que signifie CAO ?",o:["Conception assistée par ordinateur", "Contrôle automatique des objets", "Construction à air ouvert", "Commande à orientation"],a:0,w:"La CAO permet de dessiner un objet en 3D et de le simuler.",l:1,t:"Modélisation"},
+{q:"Quel est l’intérêt d’une simulation ?",o:["Tester le comportement de l’objet avant de le fabriquer", "Remplacer toutes les mesures", "Augmenter le prix", "Supprimer le cahier des charges"],a:0,w:"Elle réduit les essais réels et les coûts.",l:2,t:"Modélisation"},
+{q:"Quelle est une limite d’un modèle numérique ?",o:["Il simplifie la réalité", "Il est toujours exact", "Il remplace les essais réels dans tous les cas", "Il n’a pas de limite"],a:0,w:"Il faut comparer les résultats avec des essais réels.",l:3,t:"Modélisation"},
+{q:"Que fait-on avec un prototype ?",o:["Des essais pour valider la solution", "Des économies de matière", "Un emballage", "Une publicité"],a:0,w:"On compare les résultats avec le cahier des charges.",l:2,t:"Modélisation"},
+{q:"Qu’est-ce qu’une gamme de fabrication ?",o:["La liste ordonnée des opérations à réaliser", "Le prix de la pièce", "Un type de matériau", "Le plan de l’atelier"],a:0,w:"Elle précise les opérations, les outils et les machines.",l:2,t:"Réalisation"},
+{q:"Quelle précaution prend-on à l’atelier ?",o:["Porter des lunettes de protection", "Courir entre les machines", "Utiliser les machines sans consigne", "Retirer les protections"],a:0,w:"La sécurité est une priorité.",l:1,t:"Réalisation"},
+{q:"Que contrôle-t-on à la fin de la réalisation ?",o:["La conformité au cahier des charges", "La couleur du fond", "Le prix du transport", "La longueur du câble"],a:0,w:"On vérifie dimensions et fonctionnement.",l:2,t:"Réalisation"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

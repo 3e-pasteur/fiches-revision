@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SVT : micro-organismes, immunité et vaccination</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#2b8a5e;--soft:#e5f5ec;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#51cf8e;--soft:#1b3a2e;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>SVT : micro-organismes, immunité et vaccination</h1>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 23 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="microbes" class="on">Le monde microbien</button><button data-t="contamination">Contamination</button><button data-t="defenses">Défenses de l’organisme</button><button data-t="vaccin">Vaccination</button><button data-t="prevention">Hygiène et traitements</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="microbes">
+<h2>1. Le monde microbien</h2>
+<p>Les <b>micro-organismes</b> sont des êtres vivants (ou assimilés) invisibles à l’œil nu, présents <b>partout</b> : air, eau, sol, peau, intestin.</p>
+<div class="tw"><table>
+<tr><th>Type</th><th>Caractéristiques</th><th>Exemples</th></tr>
+<tr><td>Bactéries</td><td>Cellules très petites, sans noyau, qui se multiplient par division</td><td>Bactéries lactiques (yaourt) ; bactéries du tétanos ; streptocoque (angine)</td></tr>
+<tr><td>Virus</td><td>Beaucoup plus petits que des bactéries ; ne sont pas des cellules ; ne se multiplient qu’à l’intérieur d’une cellule hôte</td><td>Grippe, rougeole, COVID-19, VIH</td></tr>
+<tr><td>Champignons microscopiques</td><td>Levures, moisissures</td><td>Levure de boulanger ; mycoses</td></tr>
+<tr><td>Parasites</td><td>Vivent aux dépens d’un hôte</td><td>Le parasite du paludisme (transmis par un moustique)</td></tr>
+</table></div>
+<p>La plupart des micro-organismes sont <b>utiles</b> ou <b>inoffensifs</b> : fabrication du pain, du yaourt, du fromage, <b>décomposeurs</b>, <b>microbiote</b> de l’intestin et de la peau. Seule une minorité est <b>pathogène</b> (responsable de maladies).</p>
+</section>
+
+<section id="contamination">
+<h2>2. Comment se transmettent les infections ?</h2>
+<ul>
+<li>Par <b>contact</b> direct ou avec des objets contaminés (mains, poignées).</li>
+<li>Par l’<b>air</b> : gouttelettes émises en toussant ou en éternuant.</li>
+<li>Par les <b>aliments</b> et l’<b>eau</b> contaminés.</li>
+<li>Par le <b>sang</b>, ou par des relations sexuelles non protégées (IST).</li>
+<li>Par un <b>vecteur</b> (moustique, tique).</li>
+</ul>
+<p>Une <b>épidémie</b> est une propagation rapide d’une maladie dans une région ; une <b>pandémie</b> touche plusieurs continents.</p>
+</section>
+
+<section id="defenses">
+<h2>3. Les défenses de l’organisme</h2>
+<div class="tw"><table>
+<tr><th>Niveau</th><th>Description</th></tr>
+<tr><td>Barrières naturelles</td><td>Peau, muqueuses, mucus, larmes, acidité de l’estomac, microbiote</td></tr>
+<tr><td>Réaction rapide non spécifique</td><td>L’<b>inflammation</b> (rougeur, chaleur, gonflement, douleur) : des cellules, les <b>phagocytes</b>, détruisent les micro-organismes</td></tr>
+<tr><td>Réponse spécifique</td><td>Les <b>lymphocytes B</b> fabriquent des <b>anticorps</b> adaptés à l’<b>antigène</b> ; les <b>lymphocytes T</b> détruisent les cellules infectées</td></tr>
+<tr><td>Mémoire immunitaire</td><td>Après une infection, des cellules gardent le souvenir de l’antigène : une seconde infection est combattue plus vite et plus fort</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>la réponse spécifique met quelques jours à se mettre en place lors d’un premier contact avec un micro-organisme : pendant ce temps, on peut être malade. Au second contact, elle est beaucoup plus rapide.</div>
+</section>
+
+<section id="vaccin">
+<h2>4. La vaccination</h2>
+<p>Un <b>vaccin</b> contient des antigènes (micro-organisme inactivé ou affaibli, ou fragments) : il provoque une <b>réponse immunitaire sans provoquer la maladie</b> et crée la <b>mémoire immunitaire</b>. Des <b>rappels</b> peuvent être nécessaires.</p>
+<ul>
+<li>Lorsqu’une grande partie de la population est vaccinée, la circulation du micro-organisme diminue : c’est l’<b>immunité collective</b>, qui protège aussi les personnes qui ne peuvent pas être vaccinées.</li>
+<li>La vaccination a permis de faire disparaître la variole et de réduire fortement la poliomyélite et la rougeole. <b>Pasteur</b> a mis au point le vaccin contre la rage en 1885.</li>
+<li>En France, onze vaccins sont obligatoires pour les enfants nés depuis 2018.</li>
+</ul>
+</section>
+
+<section id="prevention">
+<h2>5. Hygiène, antiseptiques et traitements</h2>
+<div class="tw"><table>
+<tr><th>Moyen</th><th>Rôle</th></tr>
+<tr><td>Hygiène</td><td>Lavage des mains, hygiène alimentaire, aération : limitent la transmission</td></tr>
+<tr><td>Antiseptiques</td><td>Détruisent les micro-organismes sur la peau ou une plaie (alcool, chlorhexidine)</td></tr>
+<tr><td>Antibiotiques</td><td>Détruisent ou bloquent les <b>bactéries</b> ; <b>inefficaces sur les virus</b> (découverte de la pénicilline par Fleming, 1928)</td></tr>
+<tr><td>Antiviraux</td><td>Freinent la multiplication de certains virus</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>un usage inutile ou mal conduit des antibiotiques favorise les <b>bactéries résistantes</b>, ce qui rend certaines infections difficiles à soigner. On les prend seulement sur ordonnance, et jusqu’au bout du traitement.</div>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelle est la caractéristique commune des micro-organismes ?",o:["Ils sont invisibles à l’œil nu", "Ils sont tous dangereux", "Ils vivent seulement dans l’eau", "Ils sont tous des virus"],a:0,w:"Ils sont présents partout, et la plupart sont inoffensifs ou utiles.",l:1,t:"Microbes"},
+{q:"Quelle différence y a-t-il entre une bactérie et un virus ?",o:["Une bactérie est une cellule, pas un virus", "Un virus est une cellule, pas une bactérie", "Les deux sont des cellules", "Il n’y en a aucune"],a:0,w:"Un virus ne se multiplie qu’à l’intérieur d’une cellule hôte.",l:2,t:"Microbes"},
+{q:"Quels micro-organismes sont utiles à l’être humain ?",o:["Les bactéries lactiques du yaourt", "La levure de boulanger", "Les bactéries du microbiote intestinal", "Les bactéries du tétanos"],a:[0, 1, 2],w:"Seule une minorité de micro-organismes est pathogène.",l:2,t:"Microbes"},
+{q:"Qu’est-ce qu’un micro-organisme pathogène ?",o:["Un micro-organisme responsable d’une maladie", "Un micro-organisme utile", "Un micro-organisme visible", "Un champignon comestible"],a:0,w:"Par exemple le virus de la grippe.",l:1,t:"Microbes"},
+{q:"Pourquoi les antibiotiques sont-ils inefficaces contre la grippe ?",o:["La grippe est provoquée par un virus, et non par une bactérie", "Les antibiotiques sont trop chers", "La grippe n’existe pas", "Les virus sont trop gros"],a:0,w:"Les antibiotiques agissent sur les bactéries.",l:2,t:"Microbes"},
+{q:"Comment peut se transmettre une infection ?",o:["Par l’air", "Par contact", "Par un aliment contaminé", "Par la lumière du Soleil"],a:[0, 1, 2],w:"Il existe aussi des vecteurs (moustiques) et la voie sexuelle.",l:2,t:"Contamination"},
+{q:"Que désigne une pandémie ?",o:["Une maladie qui touche plusieurs continents", "Une maladie rare", "Une maladie qui touche un seul village", "Une maladie non contagieuse"],a:0,w:"Une épidémie est plus localisée.",l:2,t:"Contamination"},
+{q:"Lequel est une barrière naturelle de l’organisme ?",o:["La peau", "Un vaccin", "Un antibiotique", "Un antiseptique"],a:0,w:"Peau et muqueuses empêchent l’entrée des micro-organismes.",l:1,t:"Défenses"},
+{q:"Que signifie l’inflammation ?",o:["Une réaction rapide avec rougeur, chaleur, gonflement et douleur", "Une absence de réaction", "La production d’anticorps uniquement", "La guérison complète"],a:0,w:"Elle accompagne l’arrivée de phagocytes sur le lieu de l’infection.",l:2,t:"Défenses"},
+{q:"Que font les phagocytes ?",o:["Ils détruisent les micro-organismes", "Ils produisent le glucose", "Ils transportent le dioxygène", "Ils fabriquent des gamètes"],a:0,w:"Ils font partie de la réaction rapide.",l:2,t:"Défenses"},
+{q:"Quelles cellules fabriquent les anticorps ?",o:["Les lymphocytes B", "Les neurones", "Les globules rouges", "Les phagocytes"],a:0,w:"Les anticorps sont spécifiques d’un antigène.",l:1,t:"Défenses"},
+{q:"Qu’est-ce qu’un antigène ?",o:["Une substance étrangère qui déclenche une réponse immunitaire", "Un anticorps", "Un médicament", "Une hormone"],a:0,w:"Les anticorps reconnaissent un antigène particulier.",l:2,t:"Défenses"},
+{q:"Que font les lymphocytes T ?",o:["Ils détruisent les cellules infectées", "Ils transportent le dioxygène", "Ils produisent le lait", "Ils digèrent les aliments"],a:0,w:"Ils participent à la réponse spécifique.",l:3,t:"Défenses"},
+{q:"Pourquoi une seconde infection par un même micro-organisme est-elle souvent moins grave ?",o:["La mémoire immunitaire permet une réponse plus rapide", "L’organisme n’a plus de défenses", "Le micro-organisme est affaibli", "Le sang est renouvelé"],a:0,w:"Des cellules mémoire gardent le souvenir de l’antigène.",l:3,t:"Défenses"},
+{q:"Que contient un vaccin ?",o:["Des antigènes (micro-organisme inactivé ou fragments)", "Des antibiotiques", "Des anticorps tout faits uniquement", "De l’eau"],a:0,w:"Ils déclenchent une réponse immunitaire sans la maladie.",l:1,t:"Vaccination"},
+{q:"Que provoque un vaccin ?",o:["Une réponse immunitaire et une mémoire immunitaire, sans la maladie", "La maladie complète", "La destruction des bactéries utiles", "Une réponse instantanée"],a:0,w:"Des rappels peuvent être nécessaires.",l:2,t:"Vaccination"},
+{q:"Que signifie l’immunité collective ?",o:["Quand une grande partie de la population est protégée, la maladie circule peu", "Tout le monde a la même maladie", "L’immunité est partagée entre individus", "Chaque personne est immunisée à vie"],a:0,w:"Elle protège aussi les personnes non vaccinées.",l:3,t:"Vaccination"},
+{q:"Qui a mis au point le vaccin contre la rage en 1885 ?",o:["Pasteur", "Fleming", "Darwin", "Mendel"],a:0,w:"Louis Pasteur est un pionnier de la vaccination.",l:2,t:"Vaccination"},
+{q:"Quel est le rôle d’un antiseptique ?",o:["Détruire les micro-organismes sur la peau ou une plaie", "Soigner une infection interne", "Remplacer un vaccin", "Renforcer les muscles"],a:0,w:"L’alcool et la chlorhexidine sont des antiseptiques.",l:2,t:"Hygiène"},
+{q:"Contre quels micro-organismes les antibiotiques sont-ils efficaces ?",o:["Les bactéries", "Les virus", "Tous les micro-organismes", "Les moisissures uniquement"],a:0,w:"Ils sont inefficaces contre les virus.",l:1,t:"Hygiène"},
+{q:"Qui a découvert la pénicilline en 1928 ?",o:["Fleming", "Pasteur", "Koch", "Curie"],a:0,w:"Alexander Fleming a observé qu’une moisissure détruisait des bactéries.",l:3,t:"Hygiène"},
+{q:"Pourquoi l’usage inutile d’antibiotiques pose-t-il problème ?",o:["Il favorise les bactéries résistantes", "Il affaiblit les virus", "Il détruit les vaccins", "Il augmente la fièvre"],a:0,w:"Les bactéries résistantes survivent et se multiplient.",l:3,t:"Hygiène"},
+{q:"Quelle mesure limite la transmission des infections ?",o:["Le lavage des mains", "Le port de bijoux", "Le partage des couverts", "Les antibiotiques systématiques"],a:0,w:"L’hygiène est la première prévention.",l:1,t:"Hygiène"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

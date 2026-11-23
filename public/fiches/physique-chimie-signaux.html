@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : signaux lumineux et sonores</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#e8590c;--soft:#fff4e6;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : signaux lumineux et sonores</h1>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 24 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="lumiere" class="on">Signaux lumineux</button><button data-t="rayonnements">Les rayonnements</button><button data-t="son">Signaux sonores</button><button data-t="info">Signal et information</button><button data-t="bonus">Pour aller plus loin</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="lumiere">
+<h2>1. Les signaux lumineux</h2>
+<div class="tw"><table>
+<tr><th>Notion</th><th>À retenir</th></tr>
+<tr><td>Source primaire</td><td>Produit elle-même de la lumière : Soleil, étoile, lampe allumée</td></tr>
+<tr><td>Objet diffusant</td><td>Renvoie dans toutes les directions la lumière qu’il reçoit : Lune, mur, livre. On le voit parce qu’il diffuse de la lumière vers nos yeux.</td></tr>
+<tr><td>Propagation</td><td>En <b>ligne droite</b> dans un milieu transparent et homogène, et même dans le <b>vide</b> ; on la modélise par un <b>rayon lumineux</b></td></tr>
+<tr><td>Vitesse</td><td>Environ <b>300 000 km/s</b> dans le vide</td></tr>
+<tr><td>Année-lumière</td><td>Distance parcourue par la lumière en un an : environ 9 500 milliards de km</td></tr>
+</table></div>
+<div class="ex">La lumière du Soleil parcourt 150 millions de km : t = d ÷ v = 150 000 000 ÷ 300 000 = <mark>500 s</mark>, soit environ <mark>8 minutes</mark>.</div>
+<ul>
+<li>La propagation rectiligne explique les <b>ombres</b>, les éclipses et permet des mesures de distance.</li>
+<li><b>Réflexion</b> : sur un miroir, l’angle d’incidence est égal à l’angle de réflexion (mesurés par rapport à la normale).</li>
+</ul>
+</section>
+
+<section id="rayonnements">
+<h2>2. Les différents rayonnements</h2>
+<p>La lumière visible n’est qu’une petite partie des rayonnements. Du moins énergétique au plus énergétique : <b>ondes radio</b>, micro-ondes, <b>infrarouge</b>, <b>lumière visible</b>, <b>ultraviolet</b>, <b>rayons X</b>, rayons gamma.</p>
+<ul>
+<li>Les ondes radio servent à communiquer (radio, télévision, téléphone, Wi-Fi).</li>
+<li>Les infrarouges transfèrent de la chaleur (caméras thermiques).</li>
+<li>Les ultraviolets peuvent abîmer la peau et les yeux ; les rayons X permettent la radiographie.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>un <b>laser</b> peut blesser définitivement l’œil : on ne le dirige jamais vers une personne et on ne regarde pas son faisceau.</div>
+</section>
+
+<section id="son">
+<h2>3. Les signaux sonores</h2>
+<ul>
+<li>Un son est une <b>vibration</b> qui se propage dans un <b>milieu matériel</b> (air, eau, solide). Il <b>ne se propage pas dans le vide</b>.</li>
+<li>Sa vitesse dépend du milieu : environ <b>340 m/s dans l’air</b>, environ 1 500 m/s dans l’eau, davantage dans les solides.</li>
+<li>La <b>fréquence</b> (en hertz, Hz) est le nombre de vibrations par seconde : un son est grave si elle est basse, aigu si elle est haute.</li>
+<li>L’oreille humaine entend de <b>20 Hz à 20 000 Hz</b>. En dessous, ce sont des <b>infrasons</b> ; au-dessus, des <b>ultrasons</b> (utilisés par le sonar et l’échographie).</li>
+</ul>
+<div class="ex"><b>Tonnerre :</b> on voit l’éclair presque instantanément. Si 3 s s’écoulent avant d’entendre le tonnerre, l’orage est à 340 × 3 ≈ <mark>1 020 m</mark>, soit environ 1 km.<br><b>Sonar :</b> une impulsion ultrasonore revient après 2 s dans l’eau (1 500 m/s). Le trajet aller-retour fait 3 000 m, donc l’obstacle est à <mark>1 500 m</mark>.</div>
+<div class="keep"><b>À retenir : </b>un son trop fort, surtout s’il est prolongé (au-delà d’environ 85 décibels), abîme l’audition de façon irréversible : il faut protéger ses oreilles dans les concerts et avec les écouteurs.</div>
+</section>
+
+<section id="info">
+<h2>4. Signal et information</h2>
+<p>Le son et la lumière permettent d’<b>émettre</b>, de <b>transporter</b> et de <b>recevoir</b> un signal, donc une <b>information</b>.</p>
+<div class="tw"><table>
+<tr><th>Type de signal</th><th>Description</th><th>Exemple</th></tr>
+<tr><td>Analogique</td><td>Varie de façon continue</td><td>Aiguille d’un thermomètre, tension d’un micro</td></tr>
+<tr><td>Numérique</td><td>Codé par des valeurs distinctes, en <b>binaire</b> (0 et 1)</td><td>Musique et photos enregistrées, Wi-Fi</td></tr>
+</table></div>
+<p>La lumière transporte l’information dans les <b>fibres optiques</b>, les ondes radio dans les communications sans fil. Mesurer une grandeur (température, distance) consiste à extraire l’information d’un signal.</p>
+</section>
+
+<section id="bonus">
+<h2>5. Pour aller plus loin</h2>
+<div class="warn"><b>Hors programme de physique-chimie du cycle 4. </b>Ces notions relèvent plutôt des sciences de la vie ou du lycée.</div>
+<ul>
+<li><b>Vision :</b> la lumière entre par la pupille ; le cristallin forme une image sur la rétine ; le nerf optique transmet le signal au cerveau.</li>
+<li><b>Réfraction :</b> la lumière change de direction quand elle passe d’un milieu transparent à un autre (c’est pourquoi une paille semble brisée dans l’eau).</li>
+<li><b>Couleurs :</b> un prisme décompose la lumière blanche en un spectre ; un objet rouge diffuse le rouge et absorbe les autres couleurs.</li>
+</ul>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Laquelle de ces sources produit elle-même de la lumière ?",o:["Le Soleil", "La Lune", "Un miroir", "Un mur blanc"],a:0,w:"Le Soleil est une source primaire ; la Lune diffuse sa lumière.",l:1,t:"Lumière"},
+{q:"Pourquoi voit-on la Lune ?",o:["Elle diffuse la lumière du Soleil", "Elle produit sa propre lumière", "Elle réfléchit uniquement la lumière de la Terre", "Elle est chaude"],a:0,w:"La Lune est un objet diffusant.",l:2,t:"Lumière"},
+{q:"Comment la lumière se propage-t-elle dans un milieu transparent et homogène ?",o:["En ligne droite", "En zigzag", "En cercle", "Elle ne se propage pas"],a:0,w:"Ce modèle du rayon lumineux explique les ombres.",l:1,t:"Lumière"},
+{q:"La lumière se propage-t-elle dans le vide ?",o:["Oui", "Non", "Seulement si elle est visible", "Seulement la nuit"],a:0,w:"C’est ainsi que la lumière du Soleil nous parvient.",l:2,t:"Lumière"},
+{q:"Quelle est la vitesse de la lumière dans le vide ?",o:["Environ 300 000 km/s", "Environ 340 m/s", "Environ 300 km/h", "Environ 1 000 km/s"],a:0,w:"Le son, lui, se propage à environ 340 m/s dans l’air.",l:1,t:"Lumière"},
+{q:"Combien de temps la lumière du Soleil met-elle pour atteindre la Terre ?",o:["Environ 8 minutes", "Environ 8 secondes", "Environ 8 heures", "Environ 8 jours"],a:0,w:"t = d ÷ v = 150 000 000 ÷ 300 000 = 500 s.",l:2,t:"Lumière"},
+{q:"Que dit la loi de la réflexion sur un miroir ?",o:["L’angle d’incidence est égal à l’angle de réflexion", "La lumière traverse le miroir", "L’angle de réflexion est toujours nul", "La lumière est absorbée"],a:0,w:"Les angles sont mesurés par rapport à la normale.",l:2,t:"Lumière"},
+{q:"Quel rayonnement permet la radiographie ?",o:["Les rayons X", "Les ondes radio", "Les infrarouges", "Les micro-ondes"],a:0,w:"Les rayons X traversent les tissus mous et sont arrêtés par les os.",l:2,t:"Rayonnements"},
+{q:"Parmi ces rayonnements, lequel est visible ?",o:["La lumière", "Les ultraviolets", "Les infrarouges", "Les rayons X"],a:0,w:"La lumière visible est une petite partie des rayonnements.",l:1,t:"Rayonnements"},
+{q:"Quel rayonnement sert aux caméras thermiques ?",o:["Les infrarouges", "Les ultraviolets", "Les rayons X", "Les ondes radio"],a:0,w:"Les objets chauds émettent un rayonnement infrarouge.",l:3,t:"Rayonnements"},
+{q:"Quelle précaution faut-il prendre avec un pointeur laser ?",o:["Ne jamais diriger le faisceau vers les yeux", "Le regarder pour vérifier qu’il fonctionne", "L’utiliser dans une pièce sombre sans précaution", "Aucune précaution"],a:0,w:"Un laser peut provoquer des lésions irréversibles de l’œil.",l:1,t:"Rayonnements"},
+{q:"Un son peut-il se propager dans le vide ?",o:["Non, il faut un milieu matériel", "Oui, comme la lumière", "Oui, mais plus vite", "Seulement dans l’espace"],a:0,w:"Le son est une vibration d’un milieu : sans matière, il ne se propage pas.",l:1,t:"Son"},
+{q:"Quelle est la vitesse du son dans l’air ?",o:["Environ 340 m/s", "Environ 300 000 km/s", "Environ 34 m/s", "Environ 3 400 m/s"],a:0,w:"Le son est beaucoup plus lent que la lumière.",l:1,t:"Son"},
+{q:"On entend le tonnerre 3 s après l’éclair. À quelle distance, en mètres, est l’orage ? (vitesse du son : 340 m/s)",num:1020,u:"m",w:"d = v × t = 340 × 3 = 1 020 m.",l:2,t:"Son"},
+{q:"Une impulsion ultrasonore revient après 2 s dans l’eau (1 500 m/s). À quelle distance se trouve l’obstacle ?",num:1500,u:"m",w:"Le trajet aller-retour mesure 1 500 × 2 = 3 000 m ; l’obstacle est à la moitié, soit 1 500 m.",l:3,t:"Son"},
+{q:"Quel est le domaine des fréquences audibles par l’oreille humaine ?",o:["De 20 Hz à 20 000 Hz", "De 2 Hz à 200 Hz", "De 200 Hz à 2 000 Hz", "De 0 à 100 Hz"],a:0,w:"En dessous : infrasons ; au-dessus : ultrasons.",l:2,t:"Son"},
+{q:"Un son de fréquence 40 000 Hz est…",o:["Un ultrason", "Un infrason", "Un son audible grave", "Un son audible aigu"],a:0,w:"Il dépasse 20 000 Hz : l’oreille humaine ne l’entend pas.",l:2,t:"Son"},
+{q:"Que signifie une fréquence élevée pour un son ?",o:["Il est aigu", "Il est grave", "Il est fort", "Il est lent"],a:0,w:"Plus la fréquence est haute, plus le son est aigu.",l:2,t:"Son"},
+{q:"Quelle unité mesure la fréquence ?",o:["Le hertz", "Le décibel", "Le mètre par seconde", "Le watt"],a:0,w:"Le décibel mesure le niveau sonore.",l:1,t:"Son"},
+{q:"Quel risque présente l’écoute prolongée d’un son très fort ?",o:["Des lésions irréversibles de l’audition", "Aucun", "Une amélioration de l’audition", "Un simple mal de tête passager"],a:0,w:"Il faut protéger ses oreilles.",l:1,t:"Son"},
+{q:"Qu’est-ce qu’un signal numérique ?",o:["Un signal codé par des valeurs distinctes, par exemple en 0 et 1", "Un signal qui varie de façon continue", "Un signal qui ne transporte pas d’information", "Un signal lumineux uniquement"],a:0,w:"Le binaire utilise deux valeurs, 0 et 1.",l:2,t:"Information"},
+{q:"Lequel est un signal analogique ?",o:["La tension variable d’un microphone", "Un fichier musical enregistré", "Un message en binaire", "Une image enregistrée sur un disque"],a:0,w:"Un signal analogique varie de façon continue.",l:3,t:"Information"},
+{q:"Comment la lumière peut-elle transporter une information ?",o:["Dans une fibre optique", "Dans le vide uniquement", "Uniquement dans l’air", "Elle ne peut pas"],a:0,w:"La fibre optique guide la lumière sur de longues distances.",l:2,t:"Information"},
+{q:"Pour aller plus loin : quelle partie de l’œil forme une image sur la rétine ?",o:["Le cristallin", "La pupille", "Le nerf optique", "L’iris"],a:0,w:"Le cristallin se comporte comme une lentille convergente (hors programme de physique-chimie).",l:3,t:"Pour aller plus loin"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SVT : génétique et évolution</title>
+<title>SVT : ADN, gènes, hérédité et mutations</title>
 <meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,70 +61,76 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
 .tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
-<h1>SVT : génétique et évolution</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<h1>SVT : ADN, gènes, hérédité et mutations</h1>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 22 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="adn" class="on">ADN et gènes</button><button data-t="repro">Reproduction</button><button data-t="mutations">Mutations</button><button data-t="evolution">Évolution</button><button data-t="biodiv">Biodiversité</button><button data-t="quiz">Quiz</button>
+<button data-t="adn" class="on">Cellule, chromosomes, ADN</button><button data-t="genes">Gènes, allèles, caractères</button><button data-t="mitose">Division cellulaire</button><button data-t="gametes">Gamètes et fécondation</button><button data-t="mutations">Mutations</button><button data-t="diversite">Diversité génétique</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="adn">
-<h2>1. ADN, gènes et chromosomes</h2>
-<p>Dans chaque cellule, le <b>noyau</b> contient les <b>chromosomes</b>, formés d’une très longue molécule d’<b>ADN</b>, support de l’information génétique. Un <b>gène</b> est une portion d’ADN qui détermine un caractère héréditaire.</p>
+<h2>1. Cellule, chromosomes et ADN</h2>
 <div class="chain"><span>Cellule</span><i>→</i><span>Noyau</span><i>→</i><span>Chromosomes</span><i>→</i><span>ADN</span><i>→</i><span>Gènes</span></div>
-<div class="tw"><table>
-<tr><th>Notion</th><th>À retenir</th></tr>
-<tr><td>Chromosomes</td><td>46 dans une cellule humaine (23 paires) ; 23 dans un gamète (spermatozoïde ou ovule)</td></tr>
-<tr><td>Allèle</td><td>Version d’un même gène. Un individu possède deux allèles de chaque gène, un hérité de chaque parent.</td></tr>
-<tr><td>Génotype / phénotype</td><td>Le <b>génotype</b> désigne les allèles portés ; le <b>phénotype</b> est le caractère observable (couleur des yeux…)</td></tr>
-</table></div>
-<div class="keep"><b>À retenir : </b>l’ADN se présente comme une double hélice. L’information génétique est portée par l’ordre de ses éléments chimiques, comme un message codé.</div>
+<ul>
+<li>Le <b>noyau</b> d’une cellule contient les <b>chromosomes</b>, faits d’une très longue molécule d’<b>ADN</b> (acide désoxyribonucléique), support de l’information génétique.</li>
+<li>L’ADN a la forme d’une <b>double hélice</b>. Ce qui compte, c’est la <b>séquence</b> de ses éléments chimiques, qui constitue un message codé.</li>
+<li>Une cellule humaine possède <b>46 chromosomes</b>, soit <b>23 paires</b> (le <b>caryotype</b>). La dernière paire détermine le sexe : <b>XX</b> chez la femme, <b>XY</b> chez l’homme.</li>
+</ul>
 </section>
 
-<section id="repro">
-<h2>2. Reproduction et transmission des caractères</h2>
+<section id="genes">
+<h2>2. Gènes, allèles et caractères</h2>
+<div class="tw"><table>
+<tr><th>Notion</th><th>À retenir</th></tr>
+<tr><td>Gène</td><td>Portion d’ADN qui détermine un caractère héréditaire (ou participe à sa détermination)</td></tr>
+<tr><td>Allèle</td><td>Version d’un même gène. Un individu possède deux allèles de chaque gène, un reçu de chaque parent.</td></tr>
+<tr><td>Génotype</td><td>L’ensemble des allèles portés par un individu</td></tr>
+<tr><td>Phénotype</td><td>Les caractères observables, qui résultent du <b>génotype</b> et de l’<b>environnement</b></td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>un caractère n’est pas toujours uniquement héréditaire. La taille dépend des gènes et de l’alimentation ; le bronzage, d’une exposition au soleil. Un caractère <b>acquis</b> (cicatrice, muscle développé) ne se transmet pas aux enfants.</div>
+</section>
+
+<section id="mitose">
+<h2>3. La division cellulaire (mitose)</h2>
+<p>Pour la croissance et le renouvellement des cellules, une cellule se divise en <b>deux cellules identiques</b>. Avant la division, l’ADN est <b>copié</b> : chaque cellule-fille reçoit une copie complète du matériel génétique, avec les mêmes chromosomes (46 chez l’humain).</p>
+</section>
+
+<section id="gametes">
+<h2>4. Gamètes, fécondation et brassage</h2>
 <ul>
-<li><b>Division cellulaire (mitose)</b> : une cellule donne deux cellules identiques, avec le même nombre de chromosomes. C’est le mode de croissance et de renouvellement des cellules.</li>
-<li><b>Reproduction sexuée</b> : fécondation d’un ovule par un spermatozoïde. Chaque gamète apporte 23 chromosomes ; la <b>cellule-œuf</b> en a 46.</li>
-<li><b>Brassage génétique</b> : la formation des gamètes et la fécondation mélangent les allèles. Les enfants d’un même couple sont donc tous différents (sauf vrais jumeaux).</li>
-<li><b>Reproduction asexuée</b> : un seul parent, descendants identiques, appelés <b>clones</b>.</li>
+<li>Les <b>gamètes</b> (spermatozoïdes, ovules) sont formés par une division particulière, la <b>méiose</b>, qui les laisse avec <b>23 chromosomes</b>, un de chaque paire. Un gamète est donc différent de la cellule qui l’a formé.</li>
+<li>La répartition des chromosomes lors de la méiose se fait <b>au hasard</b> : c’est un <b>brassage génétique</b>. Chaque personne peut produire des gamètes génétiquement différents.</li>
+<li>La <b>fécondation</b> réunit deux gamètes : la <b>cellule-œuf</b> a de nouveau <b>46 chromosomes</b>. Elle crée une combinaison unique d’allèles.</li>
 </ul>
+<div class="ex">Détermination du sexe : l’ovule porte toujours un X ; le spermatozoïde porte un X ou un Y. S’il porte un X, l’enfant est une fille (XX) ; s’il porte un Y, c’est un garçon (XY). Il y a <mark>une chance sur deux</mark> pour chaque cas.</div>
 </section>
 
 <section id="mutations">
-<h2>3. Les mutations</h2>
-<p>Une <b>mutation</b> est une modification rare et aléatoire de l’ADN. Elle peut être spontanée ou provoquée (UV, certains produits chimiques, rayonnements).</p>
+<h2>5. Les mutations</h2>
+<p>Une <b>mutation</b> est une modification rare et aléatoire de la séquence de l’ADN. Elle peut être <b>spontanée</b> (erreur de copie) ou provoquée par des <b>agents mutagènes</b> (rayons UV, tabac, certains produits chimiques, radioactivité).</p>
 <ul>
 <li>Elle peut n’avoir <b>aucun effet</b>, être <b>défavorable</b> (maladie) ou, plus rarement, <b>favorable</b>.</li>
-<li>Pour être transmise aux descendants, elle doit toucher une cellule qui donne des gamètes.</li>
-<li>Les mutations créent de <b>nouveaux allèles</b> : c’est une source de diversité génétique.</li>
+<li>Elle ne se transmet aux descendants que si elle touche une cellule qui produit des gamètes. Une mutation d’une cellule de la peau n’est pas héréditaire.</li>
+<li>Les mutations créent de <b>nouveaux allèles</b> : c’est la source de la diversité génétique.</li>
 </ul>
 </section>
 
-<section id="evolution">
-<h2>4. L’évolution et la sélection naturelle</h2>
-<p>Les individus d’une population ne sont pas identiques (mutations, brassage). Ceux dont les caractères sont <b>mieux adaptés</b> au milieu survivent mieux et ont <b>plus de descendants</b> : c’est la <b>sélection naturelle</b>. Au fil des générations, la fréquence de leurs allèles augmente. Cette idée est exposée par <b>Darwin</b> en 1859.</p>
-<div class="tw"><table>
-<tr><th>Exemple</th><th>Explication</th></tr>
-<tr><td>Phalène du bouleau</td><td>Au XIXe siècle, avec la pollution industrielle, les troncs noircissent. Les papillons sombres, mieux camouflés, sont moins mangés par les oiseaux et deviennent plus nombreux.</td></tr>
-<tr><td>Résistance aux antibiotiques</td><td>Parmi des bactéries, certaines résistent par mutation. L’antibiotique tue les autres : les résistantes se multiplient.</td></tr>
-</table></div>
-<p>Les êtres vivants sont <b>apparentés</b> : ceux qui partagent des caractères hérités d’un ancêtre commun sont plus proches. Les fossiles et la comparaison de l’ADN permettent de reconstituer ces liens sous forme d’arbres de parenté. <b>Homo sapiens</b> est apparu en Afrique il y a environ 300 000 ans.</p>
-</section>
-
-<section id="biodiv">
-<h2>5. La biodiversité</h2>
-<p>La <b>biodiversité</b> désigne la diversité du vivant à trois niveaux : la diversité des <b>écosystèmes</b>, des <b>espèces</b> et des <b>allèles</b> au sein d’une espèce. Une <b>espèce</b> est un ensemble d’individus pouvant se reproduire entre eux et avoir une descendance fertile.</p>
-<div class="keep"><b>À retenir : </b>la biodiversité évolue naturellement, mais les activités humaines (destruction des milieux, pollution, changement climatique) accélèrent la disparition d’espèces.</div>
+<section id="diversite">
+<h2>6. La diversité génétique</h2>
+<p>Au sein d’une population, les individus ne sont pas identiques : mutations et brassage créent des <b>combinaisons d’allèles</b> différentes. Cette <b>diversité génétique</b> est une chance quand le milieu change : certains individus survivent mieux (par exemple des bactéries résistantes à un antibiotique).</p>
+<p>Seuls des <b>vrais jumeaux</b> sont génétiquement identiques : ils proviennent de la division d’une même cellule-œuf. Les frères et sœurs d’une même famille sont tous différents.</p>
 </section>
 
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -132,68 +138,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Où se trouve l’ADN dans une cellule animale ?",o:["Dans le noyau, sur les chromosomes","Dans la membrane","Dans le cytoplasme uniquement"],a:0,w:"L’ADN est localisé dans le noyau, organisé en chromosomes."},
-{q:"Qu’est-ce qu’un gène ?",o:["Une portion d’ADN qui détermine un caractère héréditaire","Une cellule","Un chromosome entier"],a:0,w:"Un gène est une portion d’ADN. Un chromosome en contient de nombreux."},
-{q:"Combien de chromosomes contient un spermatozoïde humain ?",o:["23","46","92"],a:0,w:"Un gamète contient 23 chromosomes. La cellule-œuf en a 46 après la fécondation."},
-{q:"Qu’est-ce qu’un allèle ?",o:["Une version d’un même gène","Un gamète","Un type de cellule"],a:0,w:"Un individu a deux allèles de chaque gène, un hérité de chaque parent."},
-{q:"Que produit la reproduction asexuée ?",o:["Des descendants identiques au parent (clones)","Des descendants tous différents","Des gamètes"],a:0,w:"Avec un seul parent, les descendants sont génétiquement identiques."},
-{q:"Qu’est-ce qu’une mutation ?",o:["Une modification rare et aléatoire de l’ADN","Une division cellulaire normale","Un mélange des chromosomes lors de la fécondation"],a:0,w:"Les mutations créent de nouveaux allèles. Elles sont rares et aléatoires."},
-{q:"Comment la sélection naturelle agit-elle ?",o:["Les individus les mieux adaptés ont plus de descendants","Tous les individus survivent de la même façon","Le milieu change les gènes des individus"],a:0,w:"Les individus mieux adaptés à leur milieu survivent mieux et se reproduisent davantage : leurs allèles deviennent plus fréquents."},
-{q:"Que désigne la biodiversité ?",o:["La diversité des écosystèmes, des espèces et des allèles","Le nombre d’habitants sur Terre","Le climat d’une région"],a:0,w:"Elle se mesure à trois niveaux : écosystèmes, espèces et diversité génétique."}
+{q:"Où se trouve l’ADN dans une cellule animale ?",o:["Dans le noyau, sur les chromosomes", "Dans la membrane", "Dans le cytoplasme uniquement", "Dans les vacuoles"],a:0,w:"L’ADN est localisé dans le noyau, organisé en chromosomes.",l:1,t:"ADN"},
+{q:"Combien de chromosomes contient une cellule humaine (hors gamètes) ?",num:46,w:"46 chromosomes, soit 23 paires.",l:1,t:"ADN"},
+{q:"Que peut-on dire de la double hélice de l’ADN ?",o:["Elle code l’information génétique par sa séquence", "Elle est composée de protéines uniquement", "Elle n’existe que chez les plantes", "Elle est présente seulement dans les gamètes"],a:0,w:"Ce qui compte, c’est l’ordre des éléments chimiques le long de la molécule.",l:2,t:"ADN"},
+{q:"Quels chromosomes sexuels possède une femme ?",o:["XX", "XY", "XXY", "YY"],a:0,w:"Un homme possède XY.",l:1,t:"ADN"},
+{q:"Qu’est-ce qu’un gène ?",o:["Une portion d’ADN qui détermine un caractère héréditaire", "Une cellule", "Un chromosome entier", "Une protéine"],a:0,w:"Un chromosome contient de nombreux gènes.",l:1,t:"Gènes"},
+{q:"Qu’est-ce qu’un allèle ?",o:["Une version d’un même gène", "Un gamète", "Un type de cellule", "Une mutation obligatoire"],a:0,w:"Un individu a deux allèles de chaque gène, un hérité de chaque parent.",l:2,t:"Gènes"},
+{q:"Quelle est la différence entre génotype et phénotype ?",o:["Le génotype désigne les allèles, le phénotype les caractères observables", "Le génotype désigne les caractères observables", "Il n’y a pas de différence", "Le phénotype est toujours identique au génotype"],a:0,w:"Le phénotype dépend aussi de l’environnement.",l:2,t:"Gènes"},
+{q:"Quels caractères dépendent des gènes et de l’environnement ?",o:["La taille", "Le bronzage", "La couleur des yeux seulement", "La forme du lobe de l’oreille seulement"],a:[0, 1],w:"La taille dépend de l’alimentation, le bronzage de l’exposition au soleil.",l:3,t:"Gènes"},
+{q:"Un champion s’est entraîné et a des muscles très développés. Ses enfants hériteront-ils de ces muscles ?",o:["Non : un caractère acquis ne se transmet pas par l’ADN", "Oui, toujours", "Oui, mais seulement les garçons", "Oui, si l’autre parent est sportif"],a:0,w:"Seule la séquence de l’ADN des gamètes est transmise.",l:3,t:"Gènes"},
+{q:"Que produit la mitose ?",o:["Deux cellules identiques à la cellule-mère", "Quatre gamètes", "Une cellule-œuf", "Des mutations obligatoires"],a:0,w:"Elle sert à la croissance et au renouvellement.",l:1,t:"Mitose"},
+{q:"Avant une division cellulaire, que se passe-t-il pour l’ADN ?",o:["Il est copié", "Il disparaît", "Il est divisé par deux", "Il est détruit"],a:0,w:"Chaque cellule-fille reçoit une copie complète.",l:2,t:"Mitose"},
+{q:"Combien de chromosomes contient un spermatozoïde humain ?",num:23,w:"Un gamète contient 23 chromosomes (un de chaque paire).",l:1,t:"Gamètes"},
+{q:"Comment s’appelle la division qui forme les gamètes ?",o:["La méiose", "La mitose", "La fécondation", "La mutation"],a:0,w:"Elle réduit le nombre de chromosomes de moitié.",l:2,t:"Gamètes"},
+{q:"Pourquoi deux enfants des mêmes parents sont-ils différents ?",o:["À cause du brassage génétique lors de la formation des gamètes et de la fécondation", "À cause de leur alimentation uniquement", "Parce que leurs parents ont mué", "Ils ne le sont pas"],a:0,w:"Les gamètes portent des combinaisons d’allèles différentes.",l:2,t:"Gamètes"},
+{q:"Quelle est la probabilité qu’un enfant soit un garçon ?",o:["Une chance sur deux", "Une chance sur quatre", "Toujours un garçon", "Cela dépend de la mère uniquement"],a:0,w:"Le spermatozoïde porte X ou Y avec la même probabilité.",l:2,t:"Gamètes"},
+{q:"Que contient une cellule-œuf humaine ?",o:["46 chromosomes", "23 chromosomes", "92 chromosomes", "1 chromosome"],a:0,w:"23 chromosomes de la mère et 23 du père.",l:2,t:"Gamètes"},
+{q:"Qu’est-ce qu’une mutation ?",o:["Une modification rare et aléatoire de l’ADN", "Une division cellulaire normale", "Un mélange de chromosomes lors de la fécondation", "Une maladie contagieuse"],a:0,w:"Les mutations créent de nouveaux allèles.",l:1,t:"Mutations"},
+{q:"Lesquels sont des agents mutagènes ?",o:["Les rayons ultraviolets", "La fumée du tabac", "Certains produits chimiques", "L’eau pure"],a:[0, 1, 2],w:"Ils augmentent le risque de mutation.",l:2,t:"Mutations"},
+{q:"Une mutation dans une cellule de la peau est-elle transmise à l’enfant ?",o:["Non, elle n’est pas dans une cellule qui forme des gamètes", "Oui, toujours", "Oui, si l’enfant est un garçon", "Seulement chez les plantes"],a:0,w:"Seules les mutations des cellules reproductrices sont héréditaires.",l:3,t:"Mutations"},
+{q:"Quelles peuvent être les conséquences d’une mutation ?",o:["Aucun effet", "Un effet défavorable", "Un effet favorable", "Toujours une maladie"],a:[0, 1, 2],w:"Beaucoup n’ont aucun effet ; certaines sont défavorables, quelques-unes favorables.",l:2,t:"Mutations"},
+{q:"Pourquoi la diversité génétique est-elle importante dans une population ?",o:["Certains individus peuvent mieux survivre si le milieu change", "Elle supprime les maladies", "Elle empêche la reproduction", "Elle rend tous les individus identiques"],a:0,w:"La variété d’allèles permet à la population de s’adapter.",l:2,t:"Diversité"},
+{q:"Quels individus sont génétiquement identiques ?",o:["Les vrais jumeaux", "Les frères et sœurs", "Les cousins", "Les parents et les enfants"],a:0,w:"Ils proviennent de la division d’une même cellule-œuf.",l:3,t:"Diversité"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 5, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("svt-genetique-best") || 0)); localStorage.setItem("svt-genetique-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

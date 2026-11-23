@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technologie : programmation, systèmes embarqués et objets connectés</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#5f3dc4;--soft:#f3f0ff;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Technologie : programmation, systèmes embarqués et objets connectés</h1>
+<p class="meta">Brevet · programme de technologie du cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 20 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="programmation" class="on">Algorithmique et programmation</button><button data-t="embarque">Systèmes embarqués</button><button data-t="numerique">Signaux et binaire</button><button data-t="reseaux">Réseaux et objets connectés</button><button data-t="donnees">Données et usages responsables</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="programmation">
+<h2>1. Algorithmique et programmation</h2>
+<p>Un <b>algorithme</b> est une suite d’instructions qui résout un problème. Les briques essentielles sont les <b>variables</b>, les <b>événements</b> (qui déclenchent un script), les <b>conditions</b> (si… alors… sinon…) et les <b>boucles</b> (répéter n fois, répéter jusqu’à, répéter indéfiniment).</p>
+<pre class="code">répéter indéfiniment
+    si &lt;luminosité &lt; 30&gt; alors
+        allumer la lampe
+    sinon
+        éteindre la lampe
+    fin
+fin</pre>
+<p>Ici le <b>capteur</b> de luminosité acquiert l’information, la carte <b>traite</b> en comparant au seuil, puis l’<b>actionneur</b> (la lampe) agit.</p>
+</section>
+
+<section id="embarque">
+<h2>2. Systèmes embarqués et interfaces</h2>
+<ul>
+<li>Un <b>système embarqué</b> est un système informatique intégré à un objet (réveil, thermostat, voiture) : un programme y lit des <b>capteurs</b> (entrées) et commande des <b>actionneurs</b> (sorties).</li>
+<li>Des <b>cartes programmables</b> (micro:bit, Arduino) permettent de réaliser et de tester ces systèmes.</li>
+<li>L’<b>interface homme-machine (IHM)</b> est ce qui permet à l’utilisateur de dialoguer avec l’objet : boutons, écran tactile, voyants, commande vocale.</li>
+</ul>
+</section>
+
+<section id="numerique">
+<h2>3. Signaux et codage binaire</h2>
+<div class="tw"><table>
+<tr><th>Signal</th><th>Description</th><th>Exemple</th></tr>
+<tr><td>TOR (tout ou rien)</td><td>Deux états : 0 ou 1</td><td>Un interrupteur, un bouton</td></tr>
+<tr><td>Analogique</td><td>Varie de façon continue</td><td>Température mesurée, tension d’un micro</td></tr>
+<tr><td>Numérique</td><td>Codé en valeurs distinctes, en <b>binaire</b></td><td>Image, son et texte enregistrés</td></tr>
+</table></div>
+<ul>
+<li>Un <b>bit</b> vaut 0 ou 1. Un <b>octet</b> est un groupe de 8 bits : il peut coder 2⁸ = <b>256</b> valeurs (de 0 à 255).</li>
+<li>Écriture binaire : 101 = 4 + 0 + 1 = 5 ; 1010 = 8 + 0 + 2 + 0 = 10.</li>
+</ul>
+</section>
+
+<section id="reseaux">
+<h2>4. Réseaux et objets connectés</h2>
+<ul>
+<li>Un <b>réseau</b> relie des appareils qui échangent des données selon des règles communes appelées <b>protocoles</b>. L’<b>Internet</b> est un réseau mondial de réseaux.</li>
+<li>Chaque appareil connecté a une <b>adresse</b> (adresse IP) qui permet de le trouver.</li>
+<li>Un <b>objet connecté</b> (montre, thermostat, caméra) échange des données via Internet avec d’autres appareils ou des serveurs : c’est l’<b>Internet des objets</b>.</li>
+<li>Communications sans fil : <b>Wi-Fi</b>, <b>Bluetooth</b>, réseau mobile ; en filaire : <b>Ethernet</b>, fibre optique.</li>
+</ul>
+</section>
+
+<section id="donnees">
+<h2>5. Données, vie privée et sobriété</h2>
+<ul>
+<li>Les objets connectés collectent des <b>données personnelles</b> : il faut en protéger l’accès (mots de passe solides, mises à jour, paramètres de confidentialité).</li>
+<li>La <b>CNIL</b> veille à la protection des données personnelles en France.</li>
+<li>Le numérique a un <b>coût énergétique et matériel</b> (serveurs, réseaux, fabrication des appareils) : prolonger la durée de vie des appareils et limiter les usages inutiles réduit son impact.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>pour décrire un système automatisé, identifiez la chaîne d’information (capteur, carte, actionneur) et la chaîne d’énergie (alimentation, distribution, conversion, transmission).</div>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"À quoi sert une variable dans un programme ?",o:["À mémoriser une valeur qui peut changer", "À dessiner une figure", "À répéter des instructions", "À alimenter l’ordinateur"],a:0,w:"Une variable garde en mémoire une valeur (score, compteur, mesure).",l:1,t:"Programmation"},
+{q:"Quelle brique répète des instructions tant qu’une condition n’est pas vraie ?",o:["Répéter jusqu’à", "Répéter 10 fois", "Si… alors", "Attendre"],a:0,w:"Le nombre de répétitions est inconnu à l’avance.",l:2,t:"Programmation"},
+{q:"Dans le script de la lampe (si luminosité < 30 alors allumer), que se passe-t-il quand la luminosité vaut 30 ?",o:["La lampe s’éteint (la condition est fausse)", "La lampe s’allume", "La lampe clignote", "Le programme s’arrête"],a:0,w:"30 n’est pas strictement inférieur à 30.",l:3,t:"Programmation"},
+{q:"Qu’est-ce qu’un événement dans un programme ?",o:["Ce qui déclenche l’exécution d’un script", "Une variable", "Une boucle", "Une erreur"],a:0,w:"Par exemple : quand le bouton A est pressé.",l:2,t:"Programmation"},
+{q:"Dans un système embarqué, que représentent les capteurs ?",o:["Les entrées du système", "Les sorties du système", "L’alimentation", "Le programme"],a:0,w:"Les capteurs fournissent les informations ; les actionneurs en sont les sorties.",l:2,t:"Systèmes embarqués"},
+{q:"Lequel est un système embarqué ?",o:["Un thermostat programmable", "Un tournevis", "Une règle", "Un cahier"],a:0,w:"Il contient un programme qui lit un capteur et commande un chauffage.",l:2,t:"Systèmes embarqués"},
+{q:"Que désigne l’IHM ?",o:["L’interface homme-machine", "Un type de capteur", "Un langage de programmation", "Une source d’énergie"],a:0,w:"C’est ce qui permet à l’utilisateur de dialoguer avec l’objet.",l:2,t:"Systèmes embarqués"},
+{q:"Lesquels sont des exemples d’IHM ?",o:["Un écran tactile", "Un bouton", "Une commande vocale", "Un engrenage"],a:[0, 1, 2],w:"L’engrenage appartient à la chaîne d’énergie.",l:2,t:"Systèmes embarqués"},
+{q:"Que signifie un signal TOR ?",o:["Il n’a que deux états : 0 ou 1", "Il varie continûment", "Il transporte du son uniquement", "Il est toujours en binaire sur 8 bits"],a:0,w:"Comme un interrupteur ouvert ou fermé.",l:1,t:"Signaux"},
+{q:"Combien de valeurs différentes peut coder un octet ?",num:256,w:"Un octet a 8 bits : 2⁸ = 256 valeurs, de 0 à 255.",l:3,t:"Signaux"},
+{q:"Quel nombre représente le code binaire 101 ?",num:5,w:"101 = 4 + 0 + 1 = 5.",l:2,t:"Signaux"},
+{q:"Quel nombre représente le code binaire 1010 ?",num:10,w:"1010 = 8 + 0 + 2 + 0 = 10.",l:3,t:"Signaux"},
+{q:"Combien de bits y a-t-il dans un octet ?",o:["8", "4", "16", "2"],a:0,w:"Un octet est un groupe de 8 bits.",l:1,t:"Signaux"},
+{q:"Qu’est-ce qu’un protocole de communication ?",o:["Un ensemble de règles pour échanger des données", "Un type de câble", "Un mot de passe", "Un logiciel de dessin"],a:0,w:"Les appareils doivent parler le même « langage ».",l:2,t:"Réseaux"},
+{q:"À quoi sert l’adresse IP d’un appareil ?",o:["À l’identifier et le trouver sur un réseau", "À régler sa luminosité", "À augmenter sa vitesse", "À économiser l’énergie"],a:0,w:"Elle permet d’acheminer les données jusqu’à lui.",l:3,t:"Réseaux"},
+{q:"Qu’est-ce qu’un objet connecté ?",o:["Un objet qui échange des données via Internet", "Un objet branché sur le secteur", "Un objet fabriqué en 3D", "Un objet sans capteur"],a:0,w:"Montre, thermostat ou caméra connectés échangent des données par Internet.",l:1,t:"Réseaux"},
+{q:"Lesquelles de ces technologies permettent une communication sans fil ?",o:["Le Wi-Fi", "Le Bluetooth", "Le réseau mobile", "Le câble Ethernet"],a:[0, 1, 2],w:"Ethernet est filaire.",l:2,t:"Réseaux"},
+{q:"Quel risque présentent les objets connectés ?",o:["L’accès à des données personnelles", "La disparition de l’électricité", "Une baisse de la température", "Aucun risque"],a:0,w:"Il faut protéger l’accès avec des mots de passe solides et des mises à jour.",l:2,t:"Données"},
+{q:"Quel organisme veille en France à la protection des données personnelles ?",o:["La CNIL", "La SNCF", "La NASA", "L’ONU"],a:0,w:"La Commission nationale de l’informatique et des libertés.",l:2,t:"Données"},
+{q:"Quel geste réduit l’impact environnemental du numérique ?",o:["Prolonger la durée de vie des appareils", "Changer d’appareil chaque année", "Laisser les appareils en veille", "Multiplier les copies de fichiers"],a:0,w:"La fabrication d’un appareil représente une grande part de son impact.",l:2,t:"Données"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

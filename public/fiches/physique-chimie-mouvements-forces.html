@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : mouvements et forces</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#e8590c;--soft:#fff4e6;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : mouvements et forces</h1>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 19 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="mouvement" class="on">Caractériser un mouvement</button><button data-t="relativite">Relativité du mouvement</button><button data-t="forces">Les forces</button><button data-t="poids">Poids et gravitation</button><button data-t="equilibre">Équilibre</button><button data-t="bonus">Pour aller plus loin</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="mouvement">
+<h2>1. Caractériser un mouvement</h2>
+<p>Décrire un mouvement, c’est préciser la <b>trajectoire</b> (rectiligne, circulaire ou quelconque) et la <b>vitesse</b>. La vitesse a une <b>direction</b>, un <b>sens</b> et une <b>valeur</b>.</p>
+<div class="tw"><table>
+<tr><th>Mouvement</th><th>Caractéristique</th></tr>
+<tr><td>Rectiligne uniforme</td><td>Trajectoire droite et vitesse constante</td></tr>
+<tr><td>Circulaire uniforme</td><td>Trajectoire circulaire, valeur de la vitesse constante mais <b>direction qui change</b> : la vitesse varie donc en direction</td></tr>
+<tr><td>Accéléré, ralenti</td><td>La valeur de la vitesse augmente ou diminue au cours du temps</td></tr>
+</table></div>
+<div class="ex">Dans un mouvement uniforme : <mark>v = d ÷ t</mark>. 150 m en 20 s : v = <mark>7,5 m/s</mark>. Un cycliste à 18 km/h pendant 30 min parcourt 18 × 0,5 = <mark>9 km</mark>. Conversion : 36 km/h = 36 ÷ 3,6 = <mark>10 m/s</mark>.</div>
+</section>
+
+<section id="relativite">
+<h2>2. La relativité du mouvement</h2>
+<p>Un mouvement se décrit toujours <b>par rapport à un référentiel</b> : le sol, un train, la Terre… Le même objet peut être en mouvement dans un référentiel et immobile dans un autre.</p>
+<div class="ex">Un passager assis dans un train qui démarre est <b>immobile</b> par rapport au train, mais <b>en mouvement</b> par rapport au quai. Pour un observateur sur le quai, c’est le train qui se déplace ; pour le passager, c’est le quai qui défile.</div>
+<p>Les trajectoires des planètes autour du Soleil peuvent être modélisées, en première approche, par des cercles parcourus à vitesse constante.</p>
+</section>
+
+<section id="forces">
+<h2>3. Les actions mécaniques et les forces</h2>
+<p>Une <b>action mécanique</b> peut être une action de <b>contact</b> (une main qui pousse un chariot, une table qui supporte un livre) ou une action <b>à distance</b> (le poids, une action magnétique). Deux objets en interaction s’exercent mutuellement des actions.</p>
+<p>On modélise une action par une <b>force</b>, représentée par une flèche et caractérisée par un <b>point d’application</b>, une <b>direction</b>, un <b>sens</b> et une <b>valeur</b> en <b>newtons</b> (N).</p>
+<div class="ex">Un livre posé sur une table subit deux forces : son <b>poids</b> (action à distance de la Terre, vers le bas) et l’<b>action de la table</b> (action de contact, vers le haut).</div>
+</section>
+
+<section id="poids">
+<h2>4. Poids et gravitation</h2>
+<div class="tw"><table>
+<tr><th>Notion</th><th>À retenir</th></tr>
+<tr><td>Poids</td><td>Force d’attraction exercée par un astre : <b>P = m × g</b>, avec P en newtons, m en kilogrammes et g l’intensité de la pesanteur (environ 10 N/kg sur Terre, environ 1,6 N/kg sur la Lune)</td></tr>
+<tr><td>Masse et poids</td><td>La <b>masse</b> (kg) ne change pas selon le lieu ; le <b>poids</b> (N) dépend de l’astre</td></tr>
+<tr><td>Gravitation universelle</td><td>Deux objets de masses m₁ et m₂ s’attirent avec une force proportionnelle à m₁ × m₂ et inversement proportionnelle au <b>carré de la distance</b> d : F = G × m₁ × m₂ ÷ d²</td></tr>
+</table></div>
+<div class="ex">Objet de 2 kg sur Terre : P = 2 × 10 = <mark>20 N</mark> &nbsp;·&nbsp; astronaute de 80 kg sur la Lune : P = 80 × 1,6 = <mark>128 N</mark> &nbsp;·&nbsp; P = 50 N sur Terre : m = 50 ÷ 10 = <mark>5 kg</mark><br>Si la distance entre deux astres <b>double</b>, la force de gravitation est <b>divisée par 4</b> (2² = 4).</div>
+<div class="keep"><b>À retenir : </b>dans la station spatiale, les astronautes « flottent » (impesanteur) non pas parce qu’il n’y a plus de gravitation, mais parce que la station et eux tombent en permanence autour de la Terre.</div>
+</section>
+
+<section id="equilibre">
+<h2>5. L’équilibre d’un objet</h2>
+<p>Un objet immobile est en <b>équilibre</b> lorsque les actions qu’il subit se <b>compensent</b> : deux forces qui se compensent ont même direction, même valeur et des sens opposés. C’est le cas du livre posé sur la table : le poids et l’action de la table se compensent.</p>
+<p>Sur une balance, un ressort ou un muscle, on étudie ainsi des situations d’équilibre.</p>
+</section>
+
+<section id="bonus">
+<h2>6. Pour aller plus loin</h2>
+<div class="warn"><b>Hors programme du cycle 4 en vigueur. </b>Le principe d’inertie ne figure pas dans le texte officiel du cycle 4 ; il est étudié au lycée.</div>
+<p><b>Principe d’inertie :</b> si les forces qui s’exercent sur un objet se compensent (ou s’il n’en subit aucune), l’objet reste immobile ou garde un mouvement rectiligne uniforme. Une voiture qui roule en ligne droite à vitesse constante subit des forces qui se compensent.</p>
+</section>
+
+<section id="quiz">
+<h2>7. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Convertissez 36 km/h en m/s.",num:10,u:"m/s",w:"On divise par 3,6 : 36 ÷ 3,6 = 10 m/s.",l:1,t:"Mouvement"},
+{q:"Un objet parcourt 150 m en 20 s à vitesse constante. Quelle est sa vitesse ?",num:7.5,u:"m/s",w:"v = d ÷ t = 150 ÷ 20 = 7,5 m/s.",l:2,t:"Mouvement"},
+{q:"Un cycliste roule à 18 km/h pendant 30 min. Quelle distance parcourt-il ?",num:9,u:"km",w:"d = v × t = 18 × 0,5 = 9 km.",l:3,t:"Mouvement"},
+{q:"Quelle est la trajectoire d’un mouvement rectiligne uniforme ?",o:["Une droite parcourue à vitesse constante", "Un cercle", "Une courbe quelconque", "Un point"],a:0,w:"Rectiligne : trajectoire droite ; uniforme : vitesse constante.",l:1,t:"Mouvement"},
+{q:"Un objet suit une trajectoire circulaire avec une valeur de vitesse constante. Que peut-on dire de sa vitesse ?",o:["Sa direction change : la vitesse n’est pas constante", "Elle est parfaitement constante", "Elle est nulle", "Son sens ne change jamais"],a:0,w:"La direction de la vitesse change à chaque instant.",l:3,t:"Mouvement"},
+{q:"Un passager est assis dans un train qui démarre. Que peut-on dire de lui ?",o:["Il est immobile par rapport au train et en mouvement par rapport au quai", "Il est immobile dans tous les référentiels", "Il est en mouvement par rapport au train", "Il n’a pas de mouvement"],a:0,w:"Le mouvement dépend du référentiel.",l:2,t:"Relativité"},
+{q:"Comment appelle-t-on l’objet par rapport auquel on décrit un mouvement ?",o:["Le référentiel", "Le repère de masse", "La trajectoire", "Le système"],a:0,w:"Il faut toujours préciser le référentiel.",l:2,t:"Relativité"},
+{q:"Quelle est l’unité de la force ?",o:["Le newton", "Le joule", "Le watt", "Le kilogramme"],a:0,w:"La force s’exprime en newtons (N).",l:1,t:"Forces"},
+{q:"Quelles caractéristiques définissent une force ?",o:["Point d’application, direction, sens et valeur", "Masse et volume", "Température et durée", "Vitesse et distance"],a:0,w:"Une force est modélisée par une flèche.",l:2,t:"Forces"},
+{q:"Le poids d’un objet est une action…",o:["À distance, exercée par la Terre", "De contact avec le sol", "Magnétique", "Toujours nulle"],a:0,w:"Le poids est une action à distance de la Terre sur l’objet.",l:2,t:"Forces"},
+{q:"Quelles forces s’exercent sur un livre posé sur une table ?",o:["Son poids et l’action de la table", "Seulement son poids", "Seulement l’action de la table", "Aucune"],a:0,w:"Ces deux actions se compensent : le livre est immobile.",l:2,t:"Forces"},
+{q:"Quel est le poids d’un objet de 2 kg sur Terre (g = 10 N/kg) ?",num:20,u:"N",w:"P = m × g = 2 × 10 = 20 N.",l:1,t:"Poids"},
+{q:"Quel est le poids d’un astronaute de 80 kg sur la Lune (g = 1,6 N/kg) ?",num:128,u:"N",w:"P = 80 × 1,6 = 128 N.",l:3,t:"Poids"},
+{q:"Un objet pèse 50 N sur Terre (g = 10 N/kg). Quelle est sa masse ?",num:5,u:"kg",w:"m = P ÷ g = 50 ÷ 10 = 5 kg.",l:2,t:"Poids"},
+{q:"Que dire de la masse et du poids d’un astronaute qui passe de la Terre à la Lune ?",o:["La masse est inchangée, le poids diminue", "Le poids est inchangé, la masse diminue", "La masse et le poids diminuent", "Ni l’un ni l’autre ne change"],a:0,w:"La masse est invariante ; le poids dépend de g.",l:2,t:"Poids"},
+{q:"Que se passe-t-il pour la force de gravitation quand la distance entre deux astres double ?",o:["Elle est divisée par 4", "Elle est divisée par 2", "Elle double", "Elle est multipliée par 4"],a:0,w:"F est proportionnelle à 1/d² : 1/2² = 1/4.",l:3,t:"Gravitation"},
+{q:"Pourquoi les astronautes flottent-ils dans la station spatiale ?",o:["Ils sont en chute libre autour de la Terre avec la station", "Il n’y a aucune gravitation à cette altitude", "La station est hors du système solaire", "Ils sont plus légers que l’air"],a:0,w:"La gravitation est presque aussi forte qu’au sol : la station tombe en permanence autour de la Terre.",l:3,t:"Gravitation"},
+{q:"Quand deux forces se compensent-elles ?",o:["Même direction, même valeur, sens opposés", "Même sens, même valeur", "Directions différentes, même valeur", "Même sens, valeurs différentes"],a:0,w:"Alors l’objet est en équilibre.",l:2,t:"Équilibre"},
+{q:"Pour aller plus loin : une voiture roule en ligne droite à vitesse constante. Que peut-on dire des forces qu’elle subit ?",o:["Elles se compensent", "Elles sont nulles", "Une seule force s’exerce", "Elles ne peuvent pas se compenser"],a:0,w:"C’est le principe d’inertie (hors programme du cycle 4).",l:3,t:"Pour aller plus loin"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

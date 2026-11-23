@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maths : espace, solides, aires et volumes</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#3b5bdb;--soft:#e7ecff;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#8aa2ff;--soft:#252b45;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#8aa2ff;--soft:#252b45;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Maths : espace, solides, aires et volumes</h1>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 22 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="reperage" class="on">Repérage</button><button data-t="solides">Solides</button><button data-t="patrons">Patrons et sections</button><button data-t="aires">Aires</button><button data-t="volumes">Volumes</button><button data-t="effets">Agrandissement et réduction</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="reperage">
+<h2>1. Se repérer dans le plan, dans l’espace et sur la Terre</h2>
+<ul>
+<li><b>Dans le plan</b> : un point est repéré par son <b>abscisse</b> (axe horizontal) puis son <b>ordonnée</b> (axe vertical) : A(3 ; −2).</li>
+<li><b>Dans l’espace</b> : on ajoute une troisième coordonnée, l’<b>altitude</b> (ou la hauteur), pour repérer un point d’un pavé ou d’un solide.</li>
+<li><b>Sur la Terre</b> : on utilise la <b>latitude</b> (angle de 0° à 90°, au nord ou au sud de l’<b>équateur</b>) et la <b>longitude</b> (angle de 0° à 180°, à l’est ou à l’ouest du <b>méridien de Greenwich</b>).</li>
+</ul>
+<div class="ex">Paris se situe vers <mark>49° N</mark> et <mark>2° E</mark>. L’équateur a pour latitude 0°, le pôle Nord 90° N, et le méridien de Greenwich a pour longitude 0°.</div>
+</section>
+
+<section id="solides">
+<h2>2. Les solides usuels</h2>
+<div class="tw"><table>
+<tr><th>Solide</th><th>Faces</th><th>Arêtes</th><th>Sommets</th><th>À retenir</th></tr>
+<tr><td>Cube</td><td>6 carrés</td><td>12</td><td>8</td><td>Pavé droit particulier</td></tr>
+<tr><td>Pavé droit</td><td>6 rectangles</td><td>12</td><td>8</td><td>Faces opposées identiques</td></tr>
+<tr><td>Prisme droit à base triangulaire</td><td>5</td><td>9</td><td>6</td><td>2 bases + 3 faces latérales rectangulaires</td></tr>
+<tr><td>Pyramide à base carrée</td><td>5</td><td>8</td><td>5</td><td>Une base + faces latérales triangulaires</td></tr>
+<tr><td>Cylindre</td><td colspan="3">2 bases (disques) et une surface latérale</td><td>Pas d’arêtes ni de sommets au sens strict</td></tr>
+<tr><td>Cône</td><td colspan="3">1 base (disque) et une surface latérale</td><td>Un sommet</td></tr>
+<tr><td>Boule</td><td colspan="3">Une seule surface, la sphère</td><td>Tous les points de la sphère sont à la même distance du centre</td></tr>
+</table></div>
+</section>
+
+<section id="patrons">
+<h2>3. Patrons, perspective et sections</h2>
+<ul>
+<li><b>Patron</b> : surface plane qui, pliée, donne le solide. Cube : 6 carrés ; cylindre : 2 disques et un rectangle dont une dimension est le périmètre de la base (2πr) ; cône : un disque et un secteur circulaire ; pyramide : une base et des triangles.</li>
+<li><b>Perspective cavalière</b> : les arêtes visibles sont en traits pleins, les arêtes cachées en <b>pointillés</b>, les arêtes parallèles restent parallèles, et les arêtes qui fuient sont dessinées en oblique, raccourcies.</li>
+</ul>
+<h3>Sections planes</h3>
+<div class="tw"><table>
+<tr><th>Solide</th><th>Plan de coupe</th><th>Section</th></tr>
+<tr><td>Pavé droit</td><td>Parallèle à une face</td><td>Rectangle de mêmes dimensions que cette face</td></tr>
+<tr><td>Cylindre</td><td>Parallèle à la base</td><td>Disque de même rayon que la base</td></tr>
+<tr><td>Cylindre</td><td>Contient l’axe</td><td>Rectangle</td></tr>
+<tr><td>Pyramide, cône</td><td>Parallèle à la base</td><td>Réduction de la base (polygone ou disque)</td></tr>
+<tr><td>Boule</td><td>Un plan quelconque qui coupe la boule</td><td>Disque</td></tr>
+</table></div>
+</section>
+
+<section id="aires">
+<h2>4. Aires et périmètres</h2>
+<div class="tw"><table>
+<tr><th>Figure</th><th>Aire</th></tr>
+<tr><td>Rectangle</td><td>longueur × largeur</td></tr>
+<tr><td>Carré</td><td>côté × côté</td></tr>
+<tr><td>Triangle</td><td>base × hauteur ÷ 2</td></tr>
+<tr><td>Parallélogramme</td><td>base × hauteur (on le découpe et on recolle un triangle pour obtenir un rectangle)</td></tr>
+<tr><td>Trapèze</td><td>(grande base + petite base) × hauteur ÷ 2</td></tr>
+<tr><td>Disque</td><td>π × r² (périmètre du cercle : 2 × π × r)</td></tr>
+</table></div>
+<p>Pour un <b>solide</b>, l’aire de la surface est la somme des aires des faces. L’aire latérale d’un cylindre est celle du rectangle de son patron : 2πr × h.</p>
+</section>
+
+<section id="volumes">
+<h2>5. Volumes</h2>
+<div class="tw"><table>
+<tr><th>Solide</th><th>Volume</th><th>Exemple</th></tr>
+<tr><td>Pavé droit</td><td>longueur × largeur × hauteur</td><td>4 × 3 × 2 = <mark>24</mark></td></tr>
+<tr><td>Prisme droit, cylindre</td><td>aire de la base × hauteur</td><td>Cylindre r = 3, h = 10 : π × 9 × 10 = <mark>90π ≈ 282,7</mark></td></tr>
+<tr><td>Pyramide, cône</td><td>⅓ × aire de la base × hauteur</td><td>Pyramide à base carrée de côté 6, h = 5 : ⅓ × 36 × 5 = <mark>60</mark></td></tr>
+<tr><td>Boule</td><td>4/3 × π × r³</td><td>r = 3 : 4/3 × π × 27 = <mark>36π ≈ 113,1</mark></td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>1 L = 1 dm³ et 1 m³ = 1 000 L. Un volume s’exprime en unités cubes (cm³, m³), une aire en unités carrées. Convertissez les dimensions dans la même unité avant de calculer.</div>
+</section>
+
+<section id="effets">
+<h2>6. Agrandissement et réduction</h2>
+<p>Lorsqu’on agrandit ou réduit une figure ou un solide avec un rapport k :</p>
+<div class="tw"><table>
+<tr><th>Grandeur</th><th>Effet</th><th>Avec k = 3</th></tr>
+<tr><td>Longueurs et angles</td><td>Longueurs × k ; angles inchangés</td><td>Longueurs × 3</td></tr>
+<tr><td>Aires</td><td>× k²</td><td>× 9</td></tr>
+<tr><td>Volumes</td><td>× k³</td><td>× 27</td></tr>
+</table></div>
+<div class="ex">Une maquette est une réduction à l’échelle 1/10 d’un bâtiment. Une longueur de 3 m devient 0,3 m ; une aire de 100 m² devient 100 × (1/10)² = <mark>1 m²</mark> ; un volume de 1 000 m³ devient 1 000 × (1/10)³ = <mark>1 m³</mark>.</div>
+</section>
+
+<section id="quiz">
+<h2>7. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Dans quel ordre donne-t-on les coordonnées d’un point du plan ?",o:["Abscisse puis ordonnée", "Ordonnée puis abscisse", "Altitude puis abscisse"],a:0,w:"On écrit (x ; y) : l’abscisse, puis l’ordonnée.",l:1,t:"Repérage"},
+{q:"Quelle est la latitude de l’équateur ?",o:["0°", "90°", "180°", "45°"],a:0,w:"L’équateur est l’origine des latitudes.",l:1,t:"Repérage"},
+{q:"Que mesure la longitude ?",o:["Un angle à l’est ou à l’ouest du méridien de Greenwich", "Un angle au nord ou au sud de l’équateur", "L’altitude d’un lieu", "La distance au pôle Nord"],a:0,w:"La longitude va de 0° à 180° est ou ouest.",l:2,t:"Repérage"},
+{q:"Combien un cube a-t-il d’arêtes ?",num:12,w:"Un cube a 12 arêtes, 8 sommets et 6 faces.",l:1,t:"Solides"},
+{q:"Combien une pyramide à base carrée a-t-elle de faces ?",num:5,w:"Une base carrée et 4 faces triangulaires.",l:2,t:"Solides"},
+{q:"Combien un prisme droit à base triangulaire a-t-il de sommets ?",num:6,w:"Trois sommets pour chaque base : 6.",l:2,t:"Solides"},
+{q:"Quelle est la section d’un pavé droit par un plan parallèle à une de ses faces ?",o:["Un rectangle de mêmes dimensions que cette face", "Un triangle", "Un disque", "Un trapèze"],a:0,w:"La section est identique à la face parallèle.",l:2,t:"Patrons et sections"},
+{q:"Quelle est la section d’un cylindre par un plan parallèle à sa base ?",o:["Un disque de même rayon", "Un rectangle", "Une ellipse allongée", "Un triangle"],a:0,w:"La section est superposable à la base.",l:2,t:"Patrons et sections"},
+{q:"Quelle est la section d’une boule par un plan ?",o:["Un disque", "Un carré", "Un rectangle", "Un point toujours"],a:0,w:"Un plan qui coupe la boule donne un disque.",l:2,t:"Patrons et sections"},
+{q:"Quelle est la section d’un cône par un plan parallèle à sa base ?",o:["Un disque, réduction de la base", "Un triangle", "Un rectangle", "Un disque de même rayon que la base"],a:0,w:"La section est une réduction de la base.",l:3,t:"Patrons et sections"},
+{q:"Quelle dimension du rectangle du patron d’un cylindre correspond à la base ?",o:["Le périmètre du disque de base, 2πr", "Le rayon", "L’aire du disque", "La hauteur du cylindre"],a:0,w:"Le rectangle s’enroule autour de la base : sa longueur est le périmètre du cercle.",l:3,t:"Patrons et sections"},
+{q:"En perspective cavalière, comment représente-t-on les arêtes cachées ?",o:["En pointillés", "En traits épais", "En couleur", "On ne les représente pas"],a:0,w:"Les arêtes cachées sont dessinées en pointillés.",l:1,t:"Patrons et sections"},
+{q:"Quelle est l’aire d’un triangle de base 8 cm et de hauteur 5 cm ?",num:20,u:"cm²",w:"8 × 5 ÷ 2 = 20 cm².",l:1,t:"Aires"},
+{q:"Quelle est l’aire d’un trapèze de bases 10 cm et 6 cm, et de hauteur 4 cm ?",num:32,u:"cm²",w:"(10 + 6) × 4 ÷ 2 = 32 cm².",l:2,t:"Aires"},
+{q:"Quelle est l’aire d’un disque de rayon 3 cm, arrondie au dixième ?",num:28.3,tol:0.05,u:"cm²",w:"π × 3² = 9π ≈ 28,3 cm².",l:2,t:"Aires"},
+{q:"Quel est le volume d’un pavé de 4 cm sur 3 cm sur 2 cm ?",num:24,u:"cm³",w:"4 × 3 × 2 = 24 cm³.",l:1,t:"Volumes"},
+{q:"Quel est le volume d’une pyramide de base carrée de côté 6 cm et de hauteur 5 cm ?",num:60,u:"cm³",w:"⅓ × 36 × 5 = 60 cm³.",l:2,t:"Volumes"},
+{q:"Quel est le volume d’un cylindre de rayon 3 cm et de hauteur 10 cm, arrondi au dixième ?",num:282.7,tol:0.1,u:"cm³",w:"π × 3² × 10 = 90π ≈ 282,7 cm³.",l:3,t:"Volumes"},
+{q:"Quel est le volume d’une boule de rayon 3 cm, arrondi au dixième ?",num:113.1,tol:0.1,u:"cm³",w:"4/3 × π × 27 = 36π ≈ 113,1 cm³.",l:3,t:"Volumes"},
+{q:"Combien de litres contient un aquarium de 0,5 m³ ?",num:500,u:"L",w:"1 m³ = 1 000 L, donc 0,5 m³ = 500 L.",l:2,t:"Volumes"},
+{q:"On agrandit un solide avec un rapport 3. Par combien son volume est-il multiplié ?",num:27,w:"Les volumes sont multipliés par k³ = 27.",l:2,t:"Agrandissement"},
+{q:"Une maquette à l’échelle 1/10 représente un bâtiment. Quelle est l’aire (en m²) de la maquette correspondant à une aire réelle de 100 m² ?",num:1,u:"m²",w:"100 × (1/10)² = 1 m².",l:3,t:"Agrandissement"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

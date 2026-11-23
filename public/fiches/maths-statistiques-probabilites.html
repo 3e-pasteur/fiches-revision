@@ -59,78 +59,89 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Maths : statistiques et probabilités</h1>
-<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 10 questions</p>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="stat" class="on">Moyenne, médiane</button><button data-t="quart">Quartiles, fréquences</button><button data-t="proba">Probabilités</button><button data-t="deux">Deux épreuves</button><button data-t="quiz">Quiz</button>
+<button data-t="stat" class="on">Moyenne, médiane, étendue</button><button data-t="diag">Fréquences et diagrammes</button><button data-t="proba">Probabilités</button><button data-t="simul">Fréquence et probabilité</button><button data-t="bonus">Pour aller plus loin</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="stat">
-<h2>1. Moyenne, médiane, étendue</h2>
-<p>Série de notes : <b>5, 7, 8, 10, 15</b> (rangée dans l’ordre croissant).</p>
+<h2>1. Les indicateurs d’une série statistique</h2>
+<p>Série de notes rangée dans l’ordre croissant : <b>5, 7, 8, 10, 15</b>.</p>
 <div class="tw"><table>
 <tr><th>Indicateur</th><th>Définition</th><th>Exemple</th></tr>
-<tr><td>Moyenne</td><td>Somme des valeurs ÷ nombre de valeurs</td><td>(5 + 7 + 8 + 10 + 15) ÷ 5 = 45 ÷ 5 = <mark>9</mark></td></tr>
-<tr><td>Médiane</td><td>Valeur qui partage la série ordonnée en deux groupes de même effectif</td><td>Valeur centrale : <mark>8</mark></td></tr>
+<tr><td>Effectif</td><td>Nombre de fois où une valeur apparaît ; l’effectif total est le nombre de valeurs</td><td>5 valeurs</td></tr>
+<tr><td>Moyenne</td><td>Somme des valeurs ÷ effectif total</td><td>(5 + 7 + 8 + 10 + 15) ÷ 5 = <mark>9</mark></td></tr>
+<tr><td>Médiane</td><td>Valeur qui partage la série ordonnée en deux groupes de même effectif : au moins la moitié des valeurs lui sont inférieures ou égales, et au moins la moitié lui sont supérieures ou égales</td><td>Valeur centrale : <mark>8</mark></td></tr>
 <tr><td>Étendue</td><td>Plus grande valeur − plus petite valeur</td><td>15 − 5 = <mark>10</mark></td></tr>
 </table></div>
-<p><b>Si l’effectif est pair</b>, la médiane est la moyenne des deux valeurs centrales : pour 4, 6, 7, 11, la médiane est (6 + 7) ÷ 2 = <mark>6,5</mark>.</p>
+<p><b>Effectif pair :</b> la médiane est la moyenne des deux valeurs centrales. Pour 4, 6, 7, 11 : (6 + 7) ÷ 2 = <mark>6,5</mark>.</p>
 <h3>La moyenne pondérée</h3>
-<p>Quand une valeur se répète, on utilise les effectifs.</p>
 <div class="tw"><table>
 <tr><th>Note</th><th>8</th><th>12</th><th>15</th><th>Total</th></tr>
 <tr><th>Effectif</th><td>2</td><td>5</td><td>3</td><td>10</td></tr>
 </table></div>
 <div class="ex">Moyenne = (8 × 2 + 12 × 5 + 15 × 3) ÷ 10 = 121 ÷ 10 = <mark>12,1</mark></div>
-<div class="keep"><b>À retenir : </b>la moyenne est sensible aux valeurs extrêmes, pas la médiane. Pour trouver la médiane, rangez toujours la série dans l’ordre.</div>
+<h3>Quel indicateur choisir ?</h3>
+<div class="ex">Salaires (en €) : 1 500 ; 1 600 ; 1 700 ; 1 800 ; 9 000.<br>Moyenne = 15 600 ÷ 5 = <mark>3 120 €</mark>. Médiane = <mark>1 700 €</mark>.<br>Une seule valeur extrême tire la moyenne vers le haut : la <b>médiane</b> décrit mieux le salaire « typique ».</div>
 </section>
 
-<section id="quart">
-<h2>2. Quartiles, fréquences, diagrammes</h2>
-<p>Le <b>premier quartile Q₁</b> est la plus petite valeur de la série telle qu’au moins 25 % des valeurs lui soient inférieures ou égales. Le <b>troisième quartile Q₃</b> correspond à 75 %. L’<b>écart interquartile</b> est Q₃ − Q₁.</p>
-<div class="ex">Série : 2, 4, 5, 7, 8, 10, 12, 13 (8 valeurs)<br>Médiane = (7 + 8) ÷ 2 = <mark>7,5</mark><br>Q₁ : 8 ÷ 4 = 2, donc la 2ème valeur : <mark>4</mark><br>Q₃ : 3 × 8 ÷ 4 = 6, donc la 6ème valeur : <mark>10</mark><br>Écart interquartile = 10 − 4 = <mark>6</mark></div>
-<p><b>Fréquence</b> = effectif ÷ effectif total (en fraction, en décimal ou en pourcentage) : 5 élèves sur 10 donnent <mark>50 %</mark>.</p>
+<section id="diag">
+<h2>2. Fréquences et diagrammes</h2>
+<p>La <b>fréquence</b> d’une valeur est : effectif de la valeur ÷ effectif total. On l’exprime en fraction, en nombre décimal ou en pourcentage (5 élèves sur 10 : 5/10 = 0,5 = <mark>50 %</mark>). La somme de toutes les fréquences vaut 1 (100 %).</p>
 <div class="tw"><table>
-<tr><th>Représentation</th><th>Quand l’utiliser</th></tr>
-<tr><td>Diagramme en bâtons</td><td>Valeurs distinctes (notes, nombre d’enfants…)</td></tr>
-<tr><td>Histogramme</td><td>Données regroupées en classes</td></tr>
-<tr><td>Diagramme circulaire</td><td>Répartition en parties d’un tout (angles proportionnels aux effectifs)</td></tr>
-<tr><td>Courbe</td><td>Évolution dans le temps</td></tr>
+<tr><th>Représentation</th><th>Usage</th><th>Remarque</th></tr>
+<tr><td>Diagramme en bâtons</td><td>Valeurs distinctes (notes, nombre d’enfants)</td><td>La hauteur d’un bâton est proportionnelle à l’effectif</td></tr>
+<tr><td>Histogramme</td><td>Données regroupées en <b>classes</b> (par exemple [0 ; 10[ , [10 ; 20[ )</td><td>Les rectangles sont accolés</td></tr>
+<tr><td>Diagramme circulaire</td><td>Répartition d’un tout</td><td>Angle = fréquence × 360° : 25 % → <mark>90°</mark> ; 40 % → <mark>144°</mark></td></tr>
+<tr><td>Courbe</td><td>Évolution dans le temps</td><td>Les points sont reliés dans l’ordre chronologique</td></tr>
 </table></div>
+<div class="keep"><b>À retenir : </b>avec un tableur-grapheur, on saisit les données, on calcule les effectifs, les fréquences et la moyenne avec =MOYENNE(…), puis on choisit le diagramme adapté.</div>
 </section>
 
 <section id="proba">
 <h2>3. Les probabilités</h2>
-<p>La probabilité d’un événement est un nombre <b>compris entre 0 et 1</b>. 0 correspond à un événement impossible, 1 à un événement certain.</p>
+<p>Une <b>expérience aléatoire</b> a plusieurs <b>issues</b> possibles, dont on ne peut pas prévoir laquelle se réalisera. Un <b>événement</b> est un ensemble d’issues. Sa <b>probabilité</b> est un nombre <b>compris entre 0 et 1</b>, exprimé en fraction, en décimal ou en pourcentage (1/4 = 0,25 = 25 %).</p>
 <div class="tw"><table>
-<tr><th>Règle</th><th>Exemple</th></tr>
-<tr><td>Issues équiprobables : P(A) = nombre d’issues favorables ÷ nombre d’issues possibles</td><td>Dé à 6 faces, P(pair) = 3 ÷ 6 = <mark>1/2</mark></td></tr>
-<tr><td>Événement contraire : P(non A) = 1 − P(A)</td><td>Urne de 10 boules dont 3 rouges : P(non rouge) = 1 − 3/10 = <mark>7/10</mark></td></tr>
-<tr><td>La somme des probabilités de toutes les issues vaut 1</td><td>Pile ou face : 1/2 + 1/2 = 1</td></tr>
+<tr><th>Notion</th><th>À retenir</th></tr>
+<tr><td>Événement impossible</td><td>Probabilité <b>0</b> (obtenir 7 avec un dé à 6 faces)</td></tr>
+<tr><td>Événement certain</td><td>Probabilité <b>1</b> (obtenir un nombre entre 1 et 6)</td></tr>
+<tr><td>Issues équiprobables</td><td>P(A) = nombre d’issues favorables ÷ nombre d’issues possibles</td></tr>
+<tr><td>Événement contraire</td><td>P(non A) = 1 − P(A)</td></tr>
+<tr><td>Somme</td><td>La somme des probabilités de toutes les issues vaut 1</td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>une probabilité n’est jamais négative et ne dépasse jamais 1. À partir de beaucoup d’expériences, la fréquence observée se rapproche de la probabilité théorique.</div>
+<div class="ex">Dé équilibré à 6 faces : P(pair) = 3/6 = <mark>1/2</mark> ; P(au moins 5) = 2/6 = <mark>1/3</mark> ; P(pas 6) = 5/6.<br>Urne de 10 boules : 3 rouges, 2 bleues, 5 vertes. P(rouge) = <mark>0,3</mark> ; P(non rouge) = 1 − 0,3 = <mark>0,7</mark> ; P(rouge ou bleue) = 5/10 = <mark>0,5</mark>.</div>
 </section>
 
-<section id="deux">
-<h2>4. Expériences à deux épreuves</h2>
-<p>On liste toutes les issues avec un <b>tableau</b> ou un <b>arbre de probabilités</b>.</p>
-<div class="ex">Deux dés, somme égale à 7 : il y a 6 × 6 = 36 issues, dont 6 favorables ((1;6), (2;5), (3;4), (4;3), (5;2), (6;1)). P = 6 ÷ 36 = <mark>1/6</mark>.</div>
-<h3>L’arbre de probabilités</h3>
-<p>Urne : 2 boules rouges et 3 boules bleues. On tire deux boules, avec remise.</p>
-<div class="ex">P(R puis R) = 2/5 × 2/5 = <mark>4/25</mark> (on multiplie le long d’une branche)<br>P(une rouge et une bleue) = 2/5 × 3/5 + 3/5 × 2/5 = <mark>12/25</mark> (on additionne les branches)</div>
-<p><b>Sans remise</b>, les probabilités du deuxième tirage changent : P(R puis R) = 2/5 × 1/4 = <mark>1/10</mark>.</p>
-<div class="keep"><b>À retenir : </b>le long d’une branche, on <b>multiplie</b> ; pour un événement qui regroupe plusieurs branches, on <b>additionne</b>. Vérifiez que la somme de toutes les branches vaut 1.</div>
+<section id="simul">
+<h2>4. Fréquence observée et probabilité</h2>
+<p>Lorsqu’on répète une expérience <b>un grand nombre de fois</b>, la <b>fréquence</b> d’un événement se rapproche de sa probabilité. On peut le vérifier par une <b>simulation</b> avec un tableur ou un programme Scratch (bloc « nombre aléatoire entre 1 et 6 »).</p>
+<div class="keep"><b>À retenir : </b>sur 1 000 lancers d’une pièce équilibrée, on obtient environ 500 « pile », mais rarement exactement 500. La fréquence <b>fluctue</b> et se stabilise autour de la probabilité 0,5 quand le nombre d’essais augmente.</div>
+</section>
+
+<section id="bonus">
+<h2>5. Pour aller plus loin</h2>
+<div class="warn"><b>Hors programme du cycle 4 en vigueur. </b>Les quartiles et les arbres de probabilités ne figurent pas dans le texte officiel du cycle 4 ; vous pouvez les avoir vus en classe.</div>
+<ul>
+<li><b>Quartiles :</b> série 2, 4, 5, 7, 8, 10, 12, 13 (8 valeurs). Q₁ est la valeur de rang 8 ÷ 4 = 2, soit <b>4</b> ; Q₃ est la valeur de rang 3 × 8 ÷ 4 = 6, soit <b>10</b>. L’écart interquartile vaut 10 − 4 = 6.</li>
+<li><b>Deux épreuves :</b> deux dés, somme égale à 7 : 6 issues favorables sur 36, soit <b>1/6</b>.</li>
+<li><b>Arbre :</b> urne de 2 rouges et 3 bleues, deux tirages avec remise : P(R puis R) = 2/5 × 2/5 = <b>4/25</b> ; sans remise : 2/5 × 1/4 = <b>1/10</b>. On multiplie le long d’une branche et on additionne les branches d’un même événement.</li>
+</ul>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -138,70 +149,32 @@ pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;
 
 <script>
 const QS = [
-{q:"Quelle est la moyenne de la série 5, 7, 8, 10, 15 ?",o:["8","9","10"],a:1,w:"(5 + 7 + 8 + 10 + 15) ÷ 5 = 45 ÷ 5 = 9."},
-{q:"Quelle est la médiane de la série 4, 6, 7, 11 ?",o:["6","6,5","7"],a:1,w:"L’effectif est pair : on prend la moyenne des deux valeurs centrales, (6 + 7) ÷ 2 = 6,5."},
-{q:"Quelle est l’étendue de la série 5, 7, 8, 10, 15 ?",o:["8","10","15"],a:1,w:"L’étendue est 15 − 5 = 10."},
-{q:"Dans une classe, 2 élèves ont 8, 5 élèves ont 12 et 3 élèves ont 15. Quelle est la moyenne de la classe ?",o:["11,67","12,1","12"],a:1,w:"Moyenne pondérée : (8 × 2 + 12 × 5 + 15 × 3) ÷ 10 = 121 ÷ 10 = 12,1."},
-{q:"Quel est le premier quartile de la série 2, 4, 5, 7, 8, 10, 12, 13 ?",o:["4","5","7"],a:0,w:"8 ÷ 4 = 2 : le premier quartile est la 2ème valeur, soit 4."},
-{q:"On lance un dé équilibré à 6 faces. Quelle est la probabilité d’obtenir un nombre pair ?",o:["1/6","1/2","2/3"],a:1,w:"3 issues favorables (2, 4, 6) sur 6 : 3 ÷ 6 = 1/2."},
-{q:"Une urne contient 10 boules dont 3 rouges. Quelle est la probabilité de ne pas tirer une boule rouge ?",o:["3/10","7/10","1/2"],a:1,w:"P(non rouge) = 1 − 3/10 = 7/10."},
-{q:"Laquelle de ces valeurs ne peut pas être une probabilité ?",o:["0","0,3","1,5"],a:2,w:"Une probabilité est comprise entre 0 et 1 : 1,5 est impossible."},
-{q:"On lance deux dés. Quelle est la probabilité que la somme soit 7 ?",o:["1/12","1/6","7/36"],a:1,w:"6 issues favorables sur 36 : 6 ÷ 36 = 1/6."},
-{q:"Une urne a 2 boules rouges et 3 bleues. On tire deux fois avec remise. Quelle est la probabilité de tirer deux rouges ?",o:["4/25","2/5","1/10"],a:0,w:"2/5 × 2/5 = 4/25. (1/10 serait la réponse sans remise.)"}
+{q:"Quelle est la moyenne de la série 5, 7, 8, 10, 15 ?",num:9,w:"(5 + 7 + 8 + 10 + 15) ÷ 5 = 45 ÷ 5 = 9.",l:1,t:"Indicateurs"},
+{q:"Quelle est la médiane de la série 4, 6, 7, 11 ?",o:["6,5", "6", "7", "7,5"],a:0,w:"L’effectif est pair : (6 + 7) ÷ 2 = 6,5.",l:2,t:"Indicateurs"},
+{q:"Quelle est l’étendue de la série 5, 7, 8, 10, 15 ?",num:10,w:"15 − 5 = 10.",l:1,t:"Indicateurs"},
+{q:"Dans une classe, 2 élèves ont 8, 5 élèves ont 12 et 3 élèves ont 15. Quelle est la moyenne de la classe ?",num:12.1,tol:0.01,w:"(8 × 2 + 12 × 5 + 15 × 3) ÷ 10 = 121 ÷ 10 = 12,1.",l:2,t:"Indicateurs"},
+{q:"Salaires : 1 500 ; 1 600 ; 1 700 ; 1 800 ; 9 000 €. Quelle est la moyenne ?",num:3120,u:"€",w:"15 600 ÷ 5 = 3 120 €.",l:2,t:"Indicateurs"},
+{q:"Pour la même série de salaires, quelle est la médiane ?",num:1700,u:"€",w:"La valeur centrale est 1 700 €.",l:2,t:"Indicateurs"},
+{q:"Quel indicateur est le moins sensible à une valeur extrême ?",o:["La médiane", "La moyenne", "L’étendue", "L’effectif total"],a:0,w:"Une valeur très grande déplace beaucoup la moyenne et l’étendue, pas la médiane.",l:2,t:"Indicateurs"},
+{q:"Sur 10 élèves, 5 ont plus de 15. Quelle est la fréquence de cet événement, en pourcentage ?",num:50,u:"%",w:"5 ÷ 10 = 0,5 = 50 %.",l:1,t:"Fréquences"},
+{q:"Dans un diagramme circulaire, quel angle correspond à 25 % ?",num:90,u:"°",w:"0,25 × 360° = 90°.",l:1,t:"Fréquences"},
+{q:"Dans un diagramme circulaire, quel angle correspond à 40 % ?",num:144,u:"°",w:"0,4 × 360° = 144°.",l:2,t:"Fréquences"},
+{q:"Quel diagramme représente le mieux l’évolution d’une température au cours d’une journée ?",o:["Une courbe", "Un diagramme circulaire", "Un diagramme en bâtons de la répartition"],a:0,w:"Une courbe montre l’évolution dans le temps.",l:1,t:"Fréquences"},
+{q:"Pour représenter des données regroupées en classes (par exemple les tailles par tranches de 10 cm), on utilise…",o:["Un histogramme", "Un diagramme circulaire uniquement", "Un nuage de points"],a:0,w:"Les classes sont représentées par des rectangles accolés.",l:2,t:"Fréquences"},
+{q:"On lance un dé équilibré à 6 faces. Quelle est la probabilité d’obtenir un nombre pair ?",o:["1/2", "1/6", "2/3", "1/3"],a:0,w:"Trois issues favorables (2, 4, 6) sur six.",l:1,t:"Probabilités"},
+{q:"Quelle est la probabilité d’obtenir au moins 5 avec un dé équilibré ?",o:["1/3", "1/6", "1/2", "2/3"],a:0,w:"Deux issues favorables (5 et 6) sur six : 2/6 = 1/3.",l:2,t:"Probabilités"},
+{q:"Une urne contient 10 boules dont 3 rouges. Quelle est la probabilité de tirer une boule rouge ?",num:0.3,tol:0.001,w:"3 issues favorables sur 10.",l:1,t:"Probabilités"},
+{q:"Dans la même urne, quelle est la probabilité de ne pas tirer une boule rouge ?",num:0.7,tol:0.001,w:"P(non rouge) = 1 − 0,3 = 0,7.",l:2,t:"Probabilités"},
+{q:"Lesquelles de ces valeurs ne peuvent pas être une probabilité ?",o:["0", "0,3", "1,5", "−0,2"],a:[2, 3],w:"Une probabilité est comprise entre 0 et 1.",l:2,t:"Probabilités"},
+{q:"Quelle est la probabilité d’un événement impossible ?",o:["0", "1", "0,5", "−1"],a:0,w:"Un événement impossible ne se réalise jamais.",l:1,t:"Probabilités"},
+{q:"Si P(A) = 0,35, que vaut la probabilité de l’événement contraire ?",o:["0,65", "0,35", "−0,35", "1,35"],a:0,w:"1 − 0,35 = 0,65.",l:1,t:"Probabilités"},
+{q:"On lance 1 000 fois une pièce équilibrée. Que peut-on attendre ?",o:["Une fréquence de « pile » proche de 0,5, mais rarement exactement 0,5", "Exactement 500 « pile »", "Toujours autant de « pile » que de « face » à chaque série de deux lancers", "Une fréquence qui s’éloigne de 0,5 quand on lance davantage"],a:0,w:"Avec beaucoup d’essais, la fréquence se stabilise autour de la probabilité.",l:2,t:"Simulation"},
+{q:"Pour simuler un dé à 6 faces avec Scratch, quel bloc utilise-t-on ?",o:["Nombre aléatoire entre 1 et 6", "Avancer de 6", "Répéter 6 fois", "Attendre 6 secondes"],a:0,w:"Le bloc « nombre aléatoire » donne un entier au hasard dans l’intervalle indiqué.",l:1,t:"Simulation"},
+{q:"Pour aller plus loin : quel est le premier quartile de la série 2, 4, 5, 7, 8, 10, 12, 13 ?",num:4,w:"8 ÷ 4 = 2 : le premier quartile est la 2ème valeur, soit 4.",l:3,t:"Pour aller plus loin"},
+{q:"Pour aller plus loin : une urne a 2 boules rouges et 3 bleues. On tire deux boules avec remise. Quelle est la probabilité d’obtenir deux rouges ?",num:0.16,tol:0.001,w:"2/5 × 2/5 = 4/25 = 0,16.",l:3,t:"Pour aller plus loin"},
+{q:"Pour aller plus loin : même urne, mais sans remise. Quelle est la probabilité d’obtenir deux rouges ?",num:0.1,tol:0.001,w:"2/5 × 1/4 = 2/20 = 0,1.",l:3,t:"Pour aller plus loin"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-stats-best") || 0)); localStorage.setItem("maths-stats-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

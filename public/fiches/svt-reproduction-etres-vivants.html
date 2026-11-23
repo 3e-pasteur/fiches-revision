@@ -61,35 +61,38 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
 .tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
 .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>SVT : la reproduction chez les êtres vivants</h1>
-<p class="meta">Brevet · notions du cycle 4 (5e et 4e) · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme de cycle 4 · lecture 15 min, puis quiz de 21 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="principe" class="on">Principe</button><button data-t="animaux">Chez les animaux</button><button data-t="plantes">Plantes à fleurs</button><button data-t="asexuee">Reproduction asexuée</button><button data-t="quiz">Quiz</button>
+<button data-t="principe" class="on">Reproduction sexuée</button><button data-t="animaux">Chez les animaux</button><button data-t="plantes">Plantes à fleurs</button><button data-t="asexuee">Reproduction asexuée</button><button data-t="comparaison">Sexuée ou asexuée ?</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="principe">
 <h2>1. La reproduction sexuée</h2>
-<p>La reproduction sexuée repose sur la rencontre de deux <b>gamètes</b> : un gamète mâle et un gamète femelle. Leur union, la <b>fécondation</b>, donne une <b>cellule-œuf</b> qui se divise et se développe en <b>embryon</b>.</p>
-<div class="keep"><b>À retenir : </b>chaque gamète apporte la moitié du matériel génétique. Les descendants héritent donc des caractères de leurs deux parents, avec un brassage qui crée de la <b>diversité</b>.</div>
+<p>Elle repose sur la rencontre de deux <b>gamètes</b> : un gamète mâle (le <b>spermatozoïde</b> chez les animaux, petit, mobile et très nombreux) et un gamète femelle (l’<b>ovule</b>, gros, immobile, avec des réserves). Leur union, la <b>fécondation</b>, donne une <b>cellule-œuf</b> qui se divise et se développe en <b>embryon</b>.</p>
+<div class="keep"><b>À retenir : </b>chaque gamète apporte la moitié du matériel génétique. Les descendants héritent des caractères de leurs deux parents, avec un brassage qui crée de la <b>diversité</b>.</div>
 </section>
 
 <section id="animaux">
 <h2>2. La reproduction chez les animaux</h2>
 <div class="tw"><table>
 <tr><th>Fécondation</th><th>Où ?</th><th>Exemples et caractéristiques</th></tr>
-<tr><td>Externe</td><td>Dans l’eau, à l’extérieur des corps</td><td>Grenouille, poisson : nombreux œufs, beaucoup de pertes</td></tr>
-<tr><td>Interne</td><td>Dans le corps de la femelle</td><td>Oiseaux, mammifères : moins de descendants, mieux protégés</td></tr>
+<tr><td>Externe</td><td>Dans l’eau, à l’extérieur des corps</td><td>Grenouille, poisson : des centaines ou des milliers d’œufs, avec beaucoup de pertes</td></tr>
+<tr><td>Interne</td><td>Dans le corps de la femelle</td><td>Oiseaux, reptiles, mammifères : moins de descendants, mieux protégés</td></tr>
 </table></div>
 <ul>
-<li>Les <b>oiseaux</b> pondent des œufs à coquille. Ce sont des animaux <b>ovipares</b>.</li>
-<li>Chez la plupart des <b>mammifères</b>, dont l’humain, l’embryon se développe dans l’<b>utérus</b>. Le <b>placenta</b> permet les échanges entre le sang de la mère et celui du fœtus : nutriments, dioxygène, déchets.</li>
-<li>Les jeunes reçoivent souvent des soins de leurs parents, ce qui augmente leurs chances de survie.</li>
+<li>Les animaux <b>ovipares</b> pondent des œufs (oiseaux, la plupart des reptiles, amphibiens, poissons). Les <b>vivipares</b> mettent au monde des petits déjà formés (la plupart des mammifères).</li>
+<li>Chez les mammifères, l’embryon se développe dans l’<b>utérus</b>. Le <b>placenta</b> permet les échanges entre le sang de la mère et celui du fœtus : nutriments, dioxygène, déchets.</li>
+<li>Les <b>soins aux jeunes</b> (couvaison, allaitement) augmentent leurs chances de survie : plus il y a de soins, moins il y a de petits.</li>
 </ul>
 </section>
 
@@ -98,14 +101,15 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="tw"><table>
 <tr><th>Organe</th><th>Rôle</th></tr>
 <tr><td>Étamine</td><td>Organe mâle : produit le <b>pollen</b></td></tr>
-<tr><td>Pistil</td><td>Organe femelle : contient l’<b>ovaire</b>, qui renferme les <b>ovules</b></td></tr>
+<tr><td>Pistil</td><td>Organe femelle : le <b>stigmate</b> reçoit le pollen, l’<b>ovaire</b> renferme les <b>ovules</b></td></tr>
 </table></div>
 <div class="tl">
-<p><b>Pollinisation</b> : le pollen est transporté (par le vent, les insectes, l’eau) jusqu’au pistil.</p>
+<p><b>Pollinisation</b> : le pollen est transporté (par le vent, les insectes, l’eau) jusqu’au stigmate d’une fleur.</p>
 <p><b>Fécondation</b> : le grain de pollen forme un tube qui rejoint l’ovule. Les gamètes s’unissent.</p>
 <p><b>Après la fécondation</b> : l’<b>ovule</b> devient une <b>graine</b> et l’<b>ovaire</b> devient un <b>fruit</b>.</p>
-<p><b>Dissémination et germination</b> : les graines sont dispersées (vent, animaux, eau) puis <b>germent</b> si elles reçoivent de l’eau, de la chaleur et du dioxygène.</p>
+<p><b>Dissémination</b> : les graines sont dispersées par le vent, l’eau ou les animaux. <b>Germination</b> : elles germent si elles reçoivent de l’eau, de la chaleur et du dioxygène.</p>
 </div>
+<p>Les fleurs colorées et parfumées attirent des insectes pollinisateurs, tandis que celles dispersées par le vent sont discrètes et produisent beaucoup de pollen.</p>
 </section>
 
 <section id="asexuee">
@@ -115,14 +119,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <li>Chez les plantes : <b>bouturage</b>, <b>stolons</b> du fraisier, bulbes, tubercules.</li>
 <li>Chez les bactéries et certains animaux : division d’une cellule ou d’un individu.</li>
 </ul>
+</section>
+
+<section id="comparaison">
+<h2>5. Sexuée ou asexuée ?</h2>
 <div class="tw"><table>
-<tr><th>Avantage</th><th>Inconvénient</th></tr>
-<tr><td>Rapide, ne nécessite qu’un seul individu</td><td>Aucune diversité génétique : toute la population est vulnérable aux mêmes menaces</td></tr>
+<tr><th></th><th>Reproduction sexuée</th><th>Reproduction asexuée</th></tr>
+<tr><td>Parents</td><td>Deux (gamètes mâle et femelle)</td><td>Un seul</td></tr>
+<tr><td>Descendants</td><td>Génétiquement différents entre eux et de leurs parents</td><td>Identiques au parent (clones)</td></tr>
+<tr><td>Avantage</td><td>Diversité génétique : certains individus résistent mieux aux changements</td><td>Rapide, ne nécessite pas de partenaire</td></tr>
+<tr><td>Inconvénient</td><td>Nécessite de trouver un partenaire</td><td>Aucune diversité : toute la population est vulnérable aux mêmes menaces</td></tr>
 </table></div>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -130,68 +141,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Qu’est-ce que la fécondation ?",o:["L’union d’un gamète mâle et d’un gamète femelle","La division d’une cellule","La formation d’un fruit"],a:0,w:"Elle donne une cellule-œuf qui se développe en embryon."},
-{q:"Chez quel animal la fécondation est-elle externe ?",o:["La grenouille","L’oiseau","Le chat"],a:0,w:"Chez la grenouille, la fécondation a lieu dans l’eau, à l’extérieur des corps."},
-{q:"Quel organe de la fleur produit le pollen ?",o:["L’étamine","Le pistil","L’ovaire"],a:0,w:"L’étamine est l’organe mâle de la fleur."},
-{q:"Qu’est-ce que la pollinisation ?",o:["Le transport du pollen jusqu’au pistil","La formation du fruit","La germination de la graine"],a:0,w:"Le vent, les insectes ou l’eau peuvent transporter le pollen."},
-{q:"Que deviennent l’ovule et l’ovaire après la fécondation ?",o:["L’ovule devient une graine et l’ovaire un fruit","L’ovule devient un fruit et l’ovaire une graine","Ils disparaissent"],a:0,w:"La graine contient le futur embryon et le fruit protège les graines."},
-{q:"Lequel est un exemple de reproduction asexuée chez les plantes ?",o:["Le bouturage","La pollinisation","La germination"],a:0,w:"Une bouture produit un clone de la plante mère."},
-{q:"Quel est l’inconvénient principal de la reproduction asexuée ?",o:["Elle ne produit aucune diversité génétique","Elle est trop lente","Elle nécessite deux parents"],a:0,w:"Les descendants sont des clones : ils sont tous vulnérables aux mêmes menaces."},
-{q:"À quoi sert le placenta chez les mammifères ?",o:["À assurer les échanges entre le sang de la mère et celui du fœtus","À produire le lait","À protéger le jeune après la naissance"],a:0,w:"Nutriments, dioxygène et déchets passent entre les deux circulations sans que les sangs se mélangent."}
+{q:"Qu’est-ce que la fécondation ?",o:["L’union d’un gamète mâle et d’un gamète femelle", "La division d’une cellule", "La formation d’un fruit", "La naissance du petit"],a:0,w:"Elle donne une cellule-œuf qui se développe en embryon.",l:1,t:"Reproduction sexuée"},
+{q:"Quelle est une caractéristique d’un spermatozoïde ?",o:["Petit, mobile et très nombreux", "Gros et immobile", "Rempli de réserves", "Produit une seule fois"],a:0,w:"L’ovule est au contraire gros, immobile et riche en réserves.",l:2,t:"Reproduction sexuée"},
+{q:"Chez quel animal la fécondation est-elle externe ?",o:["La grenouille", "L’oiseau", "Le chat", "Le lapin"],a:0,w:"Chez la grenouille, la fécondation a lieu dans l’eau.",l:1,t:"Animaux"},
+{q:"Quelle est la conséquence d’une fécondation externe dans l’eau ?",o:["Beaucoup d’œufs sont produits, avec beaucoup de pertes", "Très peu d’œufs, tous protégés", "Aucun œuf", "Des petits déjà formés"],a:0,w:"Les œufs sont peu protégés.",l:2,t:"Animaux"},
+{q:"Quels animaux sont vivipares ?",o:["La plupart des mammifères", "Les oiseaux", "Les reptiles", "Les poissons"],a:0,w:"Les vivipares mettent au monde des petits formés.",l:2,t:"Animaux"},
+{q:"À quoi sert le placenta ?",o:["Aux échanges entre le sang de la mère et celui du fœtus", "À produire le lait", "À protéger les œufs", "À stocker le sperme"],a:0,w:"Nutriments, dioxygène et déchets passent sans mélange des sangs.",l:2,t:"Animaux"},
+{q:"Quel lien y a-t-il entre soins aux jeunes et nombre de descendants ?",o:["Plus il y a de soins, moins il y a de petits", "Plus il y a de soins, plus il y a de petits", "Aucun lien", "Les soins n’existent que chez les poissons"],a:0,w:"Investir dans quelques petits augmente leurs chances de survie.",l:3,t:"Animaux"},
+{q:"Quel organe de la fleur produit le pollen ?",o:["L’étamine", "Le pistil", "L’ovaire", "Le stigmate"],a:0,w:"L’étamine est l’organe mâle.",l:1,t:"Plantes"},
+{q:"Que contient l’ovaire d’une fleur ?",o:["Les ovules", "Le pollen", "Les graines mûres", "Les stomates"],a:0,w:"Les ovules deviennent des graines après la fécondation.",l:2,t:"Plantes"},
+{q:"Qu’est-ce que la pollinisation ?",o:["Le transport du pollen jusqu’au stigmate", "La formation du fruit", "La germination", "La dispersion des graines"],a:0,w:"Le vent, les insectes ou l’eau le transportent.",l:1,t:"Plantes"},
+{q:"Que deviennent l’ovule et l’ovaire après la fécondation ?",o:["L’ovule devient une graine et l’ovaire un fruit", "L’ovule devient un fruit et l’ovaire une graine", "Ils disparaissent", "Ils deviennent du pollen"],a:0,w:"La graine contient l’embryon et le fruit protège les graines.",l:2,t:"Plantes"},
+{q:"Quelles conditions sont nécessaires à la germination d’une graine ?",o:["Eau", "Chaleur adaptée", "Dioxygène", "Lumière toujours indispensable"],a:[0, 1, 2],w:"Beaucoup de graines germent même sans lumière.",l:3,t:"Plantes"},
+{q:"Comment les graines peuvent-elles être dispersées ?",o:["Par le vent", "Par l’eau", "Par les animaux", "Uniquement par le sol"],a:[0, 1, 2],w:"Chaque mode de dissémination correspond à des adaptations des graines.",l:2,t:"Plantes"},
+{q:"Lequel est un exemple de reproduction asexuée chez les plantes ?",o:["Le bouturage", "La pollinisation", "La germination", "La fécondation"],a:0,w:"Une bouture produit un clone de la plante mère.",l:1,t:"Asexuée"},
+{q:"Que produit la reproduction asexuée ?",o:["Des descendants identiques au parent", "Des descendants tous différents", "Des gamètes", "Des graines"],a:0,w:"On parle de clones.",l:1,t:"Asexuée"},
+{q:"Quel est le principal avantage de la reproduction sexuée ?",o:["Elle crée de la diversité génétique", "Elle est plus rapide", "Elle ne demande qu’un seul parent", "Elle produit des clones"],a:0,w:"La diversité augmente les chances de survie face aux changements.",l:2,t:"Comparaison"},
+{q:"Quel est l’inconvénient principal de la reproduction asexuée ?",o:["Aucune diversité génétique", "Elle est trop lente", "Elle nécessite deux parents", "Elle ne produit pas de descendants"],a:0,w:"Toute la population est vulnérable aux mêmes menaces.",l:2,t:"Comparaison"},
+{q:"Pourquoi les fleurs discrètes produisent-elles beaucoup de pollen ?",o:["Parce qu’il est dispersé par le vent, avec beaucoup de pertes", "Parce qu’elles sont pollinisées par les insectes", "Parce qu’elles n’ont pas d’étamines", "Parce qu’elles n’ont pas de graines"],a:0,w:"Le vent est peu précis : il faut beaucoup de pollen pour que certains grains atteignent un stigmate.",l:3,t:"Plantes"},
+{q:"Une même variété de pommes de terre est cultivée par plantation de tubercules. Quel type de reproduction est-ce ?",o:["Asexuée", "Sexuée", "Ni l’une ni l’autre", "Les deux"],a:0,w:"Les tubercules produisent des plantes identiques à la plante mère.",l:3,t:"Asexuée"},
+{q:"Que signifie ovipare ?",o:["Qui pond des œufs", "Qui met au monde un petit formé", "Qui se reproduit sans partenaire", "Qui allaite"],a:0,w:"Oiseaux et amphibiens sont ovipares.",l:1,t:"Animaux"},
+{q:"Par quoi les insectes sont-ils attirés vers les fleurs ?",o:["Les couleurs, le parfum et le nectar", "Le pollen seulement", "Le fruit", "Les graines"],a:0,w:"Ils transportent du pollen d’une fleur à l’autre.",l:2,t:"Plantes"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("svt-reproduction-best") || 0)); localStorage.setItem("svt-reproduction-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

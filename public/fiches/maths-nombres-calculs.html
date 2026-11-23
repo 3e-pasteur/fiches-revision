@@ -58,73 +58,115 @@ mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-wei
 button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Maths : nombres et calculs</h1>
-<p class="meta">Brevet 3ème · lecture 15 min, puis quiz de 10 questions</p>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 20 min, puis quiz de 35 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="bases" class="on">Calculs de base</button><button data-t="puissances">Puissances</button><button data-t="racines">Racines</button><button data-t="arith">Arithmétique</button><button data-t="litteral">Calcul littéral</button><button data-t="equations">Équations</button><button data-t="quiz">Quiz</button>
+<button data-t="bases" class="on">Calculs de base</button><button data-t="egalite">Fractions et comparaisons</button><button data-t="puissances">Puissances</button><button data-t="racines">Racines carrées</button><button data-t="divisibilite">Divisibilité</button><button data-t="litteral">Calcul littéral</button><button data-t="equations">Équations</button><button data-t="bonus">Pour aller plus loin</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="bases">
 <h2>1. Calculs de base</h2>
 <h3>Les priorités opératoires</h3>
 <p>On calcule dans cet ordre : <b>parenthèses</b>, puis <b>puissances</b>, puis <b>multiplications et divisions</b> (de gauche à droite), puis <b>additions et soustractions</b> (de gauche à droite).</p>
-<div class="ex">3 + 4 × 2 = 3 + 8 = <mark>11</mark> &nbsp;·&nbsp; (3 + 4) × 2 = <mark>14</mark> &nbsp;·&nbsp; 20 − 3 × 2<sup>2</sup> = 20 − 12 = <mark>8</mark></div>
+<div class="ex">3 + 4 × 2 = <mark>11</mark> &nbsp;·&nbsp; (3 + 4) × 2 = <mark>14</mark> &nbsp;·&nbsp; 20 − 3 × 2<sup>2</sup> = 20 − 12 = <mark>8</mark></div>
 <h3>Les nombres relatifs</h3>
 <div class="tw"><table>
 <tr><th>Règle</th><th>Exemple</th></tr>
+<tr><td>L’<b>opposé</b> de a est −a ; a + (−a) = 0</td><td>L’opposé de −7 est <mark>7</mark></td></tr>
 <tr><td>Soustraire, c’est ajouter l’opposé</td><td>5 − (−3) = 5 + 3 = <mark>8</mark></td></tr>
-<tr><td>Même signe : le produit est positif</td><td>(−3) × (−4) = <mark>12</mark></td></tr>
-<tr><td>Signes différents : le produit est négatif</td><td>(−2) × 5 = <mark>−10</mark></td></tr>
+<tr><td>Même signe : le produit (ou le quotient) est <b>positif</b></td><td>(−3) × (−4) = <mark>12</mark></td></tr>
+<tr><td>Signes différents : le produit (ou le quotient) est <b>négatif</b></td><td>(−2) × 5 = <mark>−10</mark></td></tr>
+<tr><td>Plusieurs facteurs : le signe dépend de la <b>parité</b> du nombre de facteurs négatifs</td><td>(−1) × (−2) × (−3) = <mark>−6</mark></td></tr>
 </table></div>
+<div class="keep"><b>Piège classique : </b>(−3)<sup>2</sup> = (−3) × (−3) = <b>9</b>, mais −3<sup>2</sup> = −(3 × 3) = <b>−9</b>. Les parenthèses changent tout.</div>
 <h3>Les fractions</h3>
 <div class="tw"><table>
 <tr><th>Opération</th><th>Règle</th><th>Exemple</th></tr>
-<tr><td>Addition, soustraction</td><td>Mettre au même dénominateur</td><td>2/3 + 1/4 = 8/12 + 3/12 = <mark>11/12</mark></td></tr>
+<tr><td>Addition, soustraction</td><td>Même dénominateur, puis on opère sur les numérateurs</td><td>2/3 + 1/4 = 8/12 + 3/12 = <mark>11/12</mark></td></tr>
 <tr><td>Multiplication</td><td>Numérateurs entre eux, dénominateurs entre eux</td><td>2/3 × 3/5 = 6/15 = <mark>2/5</mark></td></tr>
-<tr><td>Division</td><td>Multiplier par l’inverse</td><td>2/3 ÷ 4/5 = 2/3 × 5/4 = <mark>5/6</mark></td></tr>
-<tr><td>Simplification</td><td>Diviser haut et bas par le même nombre</td><td>12/18 = <mark>2/3</mark></td></tr>
+<tr><td>Division</td><td>Multiplier par l’<b>inverse</b> (l’inverse de a/b est b/a ; 0 n’a pas d’inverse)</td><td>2/3 ÷ 4/5 = 2/3 × 5/4 = <mark>5/6</mark></td></tr>
+<tr><td>Simplification</td><td>Diviser haut et bas par le même nombre non nul</td><td>12/18 = <mark>2/3</mark></td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>on ne peut additionner deux fractions que si elles ont le même dénominateur, mais on peut toujours les multiplier directement.</div>
+<div class="ex"><b>Exemple résolu.</b> A = 2/3 − 5/6 × 3/10.<br>On commence par la multiplication : 5/6 × 3/10 = 15/60 = 1/4.<br>Puis A = 2/3 − 1/4 = 8/12 − 3/12 = <mark>5/12</mark>.</div>
+</section>
+
+<section id="egalite">
+<h2>2. Égalité, comparaison et repérage des nombres</h2>
+<ul>
+<li><b>Égalité de deux fractions :</b> a/b = c/d équivaut à <mark>a × d = b × c</mark> (produit en croix). Exemple : 3/4 = 9/12 car 3 × 12 = 4 × 9 = 36.</li>
+<li><b>Comparer des fractions :</b> on les met au même dénominateur (3/4 = 9/12 et 5/6 = 10/12, donc 3/4 &lt; 5/6), ou on les compare à 1/2 ou à 1.</li>
+<li><b>Comparer des relatifs :</b> tout nombre négatif est plus petit que tout nombre positif ; entre deux négatifs, le plus petit est celui qui a la plus grande valeur sans le signe (−5 &lt; −2).</li>
+<li><b>Droite graduée :</b> on peut placer un nombre rationnel (−2,5 est au milieu de −3 et −2) et lire son abscisse.</li>
+<li><b>Encadrer :</b> 3 &lt; √10 &lt; 4 car 3<sup>2</sup> = 9 et 4<sup>2</sup> = 16 ; 3,14 &lt; π &lt; 3,15.</li>
+</ul>
+<h3>Ordres de grandeur à connaître</h3>
+<div class="tw"><table>
+<tr><th>Grandeur</th><th>Ordre de grandeur</th></tr>
+<tr><td>Circonférence de la Terre</td><td>environ 40 000 km</td></tr>
+<tr><td>Distance Terre-Lune</td><td>environ 384 000 km, soit 3,8 × 10<sup>5</sup> km</td></tr>
+<tr><td>Vitesse de la lumière</td><td>environ 3 × 10<sup>8</sup> m/s</td></tr>
+<tr><td>Taille d’un atome</td><td>environ 10<sup>−10</sup> m</td></tr>
+<tr><td>Population mondiale</td><td>environ 8 milliards, soit 8 × 10<sup>9</sup></td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>un ordre de grandeur sert à vérifier qu’un résultat est vraisemblable : on remplace les nombres par des valeurs simples proches (4 987 × 2,03 ≈ 5 000 × 2 = 10 000).</div>
 </section>
 
 <section id="puissances">
-<h2>2. Puissances et notation scientifique</h2>
+<h2>3. Puissances et notation scientifique</h2>
+<p>Pour un entier positif n, a<sup>n</sup> = a × a × … × a (n facteurs). Par convention, a<sup>0</sup> = 1 et <b>a<sup>−n</sup> = 1 ÷ a<sup>n</sup></b>.</p>
 <div class="tw"><table>
 <tr><th>Règle</th><th>Exemple</th></tr>
-<tr><td>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></td><td>2<sup>3</sup> × 2<sup>4</sup> = <mark>2<sup>7</sup></mark></td></tr>
+<tr><td>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></td><td>2<sup>3</sup> × 2<sup>4</sup> = <mark>2<sup>7</sup></mark> (3 + 4 facteurs 2)</td></tr>
 <tr><td>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></td><td>5<sup>6</sup> ÷ 5<sup>2</sup> = <mark>5<sup>4</sup></mark></td></tr>
 <tr><td>(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></td><td>(3<sup>2</sup>)<sup>3</sup> = <mark>3<sup>6</sup></mark></td></tr>
-<tr><td>a<sup>0</sup> = 1</td><td>7<sup>0</sup> = <mark>1</mark></td></tr>
-<tr><td>a<sup>−n</sup> = 1 ÷ a<sup>n</sup></td><td>2<sup>−3</sup> = 1/8 = <mark>0,125</mark></td></tr>
+<tr><td>Exposant négatif</td><td>2<sup>−3</sup> = 1/8 = <mark>0,125</mark> ; 10<sup>−2</sup> = 0,01</td></tr>
 </table></div>
-<h3>La notation scientifique</h3>
-<p>Un nombre s’écrit a × 10<sup>n</sup> avec <b>1 ≤ a &lt; 10</b> et n un entier relatif.</p>
-<div class="ex">4 500 000 = <mark>4,5 × 10<sup>6</sup></mark> &nbsp;·&nbsp; 0,00032 = <mark>3,2 × 10<sup>−4</sup></mark></div>
-<div class="keep"><b>À retenir : </b>quand le nombre est grand, l’exposant est positif. Quand il est inférieur à 1, l’exposant est négatif.</div>
+<div class="keep"><b>À retenir : </b>au programme, on retrouve ces règles en revenant à la <b>définition</b> (écrire les facteurs), plutôt qu’en apprenant des formules sans comprendre.</div>
+<h3>Notation scientifique et préfixes</h3>
+<p>Un nombre s’écrit a × 10<sup>n</sup> avec <b>1 ≤ a &lt; 10</b> et n entier relatif : 4 500 000 = <mark>4,5 × 10<sup>6</sup></mark> ; 0,00032 = <mark>3,2 × 10<sup>−4</sup></mark>.</p>
+<div class="tw"><table>
+<tr><th>Préfixe</th><th>nano</th><th>micro</th><th>milli</th><th>kilo</th><th>méga</th><th>giga</th></tr>
+<tr><th>Facteur</th><td>10<sup>−9</sup></td><td>10<sup>−6</sup></td><td>10<sup>−3</sup></td><td>10<sup>3</sup></td><td>10<sup>6</sup></td><td>10<sup>9</sup></td></tr>
+</table></div>
+<div class="ex">5 nm = 5 × 10<sup>−9</sup> m &nbsp;·&nbsp; 3 GHz = 3 × 10<sup>9</sup> Hz &nbsp;·&nbsp; (3 × 10<sup>5</sup>) × (2 × 10<sup>−2</sup>) = 6 × 10<sup>3</sup> = <mark>6 000</mark></div>
 </section>
 
 <section id="racines">
-<h2>3. Les racines carrées</h2>
-<p>La racine carrée de a (avec a ≥ 0), notée √a, est le nombre <b>positif</b> dont le carré est a.</p>
+<h2>4. Les racines carrées</h2>
+<p>La racine carrée d’un nombre a ≥ 0, notée √a, est le nombre <b>positif</b> dont le carré est a. Les <b>carrés parfaits</b> de 1 à 144 sont : 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144.</p>
 <div class="tw"><table>
 <tr><th>Règle</th><th>Exemple</th></tr>
-<tr><td>√(a²) = a (pour a ≥ 0)</td><td>√49 = <mark>7</mark></td></tr>
-<tr><td>√(a × b) = √a × √b</td><td>√50 = √25 × √2 = <mark>5√2</mark></td></tr>
-<tr><td>√(a ÷ b) = √a ÷ √b (b &gt; 0)</td><td>√(9/4) = 3/2 = <mark>1,5</mark></td></tr>
+<tr><td>√(a²) = a (pour a ≥ 0) et (√a)² = a</td><td>√49 = <mark>7</mark> ; (√5)² = <mark>5</mark></td></tr>
+<tr><td>√(a × b) = √a × √b (a, b ≥ 0)</td><td>√50 = √25 × √2 = <mark>5√2</mark></td></tr>
+<tr><td>√a + √b <b>n’est pas égal</b> à √(a + b)</td><td>√9 + √16 = 7, mais √(9 + 16) = √25 = <mark>5</mark></td></tr>
 </table></div>
-<p><b>Les carrés parfaits à connaître :</b> 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144.</p>
-<div class="keep"><b>À retenir : </b>on ne peut pas additionner les racines sous le radical. √9 + √16 = 3 + 4 = 7, alors que √(9 + 16) = √25 = 5.</div>
+<h3>Résoudre x² = a</h3>
+<ul>
+<li>Si a &gt; 0 : deux solutions, <b>√a</b> et <b>−√a</b>. Exemple : x² = 49 donne x = 7 ou x = −7.</li>
+<li>Si a = 0 : une seule solution, 0.</li>
+<li>Si a &lt; 0 : <b>aucune solution</b>, car un carré n’est jamais négatif.</li>
+</ul>
+<div class="ex">Un carré a pour aire 20 cm². Son côté c vérifie c² = 20, donc c = √20 ≈ <mark>4,47 cm</mark> (on ne garde que la solution positive, car c’est une longueur).</div>
 </section>
 
-<section id="arith">
-<h2>4. Arithmétique</h2>
-<p>Un <b>nombre premier</b> a exactement deux diviseurs : 1 et lui-même (2, 3, 5, 7, 11, 13, 17, 19, 23, 29…). Le nombre 1 n’est pas premier.</p>
+<section id="divisibilite">
+<h2>5. Divisibilité et nombres premiers</h2>
+<ul>
+<li>a est un <b>multiple</b> de b (et b un <b>diviseur</b> de a) s’il existe un entier k tel que a = b × k.</li>
+<li><b>Division euclidienne</b> de a par b : a = b × q + r avec 0 ≤ r &lt; b. Exemple : 47 = 5 × 9 + 2 (quotient 9, reste 2).</li>
+</ul>
 <div class="tw"><table>
 <tr><th>Divisible par</th><th>Critère</th></tr>
 <tr><td>2</td><td>Le dernier chiffre est pair</td></tr>
@@ -133,46 +175,52 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <tr><td>9</td><td>La somme des chiffres est un multiple de 9</td></tr>
 <tr><td>10</td><td>Le dernier chiffre est 0</td></tr>
 </table></div>
-<p><b>Décomposition en facteurs premiers :</b> 60 = 2<sup>2</sup> × 3 × 5.</p>
-<h3>Le PGCD par l’algorithme d’Euclide</h3>
-<p>On divise, puis on recommence avec le diviseur et le reste, jusqu’à obtenir un reste nul. Le PGCD est le dernier reste non nul.</p>
-<div class="ex">48 = 18 × 2 + <mark>12</mark><br>18 = 12 × 1 + <mark>6</mark><br>12 = 6 × 2 + 0 &nbsp;→&nbsp; PGCD(48 ; 18) = <mark>6</mark></div>
-<p>Pour rendre une fraction irréductible, on divise le numérateur et le dénominateur par leur PGCD : 48/18 = 8/3.</p>
+<p>Un <b>nombre premier</b> a exactement deux diviseurs, 1 et lui-même. Ceux qui sont inférieurs ou égaux à 30 : <b>2, 3, 5, 7, 11, 13, 17, 19, 23, 29</b>. Le nombre 1 n’est pas premier. On trouve les premiers jusqu’à 100 avec le crible d’Ératosthène.</p>
+<div class="ex"><b>Décomposition en facteurs premiers :</b> 60 = 2<sup>2</sup> × 3 × 5 &nbsp;·&nbsp; 84 = 2<sup>2</sup> × 3 × 7 &nbsp;·&nbsp; 126 = 2 × 3<sup>2</sup> × 7<br><b>Fraction irréductible :</b> 84/126 = (2<sup>2</sup> × 3 × 7) ÷ (2 × 3<sup>2</sup> × 7) = <mark>2/3</mark></div>
+<div class="ex"><b>Problème de conjonction.</b> Deux feux clignotent toutes les 12 s et toutes les 18 s, et sont allumés ensemble à l’instant 0. Multiples de 12 : 12, 24, <b>36</b>… Multiples de 18 : 18, <b>36</b>… Ils clignotent de nouveau ensemble au bout de <mark>36 s</mark>.</div>
 </section>
 
 <section id="litteral">
-<h2>5. Calcul littéral</h2>
-<h3>Développer</h3>
-<div class="ex">k(a + b) = ka + kb<br>(a + b)(c + d) = ac + ad + bc + bd<br>(2x + 1)(x − 3) = 2x<sup>2</sup> − 6x + x − 3 = <mark>2x<sup>2</sup> − 5x − 3</mark></div>
-<h3>Les trois identités remarquables</h3>
+<h2>6. Le calcul littéral</h2>
+<p>Une lettre peut être une <b>inconnue</b> (dans une équation), une <b>variable</b> (dans une fonction) ou une <b>indéterminée</b> (dans une identité vraie pour tout nombre). Conventions : 2x signifie 2 × x ; x² signifie x × x ; on ne note pas le signe × devant une lettre ou une parenthèse.</p>
 <div class="tw"><table>
-<tr><th>Identité</th><th>Exemple</th></tr>
-<tr><td>(a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup></td><td>(x + 3)<sup>2</sup> = <mark>x<sup>2</sup> + 6x + 9</mark></td></tr>
-<tr><td>(a − b)<sup>2</sup> = a<sup>2</sup> − 2ab + b<sup>2</sup></td><td>(x − 5)<sup>2</sup> = <mark>x<sup>2</sup> − 10x + 25</mark></td></tr>
-<tr><td>(a + b)(a − b) = a<sup>2</sup> − b<sup>2</sup></td><td>(x + 4)(x − 4) = <mark>x<sup>2</sup> − 16</mark></td></tr>
+<tr><th>Opération</th><th>Règle</th><th>Exemple</th></tr>
+<tr><td>Distributivité simple</td><td>k(a + b) = ka + kb</td><td>3(x + 4) = <mark>3x + 12</mark></td></tr>
+<tr><td>Distributivité double</td><td>(a + b)(c + d) = ac + ad + bc + bd</td><td>(2x + 1)(x − 3) = 2x² − 6x + x − 3 = <mark>2x² − 5x − 3</mark></td></tr>
+<tr><td>Factorisation (facteur commun)</td><td>ka + kb = k(a + b)</td><td>6x + 9 = <mark>3(2x + 3)</mark></td></tr>
+<tr><td>Identité remarquable à connaître</td><td>a² − b² = (a − b)(a + b)</td><td>x² − 16 = <mark>(x − 4)(x + 4)</mark> ; 49 − 9x² = <mark>(7 − 3x)(7 + 3x)</mark></td></tr>
 </table></div>
-<h3>Factoriser</h3>
-<p>Factoriser, c’est transformer une somme en produit. Cherchez d’abord un <b>facteur commun</b>, puis une identité remarquable.</p>
-<div class="ex">6x + 9 = <mark>3(2x + 3)</mark> &nbsp;·&nbsp; x<sup>2</sup> − 16 = <mark>(x − 4)(x + 4)</mark> &nbsp;·&nbsp; 4x<sup>2</sup> + 12x + 9 = <mark>(2x + 3)<sup>2</sup></mark></div>
-<div class="keep"><b>À retenir : </b>dans (a + b)<sup>2</sup>, n’oubliez jamais le double produit 2ab. L’erreur classique est d’écrire a<sup>2</sup> + b<sup>2</sup>.</div>
+<div class="ex"><b>Démontrer une propriété générale.</b> La somme de trois entiers consécutifs est un multiple de 3. Avec n un entier : n + (n + 1) + (n + 2) = 3n + 3 = <mark>3(n + 1)</mark>, donc c’est un multiple de 3.</div>
+<div class="keep"><b>À retenir : </b>vérifier sur quelques exemples ne prouve rien. Pour montrer qu’un résultat est vrai pour <b>tous</b> les nombres, on utilise le calcul littéral. Un seul contre-exemple suffit en revanche pour montrer qu’une affirmation est fausse.</div>
 </section>
 
 <section id="equations">
-<h2>6. Équations, inéquations, systèmes</h2>
+<h2>7. Équations du premier degré</h2>
 <div class="tw"><table>
 <tr><th>Type</th><th>Méthode</th><th>Exemple</th></tr>
-<tr><td>Équation du 1er degré</td><td>Isoler l’inconnue</td><td>3x + 5 = 20 → 3x = 15 → <mark>x = 5</mark></td></tr>
+<tr><td>a + x = b ou ax = b</td><td>Opération inverse des deux côtés</td><td>3x + 5 = 20 → 3x = 15 → <mark>x = 5</mark></td></tr>
+<tr><td>ax + b = cx + d</td><td>Regrouper les x d’un côté, les nombres de l’autre</td><td>4x − 3 = x + 9 → 3x = 12 → <mark>x = 4</mark></td></tr>
 <tr><td>Produit nul</td><td>Un produit est nul si l’un des facteurs est nul</td><td>(x − 2)(x + 5) = 0 → <mark>x = 2 ou x = −5</mark></td></tr>
-<tr><td>Inéquation</td><td>Comme une équation, mais le sens change si on multiplie ou divise par un négatif</td><td>−2x &gt; 6 → <mark>x &lt; −3</mark></td></tr>
-<tr><td>Système</td><td>Combinaison ou substitution</td><td>x + y = 10 et x − y = 2 → 2x = 12, <mark>x = 6, y = 4</mark></td></tr>
+<tr><td>x² = a</td><td>Voir la partie racines carrées</td><td>x² = 25 → <mark>x = 5 ou x = −5</mark></td></tr>
 </table></div>
 <h3>Mettre un problème en équation</h3>
-<p><b>1.</b> Choisir l’inconnue. <b>2.</b> Traduire l’énoncé en équation. <b>3.</b> Résoudre. <b>4.</b> Conclure par une phrase de réponse, en vérifiant que le résultat convient à la situation.</p>
-<div class="keep"><b>À retenir : </b>vérifiez toujours votre solution en la remplaçant dans l’équation de départ.</div>
+<p><b>1.</b> Choisir l’inconnue. <b>2.</b> Traduire l’énoncé par une équation. <b>3.</b> Résoudre. <b>4.</b> Vérifier et répondre par une phrase.</p>
+<div class="ex">Léa a 3 ans de plus que Paul, et la somme de leurs âges est 27. Âge de Paul : x. Âge de Léa : x + 3.<br>x + (x + 3) = 27 → 2x = 24 → x = 12. Paul a <mark>12 ans</mark> et Léa <mark>15 ans</mark> (vérification : 12 + 15 = 27).</div>
+</section>
+
+<section id="bonus">
+<h2>8. Pour aller plus loin</h2>
+<div class="warn"><b>Hors programme du cycle 4 en vigueur. </b>Les notions ci-dessous ne figurent pas dans le texte officiel du cycle 4. Elles peuvent avoir été vues en classe ou aider pour le lycée ; en cas de doute, fiez-vous au cours de votre professeur.</div>
+<ul>
+<li><b>PGCD par l’algorithme d’Euclide :</b> on divise, puis on recommence avec le diviseur et le reste. 48 = 18 × 2 + 12 ; 18 = 12 × 1 + 6 ; 12 = 6 × 2 + 0 : PGCD(48 ; 18) = 6, donc 48/18 = 8/3.</li>
+<li><b>Autres identités remarquables :</b> (a + b)² = a² + 2ab + b² et (a − b)² = a² − 2ab + b². Exemple : (x + 3)² = x² + 6x + 9. L’erreur classique est d’oublier le double produit.</li>
+<li><b>Inéquations :</b> comme les équations, mais le sens de l’inégalité s’inverse quand on multiplie ou divise par un nombre négatif (−2x &gt; 6 donne x &lt; −3).</li>
+<li><b>Systèmes de deux équations :</b> x + y = 10 et x − y = 2 : en additionnant, 2x = 12, donc x = 6 et y = 4.</li>
+</ul>
 </section>
 
 <section id="quiz">
-<h2>7. Quiz d’entraînement</h2>
+<h2>9. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -180,70 +228,43 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Calculez : 3 + 4 × 2",o:["14","11","10"],a:1,w:"La multiplication est prioritaire : 4 × 2 = 8, puis 3 + 8 = 11."},
-{q:"Calculez : 2/3 + 1/4",o:["3/7","11/12","2/12"],a:1,w:"On met au même dénominateur : 8/12 + 3/12 = 11/12."},
-{q:"Calculez : 2/3 ÷ 4/5",o:["8/15","5/6","6/5"],a:1,w:"Diviser, c’est multiplier par l’inverse : 2/3 × 5/4 = 10/12 = 5/6."},
-{q:"Calculez : (−3) × (−4)",o:["−12","12","−7"],a:1,w:"Deux nombres de même signe : le produit est positif, donc 12."},
-{q:"Simplifiez : 10³ × 10⁴",o:["10¹²","10⁷","100⁷"],a:1,w:"On additionne les exposants : 3 + 4 = 7, donc 10⁷."},
-{q:"Quelle est l’écriture scientifique de 0,00032 ?",o:["3,2 × 10⁴","3,2 × 10⁻⁴","32 × 10⁻⁵"],a:1,w:"On place la virgule après le premier chiffre non nul : 3,2, et on a décalé de 4 rangs vers la droite, donc 10⁻⁴."},
-{q:"Écrivez √50 sous la forme a√b la plus simple.",o:["25√2","5√2","10√5"],a:1,w:"√50 = √25 × √2 = 5√2."},
-{q:"Quel est le PGCD de 48 et 18 ?",o:["3","6","12"],a:1,w:"48 = 18 × 2 + 12, 18 = 12 × 1 + 6, 12 = 6 × 2 + 0 : le dernier reste non nul est 6."},
-{q:"Développez : (x + 3)²",o:["x² + 9","x² + 6x + 9","x² + 3x + 9"],a:1,w:"(a + b)² = a² + 2ab + b², donc x² + 6x + 9."},
-{q:"Résolvez : −2x > 6",o:["x > −3","x < −3","x < 3"],a:1,w:"On divise par −2, nombre négatif : le sens de l’inéquation s’inverse, donc x < −3."}
+{q:"Calculez : 3 + 4 × 2",num:11,w:"La multiplication est prioritaire : 4 × 2 = 8, puis 3 + 8 = 11.",l:1,t:"Calculs"},
+{q:"Calculez : (−3) × (−4)",o:["12", "−12", "−7", "7"],a:0,w:"Deux nombres de même signe : le produit est positif.",l:1,t:"Calculs"},
+{q:"Quelles égalités sont vraies ?",o:["(−3)² = 9", "−3² = 9", "−3² = −9", "(−3)² = −9"],a:[0, 2],w:"(−3)² = (−3) × (−3) = 9, alors que −3² = −(3 × 3) = −9.",l:2,t:"Calculs"},
+{q:"Calculez : (−7) − (−2)",o:["−5", "−9", "5", "9"],a:0,w:"Soustraire (−2), c’est ajouter 2 : −7 + 2 = −5.",l:2,t:"Calculs"},
+{q:"Quel est le signe de (−1) × (−2) × (−3) × (−4) ?",o:["Positif", "Négatif", "Nul"],a:0,w:"Il y a quatre facteurs négatifs, un nombre pair : le produit est positif (il vaut 24).",l:2,t:"Calculs"},
+{q:"Calculez : 2/3 + 1/4",o:["11/12", "3/7", "2/12", "3/12"],a:0,w:"Au dénominateur 12 : 8/12 + 3/12 = 11/12.",l:1,t:"Fractions"},
+{q:"Calculez : 2/3 ÷ 4/5",o:["5/6", "8/15", "6/5", "10/3"],a:0,w:"Diviser par 4/5, c’est multiplier par 5/4 : 2/3 × 5/4 = 10/12 = 5/6.",l:2,t:"Fractions"},
+{q:"Calculez : 2/3 − 5/6 × 3/10",o:["5/12", "1/4", "7/12", "3/5"],a:0,w:"La multiplication d’abord : 5/6 × 3/10 = 1/4, puis 2/3 − 1/4 = 8/12 − 3/12 = 5/12.",l:3,t:"Fractions"},
+{q:"À quelle condition a/b = c/d ?",o:["a × d = b × c", "a + d = b + c", "a × b = c × d", "a × c = b × d"],a:0,w:"C’est la condition d’égalité de deux fractions (produit en croix).",l:2,t:"Fractions"},
+{q:"Comparez 3/4 et 5/6.",o:["3/4 < 5/6", "3/4 > 5/6", "3/4 = 5/6"],a:0,w:"Au dénominateur 12 : 9/12 < 10/12.",l:2,t:"Fractions"},
+{q:"Entre quels entiers consécutifs se trouve √10 ?",o:["3 et 4", "2 et 3", "4 et 5", "9 et 11"],a:0,w:"3² = 9 et 4² = 16, donc 3 < √10 < 4.",l:2,t:"Racines"},
+{q:"Simplifiez : 10³ × 10⁴",o:["10⁷", "10¹²", "100⁷", "10⁻¹"],a:0,w:"On additionne les exposants : 3 + 4 = 7.",l:1,t:"Puissances"},
+{q:"Donnez 2⁻³ en écriture décimale.",num:0.125,tol:0.0001,w:"2⁻³ = 1 ÷ 2³ = 1/8 = 0,125.",l:2,t:"Puissances"},
+{q:"Quelle est l’écriture scientifique de 0,00032 ?",o:["3,2 × 10⁻⁴", "3,2 × 10⁴", "32 × 10⁻⁵", "0,32 × 10⁻³"],a:0,w:"La virgule est décalée de 4 rangs vers la droite : 3,2 × 10⁻⁴ (avec 1 ≤ 3,2 < 10).",l:2,t:"Puissances"},
+{q:"Calculez : (3 × 10⁵) × (2 × 10⁻²)",o:["6 × 10³", "6 × 10⁷", "5 × 10³", "6 × 10⁻⁷"],a:0,w:"3 × 2 = 6 et 10⁵ × 10⁻² = 10³.",l:3,t:"Puissances"},
+{q:"À quelle puissance de 10 correspond le préfixe nano ?",o:["10⁻⁹", "10⁻³", "10⁻⁶", "10⁹"],a:0,w:"Nano = 10⁻⁹ ; micro = 10⁻⁶ ; milli = 10⁻³ ; giga = 10⁹.",l:1,t:"Puissances"},
+{q:"Calculez : √144",num:12,w:"12 × 12 = 144.",l:1,t:"Racines"},
+{q:"Que vaut √9 + √16 ?",o:["7", "5", "25", "√25"],a:0,w:"√9 = 3 et √16 = 4, donc 7. On ne peut pas écrire √9 + √16 = √25.",l:2,t:"Racines"},
+{q:"Quelles sont les solutions de x² = 49 ?",o:["7", "−7", "49", "24,5"],a:[0, 1],w:"Deux nombres ont pour carré 49 : 7 et −7.",l:2,t:"Racines"},
+{q:"Combien de solutions a l’équation x² = −4 ?",o:["Aucune", "Une", "Deux"],a:0,w:"Un carré n’est jamais négatif.",l:3,t:"Racines"},
+{q:"Un carré a pour aire 20 cm². Donnez son côté arrondi au dixième.",num:4.5,tol:0.05,u:"cm",w:"c = √20 ≈ 4,47, soit 4,5 cm au dixième.",l:2,t:"Racines"},
+{q:"Lequel de ces nombres est divisible par 9 ?",o:["4 725", "5 163", "7 042", "2 345"],a:0,w:"4 + 7 + 2 + 5 = 18, un multiple de 9.",l:2,t:"Divisibilité"},
+{q:"Quel est le quotient et le reste de la division euclidienne de 47 par 5 ?",o:["Quotient 9, reste 2", "Quotient 8, reste 7", "Quotient 9, reste 5", "Quotient 10, reste −3"],a:0,w:"47 = 5 × 9 + 2 avec 0 ≤ 2 < 5.",l:2,t:"Divisibilité"},
+{q:"Quels nombres sont premiers ?",o:["21", "23", "27", "29"],a:[1, 3],w:"21 = 3 × 7 et 27 = 3 × 9 ne sont pas premiers.",l:2,t:"Divisibilité"},
+{q:"Quelle est la décomposition de 60 en facteurs premiers ?",o:["2² × 3 × 5", "2 × 3 × 10", "6 × 10", "2 × 30"],a:0,w:"60 = 4 × 15 = 2² × 3 × 5.",l:2,t:"Divisibilité"},
+{q:"Quelle est la forme irréductible de 84/126 ?",o:["2/3", "3/4", "42/63", "4/6"],a:0,w:"84 = 2² × 3 × 7 et 126 = 2 × 3² × 7 : on simplifie par 2 × 3 × 7 = 42.",l:3,t:"Divisibilité"},
+{q:"Deux feux clignotent toutes les 12 s et 18 s, ensemble à l’instant 0. Dans combien de secondes clignotent-ils de nouveau ensemble pour la première fois ?",num:36,u:"s",w:"Multiples de 12 : 12, 24, 36. Multiples de 18 : 18, 36. Le premier commun est 36.",l:3,t:"Divisibilité"},
+{q:"Développez : (2x + 1)(x − 3)",o:["2x² − 5x − 3", "2x² − 3", "2x² + 5x − 3", "2x² − 6x − 3"],a:0,w:"2x × x = 2x², 2x × (−3) = −6x, 1 × x = x, 1 × (−3) = −3 : 2x² − 5x − 3.",l:2,t:"Calcul littéral"},
+{q:"Factorisez : x² − 16",o:["(x − 4)(x + 4)", "(x − 4)²", "(x − 8)(x + 2)", "x(x − 16)"],a:0,w:"a² − b² = (a − b)(a + b) avec a = x et b = 4.",l:2,t:"Calcul littéral"},
+{q:"Factorisez : 49 − 9x²",o:["(7 − 3x)(7 + 3x)", "(7 − 9x)(7 + x)", "(7 − 3x)²", "(49 − 3x)(1 + 3x)"],a:0,w:"49 = 7² et 9x² = (3x)², donc a² − b² avec a = 7 et b = 3x.",l:3,t:"Calcul littéral"},
+{q:"Pourquoi n + (n + 1) + (n + 2) est-il toujours un multiple de 3 ?",o:["Il est égal à 3(n + 1)", "Parce que 3 est impair", "Parce que n est pair", "Il ne l’est pas toujours"],a:0,w:"n + n + 1 + n + 2 = 3n + 3 = 3(n + 1).",l:3,t:"Calcul littéral"},
+{q:"Résolvez : 3x + 5 = 20",num:5,w:"3x = 15, donc x = 5.",l:1,t:"Équations"},
+{q:"Résolvez : 4x − 3 = x + 9",num:4,w:"3x = 12, donc x = 4.",l:2,t:"Équations"},
+{q:"Quelles sont les solutions de (x − 2)(x + 5) = 0 ?",o:["2", "−5", "5", "−2"],a:[0, 1],w:"Un produit est nul si un facteur est nul : x − 2 = 0 ou x + 5 = 0.",l:2,t:"Équations"},
+{q:"Léa a 3 ans de plus que Paul. La somme de leurs âges est 27. Quel est l’âge de Paul ?",num:12,u:"ans",w:"x + (x + 3) = 27 donne 2x = 24, donc x = 12.",l:3,t:"Équations"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 6, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-nombres-best") || 0)); localStorage.setItem("maths-nombres-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>

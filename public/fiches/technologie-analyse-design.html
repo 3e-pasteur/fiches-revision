@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technologie : besoin, cahier des charges, design et cycle de vie</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#5f3dc4;--soft:#f3f0ff;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#9775fa;--soft:#2a2540;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Technologie : besoin, cahier des charges, design et cycle de vie</h1>
+<p class="meta">Brevet · programme de technologie du cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 19 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="besoin" class="on">Besoin et fonctions</button><button data-t="cdc">Cahier des charges</button><button data-t="design">Design et créativité</button><button data-t="cycle">Cycle de vie</button><button data-t="societe">Objets techniques et société</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="besoin">
+<h2>1. Le besoin et les fonctions d’un objet technique</h2>
+<p>Un <b>objet technique</b> est créé pour répondre à un <b>besoin</b>. On analyse ce qu’il fait et comment il le fait.</p>
+<div class="tw"><table>
+<tr><th>Notion</th><th>Définition</th><th>Exemple (un vélo électrique)</th></tr>
+<tr><td>Besoin</td><td>Ce qui manque à l’utilisateur</td><td>Se déplacer facilement, sans effort excessif</td></tr>
+<tr><td>Fonction d’usage</td><td>Raison pour laquelle l’objet est utilisé</td><td>Permettre de se déplacer</td></tr>
+<tr><td>Fonction technique</td><td>Action réalisée par une partie de l’objet pour assurer la fonction d’usage</td><td>Convertir l’énergie électrique en mouvement</td></tr>
+<tr><td>Solution technique</td><td>Moyen choisi pour réaliser une fonction technique</td><td>Un moteur électrique dans la roue</td></tr>
+<tr><td>Contrainte</td><td>Condition à respecter (coût, taille, sécurité, normes, environnement)</td><td>Masse inférieure à 25 kg</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>on distingue ce que l’objet <b>fait</b> (la fonction) de la façon dont il le fait (la solution technique). Une même fonction peut être réalisée par plusieurs solutions.</div>
+</section>
+
+<section id="cdc">
+<h2>2. Le cahier des charges</h2>
+<p>Le <b>cahier des charges</b> décrit ce que doit faire l’objet avant sa conception : ses <b>fonctions principales</b>, ses <b>contraintes</b>, et pour chacune un <b>critère</b> mesurable assorti d’un <b>niveau</b> à atteindre et d’une <b>flexibilité</b> (marge acceptable).</p>
+<div class="tw"><table>
+<tr><th>Fonction ou contrainte</th><th>Critère</th><th>Niveau</th></tr>
+<tr><td>Permettre de se déplacer</td><td>Autonomie</td><td>au moins 50 km</td></tr>
+<tr><td>Être sûr</td><td>Distance de freinage</td><td>au plus 5 m à 25 km/h</td></tr>
+<tr><td>Rester abordable</td><td>Prix</td><td>moins de 1 500 €</td></tr>
+</table></div>
+<p>On peut le représenter par un schéma (« diagramme des interacteurs ») où l’objet est au centre, relié à son milieu environnant (utilisateur, énergie, environnement…) par ses fonctions et ses contraintes.</p>
+</section>
+
+<section id="design">
+<h2>3. Design, innovation et créativité</h2>
+<ul>
+<li>Le <b>design</b> d’un objet combine <b>fonction</b>, <b>forme</b>, <b>ergonomie</b> (confort et facilité d’utilisation), <b>esthétique</b>, <b>matériaux</b> et couleurs.</li>
+<li>Une <b>innovation</b> est une nouveauté qui répond à un besoin et qui est diffusée ; une <b>invention</b> est la création d’un principe nouveau.</li>
+<li>La démarche de <b>créativité</b> : recherche d’idées (remue-méninges), <b>croquis</b>, choix d’une solution, réalisation d’une <b>maquette</b> ou d’un <b>prototype</b>, <b>essais</b> et améliorations.</li>
+</ul>
+</section>
+
+<section id="cycle">
+<h2>4. Le cycle de vie et l’impact environnemental</h2>
+<div class="chain"><span>Conception</span><i>→</i><span>Fabrication</span><i>→</i><span>Distribution</span><i>→</i><span>Utilisation</span><i>→</i><span>Fin de vie</span></div>
+<p>À chaque étape, un objet consomme de l’énergie et des ressources et rejette des polluants. La <b>fin de vie</b> peut être le <b>recyclage</b>, la réutilisation, la réparation ou l’élimination.</p>
+<div class="keep"><b>À retenir : </b>l’<b>éco-conception</b> consiste à réduire l’impact environnemental d’un objet dès sa conception : choix des matériaux, réduction de l’énergie consommée, facilité de réparation et de recyclage.</div>
+</section>
+
+<section id="societe">
+<h2>5. Les objets techniques et la société</h2>
+<ul>
+<li>Les objets <b>évoluent</b> avec les besoins, les matériaux et les techniques : le téléphone fixe est devenu un smartphone qui regroupe de nombreuses fonctions.</li>
+<li>Ces évolutions ont des <b>effets sociaux</b> (communication, emploi, façons de vivre) et <b>environnementaux</b> (consommation de ressources, déchets électroniques).</li>
+<li>Des principes de <b>développement durable</b> guident les choix : durabilité, réparabilité, recyclage, sobriété énergétique.</li>
+</ul>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Que désigne la fonction d’usage d’un objet technique ?",o:["La raison pour laquelle il est utilisé", "Son prix", "Sa couleur", "La façon dont il est fabriqué"],a:0,w:"La fonction d’usage répond au besoin de l’utilisateur.",l:1,t:"Besoin et fonctions"},
+{q:"Qu’est-ce qu’une solution technique ?",o:["Le moyen choisi pour réaliser une fonction technique", "Le besoin de l’utilisateur", "Le nom de l’objet", "Le prix de vente"],a:0,w:"Un moteur est une solution technique pour la fonction « convertir l’énergie ».",l:2,t:"Besoin et fonctions"},
+{q:"Quelle est la différence entre une fonction technique et une solution technique ?",o:["La fonction dit ce que fait l’objet, la solution dit comment", "Il n’y en a aucune", "La fonction est le matériau, la solution est la forme", "La solution décrit le besoin"],a:0,w:"Plusieurs solutions peuvent réaliser la même fonction.",l:2,t:"Besoin et fonctions"},
+{q:"Lesquelles de ces exigences sont des contraintes ?",o:["Coût maximal", "Masse maximale", "Respect des normes de sécurité", "Couleur de l’emballage"],a:[0, 1, 2],w:"Les contraintes sont les conditions à respecter pour concevoir l’objet.",l:2,t:"Besoin et fonctions"},
+{q:"À quoi sert un cahier des charges ?",o:["À décrire ce que doit faire l’objet, avec ses contraintes", "À vendre l’objet", "À fabriquer l’objet", "À réparer l’objet"],a:0,w:"Il liste les fonctions, les contraintes, les critères et les niveaux attendus.",l:1,t:"Cahier des charges"},
+{q:"Dans un cahier des charges, que précise le niveau d’un critère ?",o:["La valeur à atteindre", "Le nom du concepteur", "Le matériau utilisé", "La date de livraison"],a:0,w:"Par exemple : autonomie d’au moins 50 km.",l:2,t:"Cahier des charges"},
+{q:"Que représente le diagramme des interacteurs ?",o:["L’objet et ses relations avec son milieu environnant", "Les étapes de fabrication", "Le prix de chaque pièce", "Les phases du projet"],a:0,w:"Il relie l’objet à son environnement par ses fonctions et ses contraintes.",l:3,t:"Cahier des charges"},
+{q:"Qu’est-ce que l’ergonomie d’un objet ?",o:["Sa facilité et son confort d’utilisation", "Son coût de fabrication", "Sa résistance mécanique", "Sa couleur"],a:0,w:"Un objet ergonomique est adapté à la main et au corps de l’utilisateur.",l:2,t:"Design"},
+{q:"Quelle est la différence entre invention et innovation ?",o:["Une innovation est une nouveauté qui répond à un besoin et se diffuse", "Une invention est toujours diffusée", "Il n’y en a aucune", "Une innovation n’est jamais nouvelle"],a:0,w:"L’invention est la création d’un principe ; l’innovation en fait un produit diffusé.",l:3,t:"Design"},
+{q:"Dans quel ordre se déroule la démarche de créativité ?",o:["Idées, croquis, prototype, essais", "Essais, croquis, idées, prototype", "Prototype, idées, essais, croquis", "Croquis, essais, prototype, idées"],a:0,w:"On cherche d’abord des idées, puis on les teste.",l:2,t:"Design"},
+{q:"Qu’est-ce qu’un prototype ?",o:["Un premier exemplaire destiné à tester une solution", "Un objet recyclé", "Le dernier exemplaire fabriqué", "Un plan sur papier"],a:0,w:"Il permet de vérifier le fonctionnement avant la fabrication en série.",l:2,t:"Design"},
+{q:"Quelle est la dernière étape du cycle de vie d’un produit ?",o:["La fin de vie (recyclage, réutilisation)", "La conception", "La distribution", "L’utilisation"],a:0,w:"Après l’utilisation vient la fin de vie.",l:1,t:"Cycle de vie"},
+{q:"Dans quel ordre sont les étapes du cycle de vie ?",o:["Conception, fabrication, distribution, utilisation, fin de vie", "Fabrication, conception, utilisation, distribution, fin de vie", "Utilisation, fabrication, conception, fin de vie, distribution", "Distribution, utilisation, conception, fabrication, fin de vie"],a:0,w:"On part du besoin pour finir par le devenir de l’objet.",l:2,t:"Cycle de vie"},
+{q:"En quoi consiste l’éco-conception ?",o:["Réduire l’impact environnemental d’un objet dès sa conception", "Fabriquer uniquement en bois", "Fabriquer plus d’objets", "Supprimer l’emballage seulement"],a:0,w:"On agit sur les matériaux, l’énergie, la réparabilité et le recyclage.",l:2,t:"Cycle de vie"},
+{q:"Lesquelles de ces actions réduisent l’impact environnemental d’un objet ?",o:["Faciliter sa réparation", "Utiliser des matériaux recyclables", "Augmenter son poids inutilement", "Réduire sa consommation d’énergie"],a:[0, 1, 3],w:"Augmenter inutilement le poids consomme plus de matière.",l:2,t:"Cycle de vie"},
+{q:"Quel est un effet social de l’évolution des objets techniques ?",o:["Une transformation des façons de communiquer", "Une baisse du besoin d’énergie", "La disparition de tout besoin", "Aucun effet"],a:0,w:"Les objets techniques modifient nos usages.",l:2,t:"Société"},
+{q:"Quel est un effet environnemental possible des objets électroniques ?",o:["Des déchets électroniques et une consommation de ressources", "Une diminution automatique de la pollution", "Aucun effet", "Une disparition des déchets"],a:0,w:"Leur fabrication et leur fin de vie ont un impact environnemental.",l:2,t:"Société"},
+{q:"Que signifie la réparabilité d’un objet ?",o:["La facilité avec laquelle on peut le réparer", "Sa résistance aux chocs", "Son prix de vente", "Sa durée de garantie"],a:0,w:"Un objet réparable dure plus longtemps et produit moins de déchets.",l:2,t:"Société"},
+{q:"Un smartphone regroupe les fonctions d’un téléphone, d’un appareil photo, d’un GPS… Que montre cet exemple ?",o:["Que les objets évoluent et peuvent regrouper plusieurs fonctions", "Que les objets ne changent pas", "Que la fonction d’usage disparaît", "Qu’il n’y a plus de contraintes"],a:0,w:"Les évolutions techniques font converger plusieurs fonctions dans un même objet.",l:3,t:"Société"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

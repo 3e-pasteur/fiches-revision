@@ -11,6 +11,7 @@ public/
   data.js              la liste des fiches
   404.html             page affichée si l'adresse n'existe pas
   fiches/              une page HTML par fiche
+  assets/              moteur de quiz partagé (quiz.js) et ses styles (quiz.css)
 ```
 
 ## Mettre le site en ligne sur Render
@@ -35,3 +36,15 @@ public/
 - Le site est public : toute personne ayant l'adresse peut le consulter. Il ne contient aucune donnée personnelle.
 - Pour tester en local, ouvrez simplement `public/index.html` dans un navigateur.
 - Les polices viennent de Google Fonts : sans connexion, le site reste lisible avec des polices de secours.
+
+## Le format des quiz
+
+Chaque fiche définit une constante `QS` (la liste de ses questions) ; le moteur `assets/quiz.js` fait le reste : modes entraînement et examen blanc, trois niveaux, chronomètre, bilan par niveau et par thème, correction détaillée, reprise des erreurs, meilleur score affiché dans le classeur.
+
+```
+{q:"Énoncé", o:["A","B","C"], a:1, w:"Explication", l:2, t:"Thème"}           choix unique (a = indice)
+{q:"Énoncé", o:["A","B","C","D"], a:[0,2], w:"…", l:3, t:"Thème"}            plusieurs bonnes réponses
+{q:"Énoncé", num:12.5, tol:0.1, u:"cm", w:"…", l:2, t:"Thème"}              réponse numérique
+```
+
+`l` vaut 1 (facile), 2 (moyen) ou 3 (difficile). Les fiches marquées « Pour aller plus loin » contiennent des notions hors programme du cycle 4 (signalées comme telles).

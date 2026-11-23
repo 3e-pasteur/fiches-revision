@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : l’énergie</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#e8590c;--soft:#fff4e6;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : l’énergie</h1>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 20 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="formes" class="on">Formes, sources, transferts</button><button data-t="conversions">Conversions et chaînes d’énergie</button><button data-t="conservation">Conservation et bilans</button><button data-t="cinetique">Énergie cinétique</button><button data-t="puissance">Puissance et énergie</button><button data-t="rayonnement">Rayonnement et effet de serre</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="formes">
+<h2>1. Formes d’énergie, sources et transferts</h2>
+<div class="tw"><table>
+<tr><th>Forme</th><th>Exemple</th></tr>
+<tr><td>Cinétique</td><td>Liée à la vitesse : une voiture en mouvement</td></tr>
+<tr><td>Potentielle</td><td>Liée à la position : l’eau retenue par un barrage</td></tr>
+<tr><td>Thermique</td><td>Liée à la température : l’eau chaude</td></tr>
+<tr><td>Électrique</td><td>Courant dans un circuit</td></tr>
+<tr><td>Chimique</td><td>Carburant, aliments, piles</td></tr>
+<tr><td>Nucléaire</td><td>Noyaux des atomes (centrale nucléaire)</td></tr>
+<tr><td>Lumineuse</td><td>Rayonnement du Soleil, d’une lampe</td></tr>
+</table></div>
+<ul>
+<li>Une <b>source d’énergie</b> fournit de l’énergie : <b>renouvelable</b> (solaire, éolien, hydraulique, biomasse, géothermie) ou <b>non renouvelable</b> (pétrole, charbon, gaz, uranium).</li>
+<li>Un <b>transfert</b> déplace de l’énergie d’un objet à un autre (chaleur qui passe d’une plaque à une casserole). Une <b>conversion</b> change la forme de l’énergie.</li>
+<li>L’énergie s’exprime en <b>joules</b> (J) ; on utilise aussi le <b>wattheure</b> (Wh) et le <b>kilowattheure</b> (kWh) : 1 kWh = 3 600 000 J.</li>
+</ul>
+</section>
+
+<section id="conversions">
+<h2>2. Conversions et chaînes d’énergie</h2>
+<div class="chain"><span>Source</span><i>→</i><span>Convertisseur</span><i>→</i><span>Récepteur</span></div>
+<div class="tw"><table>
+<tr><th>Dispositif</th><th>Conversion</th></tr>
+<tr><td>Panneau photovoltaïque</td><td>Énergie lumineuse → énergie électrique</td></tr>
+<tr><td>Moteur électrique</td><td>Énergie électrique → énergie mécanique (cinétique)</td></tr>
+<tr><td>Lampe</td><td>Énergie électrique → lumineuse et thermique</td></tr>
+<tr><td>Centrale hydraulique</td><td>Potentielle → cinétique → électrique</td></tr>
+<tr><td>Voiture thermique</td><td>Chimique (carburant) → cinétique et thermique, avec <b>émission de CO₂</b></td></tr>
+</table></div>
+</section>
+
+<section id="conservation">
+<h2>3. La conservation de l’énergie et les bilans</h2>
+<p>L’énergie <b>ne se crée pas et ne disparaît pas</b> : elle se <b>conserve</b>, en passant d’une forme à une autre. Mais toutes les formes ne sont pas également utilisables : une partie est toujours convertie en énergie <b>thermique</b>, souvent perdue.</p>
+<div class="ex"><b>Bilan énergétique d’une lampe.</b> Énergie reçue : 100 J (électrique). Énergie lumineuse utile : 10 J. Le reste, 90 J, est transféré à l’environnement sous forme d’énergie <b>thermique</b> (« pertes »).</div>
+<div class="keep"><b>À retenir : </b>quand les énergies entrante et sortante d’un système sont différentes, c’est qu’une partie a été transférée ou convertie ailleurs (souvent en chaleur) : ce n’est pas une « disparition ».</div>
+</section>
+
+<section id="cinetique">
+<h2>4. L’énergie cinétique</h2>
+<div class="ex"><mark>E<sub>c</sub> = ½ × m × v²</mark> (E<sub>c</sub> en J, m en kg, v en m/s)<br>Voiture de 1 000 kg à 20 m/s : E<sub>c</sub> = 0,5 × 1 000 × 20² = <mark>200 000 J</mark><br>Cycliste et vélo de 80 kg à 10 m/s : E<sub>c</sub> = 0,5 × 80 × 100 = <mark>4 000 J</mark></div>
+<div class="keep"><b>À retenir : </b>si la vitesse double, l’énergie cinétique est multipliée par <b>4</b> (2² = 4). C’est pourquoi la vitesse est si dangereuse en cas d’accident.</div>
+</section>
+
+<section id="puissance">
+<h2>5. Puissance et énergie</h2>
+<div class="tw"><table>
+<tr><th>Relation</th><th>Exemple</th></tr>
+<tr><td><b>P = E ÷ t</b> (P en W, E en J, t en s)</td><td>3 600 J en 60 s : P = <mark>60 W</mark></td></tr>
+<tr><td><b>E = P × t</b></td><td>Appareil de 1 500 W pendant 2 h : E = 1,5 kW × 2 h = <mark>3 kWh</mark></td></tr>
+<tr><td>Énergie en kWh</td><td>Lampe de 10 W allumée 5 h : <mark>50 Wh</mark></td></tr>
+</table></div>
+</section>
+
+<section id="rayonnement">
+<h2>6. Rayonnement, effet de serre et stockage</h2>
+<ul>
+<li>Tout objet <b>émet</b> un rayonnement (lumière, infrarouge) et peut en <b>absorber</b> : l’absorption chauffe l’objet. C’est un <b>transfert d’énergie par rayonnement</b> (le Soleil chauffe la Terre ; une surface noire chauffe plus au soleil).</li>
+<li>La Terre réchauffée émet à son tour un rayonnement infrarouge. Les <b>gaz à effet de serre</b> (CO₂, méthane, vapeur d’eau) l’<b>absorbent</b> en partie et renvoient de l’énergie vers le sol : c’est l’<b>effet de serre</b>. L’augmentation de ces gaz renforce le réchauffement.</li>
+<li>On peut <b>stocker</b> de l’énergie électrique en la convertissant : batteries (énergie chimique), barrages réversibles (énergie potentielle).</li>
+</ul>
+</section>
+
+<section id="quiz">
+<h2>7. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelle forme d’énergie dépend de la vitesse d’un objet ?",o:["Cinétique", "Potentielle", "Chimique", "Nucléaire"],a:0,w:"L’énergie cinétique est liée au mouvement.",l:1,t:"Formes"},
+{q:"Lesquelles de ces sources d’énergie sont renouvelables ?",o:["Le solaire", "L’éolien", "Le charbon", "Le pétrole"],a:[0, 1],w:"Charbon et pétrole sont des énergies fossiles, non renouvelables à l’échelle humaine.",l:2,t:"Formes"},
+{q:"Quelle est la différence entre un transfert et une conversion d’énergie ?",o:["Un transfert déplace l’énergie, une conversion change sa forme", "Aucune", "Une conversion déplace l’énergie, un transfert change sa forme", "Un transfert détruit l’énergie"],a:0,w:"La chaleur qui passe d’un corps à un autre est un transfert ; une lampe réalise une conversion.",l:2,t:"Formes"},
+{q:"Combien de joules y a-t-il dans 1 kWh ?",num:3600000,w:"1 kW × 3 600 s = 3 600 000 J.",l:3,t:"Formes"},
+{q:"Que convertit un panneau photovoltaïque ?",o:["De l’énergie lumineuse en énergie électrique", "De l’énergie chimique en énergie thermique", "De l’énergie électrique en énergie lumineuse", "De l’énergie cinétique en énergie potentielle"],a:0,w:"Il transforme le rayonnement du Soleil en électricité.",l:1,t:"Conversions"},
+{q:"Que convertit un moteur électrique ?",o:["De l’énergie électrique en énergie mécanique", "De l’énergie lumineuse en énergie électrique", "De l’énergie thermique en énergie chimique", "De l’énergie nucléaire en énergie lumineuse"],a:0,w:"Il fait tourner un axe grâce au courant électrique.",l:2,t:"Conversions"},
+{q:"Dans une centrale hydraulique, quelle suite de conversions a lieu ?",o:["Potentielle, cinétique, électrique", "Chimique, thermique, électrique", "Nucléaire, thermique, électrique", "Électrique, cinétique, potentielle"],a:0,w:"L’eau retenue tombe, entraîne une turbine, qui fait tourner un alternateur.",l:3,t:"Conversions"},
+{q:"Quel dispositif émet du dioxyde de carbone lors de sa conversion d’énergie ?",o:["Une voiture thermique", "Un panneau solaire", "Une éolienne", "Un barrage hydraulique"],a:0,w:"La combustion du carburant produit du CO₂.",l:2,t:"Conversions"},
+{q:"Que dit la conservation de l’énergie ?",o:["L’énergie ne se crée pas et ne disparaît pas, elle se convertit", "L’énergie diminue toujours", "L’énergie augmente à chaque conversion", "L’énergie disparaît sous forme de chaleur"],a:0,w:"Les « pertes » sont de l’énergie thermique transférée à l’environnement.",l:2,t:"Conservation"},
+{q:"Une lampe reçoit 100 J d’énergie électrique et émet 10 J d’énergie lumineuse. Où sont passés les 90 J restants ?",o:["Transférés à l’environnement sous forme d’énergie thermique", "Ils ont disparu", "Ils sont stockés dans l’ampoule", "Ils sont devenus de l’énergie nucléaire"],a:0,w:"L’énergie se conserve : le reste est transféré sous forme de chaleur.",l:3,t:"Conservation"},
+{q:"Quelle est l’énergie cinétique d’une voiture de 1 000 kg roulant à 20 m/s ?",num:200000,u:"J",w:"Ec = 0,5 × 1 000 × 20² = 200 000 J.",l:2,t:"Énergie cinétique"},
+{q:"Quelle est l’énergie cinétique d’un cycliste et de son vélo (80 kg au total) à 10 m/s ?",num:4000,u:"J",w:"Ec = 0,5 × 80 × 10² = 4 000 J.",l:2,t:"Énergie cinétique"},
+{q:"Si la vitesse d’un véhicule double, son énergie cinétique est…",o:["Multipliée par 4", "Doublée", "Multipliée par 2,5", "Inchangée"],a:0,w:"v est au carré dans la formule : doubler la vitesse multiplie Ec par 4.",l:2,t:"Énergie cinétique"},
+{q:"Quelle puissance a un appareil qui transfère 3 600 J en 60 s ?",num:60,u:"W",w:"P = E ÷ t = 3 600 ÷ 60 = 60 W.",l:1,t:"Puissance"},
+{q:"Quelle énergie consomme un appareil de 1 500 W qui fonctionne pendant 2 h ?",num:3,u:"kWh",w:"E = P × t = 1,5 kW × 2 h = 3 kWh.",l:2,t:"Puissance"},
+{q:"Une lampe de 10 W reste allumée 5 h. Quelle énergie consomme-t-elle ?",num:50,u:"Wh",w:"E = 10 W × 5 h = 50 Wh.",l:2,t:"Puissance"},
+{q:"Que signifie qu’un objet émet un rayonnement ?",o:["Il transfère de l’énergie par rayonnement", "Il perd sa masse", "Il devient plus lourd", "Il change de forme"],a:0,w:"L’émission et l’absorption d’un rayonnement sont des transferts d’énergie.",l:2,t:"Rayonnement"},
+{q:"Que fait l’effet de serre ?",o:["Les gaz à effet de serre absorbent une partie du rayonnement infrarouge de la Terre", "Les gaz à effet de serre arrêtent la lumière du Soleil", "Ils refroidissent la Terre", "Ils transforment l’énergie en matière"],a:0,w:"Ils renvoient de l’énergie vers le sol, ce qui réchauffe la surface.",l:3,t:"Rayonnement"},
+{q:"Pourquoi une voiture noire chauffe-t-elle davantage au soleil qu’une voiture blanche ?",o:["Elle absorbe davantage de rayonnement", "Elle émet de la lumière", "Elle est plus lourde", "Le noir produit de l’énergie"],a:0,w:"Une surface noire absorbe davantage de rayonnement.",l:3,t:"Rayonnement"},
+{q:"Quel dispositif permet de stocker de l’énergie électrique ?",o:["Une batterie", "Une ampoule", "Un interrupteur", "Un fil de cuivre"],a:0,w:"La batterie convertit l’énergie électrique en énergie chimique, et inversement.",l:2,t:"Rayonnement"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

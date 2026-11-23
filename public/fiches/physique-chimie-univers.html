@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : l’Univers et la structure de la matière</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#e8590c;--soft:#fff4e6;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : l’Univers et la structure de la matière</h1>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 21 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="echelles" class="on">Échelles de l’Univers</button><button data-t="solaire">Le système solaire</button><button data-t="temps">Âges et évolution</button><button data-t="matiere">Origine de la matière</button><button data-t="atome">L’atome</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="echelles">
+<h2>1. Les échelles de l’Univers</h2>
+<div class="tw"><table>
+<tr><th>Objet</th><th>Ordre de grandeur</th></tr>
+<tr><td>Noyau d’un atome</td><td>10<sup>−15</sup> m</td></tr>
+<tr><td>Atome</td><td>10<sup>−10</sup> m</td></tr>
+<tr><td>Être humain</td><td>1 m</td></tr>
+<tr><td>Rayon de la Terre</td><td>environ 6 400 km</td></tr>
+<tr><td>Distance Terre-Soleil (1 unité astronomique)</td><td>environ 150 millions de km</td></tr>
+<tr><td>Une année-lumière</td><td>environ 9 500 milliards de km (9,5 × 10<sup>12</sup> km)</td></tr>
+<tr><td>Étoile la plus proche du Soleil</td><td>environ 4 années-lumière</td></tr>
+<tr><td>Voie lactée (notre galaxie)</td><td>environ 100 000 années-lumière de diamètre</td></tr>
+</table></div>
+<p>L’<b>année-lumière</b> est une unité de distance : celle que parcourt la lumière en un an. Pour convertir : d = v × t, avec v ≈ 300 000 km/s. La lumière du Soleil met environ 500 s (8 min 20 s) pour atteindre la Terre : 150 000 000 ÷ 300 000 = 500 s.</p>
+<div class="keep"><b>À retenir : </b>quand on regarde une étoile à 4 années-lumière, on la voit telle qu’elle était il y a 4 ans : regarder loin, c’est regarder dans le passé.</div>
+</section>
+
+<section id="solaire">
+<h2>2. Le système solaire</h2>
+<ul>
+<li>Il comprend une étoile, le <b>Soleil</b>, et huit planètes, dont les trajectoires sont presque circulaires.</li>
+<li><b>Planètes telluriques</b> (rocheuses) : Mercure, Vénus, Terre, Mars. <b>Planètes géantes</b> : Jupiter et Saturne (gazeuses), Uranus et Neptune (de glaces).</li>
+<li>Il comprend aussi des satellites naturels (comme la Lune), des astéroïdes (une ceinture entre Mars et Jupiter) et des comètes.</li>
+<li>Le Soleil est l’une des centaines de milliards d’étoiles de la <b>Voie lactée</b>, elle-même l’une des innombrables <b>galaxies</b> de l’Univers.</li>
+</ul>
+</section>
+
+<section id="temps">
+<h2>3. L’évolution de l’Univers dans le temps</h2>
+<div class="tl">
+<p><b>Il y a environ 13,8 milliards d’années</b> : début de l’Univers (<b>Big Bang</b>), qui est depuis en expansion.</p>
+<p><b>Il y a environ 4,6 milliards d’années</b> : formation du système solaire et de la Terre.</p>
+<p><b>Il y a environ 3,5 milliards d’années</b> : premières traces de vie sur Terre.</p>
+<p><b>Il y a environ 300 000 ans</b> : apparition d’<i>Homo sapiens</i>.</p>
+</div>
+<p>Les <b>âges géologiques</b> (ères et périodes) découpent l’histoire de la Terre : on les repère grâce aux roches et aux fossiles.</p>
+</section>
+
+<section id="matiere">
+<h2>4. L’origine de la matière</h2>
+<ul>
+<li>Peu après le Big Bang se sont formés les éléments les plus légers : l’<b>hydrogène</b> et l’<b>hélium</b>.</li>
+<li>Les éléments plus lourds (carbone, oxygène, fer, silicium…) sont fabriqués <b>à l’intérieur des étoiles</b> et dispersés dans l’espace lors de leur explosion. Nous sommes faits de « poussières d’étoiles ».</li>
+<li>La matière que nous observons est <b>partout de même nature</b> (les mêmes atomes) et obéit aux <b>mêmes lois</b> : sur Terre comme dans les étoiles.</li>
+<li>Dans la croûte terrestre, les éléments les plus abondants sont l’<b>oxygène</b> et le <b>silicium</b>. Certains éléments, comme les <b>terres rares</b>, sont peu abondants ou concentrés dans quelques régions : leur exploitation pose des questions économiques et environnementales.</li>
+</ul>
+</section>
+
+<section id="atome">
+<h2>5. L’atome</h2>
+<ul>
+<li>L’atome est formé d’un <b>noyau</b> (<b>nucléons</b> : protons + et neutrons) et d’<b>électrons</b> −, en mouvement autour du noyau.</li>
+<li>Presque toute la masse de l’atome est dans le noyau, qui est environ <b>100 000 fois plus petit</b> que l’atome (10<sup>−15</sup> m contre 10<sup>−10</sup> m) : l’atome est essentiellement du <b>vide</b>.</li>
+<li>L’atome est <b>électriquement neutre</b> : autant d’électrons que de protons.</li>
+</ul>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Quelle est l’étoile du système solaire ?",o:["Le Soleil", "La Lune", "Jupiter", "Mars"],a:0,w:"Le Soleil est une étoile ; les planètes tournent autour de lui.",l:1,t:"Système solaire"},
+{q:"Combien de planètes compte le système solaire ?",num:8,w:"Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus et Neptune.",l:1,t:"Système solaire"},
+{q:"Lesquelles de ces planètes sont telluriques ?",o:["Mercure", "Terre", "Jupiter", "Saturne"],a:[0, 1],w:"Jupiter et Saturne sont des planètes géantes gazeuses.",l:2,t:"Système solaire"},
+{q:"Comment s’appelle la galaxie qui contient le système solaire ?",o:["La Voie lactée", "Andromède", "Le Grand Nuage", "La galaxie solaire"],a:0,w:"Le Soleil est l’une des étoiles de la Voie lactée.",l:1,t:"Échelles"},
+{q:"L’année-lumière est une unité de…",o:["Distance", "Durée", "Vitesse", "Masse"],a:0,w:"C’est la distance parcourue par la lumière en un an.",l:1,t:"Échelles"},
+{q:"La lumière met combien de secondes pour parcourir 150 millions de km à 300 000 km/s ?",num:500,u:"s",w:"t = d ÷ v = 150 000 000 ÷ 300 000 = 500 s.",l:3,t:"Échelles"},
+{q:"Quel est l’ordre de grandeur de la taille d’un atome ?",o:["10⁻¹⁰ m", "10⁻¹⁵ m", "10⁻³ m", "10⁻⁶ m"],a:0,w:"Un atome mesure environ un dixième de milliardième de mètre.",l:2,t:"Échelles"},
+{q:"Environ combien de fois un noyau est-il plus petit que l’atome ?",o:["100 000 fois", "10 fois", "1 000 fois", "2 fois"],a:0,w:"10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵.",l:3,t:"Échelles"},
+{q:"Quelle est la distance parcourue par la lumière en une année ?",o:["Environ 9 500 milliards de km", "Environ 150 millions de km", "Environ 300 000 km", "Environ 100 000 km"],a:0,w:"C’est la définition de l’année-lumière (9,5 × 10¹² km).",l:2,t:"Échelles"},
+{q:"Une étoile est à 4 années-lumière. Que voit-on quand on la regarde ?",o:["Sa lumière émise il y a 4 ans", "Sa lumière émise à l’instant", "Sa lumière émise il y a 4 jours", "Rien, elle est trop loin"],a:0,w:"La lumière met 4 ans pour nous parvenir.",l:3,t:"Échelles"},
+{q:"Quel est l’âge de l’Univers ?",o:["Environ 13,8 milliards d’années", "Environ 4,6 milliards d’années", "Environ 3,5 milliards d’années", "Environ 300 000 ans"],a:0,w:"Il a commencé avec le Big Bang.",l:2,t:"Évolution"},
+{q:"Il y a environ combien de temps le système solaire s’est-il formé ?",o:["4,6 milliards d’années", "13,8 milliards d’années", "300 000 ans", "3,5 milliards d’années"],a:0,w:"La Terre s’est formée à la même époque.",l:2,t:"Évolution"},
+{q:"Il y a environ combien de temps sont apparues les premières traces de vie ?",o:["3,5 milliards d’années", "4,6 milliards d’années", "300 000 ans", "13,8 milliards d’années"],a:0,w:"Les plus anciennes traces de vie datent d’environ 3,5 milliards d’années.",l:2,t:"Évolution"},
+{q:"Il y a environ combien de temps est apparu Homo sapiens ?",o:["300 000 ans", "3,5 milliards d’années", "4,6 milliards d’années", "1 000 ans"],a:0,w:"Notre espèce est très récente à l’échelle de l’Univers.",l:2,t:"Évolution"},
+{q:"Quels éléments se sont formés peu après le Big Bang ?",o:["L’hydrogène et l’hélium", "Le carbone et l’oxygène", "Le fer et l’or", "Le silicium et l’uranium"],a:0,w:"Les éléments plus lourds ont été fabriqués plus tard.",l:2,t:"Matière"},
+{q:"Où se sont formés les éléments plus lourds comme le carbone, l’oxygène et le fer ?",o:["À l’intérieur des étoiles", "Dans les océans", "Sur la Lune", "À la surface de la Terre"],a:0,w:"Ils sont dispersés dans l’espace lors de l’explosion des étoiles.",l:3,t:"Matière"},
+{q:"Que peut-on dire de la matière sur Terre et dans les étoiles ?",o:["Elle est de même nature et obéit aux mêmes lois", "Elle est de nature différente", "Les étoiles ne contiennent pas d’atomes", "Elle n’obéit à aucune loi"],a:0,w:"Ce sont les mêmes atomes partout.",l:2,t:"Matière"},
+{q:"Quels sont les éléments les plus abondants de la croûte terrestre ?",o:["L’oxygène et le silicium", "Le fer et le cuivre", "L’or et l’argent", "L’hydrogène et l’hélium"],a:0,w:"Les roches sont surtout faites de silicates (silicium et oxygène).",l:3,t:"Matière"},
+{q:"De quoi est constitué le noyau d’un atome ?",o:["De protons et de neutrons", "D’électrons", "De protons et d’électrons", "De neutrons seulement"],a:0,w:"Protons et neutrons sont des nucléons.",l:1,t:"Atome"},
+{q:"Quelle est la charge électrique d’un électron ?",o:["Négative", "Positive", "Nulle"],a:0,w:"Les électrons sont chargés négativement.",l:1,t:"Atome"},
+{q:"Pourquoi un atome est-il électriquement neutre ?",o:["Il a autant de protons que d’électrons", "Il n’a pas d’électrons", "Il n’a pas de protons", "Il est trop petit"],a:0,w:"Les charges positives et négatives se compensent.",l:2,t:"Atome"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Physique-chimie : électricité</title>
+<meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--paper:#f6f9ff;--sheet:#fff;--ink:#1c2540;--muted:#5d6785;--line:#d9e2f5;--hl:#e3ebfa;--c:#e8590c;--soft:#fff4e6;--ok:#2b8a5e;--okbg:#e5f5ec;--ko:#cf3a45;--kobg:#fdecee;--shadow:rgba(28,37,64,.10);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#121827;--sheet:#1b2336;--ink:#e9edf9;--muted:#9aa5c4;--line:#2c3856;--hl:#18213a;--c:#ff922b;--soft:#3d2a17;--ok:#51cf8e;--okbg:#1b3a2e;--ko:#ff8f98;--kobg:#3a2230;--shadow:rgba(0,0,0,.4)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:16px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-color:var(--paper);
+background-image:linear-gradient(var(--hl) 1px,transparent 1px),linear-gradient(90deg,var(--hl) 1px,transparent 1px);background-size:100% 32px,32px 100%}
+body::before{content:"";position:fixed;top:0;bottom:0;left:64px;width:2px;background:var(--c);opacity:.55;pointer-events:none}
+main{max-width:860px;margin:0 auto;padding:22px 18px 70px 92px}
+.back{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem}
+h1{font:700 clamp(2.4rem,6vw,3.4rem)/1.05 Caveat,"Segoe Script",cursive;margin:8px 0 4px;color:var(--c)}
+.meta{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:linear-gradient(var(--paper) 80%,transparent);margin-bottom:6px}
+nav button{flex:none;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font:600 .88rem Figtree,sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--c);border-color:var(--c);color:#fff}
+section{background:var(--sheet);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:6px 16px 16px 6px;padding:20px 22px;margin:0 0 18px;box-shadow:0 6px 18px var(--shadow)}
+h2{font:700 1.9rem/1.1 Caveat,cursive;margin:0 0 10px;color:var(--c)}
+h3{font-size:1.02rem;margin:16px 0 6px}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+li{margin-bottom:4px}
+.keep{background:var(--soft);border-radius:10px;padding:11px 14px;margin:12px 0 4px;max-width:68ch}
+.keep b:first-child{color:var(--c)}
+.tw{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.85rem}
+td:first-child{font-weight:700;white-space:nowrap}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:4px;font-weight:700;box-shadow:inset 0 -2px 0 var(--c)}
+.ex{border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:8px 0}
+.q{font-size:1.08rem;font-weight:600;margin:6px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:500 1rem Figtree,sans-serif;padding:11px 14px;border-radius:12px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--c)}
+.opt.good{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--ko);background:var(--kobg)}
+.opt:disabled{cursor:default}
+.fb{margin:12px 0 0;padding:11px 14px;border-radius:10px;background:var(--hl);max-width:68ch}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:6px}
+.bar{height:8px;background:var(--hl);border-radius:99px;overflow:hidden;flex:1 1 140px}
+.bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.btn{background:var(--c);color:#fff;border:none;font:700 .95rem Figtree,sans-serif;padding:10px 18px;border-radius:10px;cursor:pointer;margin:12px 8px 0 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.score{font:700 3rem/1 Caveat,cursive;color:var(--c)}
+button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2px}
+@media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">← Retour au classeur</a>
+<h1>Physique-chimie : électricité</h1>
+<p class="meta">Brevet · programme de physique-chimie du cycle 4 (5e, 4e, 3e) · lecture 18 min, puis quiz de 20 questions</p>
+
+<nav id="nav" aria-label="Sections">
+<button data-t="circuits" class="on">Circuits et grandeurs</button><button data-t="serie">Série et dérivation</button><button data-t="ohm">Loi d’Ohm</button><button data-t="puissance">Puissance et consommation</button><button data-t="securite">Sécurité et usages</button><button data-t="quiz">Quiz</button>
+</nav>
+
+<section id="circuits">
+<h2>1. Circuits électriques et grandeurs</h2>
+<div class="tw"><table>
+<tr><th>Grandeur</th><th>Symbole, unité</th><th>Appareil et branchement</th></tr>
+<tr><td>Tension</td><td>U, volt (V)</td><td>Voltmètre, en <b>dérivation</b> aux bornes du dipôle</td></tr>
+<tr><td>Intensité</td><td>I, ampère (A)</td><td>Ampèremètre, en <b>série</b></td></tr>
+<tr><td>Résistance</td><td>R, ohm (Ω)</td><td>Ohmmètre (dipôle hors circuit)</td></tr>
+</table></div>
+<p>Un circuit comprend un <b>générateur</b> (pile, batterie, prise), des <b>dipôles récepteurs</b> (lampe, moteur, résistance) et des fils, éventuellement un interrupteur. Le courant ne circule que dans un circuit <b>fermé</b>. Un <b>court-circuit</b> relie directement les deux bornes du générateur : l’intensité devient très grande, ce qui peut provoquer un échauffement dangereux.</p>
+</section>
+
+<section id="serie">
+<h2>2. Dipôles en série et en dérivation</h2>
+<div class="tw"><table>
+<tr><th>Circuit</th><th>Intensité</th><th>Tension</th></tr>
+<tr><td>En <b>série</b> (une seule maille)</td><td>La <b>même</b> en tout point du circuit</td><td><b>Additivité</b> : la tension du générateur est la somme des tensions aux bornes des dipôles</td></tr>
+<tr><td>En <b>dérivation</b> (deux mailles)</td><td><b>Additivité</b> : l’intensité dans la branche principale est la somme des intensités dans les branches</td><td><b>Unicité</b> : la même tension aux bornes de chaque branche</td></tr>
+</table></div>
+<div class="ex">Série : un générateur de 12 V alimente une lampe qui a 5 V à ses bornes et un moteur. La tension aux bornes du moteur est 12 − 5 = <mark>7 V</mark>.<br>Dérivation : deux branches traversées par 0,3 A et 0,2 A. Dans la branche principale, I = 0,3 + 0,2 = <mark>0,5 A</mark>.<br>Deux lampes en dérivation aux bornes d’un générateur de 6 V : chaque lampe a <mark>6 V</mark> à ses bornes.</div>
+</section>
+
+<section id="ohm">
+<h2>3. La loi d’Ohm</h2>
+<p>Pour un conducteur ohmique de résistance R, la tension à ses bornes est proportionnelle à l’intensité qui le traverse :</p>
+<div class="ex"><mark>U = R × I</mark> (U en V, R en Ω, I en A)</div>
+<div class="tw"><table>
+<tr><th>Cas</th><th>Exemple</th></tr>
+<tr><td>Calculer U</td><td>R = 100 Ω et I = 0,05 A : U = <mark>5 V</mark></td></tr>
+<tr><td>Calculer I</td><td>U = 12 V et R = 60 Ω : I = 12 ÷ 60 = <mark>0,2 A</mark></td></tr>
+<tr><td>Calculer R</td><td>U = 6 V et I = 0,03 A : R = 6 ÷ 0,03 = <mark>200 Ω</mark></td></tr>
+</table></div>
+<p>La représentation graphique de U en fonction de I est une <b>droite passant par l’origine</b>, car il y a proportionnalité.</p>
+</section>
+
+<section id="puissance">
+<h2>4. Puissance électrique et consommation d’énergie</h2>
+<div class="ex"><mark>P = U × I</mark> (P en W) &nbsp;·&nbsp; <mark>E = P × t</mark><br>Appareil sous 230 V traversé par 2 A : P = 230 × 2 = <mark>460 W</mark>.<br>Lampe de 60 W allumée 5 h par jour pendant 7 jours : E = 0,060 kW × 35 h = <mark>2,1 kWh</mark>.</div>
+<p>Le coût de l’électricité se calcule avec l’énergie consommée en kWh multipliée par le prix du kWh. Éclairage, chauffage, appareils en <b>veille</b> et usages du <b>numérique</b> (streaming, serveurs, stockage de données) ont un coût énergétique : on peut le réduire par des gestes simples.</p>
+</section>
+
+<section id="securite">
+<h2>5. Sécurité électrique</h2>
+<ul>
+<li>Le courant du <b>secteur</b> (230 V) est dangereux : ne jamais toucher un fil dénudé, ni utiliser un appareil avec les mains mouillées.</li>
+<li>Les <b>fusibles</b> et <b>disjoncteurs</b> coupent le courant en cas de surintensité ou de court-circuit.</li>
+<li>La <b>prise de terre</b> protège en évacuant un courant de fuite.</li>
+<li>Une <b>batterie</b> permet de stocker de l’énergie électrique sous forme chimique.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>on met en relation les lois de l’électricité et la sécurité : un câble trop fin qui laisse passer une intensité trop grande chauffe, d’où l’importance du bon calibre de fusible.</div>
+</section>
+
+<section id="quiz">
+<h2>6. Quiz d’entraînement</h2>
+<div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
+<div id="qbox"></div>
+</section>
+</main>
+
+<script>
+const QS = [
+{q:"Comment branche-t-on un ampèremètre ?",o:["En série", "En dérivation", "Aux bornes du générateur", "Hors circuit"],a:0,w:"L’ampèremètre mesure l’intensité : tout le courant doit le traverser.",l:1,t:"Circuits"},
+{q:"Comment branche-t-on un voltmètre ?",o:["En dérivation", "En série", "Il n’a pas besoin d’être branché", "En parallèle de l’interrupteur seulement"],a:0,w:"Le voltmètre mesure une tension aux bornes d’un dipôle.",l:1,t:"Circuits"},
+{q:"Quel danger présente un court-circuit ?",o:["Une intensité très grande qui peut chauffer et provoquer un incendie", "Une tension nulle sans conséquence", "Une lampe qui brille plus fort", "Aucun danger"],a:0,w:"Les deux bornes du générateur sont reliées directement.",l:2,t:"Circuits"},
+{q:"Dans un circuit en série, comment est l’intensité ?",o:["La même en tout point", "Différente dans chaque dipôle", "Nulle", "Plus grande près du générateur"],a:0,w:"Il n’y a qu’un seul chemin pour le courant.",l:1,t:"Série et dérivation"},
+{q:"Un générateur de 12 V alimente une lampe (5 V à ses bornes) et un moteur, en série. Quelle est la tension aux bornes du moteur ?",num:7,u:"V",w:"Additivité des tensions : 12 − 5 = 7 V.",l:2,t:"Série et dérivation"},
+{q:"Dans un circuit en dérivation, deux branches sont traversées par 0,3 A et 0,2 A. Quelle est l’intensité du courant principal ?",num:0.5,tol:0.001,u:"A",w:"Additivité des intensités : 0,3 + 0,2 = 0,5 A.",l:2,t:"Série et dérivation"},
+{q:"Deux lampes sont montées en dérivation aux bornes d’un générateur de 6 V. Quelle tension a chaque lampe ?",o:["6 V", "3 V", "12 V", "0 V"],a:0,w:"Loi d’unicité des tensions : la même tension aux bornes de chaque branche.",l:3,t:"Série et dérivation"},
+{q:"Quelle est la formule de la loi d’Ohm ?",o:["U = R × I", "U = R ÷ I", "I = U × R", "R = U × I"],a:0,w:"U en volts, R en ohms, I en ampères.",l:1,t:"Loi d’Ohm"},
+{q:"Quelle tension y a-t-il aux bornes d’un conducteur de 100 Ω traversé par 0,05 A ?",num:5,u:"V",w:"U = R × I = 100 × 0,05 = 5 V.",l:2,t:"Loi d’Ohm"},
+{q:"Quelle intensité traverse un conducteur de 60 Ω soumis à 12 V ?",num:0.2,tol:0.001,u:"A",w:"I = U ÷ R = 12 ÷ 60 = 0,2 A.",l:2,t:"Loi d’Ohm"},
+{q:"Quelle est la résistance d’un conducteur soumis à 6 V et traversé par 0,03 A ?",num:200,u:"Ω",w:"R = U ÷ I = 6 ÷ 0,03 = 200 Ω.",l:3,t:"Loi d’Ohm"},
+{q:"Comment est la représentation graphique de U en fonction de I pour un conducteur ohmique ?",o:["Une droite passant par l’origine", "Une droite horizontale", "Une courbe", "Un point"],a:0,w:"U et I sont proportionnelles.",l:2,t:"Loi d’Ohm"},
+{q:"Quelle est la puissance d’un appareil de 230 V traversé par 2 A ?",num:460,u:"W",w:"P = U × I = 230 × 2 = 460 W.",l:2,t:"Puissance"},
+{q:"Une lampe de 60 W est allumée 5 h par jour pendant 7 jours. Quelle énergie consomme-t-elle, en kWh ?",num:2.1,tol:0.01,u:"kWh",w:"E = 0,06 kW × 35 h = 2,1 kWh.",l:3,t:"Puissance"},
+{q:"Quelle énergie consomme un appareil de 1 000 W qui fonctionne 2 h ?",num:2,u:"kWh",w:"E = 1 kW × 2 h = 2 kWh.",l:2,t:"Puissance"},
+{q:"Que fait un fusible en cas de surintensité ?",o:["Il coupe le circuit", "Il augmente la tension", "Il stocke l’énergie", "Il augmente la résistance du circuit"],a:0,w:"Il fond et interrompt le courant, ce qui évite l’échauffement.",l:2,t:"Sécurité"},
+{q:"Lequel de ces comportements est dangereux ?",o:["Utiliser un appareil électrique avec les mains mouillées", "Débrancher un appareil en tirant sur la fiche", "Brancher un appareil avec un câble en bon état", "Utiliser une prise de terre"],a:0,w:"L’eau facilite le passage du courant dans le corps.",l:1,t:"Sécurité"},
+{q:"À quoi sert une batterie ?",o:["À stocker de l’énergie électrique sous forme chimique", "À produire de l’énergie à partir de rien", "À mesurer l’intensité", "À mesurer la tension"],a:0,w:"Elle convertit l’énergie électrique en énergie chimique à la charge, et inversement à la décharge.",l:2,t:"Sécurité"},
+{q:"Quel usage du numérique a un coût énergétique ?",o:["Regarder une vidéo en streaming", "Aucun", "Seulement le jeu vidéo", "Seulement l’envoi de courriels"],a:0,w:"Les serveurs et les réseaux consomment de l’énergie.",l:2,t:"Puissance"},
+{q:"Pourquoi un câble trop fin traversé par une grande intensité est-il dangereux ?",o:["Il chauffe fortement", "Il devient isolant", "Il se coupe en deux", "Il diminue la tension"],a:0,w:"Une intensité élevée dans un conducteur trop fin provoque un échauffement.",l:3,t:"Sécurité"}
+];
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

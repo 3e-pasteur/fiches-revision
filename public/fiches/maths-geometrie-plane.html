@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Maths : géométrie plane (5e et 4e)</title>
+<title>Maths : géométrie plane</title>
 <meta name="description" content="Fiches de révision pour le brevet : cours courts, méthodes et quiz corrigés.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,69 +59,90 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 @media (max-width:640px){body::before{left:14px}main{padding:16px 12px 70px 28px}section{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .fig{display:block;width:100%;max-width:260px;margin:10px 0}.fig *{vector-effect:non-scaling-stroke}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}.chain span{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:5px 11px;font-weight:600}.chain i{font-style:normal;color:var(--c);font-weight:700}
+.tl{border-left:3px solid var(--c);margin:10px 0 12px 6px;padding-left:16px}.tl p{margin:0 0 8px}.tl b{color:var(--c)}
+pre.code{background:var(--hl);border-radius:10px;padding:10px 14px;margin:8px 0;font:500 .92rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;max-width:68ch;overflow-x:auto}
+.warn{border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;max-width:68ch;color:var(--muted)}.warn b:first-child{color:var(--ink)}
 </style>
+<link rel="stylesheet" href="../assets/quiz.css">
 </head>
 <body>
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
-<h1>Maths : géométrie plane (5e et 4e)</h1>
-<p class="meta">Brevet · notions du cycle 4 (5e et 4e) · lecture 10 min, puis quiz de 8 questions</p>
+<h1>Maths : géométrie plane</h1>
+<p class="meta">Brevet · programme de cycle 4 (5e, 4e, 3e) · lecture 15 min, puis quiz de 21 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="angles" class="on">Angles</button><button data-t="triangles">Triangles</button><button data-t="quad">Quadrilatères</button><button data-t="sym">Symétries et cercle</button><button data-t="quiz">Quiz</button>
+<button data-t="angles" class="on">Angles et parallélisme</button><button data-t="triangles">Triangles</button><button data-t="droites">Droites remarquables</button><button data-t="quad">Quadrilatères</button><button data-t="cercle">Cercle</button><button data-t="demo">Rédiger une démonstration</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="angles">
 <h2>1. Les angles</h2>
 <div class="tw"><table>
 <tr><th>Propriété</th><th>Exemple</th></tr>
-<tr><td>La somme des angles d’un triangle vaut <b>180°</b></td><td>Angles de 50° et 60° : le troisième vaut 180 − 50 − 60 = <mark>70°</mark></td></tr>
-<tr><td>La somme des angles d’un quadrilatère vaut <b>360°</b></td><td>Trois angles de 90°, 80° et 100° : le quatrième vaut <mark>90°</mark></td></tr>
+<tr><td>La somme des angles d’un <b>triangle</b> vaut 180°</td><td>Angles de 50° et 60° : le troisième vaut 180 − 50 − 60 = <mark>70°</mark></td></tr>
+<tr><td>La somme des angles d’un <b>quadrilatère</b> vaut 360°</td><td>Trois angles de 90°, 80° et 100° : le quatrième vaut <mark>90°</mark></td></tr>
 <tr><td>Deux angles <b>opposés par le sommet</b> sont égaux</td><td>Deux droites sécantes forment deux paires d’angles égaux</td></tr>
-<tr><td>Deux angles <b>complémentaires</b> ont une somme de 90° ; deux angles <b>supplémentaires</b>, de 180°</td><td>Le complémentaire de 35° est <mark>55°</mark></td></tr>
+<tr><td>Angles <b>complémentaires</b> : somme de 90° ; <b>supplémentaires</b> : somme de 180°</td><td>Le complémentaire de 35° est <mark>55°</mark> ; le supplémentaire de 35° est <mark>145°</mark></td></tr>
 </table></div>
 <h3>Droites parallèles et sécante</h3>
-<p>Si deux droites sont <b>parallèles</b>, une sécante forme avec elles des angles <b>alternes-internes</b> égaux et des angles <b>correspondants</b> égaux. Réciproquement, si ces angles sont égaux, les droites sont parallèles.</p>
-<div class="keep"><b>À retenir : </b>dans un triangle <b>isocèle</b>, les angles à la base sont égaux. Dans un triangle <b>équilatéral</b>, les trois angles valent 60°.</div>
+<p>Si deux droites sont <b>parallèles</b>, une sécante forme avec elles des angles <b>alternes-internes</b> égaux et des angles <b>correspondants</b> égaux. <b>Réciproquement</b>, si ces angles sont égaux, les droites sont parallèles : c’est une caractérisation angulaire du parallélisme.</p>
 </section>
 
 <section id="triangles">
 <h2>2. Les triangles</h2>
-<p><b>Inégalité triangulaire :</b> dans un triangle, chaque côté est plus petit que la somme des deux autres. On ne peut pas construire un triangle de côtés 3 cm, 4 cm et 8 cm, car 3 + 4 = 7 est inférieur à 8.</p>
 <div class="tw"><table>
-<tr><th>Droite remarquable</th><th>Définition</th></tr>
-<tr><td>Médiatrice d’un côté</td><td>Droite <b>perpendiculaire</b> au côté, passant par son <b>milieu</b>. Ses points sont à égale distance des extrémités du segment.</td></tr>
-<tr><td>Hauteur</td><td>Droite passant par un sommet et <b>perpendiculaire</b> au côté opposé</td></tr>
-<tr><td>Médiane</td><td>Droite passant par un sommet et par le <b>milieu</b> du côté opposé</td></tr>
-<tr><td>Bissectrice</td><td>Droite qui partage un angle en <b>deux angles égaux</b></td></tr>
+<tr><th>Triangle</th><th>Propriétés</th></tr>
+<tr><td>Isocèle</td><td>Deux côtés égaux ; les angles à la base sont égaux</td></tr>
+<tr><td>Équilatéral</td><td>Trois côtés égaux ; trois angles de 60°</td></tr>
+<tr><td>Rectangle</td><td>Un angle droit ; les deux autres angles sont complémentaires (somme de 90°)</td></tr>
 </table></div>
-<p>Les trois médiatrices d’un triangle se coupent en un point, le <b>centre du cercle circonscrit</b>, à égale distance des trois sommets.</p>
+<p><b>Inégalité triangulaire :</b> dans un triangle, chaque côté est plus petit que la somme des deux autres. Un triangle de côtés 3 cm, 4 cm et 8 cm n’existe pas, car 3 + 4 = 7 &lt; 8 ; un triangle de côtés 3 cm, 4 cm et 7 cm est « aplati » (les trois points sont alignés).</p>
+<p><b>Construire un triangle</b> est possible si l’on connaît trois côtés (CCC), deux côtés et l’angle compris (CAC), ou un côté et les deux angles adjacents (ACA). Ce sont aussi les trois cas d’égalité des triangles.</p>
+</section>
+
+<section id="droites">
+<h2>3. Les droites remarquables du triangle</h2>
+<div class="tw"><table>
+<tr><th>Droite</th><th>Définition</th><th>Propriété</th></tr>
+<tr><td>Médiatrice d’un côté</td><td>Perpendiculaire au côté en son <b>milieu</b></td><td>Chaque point de la médiatrice est <b>à égale distance</b> des extrémités du segment, et réciproquement</td></tr>
+<tr><td>Hauteur</td><td>Passe par un sommet et est <b>perpendiculaire</b> au côté opposé</td><td>Les trois hauteurs sont concourantes</td></tr>
+<tr><td>Médiane</td><td>Passe par un sommet et par le <b>milieu</b> du côté opposé</td><td>Les trois médianes sont concourantes (centre de gravité)</td></tr>
+<tr><td>Bissectrice</td><td>Partage un angle en <b>deux angles égaux</b></td><td>Les trois bissectrices se coupent au centre du cercle inscrit</td></tr>
+</table></div>
+<div class="keep"><b>À retenir : </b>les trois médiatrices d’un triangle se coupent en un point : le <b>centre du cercle circonscrit</b>, à égale distance des trois sommets.</div>
 </section>
 
 <section id="quad">
-<h2>3. Les quadrilatères</h2>
+<h2>4. Les quadrilatères</h2>
 <div class="tw"><table>
-<tr><th>Quadrilatère</th><th>Propriétés</th></tr>
-<tr><td>Parallélogramme</td><td>Côtés opposés parallèles et de même longueur ; angles opposés égaux ; <b>diagonales qui se coupent en leur milieu</b></td></tr>
-<tr><td>Rectangle</td><td>Parallélogramme avec <b>quatre angles droits</b> ; diagonales de <b>même longueur</b></td></tr>
-<tr><td>Losange</td><td>Parallélogramme avec <b>quatre côtés égaux</b> ; diagonales <b>perpendiculaires</b></td></tr>
-<tr><td>Carré</td><td>À la fois un rectangle et un losange</td></tr>
+<tr><th>Quadrilatère</th><th>Propriétés</th><th>Pour prouver que c’est un…</th></tr>
+<tr><td>Parallélogramme</td><td>Côtés opposés parallèles et égaux ; angles opposés égaux ; <b>diagonales qui se coupent en leur milieu</b></td><td>Montrer que les diagonales se coupent en leur milieu, ou que les côtés opposés sont parallèles deux à deux (ou égaux deux à deux)</td></tr>
+<tr><td>Rectangle</td><td>Parallélogramme avec <b>quatre angles droits</b> ; diagonales de <b>même longueur</b></td><td>Parallélogramme avec un angle droit, ou parallélogramme dont les diagonales sont égales</td></tr>
+<tr><td>Losange</td><td>Parallélogramme avec <b>quatre côtés égaux</b> ; diagonales <b>perpendiculaires</b></td><td>Parallélogramme avec deux côtés consécutifs égaux, ou dont les diagonales sont perpendiculaires</td></tr>
+<tr><td>Carré</td><td>À la fois un rectangle et un losange</td><td>Rectangle avec deux côtés consécutifs égaux, ou losange avec un angle droit</td></tr>
 </table></div>
-<div class="keep"><b>À retenir : </b>pour démontrer qu’un quadrilatère est un parallélogramme, on montre que ses diagonales se coupent en leur milieu, ou que ses côtés opposés sont parallèles deux à deux.</div>
 </section>
 
-<section id="sym">
-<h2>4. Symétries et cercle</h2>
+<section id="cercle">
+<h2>5. Le cercle</h2>
 <ul>
-<li>La <b>symétrie axiale</b> (par rapport à une droite) et la <b>symétrie centrale</b> (par rapport à un point) <b>conservent</b> les longueurs, les angles et les aires.</li>
-<li>Une figure a un <b>axe de symétrie</b> si elle se superpose à elle-même après pliage ; elle a un <b>centre de symétrie</b> si elle se superpose à elle-même après un demi-tour. Le parallélogramme a un centre de symétrie ; le losange et le rectangle ont aussi des axes.</li>
-<li>L’axe de symétrie de deux points symétriques est leur <b>médiatrice</b>.</li>
+<li>Le <b>rayon</b> relie le centre à un point du cercle ; le <b>diamètre</b> passe par le centre et vaut deux rayons ; une <b>corde</b> relie deux points du cercle.</li>
+<li>Si un côté d’un triangle est un <b>diamètre</b> de son cercle circonscrit, alors ce triangle est <b>rectangle</b> (l’angle droit est opposé à ce diamètre).</li>
+<li>Réciproquement, dans un triangle rectangle, le centre du cercle circonscrit est le <b>milieu de l’hypoténuse</b>. La médiane issue de l’angle droit mesure donc la moitié de l’hypoténuse.</li>
+<li>Périmètre d’un cercle : 2 × π × r ; aire d’un disque : π × r².</li>
 </ul>
-<p><b>Le cercle :</b> le <b>rayon</b> relie le centre à un point du cercle, le <b>diamètre</b> passe par le centre et vaut deux rayons, une <b>corde</b> relie deux points du cercle. Un triangle inscrit dans un cercle dont un côté est un diamètre est rectangle.</p>
+</section>
+
+<section id="demo">
+<h2>6. Rédiger une démonstration</h2>
+<p>Une démonstration enchaîne trois éléments : <b>ce que l’on sait</b> (les données de l’énoncé), <b>la propriété utilisée</b>, puis <b>la conclusion</b>.</p>
+<div class="ex">ABCD est un parallélogramme qui a un angle droit en A.<br><b>Données :</b> ABCD est un parallélogramme, et il a un angle droit.<br><b>Propriété :</b> si un parallélogramme a un angle droit, alors c’est un rectangle.<br><b>Conclusion :</b> ABCD est un rectangle.</div>
+<div class="keep"><b>À retenir : </b>citez la propriété avec ses deux parties (« si… alors… ») et vérifiez que toutes les conditions sont réunies. On ne démontre jamais en mesurant sur le dessin : la figure est un support, pas une preuve.</div>
 </section>
 
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -129,68 +150,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Un triangle a deux angles de 50° et 60°. Combien mesure le troisième ?",o:["70°","80°","110°"],a:0,w:"180 − 50 − 60 = 70°."},
-{q:"Que peut-on dire de deux angles opposés par le sommet ?",o:["Ils sont égaux","Ils sont complémentaires","Ils sont supplémentaires"],a:0,w:"Deux angles opposés par le sommet sont toujours égaux."},
-{q:"Deux droites parallèles sont coupées par une sécante. Que sont les angles alternes-internes ?",o:["Égaux","Complémentaires","Toujours droits"],a:0,w:"Les angles alternes-internes sont égaux lorsque les droites sont parallèles."},
-{q:"Peut-on construire un triangle de côtés 3 cm, 4 cm et 8 cm ?",o:["Oui","Non, car 3 + 4 est inférieur à 8","Seulement s’il est rectangle"],a:1,w:"L’inégalité triangulaire impose que chaque côté soit plus petit que la somme des deux autres."},
-{q:"Quelle propriété caractérise les diagonales d’un parallélogramme ?",o:["Elles se coupent en leur milieu","Elles sont perpendiculaires","Elles sont de même longueur"],a:0,w:"Les diagonales d’un parallélogramme se coupent en leur milieu."},
-{q:"Quelle propriété supplémentaire a un losange par rapport à un parallélogramme ?",o:["Ses diagonales sont perpendiculaires","Ses diagonales sont égales","Il a quatre angles droits"],a:0,w:"Le losange a quatre côtés égaux et ses diagonales sont perpendiculaires."},
-{q:"Quelle propriété supplémentaire a un rectangle par rapport à un parallélogramme ?",o:["Ses diagonales ont la même longueur","Ses côtés sont tous égaux","Ses diagonales sont perpendiculaires"],a:0,w:"Un rectangle a quatre angles droits et des diagonales de même longueur."},
-{q:"Qu’est-ce que la médiatrice d’un segment ?",o:["La droite perpendiculaire au segment qui passe par son milieu","Le segment qui joint deux sommets","La droite parallèle au segment"],a:0,w:"Ses points sont à égale distance des deux extrémités du segment."}
+{q:"Un triangle a deux angles de 50° et 60°. Combien mesure le troisième ?",num:70,u:"°",w:"180 − 50 − 60 = 70.",l:1,t:"Angles"},
+{q:"Que peut-on dire de deux angles opposés par le sommet ?",o:["Ils sont égaux", "Ils sont complémentaires", "Ils sont supplémentaires", "Ils sont toujours droits"],a:0,w:"Deux angles opposés par le sommet sont égaux.",l:1,t:"Angles"},
+{q:"Quel est le complémentaire d’un angle de 35° ?",num:55,u:"°",w:"90 − 35 = 55.",l:1,t:"Angles"},
+{q:"Quel est le supplémentaire d’un angle de 35° ?",num:145,u:"°",w:"180 − 35 = 145.",l:2,t:"Angles"},
+{q:"Deux droites parallèles sont coupées par une sécante. Que dire des angles alternes-internes ?",o:["Ils sont égaux", "Ils sont complémentaires", "Ils sont supplémentaires", "Ils sont nuls"],a:0,w:"Les angles alternes-internes sont égaux lorsque les droites sont parallèles.",l:2,t:"Angles"},
+{q:"Deux angles alternes-internes sont égaux. Que peut-on conclure ?",o:["Les deux droites sont parallèles", "Les deux droites sont perpendiculaires", "Les droites sont sécantes en un angle droit", "On ne peut rien conclure"],a:0,w:"C’est la réciproque de la propriété : l’égalité des angles caractérise le parallélisme.",l:3,t:"Angles"},
+{q:"Quels angles sont égaux dans un triangle isocèle ?",o:["Les angles à la base", "Tous les angles", "L’angle au sommet et un angle de base", "Aucun"],a:0,w:"Les angles à la base d’un triangle isocèle sont égaux.",l:1,t:"Triangles"},
+{q:"Peut-on construire un triangle de côtés 3 cm, 4 cm et 8 cm ?",o:["Non, car 3 + 4 est inférieur à 8", "Oui", "Seulement s’il est rectangle", "Seulement s’il est isocèle"],a:0,w:"L’inégalité triangulaire impose que chaque côté soit plus petit que la somme des deux autres.",l:2,t:"Triangles"},
+{q:"Un triangle a pour côtés 3 cm, 4 cm et 7 cm. Que peut-on dire ?",o:["Les trois points sont alignés", "Il est rectangle", "Il est équilatéral", "Il est isocèle"],a:0,w:"3 + 4 = 7 : le triangle est aplati.",l:3,t:"Triangles"},
+{q:"Quels sont les cas de construction (et d’égalité) d’un triangle ?",o:["Trois côtés", "Deux côtés et l’angle compris", "Un côté et les deux angles adjacents", "Trois angles"],a:[0, 1, 2],w:"Trois angles ne fixent que la forme, pas la taille.",l:2,t:"Triangles"},
+{q:"Qu’est-ce que la médiatrice d’un segment ?",o:["La droite perpendiculaire au segment passant par son milieu", "La droite passant par un sommet et le milieu du côté opposé", "La droite qui partage un angle en deux", "Le segment qui joint deux sommets"],a:0,w:"Ses points sont à égale distance des deux extrémités du segment.",l:1,t:"Droites"},
+{q:"Qu’est-ce qu’une médiane d’un triangle ?",o:["La droite passant par un sommet et par le milieu du côté opposé", "La droite perpendiculaire à un côté passant par son milieu", "La droite qui partage un angle en deux", "La droite perpendiculaire à un côté passant par le sommet opposé"],a:0,w:"Ne pas confondre avec la hauteur et la médiatrice.",l:2,t:"Droites"},
+{q:"Où se coupent les trois médiatrices d’un triangle ?",o:["Au centre du cercle circonscrit", "Au centre du cercle inscrit", "Au centre de gravité", "Sur un des sommets"],a:0,w:"Ce point est à égale distance des trois sommets.",l:2,t:"Droites"},
+{q:"Quelle propriété ont les diagonales d’un parallélogramme ?",o:["Elles se coupent en leur milieu", "Elles sont perpendiculaires", "Elles sont de même longueur", "Elles sont parallèles"],a:0,w:"C’est une propriété caractéristique du parallélogramme.",l:1,t:"Quadrilatères"},
+{q:"Quelle propriété supplémentaire a un losange ?",o:["Ses diagonales sont perpendiculaires", "Ses diagonales sont égales", "Il a quatre angles droits", "Ses côtés opposés ne sont pas parallèles"],a:0,w:"Un losange a quatre côtés égaux et ses diagonales sont perpendiculaires.",l:2,t:"Quadrilatères"},
+{q:"Quelle propriété supplémentaire a un rectangle ?",o:["Ses diagonales ont la même longueur", "Ses côtés sont tous égaux", "Ses diagonales sont perpendiculaires", "Il a trois angles droits seulement"],a:0,w:"Un rectangle a quatre angles droits et des diagonales égales.",l:2,t:"Quadrilatères"},
+{q:"ABCD est un parallélogramme avec deux côtés consécutifs égaux. Que peut-on conclure ?",o:["C’est un losange", "C’est un rectangle", "C’est un carré", "C’est un trapèze"],a:0,w:"Un parallélogramme dont deux côtés consécutifs sont égaux est un losange.",l:3,t:"Quadrilatères"},
+{q:"Un triangle a un côté qui est un diamètre de son cercle circonscrit. Que peut-on dire ?",o:["Il est rectangle", "Il est équilatéral", "Il est isocèle", "On ne peut rien dire"],a:0,w:"L’angle opposé au diamètre est droit.",l:3,t:"Cercle"},
+{q:"ABC est rectangle en A avec BC = 10 cm. Quelle est la longueur de la médiane issue de A ?",num:5,u:"cm",w:"Le centre du cercle circonscrit est le milieu de l’hypoténuse, donc la médiane vaut la moitié de BC.",l:3,t:"Cercle"},
+{q:"Que doit comporter chaque étape d’une démonstration ?",o:["Les données, la propriété utilisée, la conclusion", "Une mesure faite sur le dessin", "Une figure soignée uniquement", "Une longue phrase sans connecteurs"],a:0,w:"On ne prouve jamais avec une mesure sur la figure.",l:1,t:"Démonstration"},
+{q:"ABCD est un parallélogramme et AC = BD. Quelle est sa nature ?",o:["Rectangle", "Losange", "Carré", "Trapèze"],a:0,w:"Un parallélogramme dont les diagonales ont la même longueur est un rectangle.",l:3,t:"Démonstration"}
 ];
-const $ = id => document.getElementById(id);
-const box = $("qbox");
-let i = 0, score = 0, wrong = [], pool = QS.map((q,k) => k);
-function hl(el, s){
-  s.split(/(\[\[.*?\]\])/).forEach(p => {
-    if (p.startsWith("[[")) { const m = document.createElement("mark"); m.textContent = p.slice(2,-2); el.appendChild(m); }
-    else el.appendChild(document.createTextNode(p));
-  });
-}
-function show(){
-  box.textContent = "";
-  $("qn").textContent = "Question " + (i + 1) + " sur " + pool.length;
-  $("pb").style.width = (i / pool.length * 100) + "%";
-  const q = QS[pool[i]];
-  const t = document.createElement("div"); t.className = "q"; hl(t, q.q); box.appendChild(t);
-  const g = document.createElement("div"); g.className = "opts"; box.appendChild(g);
-  const fb = document.createElement("div"); fb.className = "fb"; fb.hidden = true; box.appendChild(fb);
-  q.o.forEach((txt, k) => {
-    const b = document.createElement("button"); b.className = "opt"; b.type = "button"; b.textContent = txt;
-    b.onclick = () => {
-      const ok = k === q.a;
-      g.querySelectorAll("button").forEach((x, n) => { x.disabled = true; if (n === q.a) x.classList.add("good"); });
-      if (!ok) { b.classList.add("bad"); wrong.push(pool[i]); } else score++;
-      fb.hidden = false; fb.textContent = (ok ? "Bien vu. " : "Pas tout à fait. ") + q.w;
-      const n = document.createElement("button"); n.className = "btn"; n.type = "button";
-      n.textContent = i + 1 < pool.length ? "Question suivante" : "Voir mon score";
-      n.onclick = () => { i++; i < pool.length ? show() : end(); };
-      box.appendChild(n); n.focus();
-    };
-    g.appendChild(b);
-  });
-}
-function end(){
-  $("pb").style.width = "100%"; $("qn").textContent = "Terminé";
-  box.textContent = "";
-  const s = document.createElement("div"); s.className = "score"; s.textContent = score + " / " + pool.length; box.appendChild(s);
-  const m = document.createElement("p");
-  m.textContent = wrong.length === 0 ? "Sans faute. Cette fiche est maîtrisée, passez à la suivante." : score >= pool.length * 0.6 ? "Bon score. Relisez les points manqués, puis refaites ces questions." : "Relisez les sections 1 à 4, puis retentez le quiz.";
-  box.appendChild(m);
-  try { const b = Math.max(score, +(localStorage.getItem("maths-geoplane-best") || 0)); localStorage.setItem("maths-geoplane-best", String(b)); const r = document.createElement("p"); r.className = "meta"; r.textContent = "Meilleur score : " + b + " / " + QS.length; box.appendChild(r); } catch(e){}
-  const again = document.createElement("button"); again.className = "btn"; again.type = "button"; again.textContent = "Tout refaire";
-  again.onclick = () => { pool = QS.map((q,k) => k); reset(); };
-  box.appendChild(again);
-  if (wrong.length){ const e = document.createElement("button"); e.className = "btn alt"; e.type = "button"; e.textContent = "Refaire mes erreurs";
-    e.onclick = () => { pool = wrong.slice(); reset(); }; box.appendChild(e); }
-}
-function reset(){ i = 0; score = 0; wrong = []; show(); }
-show();
-
-const btns = Array.from(document.querySelectorAll("#nav button"));
-btns.forEach(b => b.onclick = () => document.getElementById(b.dataset.t).scrollIntoView({behavior:"smooth"}));
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.t === e.target.id)); }), {rootMargin:"-30% 0px -60% 0px"});
-btns.forEach(b => io.observe(document.getElementById(b.dataset.t)));
 </script>
+<script src="../assets/quiz.js"></script>
 </body>
 </html>
