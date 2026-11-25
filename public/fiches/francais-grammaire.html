@@ -64,10 +64,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : la grammaire</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="nature" class="on">Nature</button><button data-t="fonction">Fonction</button><button data-t="prop">Propositions</button><button data-t="methode">Méthode</button><button data-t="quiz">Quiz</button>
+<button data-t="nature" class="on">Nature</button><button data-t="fonction">Fonction</button><button data-t="prop">Propositions</button><button data-t="methode">Méthode</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="nature">
@@ -143,8 +143,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <p><b>Nature ou fonction ?</b> Lisez bien la question : « nature » appelle un nom de classe (adjectif, pronom…), « fonction » appelle un rôle (sujet, COD…).</p>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Trouver le sujet</b> : « Qui est-ce qui… ? » ou « c’est… qui ».</li>
+<li><b>COD ou attribut ?</b> Après un verbe d’action : COD. Après un verbe d’état (être, devenir, sembler) : attribut du sujet.</li>
+<li><b>Complément circonstanciel</b> : on peut le supprimer et le déplacer sans casser la phrase.</li>
+<li><b>« que »</b> : pronom relatif (« le livre que je lis »), conjonction de subordination (« je pense que… ») ou adverbe (« que c’est beau ! »).</li>
+<li><b>Nature ou fonction ?</b> La nature est une classe de mots (nom, adjectif…), la fonction est un rôle dans la phrase (sujet, COD…).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>commencez toujours par repérer les verbes conjugués, puis le sujet, puis les compléments.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -152,14 +164,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelle est la nature du mot souligné ? « Il mange [[une]] pomme. »",o:["Pronom","Déterminant","Adjectif"],a:1,w:"« une » introduit le nom « pomme » : c’est un déterminant (article indéfini)."},
-{q:"Quelle est la fonction du groupe souligné ? « Léa termine [[ses devoirs]]. »",o:["Sujet","COD","COI"],a:1,w:"On répond à « Léa termine quoi ? » sans préposition : COD. On peut dire « Léa les termine »."},
-{q:"Quelle est la fonction du groupe souligné ? « Il pense [[à son avenir]]. »",o:["COD","COI","Complément circonstanciel"],a:1,w:"Le verbe « penser à » est suivi de la préposition « à » : COI. On peut le remplacer par « y » : il y pense."},
-{q:"Quelle est la fonction du mot souligné ? « Ce film est [[passionnant]]. »",o:["Épithète","COD","Attribut du sujet"],a:2,w:"Après le verbe d’état « être », l’adjectif qualifie le sujet : attribut du sujet."},
-{q:"Quelle est la fonction du groupe souligné ? « Le chien [[de mon voisin]] aboie. »",o:["Complément du nom","COI","Complément circonstanciel de lieu"],a:0,w:"Il précise le nom « chien » : complément du nom."},
-{q:"Quelle est la fonction du mot souligné ? « [[Hier]], nous sommes allés au cinéma. »",o:["Complément circonstanciel de temps","Sujet","COD"],a:0,w:"Il répond à « quand ? », on peut le supprimer ou le déplacer : complément circonstanciel de temps."},
-{q:"Combien de propositions ? « Je pense que tu as raison parce que tu as lu le texte. »",o:["2","3","4"],a:1,w:"Trois verbes conjugués : je pense, tu as raison, tu as lu. Donc 3 propositions."},
-{q:"Quelle est la nature de la proposition soulignée ? « Les élèves [[qui révisent]] réussissent. »",o:["Subordonnée relative","Subordonnée complétive","Proposition coordonnée"],a:0,w:"Elle est introduite par « qui » et complète le nom « élèves » : subordonnée relative."}
+{q:"Quelle est la nature du mot souligné ? « Il mange [[une]] pomme. »",o:["Pronom", "Déterminant", "Adjectif"],a:1,w:"« une » introduit le nom « pomme » : c’est un déterminant (article indéfini).",l:1,t:"Nature"},
+{q:"Quelle est la fonction du groupe souligné ? « Léa termine [[ses devoirs]]. »",o:["Sujet", "COD", "COI"],a:1,w:"On répond à « Léa termine quoi ? » sans préposition : COD. On peut dire « Léa les termine ».",l:1,t:"Fonction"},
+{q:"Quelle est la fonction du groupe souligné ? « Il pense [[à son avenir]]. »",o:["COD", "COI", "Complément circonstanciel"],a:1,w:"Le verbe « penser à » est suivi de la préposition « à » : COI. On peut le remplacer par « y » : il y pense.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du mot souligné ? « Ce film est [[passionnant]]. »",o:["Épithète", "COD", "Attribut du sujet"],a:2,w:"Après le verbe d’état « être », l’adjectif qualifie le sujet : attribut du sujet.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du groupe souligné ? « Le chien [[de mon voisin]] aboie. »",o:["Complément du nom", "COI", "Complément circonstanciel de lieu"],a:0,w:"Il précise le nom « chien » : complément du nom.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du mot souligné ? « [[Hier]], nous sommes allés au cinéma. »",o:["Complément circonstanciel de temps", "Sujet", "COD"],a:0,w:"Il répond à « quand ? », on peut le supprimer ou le déplacer : complément circonstanciel de temps.",l:2,t:"Fonction"},
+{q:"Combien de propositions ? « Je pense que tu as raison parce que tu as lu le texte. »",o:["2", "3", "4"],a:1,w:"Trois verbes conjugués : je pense, tu as raison, tu as lu. Donc 3 propositions.",l:2,t:"Propositions"},
+{q:"Quelle est la nature de la proposition soulignée ? « Les élèves [[qui révisent]] réussissent. »",o:["Subordonnée relative", "Subordonnée complétive", "Proposition coordonnée"],a:0,w:"Elle est introduite par « qui » et complète le nom « élèves » : subordonnée relative.",l:2,t:"Propositions"},
+{q:"Quelle est la nature du mot souligné ? « Il est [[très]] fatigué. »",o:["Adverbe", "Adjectif", "Préposition"],a:0,w:"« très » est invariable et précise l’adjectif « fatigué » : c’est un adverbe.",l:1,t:"Nature"},
+{q:"Quelle est la nature du mot souligné ? « Le chat [[de]] Paul dort. »",o:["Préposition", "Déterminant", "Pronom"],a:0,w:"« de » relie deux mots (« chat » et « Paul ») : c’est une préposition.",l:1,t:"Nature"},
+{q:"Quelle est la nature du mot souligné ? « Il est petit [[mais]] fort. »",o:["Conjonction de coordination", "Conjonction de subordination", "Adverbe"],a:0,w:"« mais » relie deux éléments de même rang : c’est une conjonction de coordination.",l:1,t:"Nature"},
+{q:"Quelle est la nature du mot souligné ? « Je [[le]] lis. » (le livre)",o:["Pronom", "Déterminant", "Adverbe"],a:0,w:"Ici « le » remplace « le livre » : c’est un pronom. Devant un nom (« le livre »), c’est un déterminant.",l:2,t:"Nature"},
+{q:"Quels mots sont des conjonctions de coordination ?",o:["mais", "car", "parce que", "donc"],a:[0, 1, 3],w:"« parce que » est une conjonction de subordination. Pour les coordinations : « Mais où est donc Ornicar ».",l:2,t:"Nature"},
+{q:"Quelle est la fonction du groupe souligné ? « [[Les élèves]] révisent. »",o:["Sujet", "COD", "Attribut du sujet"],a:0,w:"On trouve le sujet avec « Qui est-ce qui révise ? » : les élèves.",l:1,t:"Fonction"},
+{q:"Quelle est la fonction du mot souligné ? « Une [[belle]] journée. »",o:["Épithète", "Attribut du sujet", "Apposition"],a:0,w:"L’adjectif est directement collé au nom : c’est une épithète.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du groupe souligné ? « Paris, [[capitale de la France]], est grande. »",o:["Apposition", "Complément du nom", "Attribut du sujet"],a:0,w:"Le groupe est séparé du nom par des virgules : c’est une apposition.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du groupe souligné ? « Il donne un livre [[à Paul]]. »",o:["COS", "COD", "COI"],a:0,w:"« à Paul » est le second objet, à côté du COD « un livre » : c’est un COS.",l:2,t:"Fonction"},
+{q:"Quelle est la fonction du mot souligné ? « Elle devient [[médecin]]. »",o:["Attribut du sujet", "COD", "Complément circonstanciel"],a:0,w:"Après un verbe d’état (devenir), le mot qui qualifie le sujet est un attribut, jamais un COD.",l:3,t:"Fonction"},
+{q:"Quelle est la fonction du groupe souligné ? « Il dort [[dans sa chambre]]. »",o:["Complément circonstanciel de lieu", "COD", "Attribut du sujet"],a:0,w:"Le groupe est supprimable et déplaçable : c’est un complément circonstanciel.",l:2,t:"Fonction"},
+{q:"Comment sont reliées les deux propositions de « Il pleut, nous restons. » ?",o:["Par juxtaposition", "Par coordination", "Par subordination"],a:0,w:"Elles sont séparées par une virgule, sans conjonction : juxtaposition.",l:2,t:"Propositions"},
+{q:"Quelle est la nature de la proposition soulignée ? « Je pense [[que tu as raison]]. »",o:["Subordonnée conjonctive complétive", "Subordonnée relative", "Subordonnée circonstancielle"],a:0,w:"Elle complète le verbe « pense » et est introduite par « que ».",l:2,t:"Propositions"},
+{q:"Quelle est la nature de la proposition soulignée ? « Il révise [[parce qu’il a peur]]. »",o:["Subordonnée circonstancielle de cause", "Subordonnée relative", "Subordonnée complétive"],a:0,w:"« parce que » introduit une cause : subordonnée circonstancielle de cause.",l:3,t:"Propositions"},
+{q:"Combien de propositions contient : « Le professeur que j’admire m’a dit que je réussirais si je travaillais. » ?",num:4,w:"Quatre verbes conjugués : admire, a dit, réussirais, travaillais.",l:3,t:"Propositions"},
+{q:"Un verbe à l’infinitif forme-t-il une proposition à lui seul ?",o:["Non, seul un verbe conjugué compte", "Oui, toujours", "Seulement après « que »"],a:0,w:"Autant de verbes conjugués, autant de propositions.",l:3,t:"Propositions"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

@@ -18,6 +18,20 @@
     if (txt !== undefined) e.textContent = txt;
     return e;
   }
+  function rich(tag, cls, txt) {
+    /* Affiche le texte ; les passages entre [[ ]] sont soulignés (mot ou groupe à analyser). */
+    var e = el(tag, cls);
+    String(txt).split(/(\[\[.*?\]\])/).forEach(function (part) {
+      if (/^\[\[.*\]\]$/.test(part)) {
+        var u = document.createElement("u");
+        u.textContent = part.slice(2, -2);
+        e.appendChild(u);
+      } else if (part) {
+        e.appendChild(document.createTextNode(part));
+      }
+    });
+    return e;
+  }
   function shuffle(a) {
     var r = a.slice();
     for (var i = r.length - 1; i > 0; i--) {
@@ -127,7 +141,7 @@
       st.timer = setInterval(function () { timer.textContent = fmtTime(Date.now() - st.t0); }, 1000);
     }
     root.appendChild(head);
-    root.appendChild(el("div", "q", q.q));
+    root.appendChild(rich("div", "q", q.q));
 
     var k = kind(q), box = el("div", "opts"), fb = el("div", "fb"), actions = el("div", "qactions");
     fb.hidden = true;
@@ -265,7 +279,7 @@
     var rev = el("div", "qreview");
     st.log.forEach(function (x, n) {
       var r = el("div", "qrev" + (x.ok ? " ok" : ""));
-      r.appendChild(el("p", null, (n + 1) + ". " + x.q.q));
+      r.appendChild(rich("p", null, (n + 1) + ". " + x.q.q));
       r.appendChild(el("p", x.ok ? "good" : "bad", (x.ok ? "Réussi : " : "Votre réponse : ") + x.given));
       if (!x.ok) r.appendChild(el("p", "good", "Bonne réponse : " + answerText(x.q)));
       if (x.q.w) r.appendChild(el("p", null, x.q.w));

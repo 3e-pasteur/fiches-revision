@@ -63,10 +63,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : analyse de texte</h1>
-<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 9 questions</p>
+<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 28 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="registres" class="on">Registres</button><button data-t="pdv">Point de vue</button><button data-t="figures">Figures de style</button><button data-t="genres">Genres</button><button data-t="methode">Méthode</button><button data-t="quiz">Quiz</button>
+<button data-t="registres" class="on">Registres</button><button data-t="pdv">Point de vue</button><button data-t="figures">Figures de style</button><button data-t="genres">Genres</button><button data-t="methode">Méthode</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="registres">
@@ -140,8 +140,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>relever un procédé sans en expliquer l’effet ne rapporte presque rien. Pensez toujours à la phrase « ce procédé permet de… ».</div>
 </section>
 
+<section id="plus">
+<h2>6. Astuces et pièges</h2>
+<ul>
+<li><b>Comparaison ou métaphore ?</b> Cherchez l’outil de comparaison (comme, tel, semblable à…). Sans outil : métaphore.</li>
+<li><b>Point de vue interne</b> : on connaît les pensées d’un personnage. <b>Externe</b> : on ne voit que gestes et paroles. <b>Omniscient</b> : on connaît les pensées de plusieurs personnages.</li>
+<li><b>Rimes</b> : plates AABB, croisées ABAB, embrassées ABBA.</li>
+<li><b>Réponse rédigée</b> : relever un procédé, le nommer, citer le passage, expliquer son effet (« ce procédé permet de… »).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>un procédé relevé sans explication de son effet rapporte très peu de points.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -149,15 +160,34 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel registre domine ? « Ô douce mélancolie, mon âme s’abandonne à ses souvenirs ! »",o:["Lyrique","Comique","Épique"],a:0,w:"Le « mon », l’exclamation et l’expression des sentiments personnels signalent le registre lyrique."},
-{q:"Quel registre domine ? « Il était si grand qu’il touchait les nuages, si fort qu’il terrassait cent armées. »",o:["Épique","Tragique","Satirique"],a:0,w:"Les exagérations célèbrent un héros : c’est le registre épique."},
-{q:"Quel point de vue ? « Il sentit son cœur battre et comprit qu’il avait peur. »",o:["Interne","Externe","Omniscient"],a:0,w:"On accède aux sensations et aux pensées d’un seul personnage : point de vue interne."},
-{q:"Quel point de vue ? « Un homme entra, s’assit, regarda sa montre. »",o:["Interne","Externe","Omniscient"],a:1,w:"On ne connaît que des gestes visibles, comme avec une caméra : point de vue externe."},
-{q:"Quelle figure de style ? « Cet enfant est un volcan. »",o:["Comparaison","Métaphore","Personnification"],a:1,w:"Il n’y a pas d’outil de comparaison : c’est une métaphore."},
-{q:"Quelle figure de style ? « Il court comme le vent. »",o:["Comparaison","Métaphore","Hyperbole"],a:0,w:"Le mot « comme » est un outil de comparaison."},
-{q:"Quelle figure de style ? « Quel beau temps ! » dit-il, sous une pluie battante.",o:["Ironie","Hyperbole","Antithèse"],a:0,w:"Il dit le contraire de ce qu’il pense : c’est une ironie."},
-{q:"Quelle figure de style ? « un silence assourdissant »",o:["Anaphore","Gradation","Oxymore"],a:2,w:"Deux mots contradictoires sont associés (silence et assourdissant) : oxymore."},
-{q:"Après avoir relevé un procédé dans une réponse rédigée, que faut-il faire ?",o:["Le recopier seulement","Expliquer son effet sur le lecteur","Passer à la question suivante"],a:1,w:"Il faut toujours interpréter : quel effet le procédé produit-il, et pourquoi l’auteur l’emploie-t-il ?"}
+{q:"Quel registre domine ? « Ô douce mélancolie, mon âme s’abandonne à ses souvenirs ! »",o:["Lyrique", "Comique", "Épique"],a:0,w:"Le « mon », l’exclamation et l’expression des sentiments personnels signalent le registre lyrique.",l:1,t:"Registres"},
+{q:"Quel registre domine ? « Il était si grand qu’il touchait les nuages, si fort qu’il terrassait cent armées. »",o:["Épique", "Tragique", "Satirique"],a:0,w:"Les exagérations célèbrent un héros : c’est le registre épique.",l:2,t:"Registres"},
+{q:"Quel point de vue ? « Il sentit son cœur battre et comprit qu’il avait peur. »",o:["Interne", "Externe", "Omniscient"],a:0,w:"On accède aux sensations et aux pensées d’un seul personnage : point de vue interne.",l:1,t:"Point de vue"},
+{q:"Quel point de vue ? « Un homme entra, s’assit, regarda sa montre. »",o:["Interne", "Externe", "Omniscient"],a:1,w:"On ne connaît que des gestes visibles, comme avec une caméra : point de vue externe.",l:1,t:"Point de vue"},
+{q:"Quelle figure de style ? « Cet enfant est un volcan. »",o:["Comparaison", "Métaphore", "Personnification"],a:1,w:"Il n’y a pas d’outil de comparaison : c’est une métaphore.",l:1,t:"Figures de style"},
+{q:"Quelle figure de style ? « Il court comme le vent. »",o:["Comparaison", "Métaphore", "Hyperbole"],a:0,w:"Le mot « comme » est un outil de comparaison.",l:1,t:"Figures de style"},
+{q:"Quelle figure de style ? « Quel beau temps ! » dit-il, sous une pluie battante.",o:["Ironie", "Hyperbole", "Antithèse"],a:0,w:"Il dit le contraire de ce qu’il pense : c’est une ironie.",l:2,t:"Figures de style"},
+{q:"Quelle figure de style ? « un silence assourdissant »",o:["Anaphore", "Gradation", "Oxymore"],a:2,w:"Deux mots contradictoires sont associés (silence et assourdissant) : oxymore.",l:2,t:"Figures de style"},
+{q:"Après avoir relevé un procédé dans une réponse rédigée, que faut-il faire ?",o:["Le recopier seulement", "Expliquer son effet sur le lecteur", "Passer à la question suivante"],a:1,w:"Il faut toujours interpréter : quel effet le procédé produit-il, et pourquoi l’auteur l’emploie-t-il ?",l:2,t:"Méthode"},
+{q:"Quel registre domine ? « Il glissa sur la peau de banane, se prit les pieds dans le tapis et finit dans l’aquarium. »",o:["Comique", "Tragique", "Lyrique"],a:0,w:"Situation absurde et enchaînement de gags : registre comique.",l:1,t:"Registres"},
+{q:"Quel registre domine ? « Le pauvre enfant grelotte de froid, seul, sans personne pour le consoler. »",o:["Pathétique", "Épique", "Polémique"],a:0,w:"Le texte cherche à faire pitié : registre pathétique.",l:2,t:"Registres"},
+{q:"Quel registre domine ? « Œdipe ne peut échapper au destin qui le condamne. »",o:["Tragique", "Comique", "Satirique"],a:0,w:"La fatalité, le destin inévitable : registre tragique.",l:2,t:"Registres"},
+{q:"Quel registre domine ? « Dans la maison déserte, la statue sembla bouger… avait-il rêvé ? »",o:["Fantastique", "Épique", "Polémique"],a:0,w:"Un événement étrange dans un cadre réaliste, avec le doute du narrateur : fantastique.",l:2,t:"Registres"},
+{q:"Quel registre cherche à se moquer pour critiquer ?",o:["Satirique", "Lyrique", "Tragique"],a:0,w:"La satire utilise ironie, caricature et portrait déformé.",l:2,t:"Registres"},
+{q:"Quand le récit est à la 1ère personne, le narrateur est…",o:["Un personnage de l’histoire", "Extérieur à l’histoire", "Toujours l’auteur"],a:0,w:"À la 1ère personne (« je »), le narrateur est un personnage.",l:1,t:"Point de vue"},
+{q:"Quel point de vue ? « Léa pensait à partir ; Paul, lui, rêvait de rester. »",o:["Omniscient", "Interne", "Externe"],a:0,w:"Le narrateur connaît les pensées de plusieurs personnages : point de vue omniscient.",l:3,t:"Point de vue"},
+{q:"Quelle figure de style ? « La mer grondait de colère. »",o:["Personnification", "Antithèse", "Gradation"],a:0,w:"La mer reçoit un sentiment humain : personnification.",l:1,t:"Figures de style"},
+{q:"Quelle figure de style ? « Il passait du rire aux larmes. »",o:["Antithèse", "Comparaison", "Euphémisme"],a:0,w:"Deux idées opposées dans une même phrase : antithèse.",l:2,t:"Figures de style"},
+{q:"Quelle figure de style ? « Je suis mort de fatigue. »",o:["Hyperbole", "Euphémisme", "Oxymore"],a:0,w:"L’exagération pour frapper l’esprit : hyperbole.",l:2,t:"Figures de style"},
+{q:"Quelle figure de style ? « Il marche, court, vole. »",o:["Gradation", "Anaphore", "Antithèse"],a:0,w:"Les verbes sont de plus en plus forts : gradation.",l:2,t:"Figures de style"},
+{q:"Quelle figure de style ? « Quand il pleut… Quand il vente… Quand il neige… »",o:["Anaphore", "Gradation", "Métaphore"],a:0,w:"Répétition d’un même mot en début de phrases : anaphore.",l:2,t:"Figures de style"},
+{q:"Quelle figure de style ? « Il nous a quittés. » (pour dire qu’il est mort)",o:["Euphémisme", "Hyperbole", "Ironie"],a:0,w:"L’euphémisme atténue une réalité dure.",l:3,t:"Figures de style"},
+{q:"Combien de syllabes compte un alexandrin ?",num:12,u:"syllabes",w:"L’alexandrin compte 12 syllabes ; l’octosyllabe, 8.",l:2,t:"Genres"},
+{q:"Un poème rime ABBA. Comment appelle-t-on ces rimes ?",o:["Embrassées", "Croisées", "Plates"],a:0,w:"Plates : AABB. Croisées : ABAB. Embrassées : ABBA.",l:3,t:"Genres"},
+{q:"Que sont les didascalies au théâtre ?",o:["Des indications de jeu et de mise en scène", "Les répliques des personnages", "Les titres des actes"],a:0,w:"Elles sont souvent en italique.",l:2,t:"Genres"},
+{q:"Quelle est la particularité d’une autobiographie ?",o:["L’auteur, le narrateur et le personnage sont une seule personne", "Le narrateur est extérieur à l’histoire", "Elle est toujours en vers"],a:0,w:"L’auteur raconte sa propre vie à la 1ère personne.",l:3,t:"Genres"},
+{q:"Qu’est-ce qui caractérise la nouvelle par rapport au roman ?",o:["Elle est plus courte, centrée sur un événement, avec souvent une chute", "Elle est toujours en vers", "Elle n’a pas de personnages"],a:0,w:"La nouvelle est un récit bref en prose.",l:3,t:"Genres"},
+{q:"Comment répondre à une question sur une image ?",o:["Décrire, puis interpréter, puis relier au texte", "Raconter l’histoire sans regarder l’image", "Ne répondre qu’avec une phrase"],a:0,w:"Plans, couleurs, personnages, lumière, puis interprétation.",l:2,t:"Méthode"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

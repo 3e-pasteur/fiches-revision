@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>EMC : les règles du jeu démocratique</h1>
-<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="constitution" class="on">Constitution</button><button data-t="laicite">Laïcité de l’État</button><button data-t="evolution">Évolution de la Ve République</button><button data-t="europe">Institutions européennes</button><button data-t="quiz">Quiz</button>
+<button data-t="constitution" class="on">Constitution</button><button data-t="laicite">Laïcité de l’État</button><button data-t="evolution">Évolution de la Ve République</button><button data-t="europe">Institutions européennes</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="constitution">
@@ -126,8 +126,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>5. Notions à connaître</h2>
+<ul>
+<li><b>Constitution</b> : texte suprême qui organise les pouvoirs et garantit les droits. <b>Séparation des pouvoirs</b> : législatif, exécutif, judiciaire.</li>
+<li><b>Conseil constitutionnel</b> : vérifie que les lois respectent la Constitution. <b>QPC</b> : contestation d’une loi lors d’un procès (depuis 2008).</li>
+<li><b>Laïcité</b> : l’État est indépendant des religions et garantit la liberté de conscience (loi de 1905).</li>
+<li><b>Règlement</b> : applicable directement dans l’Union. <b>Directive</b> : objectif à transposer dans le droit national.</li>
+<li><b>Souveraineté</b> : pouvoir suprême d’un État de décider pour lui-même.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la démocratie repose sur des règles : une Constitution, des pouvoirs séparés, la laïcité, et l’appartenance à des ensembles européens.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -135,14 +147,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel texte est la norme juridique fondamentale de l’État ?",o:["La Constitution","Une directive européenne","Un décret"],a:0,w:"Toutes les lois doivent respecter la Constitution."},
-{q:"Quels sont les trois pouvoirs séparés ?",o:["Législatif, exécutif, judiciaire","Politique, économique, religieux","National, régional, local"],a:0,w:"La séparation des pouvoirs évite la concentration du pouvoir entre les mêmes mains."},
-{q:"Quelle institution vérifie qu’une loi respecte la Constitution ?",o:["Le Conseil constitutionnel","Le Sénat","La Commission européenne"],a:0,w:"Le Conseil constitutionnel contrôle la conformité des lois à la Constitution."},
-{q:"Que signifie la laïcité de l’État ?",o:["L’autorité politique est indépendante des autorités religieuses","Les religions sont interdites","L’État finance un culte officiel"],a:0,w:"La loi de 1905 sépare les Églises et l’État."},
-{q:"Quelle modification constitutionnelle date de 1962 ?",o:["L’élection du président au suffrage universel direct","Le quinquennat","La parité"],a:0,w:"Le référendum de 1962 a instauré l’élection directe du président."},
-{q:"En quelle année est-on passé du septennat au quinquennat ?",o:["2000","1962","2008"],a:0,w:"La durée du mandat présidentiel est passée de sept à cinq ans en 2000."},
-{q:"Que prévoit la citoyenneté européenne ?",o:["Voter aux élections européennes et municipales dans son pays de résidence","L’obligation de voter","La suppression des nationalités"],a:0,w:"Elle ajoute des droits à la nationalité sans la remplacer."},
-{q:"Que fait une directive européenne ?",o:["Elle fixe des objectifs que chaque État doit transposer dans son droit","Elle s’applique directement sans transposition","Elle remplace la Constitution"],a:0,w:"À la différence du règlement, une directive doit être transposée en droit national."}
+{q:"Quel texte est la norme juridique fondamentale de l’État ?",o:["La Constitution", "Une directive européenne", "Un décret"],a:0,w:"Toutes les lois doivent respecter la Constitution.",l:1,t:"La Constitution"},
+{q:"Quels sont les trois pouvoirs séparés ?",o:["Législatif, exécutif, judiciaire", "Politique, économique, religieux", "National, régional, local"],a:0,w:"La séparation des pouvoirs évite la concentration du pouvoir entre les mêmes mains.",l:1,t:"La séparation des pouvoirs"},
+{q:"Quelle institution vérifie qu’une loi respecte la Constitution ?",o:["Le Conseil constitutionnel", "Le Sénat", "La Commission européenne"],a:0,w:"Le Conseil constitutionnel contrôle la conformité des lois à la Constitution.",l:2,t:"La Constitution"},
+{q:"Que signifie la laïcité de l’État ?",o:["L’autorité politique est indépendante des autorités religieuses", "Les religions sont interdites", "L’État finance un culte officiel"],a:0,w:"La loi de 1905 sépare les Églises et l’État.",l:2,t:"Laïcité"},
+{q:"Quelle modification constitutionnelle date de 1962 ?",o:["L’élection du président au suffrage universel direct", "Le quinquennat", "La parité"],a:0,w:"Le référendum de 1962 a instauré l’élection directe du président.",l:2,t:"Évolution de la Constitution"},
+{q:"En quelle année est-on passé du septennat au quinquennat ?",o:["2000", "1962", "2008"],a:0,w:"La durée du mandat présidentiel est passée de sept à cinq ans en 2000.",l:2,t:"Évolution de la Constitution"},
+{q:"Que prévoit la citoyenneté européenne ?",o:["Voter aux élections européennes et municipales dans son pays de résidence", "L’obligation de voter", "La suppression des nationalités"],a:0,w:"Elle ajoute des droits à la nationalité sans la remplacer.",l:2,t:"Europe"},
+{q:"Que fait une directive européenne ?",o:["Elle fixe des objectifs que chaque État doit transposer dans son droit", "Elle s’applique directement sans transposition", "Elle remplace la Constitution"],a:0,w:"À la différence du règlement, une directive doit être transposée en droit national.",l:3,t:"Europe"},
+{q:"En quelle année date la Constitution de la Ve République ?",num:1958,w:"La Constitution de 1958 organise toujours les institutions françaises.",l:1,t:"La Constitution"},
+{q:"Qui exerce le pouvoir législatif ?",o:["Le Parlement", "Le gouvernement", "Les juges"],a:0,w:"Le Parlement (Assemblée nationale et Sénat) vote les lois et contrôle le gouvernement.",l:2,t:"La séparation des pouvoirs"},
+{q:"Qui exerce le pouvoir exécutif ?",o:["Le président de la République et le gouvernement", "Les juges", "Les députés"],a:0,w:"L’exécutif fait appliquer les lois et dirige l’action de l’État.",l:2,t:"La séparation des pouvoirs"},
+{q:"Quel est le rôle du pouvoir judiciaire ?",o:["Rendre la justice de façon indépendante", "Voter les lois", "Diriger l’État"],a:0,w:"L’indépendance des juges protège les libertés.",l:2,t:"La séparation des pouvoirs"},
+{q:"Que permet la QPC (question prioritaire de constitutionnalité) ?",o:["À un justiciable de contester une loi à l’occasion d’un procès", "De changer la Constitution", "De dissoudre l’Assemblée"],a:0,w:"Elle a été créée par la réforme de 2008.",l:3,t:"La Constitution"},
+{q:"Quels textes ont valeur constitutionnelle ?",o:["La Déclaration des droits de l’homme et du citoyen (1789)", "Le préambule de la Constitution de 1946", "La Charte de l’environnement", "Le traité de Versailles"],a:[0, 1, 2],w:"La Constitution de 1958 fait référence à ces textes.",l:3,t:"La Constitution"},
+{q:"Quelle loi de 1905 est un fondement de la laïcité ?",o:["La loi de séparation des Églises et de l’État", "La loi Veil", "La loi sur le quinquennat"],a:0,w:"Elle date du 9 décembre 1905.",l:2,t:"Laïcité"},
+{q:"Que garantit la laïcité ?",o:["La liberté de conscience : croire ou ne pas croire", "L’interdiction de toute religion", "Le financement d’un culte par l’État"],a:0,w:"L’État ne reconnaît ni ne finance aucun culte.",l:3,t:"Laïcité"},
+{q:"Quel texte est ajouté à la Constitution en 2004 ?",o:["La Charte de l’environnement", "La Déclaration de 1789", "La loi Veil"],a:0,w:"La Constitution évolue pour prendre en compte de nouveaux enjeux.",l:2,t:"Évolution de la Constitution"},
+{q:"Que vise l’introduction de la parité en 1999 ?",o:["L’égalité entre les femmes et les hommes dans les mandats électoraux", "La suppression du Sénat", "Le droit de vote à 16 ans"],a:0,w:"Elle a été inscrite dans la Constitution en 1999.",l:3,t:"Évolution de la Constitution"},
+{q:"Quelle institution défend les droits de l’homme en Europe, avec la Cour européenne des droits de l’homme ?",o:["Le Conseil de l’Europe", "La Commission européenne", "L’OTAN"],a:0,w:"Il ne faut pas le confondre avec l’Union européenne ni avec le Conseil européen.",l:3,t:"Europe"},
+{q:"Quelle différence entre règlement et directive ?",o:["Le règlement s’applique directement ; la directive fixe des objectifs que chaque État transpose", "Il n’y a aucune différence", "La directive s’applique directement"],a:0,w:"Les décisions de la Cour de justice de l’Union s’imposent aux États.",l:3,t:"Europe"},
+{q:"Quelles institutions font partie de l’Union européenne ?",o:["Le Parlement européen", "La Commission européenne", "La Cour de justice de l’Union européenne", "Le Conseil constitutionnel"],a:[0, 1, 2],w:"Le Conseil constitutionnel est une institution française.",l:2,t:"Europe"},
+{q:"Quels droits donne la citoyenneté européenne ?",o:["Circuler et s’installer librement", "Voter aux élections européennes dans son pays de résidence", "Voter aux municipales dans son pays de résidence", "Voter à la présidentielle de n’importe quel pays"],a:[0, 1, 2],w:"La Charte des droits fondamentaux de l’Union garantit ces droits.",l:2,t:"Europe"},
+{q:"Que signifie qu’une compétence est « partagée » dans l’Union européenne ?",o:["Les États et l’Union l’exercent ensemble", "Elle appartient seulement à l’Union", "Elle n’existe pas"],a:0,w:"Certaines compétences sont partagées ; d’autres relèvent encore de la souveraineté des États.",l:3,t:"Europe"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

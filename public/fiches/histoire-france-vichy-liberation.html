@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la France de Vichy à la Libération</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="vichy" class="on">Vichy</button><button data-t="collab">Collaboration</button><button data-t="resistance">Résistance</button><button data-t="liberation">Libération</button><button data-t="quiz">Quiz</button>
+<button data-t="vichy" class="on">Vichy</button><button data-t="collab">Collaboration</button><button data-t="resistance">Résistance</button><button data-t="liberation">Libération</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="vichy">
@@ -117,8 +117,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </div>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Zone occupée / zone libre</b> : la France est divisée jusqu’au 11 novembre 1942, séparée par la <b>ligne de démarcation</b>.</li>
+<li><b>État français</b> : nom officiel du régime de Pétain. <b>Révolution nationale</b> : son programme (« Travail, Famille, Patrie »).</li>
+<li><b>Collaboration</b> : coopération avec l’occupant. <b>Résistance</b> : refus de l’occupation et de Vichy.</li>
+<li><b>STO</b> : Service du travail obligatoire (envoi de travailleurs en Allemagne). <b>Maquis</b> : groupe de résistants armés.</li>
+<li><b>CNR</b> : Conseil national de la Résistance, qui prépare la refondation sociale et politique.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la France de 1940 à 1944 est divisée : certains collaborent, d’autres résistent, la majorité subit les privations. La Libération permet de refonder la République.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -126,14 +138,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Que se passe-t-il le 10 juillet 1940 ?",o:["De Gaulle lance l’appel du 18 juin","Le Parlement vote les pleins pouvoirs à Pétain","Paris est libérée"],a:1,w:"Le vote met fin à la IIIe République et crée l’État français dirigé par Pétain."},
-{q:"Quelle devise remplace « Liberté, Égalité, Fraternité » sous Vichy ?",o:["Travail, Famille, Patrie","Union, Force, Liberté","Honneur et Patrie"],a:0,w:"« Travail, Famille, Patrie » est la devise du régime de Vichy."},
-{q:"Que désigne la rafle du Vél’ d’Hiv, en juillet 1942 ?",o:["L’arrestation de plus de 13 000 Juifs par la police française","Un débarquement allié","Une bataille de la Résistance"],a:0,w:"La rafle des 16 et 17 juillet 1942 est organisée par la police française, sous l’autorité de Vichy et à la demande des Allemands."},
-{q:"Que prévoit le STO créé en 1943 ?",o:["L’envoi de travailleurs français en Allemagne","Le droit de vote des femmes","Le rationnement alimentaire"],a:0,w:"Le Service du travail obligatoire envoie des Français travailler en Allemagne. Beaucoup le refusent et rejoignent les maquis."},
-{q:"Qui réunit le Conseil national de la Résistance en mai 1943 ?",o:["Jean Moulin","Philippe Pétain","Pierre Laval"],a:0,w:"Jean Moulin unifie les mouvements de résistance au sein du CNR."},
-{q:"Qu’est-ce que l’appel du 18 juin 1940 ?",o:["Un discours de Pétain demandant l’armistice","Le discours de de Gaulle, depuis Londres, appelant à poursuivre le combat","L’annonce du débarquement"],a:1,w:"De Gaulle appelle les Français à continuer la lutte contre l’Allemagne."},
-{q:"Quelle est la date de la libération de Paris ?",o:["6 juin 1944","25 août 1944","8 mai 1945"],a:1,w:"Paris est libérée le 25 août 1944."},
-{q:"Quel droit obtiennent les femmes françaises en 1944 ?",o:["Le droit de vote","Le droit à l’IVG","Le droit de travailler"],a:0,w:"L’ordonnance d’avril 1944 leur accorde le droit de vote ; elles votent pour la première fois en 1945."}
+{q:"Que se passe-t-il le 10 juillet 1940 ?",o:["De Gaulle lance l’appel du 18 juin", "Le Parlement vote les pleins pouvoirs à Pétain", "Paris est libérée"],a:1,w:"Le vote met fin à la IIIe République et crée l’État français dirigé par Pétain.",l:1,t:"Vichy"},
+{q:"Quelle devise remplace « Liberté, Égalité, Fraternité » sous Vichy ?",o:["Travail, Famille, Patrie", "Union, Force, Liberté", "Honneur et Patrie"],a:0,w:"« Travail, Famille, Patrie » est la devise du régime de Vichy.",l:1,t:"Vichy"},
+{q:"Que désigne la rafle du Vél’ d’Hiv, en juillet 1942 ?",o:["L’arrestation de plus de 13 000 Juifs par la police française", "Un débarquement allié", "Une bataille de la Résistance"],a:0,w:"La rafle des 16 et 17 juillet 1942 est organisée par la police française, sous l’autorité de Vichy et à la demande des Allemands.",l:2,t:"Collaboration"},
+{q:"Que prévoit le STO créé en 1943 ?",o:["L’envoi de travailleurs français en Allemagne", "Le droit de vote des femmes", "Le rationnement alimentaire"],a:0,w:"Le Service du travail obligatoire envoie des Français travailler en Allemagne. Beaucoup le refusent et rejoignent les maquis.",l:2,t:"Collaboration"},
+{q:"Qui réunit le Conseil national de la Résistance en mai 1943 ?",o:["Jean Moulin", "Philippe Pétain", "Pierre Laval"],a:0,w:"Jean Moulin unifie les mouvements de résistance au sein du CNR.",l:2,t:"Résistance"},
+{q:"Qu’est-ce que l’appel du 18 juin 1940 ?",o:["Un discours de Pétain demandant l’armistice", "Le discours de de Gaulle, depuis Londres, appelant à poursuivre le combat", "L’annonce du débarquement"],a:1,w:"De Gaulle appelle les Français à continuer la lutte contre l’Allemagne.",l:1,t:"Résistance"},
+{q:"Quelle est la date de la libération de Paris ?",o:["6 juin 1944", "25 août 1944", "8 mai 1945"],a:1,w:"Paris est libérée le 25 août 1944.",l:1,t:"Libération"},
+{q:"Quel droit obtiennent les femmes françaises en 1944 ?",o:["Le droit de vote", "Le droit à l’IVG", "Le droit de travailler"],a:0,w:"L’ordonnance d’avril 1944 leur accorde le droit de vote ; elles votent pour la première fois en 1945.",l:1,t:"Libération"},
+{q:"Dans quelle ville s’installe le gouvernement de Pétain ?",o:["Vichy", "Lyon", "Bordeaux"],a:0,w:"Le régime est appelé « régime de Vichy » ou « État français ».",l:1,t:"Vichy"},
+{q:"Comment appelle-t-on la ligne qui sépare la zone occupée de la zone libre ?",o:["La ligne de démarcation", "La ligne Maginot", "La ligne rouge"],a:0,w:"La France est coupée en deux jusqu’en novembre 1942.",l:2,t:"Vichy"},
+{q:"En quelle année les Allemands occupent-ils aussi le sud de la France ?",num:1942,w:"Le 11 novembre 1942, l’Allemagne occupe la zone libre.",l:3,t:"Vichy"},
+{q:"Que désigne la « collaboration » ?",o:["La coopération avec l’occupant allemand", "Le travail en équipe dans les usines", "L’alliance avec le Royaume-Uni"],a:0,w:"Pétain engage la France dans la collaboration après la rencontre de Montoire (octobre 1940).",l:1,t:"Collaboration"},
+{q:"Qui décide le statut des Juifs d’octobre 1940 ?",o:["Le régime de Vichy, de sa propre initiative", "Les troupes allemandes", "Le général de Gaulle"],a:0,w:"Les lois antisémites de Vichy sont décidées par le gouvernement de Pétain.",l:3,t:"Collaboration"},
+{q:"Quel est le rôle de la Milice ?",o:["Traquer les résistants et les Juifs au service de Vichy", "Combattre l’Allemagne", "Distribuer les tickets de rationnement"],a:0,w:"La Milice est créée en janvier 1943.",l:2,t:"Collaboration"},
+{q:"Qui sont les maquisards ?",o:["Des résistants armés cachés dans les campagnes, souvent des jeunes qui refusent le STO", "Des soldats allemands", "Des policiers de Vichy"],a:0,w:"Après la création du STO, de nombreux jeunes rejoignent les maquis.",l:2,t:"Résistance"},
+{q:"Quelles sont des actions de la Résistance intérieure ?",o:["La presse clandestine", "Le renseignement", "Les sabotages", "La signature de l’armistice"],a:[0, 1, 2],w:"Les résistants risquent la torture, la déportation et la mort.",l:2,t:"Résistance"},
+{q:"Quelle est la mission de Jean Moulin ?",o:["Unifier les mouvements de résistance sous l’autorité de de Gaulle", "Négocier avec Hitler", "Diriger la Milice"],a:0,w:"Il réunit le premier CNR le 27 mai 1943. Arrêté en juin, il meurt sous la torture.",l:2,t:"Résistance"},
+{q:"Qu’est-ce que la France libre ?",o:["Les Français qui poursuivent le combat aux côtés des Alliés, autour de de Gaulle", "La zone sud avant 1942", "Le gouvernement de Pétain"],a:0,w:"La France libre se forme après l’appel du 18 juin 1940.",l:2,t:"Résistance"},
+{q:"Quelle division du général Leclerc participe à la libération de Paris ?",o:["La 2e division blindée", "La Légion étrangère", "La division Charlemagne"],a:0,w:"Les Parisiens se soulèvent et la division Leclerc entre dans Paris le 25 août 1944.",l:3,t:"Libération"},
+{q:"Qu’appelle-t-on l’épuration ?",o:["Le jugement et la sanction des collaborateurs après la Libération", "L’expulsion des immigrés", "La reconstruction des villes"],a:0,w:"L’épuration vise à punir ceux qui ont collaboré avec l’occupant.",l:2,t:"Libération"},
+{q:"Quel texte inspire la création de la Sécurité sociale en 1945 ?",o:["Le programme du Conseil national de la Résistance", "La Constitution de 1958", "Le traité de Versailles"],a:0,w:"Le programme du CNR prévoit aussi le droit de vote des femmes et la protection sociale.",l:3,t:"Libération"},
+{q:"Quelles réformes caractérisent la refondation de la République (1944-1946) ?",o:["Le droit de vote pour les femmes", "La création de la Sécurité sociale", "La Constitution de la IVe République", "Le retour du régime de Vichy"],a:[0, 1, 2],w:"La République est rétablie et élargie : droits politiques et sociaux.",l:3,t:"Libération"},
+{q:"En quelle année les femmes françaises votent-elles pour la première fois ?",num:1945,w:"Le droit de vote est accordé en 1944 ; elles votent en 1945.",l:2,t:"Libération"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

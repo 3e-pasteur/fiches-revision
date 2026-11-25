@@ -65,10 +65,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : types, formes et voix de la phrase</h1>
-<p class="meta">Brevet · notions du cycle 4 · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · notions du cycle 4 · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="types" class="on">Types de phrase</button><button data-t="formes">Formes de phrase</button><button data-t="voix">Voix active et passive</button><button data-t="quiz">Quiz</button>
+<button data-t="types" class="on">Types de phrase</button><button data-t="formes">Formes de phrase</button><button data-t="voix">Voix active et passive</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="types">
@@ -116,8 +116,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>seuls les verbes qui peuvent avoir un COD se mettent à la voix passive. « Il dort » ne peut pas devenir passif.</div>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Type ≠ ponctuation</b> : « Viens ici ! » est injonctive, pas exclamative.</li>
+<li><b>ne… que</b> signifie « seulement » : ce n’est pas une négation.</li>
+<li><b>Passif</b> : être au même temps que le verbe actif + participe passé accordé avec le nouveau sujet.</li>
+<li><b>Impersonnelle</b> : le sujet « il » ne désigne personne (il pleut, il faut).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>type, forme et voix sont trois classements indépendants : une même phrase peut être déclarative, négative et passive.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -125,14 +136,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel est le type de la phrase « Viens ici ! » ?",o:["Injonctive","Exclamative","Déclarative"],a:0,w:"Elle exprime un ordre : c’est une phrase injonctive, malgré le point d’exclamation."},
-{q:"« Quand arrives-tu ? » est une interrogation…",o:["Partielle","Totale","Indirecte"],a:0,w:"Elle contient un mot interrogatif (« quand ») et ne peut pas recevoir « oui » ou « non » pour réponse."},
-{q:"Quelle est la valeur de « ne… que » dans « Il ne mange que du pain » ?",o:["La restriction","La négation","L’interrogation"],a:0,w:"Cela signifie qu’il mange seulement du pain."},
-{q:"Dans « La souris est mangée par le chat », comment s’appelle « par le chat » ?",o:["Le complément d’agent","Le COD","L’attribut du sujet"],a:0,w:"C’est l’ancien sujet de la phrase active, devenu complément d’agent."},
-{q:"Quelle est la voix passive de « Le professeur corrige les copies. » ?",o:["Les copies sont corrigées par le professeur.","Les copies corrigent le professeur.","Le professeur est corrigé par les copies."],a:0,w:"Le COD devient sujet, le verbe prend « être + participe passé » au même temps, et l’ancien sujet devient complément d’agent."},
-{q:"Quelle est la forme de la phrase « C’est Léa qui a gagné. » ?",o:["Emphatique","Passive","Impersonnelle"],a:0,w:"La structure « c’est… qui » met en relief Léa."},
-{q:"Quelle est la forme de la phrase « Il pleut. » ?",o:["Impersonnelle","Emphatique","Négative"],a:0,w:"Le sujet « il » ne désigne personne."},
-{q:"Quel verbe ne peut pas se mettre à la voix passive ?",o:["Dormir","Manger","Lire"],a:0,w:"Dormir n’a pas de COD, donc on ne peut pas construire de phrase passive."}
+{q:"Quel est le type de la phrase « Viens ici ! » ?",o:["Injonctive", "Exclamative", "Déclarative"],a:0,w:"Elle exprime un ordre : c’est une phrase injonctive, malgré le point d’exclamation.",l:1,t:"Types de phrase"},
+{q:"« Quand arrives-tu ? » est une interrogation…",o:["Partielle", "Totale", "Indirecte"],a:0,w:"Elle contient un mot interrogatif (« quand ») et ne peut pas recevoir « oui » ou « non » pour réponse.",l:2,t:"Types de phrase"},
+{q:"Quelle est la valeur de « ne… que » dans « Il ne mange que du pain » ?",o:["La restriction", "La négation", "L’interrogation"],a:0,w:"Cela signifie qu’il mange seulement du pain.",l:2,t:"Formes de phrase"},
+{q:"Dans « La souris est mangée par le chat », comment s’appelle « par le chat » ?",o:["Le complément d’agent", "Le COD", "L’attribut du sujet"],a:0,w:"C’est l’ancien sujet de la phrase active, devenu complément d’agent.",l:2,t:"Voix passive"},
+{q:"Quelle est la voix passive de « Le professeur corrige les copies. » ?",o:["Les copies sont corrigées par le professeur.", "Les copies corrigent le professeur.", "Le professeur est corrigé par les copies."],a:0,w:"Le COD devient sujet, le verbe prend « être + participe passé » au même temps, et l’ancien sujet devient complément d’agent.",l:2,t:"Voix passive"},
+{q:"Quelle est la forme de la phrase « C’est Léa qui a gagné. » ?",o:["Emphatique", "Passive", "Impersonnelle"],a:0,w:"La structure « c’est… qui » met en relief Léa.",l:2,t:"Formes de phrase"},
+{q:"Quelle est la forme de la phrase « Il pleut. » ?",o:["Impersonnelle", "Emphatique", "Négative"],a:0,w:"Le sujet « il » ne désigne personne.",l:2,t:"Formes de phrase"},
+{q:"Quel verbe ne peut pas se mettre à la voix passive ?",o:["Dormir", "Manger", "Lire"],a:0,w:"Dormir n’a pas de COD, donc on ne peut pas construire de phrase passive.",l:3,t:"Voix passive"},
+{q:"Quel est le type de « Quelle belle journée ! » ?",o:["Exclamative", "Interrogative", "Déclarative"],a:0,w:"Elle exprime un sentiment.",l:1,t:"Types de phrase"},
+{q:"Quel est le type de « Léa révise son brevet. » ?",o:["Déclarative", "Injonctive", "Exclamative"],a:0,w:"Elle affirme, elle informe.",l:1,t:"Types de phrase"},
+{q:"« Viens-tu ? » est une interrogation…",o:["Totale", "Partielle", "Exclamative"],a:0,w:"La réponse est « oui » ou « non » : interrogation totale.",l:2,t:"Types de phrase"},
+{q:"« Où vas-tu ? » est une interrogation…",o:["Partielle", "Totale", "Injonctive"],a:0,w:"Elle contient un mot interrogatif.",l:2,t:"Types de phrase"},
+{q:"Comment construit-on une interrogation ?",o:["Par l’intonation", "Avec « est-ce que »", "Par inversion du sujet", "Avec un point d’exclamation seul"],a:[0, 1, 2],w:"« Viens ici ! » reste une phrase injonctive.",l:2,t:"Types de phrase"},
+{q:"Quel est le type de « Sois sage ! » ?",o:["Injonctive", "Déclarative", "Interrogative"],a:0,w:"Elle donne un ordre ou un conseil.",l:1,t:"Types de phrase"},
+{q:"Quelle est la forme de « Il ne mange jamais de poisson. » ?",o:["Négative", "Affirmative", "Passive"],a:0,w:"« ne… jamais » entoure le verbe.",l:1,t:"Formes de phrase"},
+{q:"Laquelle de ces phrases n’est pas négative ?",o:["Il ne mange que du pain.", "Il ne mange jamais de pain.", "Il ne mange plus de pain."],a:0,w:"« ne… que » exprime la restriction (« seulement »).",l:3,t:"Formes de phrase"},
+{q:"Quelle est la forme de « C’est à Paul que je parle. » ?",o:["Emphatique", "Impersonnelle", "Passive"],a:0,w:"La mise en relief se fait avec « c’est… que ».",l:2,t:"Formes de phrase"},
+{q:"Quelle est la forme de « Il faut partir. » ?",o:["Impersonnelle", "Emphatique", "Passive"],a:0,w:"Le sujet « il » ne désigne personne.",l:2,t:"Formes de phrase"},
+{q:"Quelle est la voix de « Le texte sera lu par les élèves » ?",o:["Passive", "Active", "Pronominale"],a:0,w:"Le sujet subit l’action.",l:1,t:"Voix passive"},
+{q:"Mettez à la voix passive : « Le jury a lu les rédactions. »",o:["Les rédactions ont été lues par le jury.", "Les rédactions sont lues par le jury.", "Le jury a été lu par les rédactions."],a:0,w:"Passé composé : « a lu » → « ont été lues ».",l:3,t:"Voix passive"},
+{q:"Mettez à la voix passive : « Les élèves liront le texte. »",o:["Le texte sera lu par les élèves.", "Le texte est lu par les élèves.", "Le texte a été lu par les élèves."],a:0,w:"Futur : « liront » → « sera lu ».",l:3,t:"Voix passive"},
+{q:"Que devient le COD de la phrase active dans la phrase passive ?",o:["Le sujet", "Le complément d’agent", "Un attribut"],a:0,w:"Le sujet actif devient complément d’agent.",l:2,t:"Voix passive"},
+{q:"Laquelle de ces phrases est à la voix passive ?",o:["La souris est mangée par le chat.", "La souris est partie.", "La souris est grise."],a:0,w:"« est partie » est un passé composé avec l’auxiliaire être ; « grise » est un attribut.",l:3,t:"Voix passive"},
+{q:"Quelle phrase peut être mise à la voix passive ?",o:["Le chat mange la souris.", "Le chat dort.", "Le chat est gris."],a:0,w:"Seuls les verbes qui peuvent avoir un COD se mettent au passif.",l:2,t:"Voix passive"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

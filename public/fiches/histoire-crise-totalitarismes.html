@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : crise de 1929 et totalitarismes</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 25 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="crise" class="on">Crise de 1929</button><button data-t="totalitarisme">Totalitarisme</button><button data-t="urss">URSS</button><button data-t="italie">Italie</button><button data-t="nazi">Allemagne nazie</button><button data-t="quiz">Quiz</button>
+<button data-t="crise" class="on">Crise de 1929</button><button data-t="totalitarisme">Totalitarisme</button><button data-t="urss">URSS</button><button data-t="italie">Italie</button><button data-t="nazi">Allemagne nazie</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="crise">
@@ -139,8 +139,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>les nazis arrivent au pouvoir par des moyens légaux, puis suppriment la démocratie en quelques mois.</div>
 </section>
 
+<section id="plus">
+<h2>6. Repères et vocabulaire</h2>
+<ul>
+<li><b>Démocratie</b> : le pouvoir appartient aux citoyens ; libertés, élections libres, plusieurs partis. <b>Dictature</b> : le pouvoir est concentré dans les mains d’un seul homme ou d’un parti.</li>
+<li><b>Fascisme</b> : nom du régime de Mussolini (de « faisceau »). <b>Nazisme</b> : régime d’Hitler, fondé sur le racisme et l’antisémitisme.</li>
+<li><b>Propagande</b> : diffusion d’idées pour manipuler l’opinion. <b>Censure</b> : contrôle de ce qui peut être publié.</li>
+<li><b>Culte de la personnalité</b> : le chef est présenté comme infaillible (portraits, statues, slogans).</li>
+<li><b>Goulag</b> : système de camps de travail forcé en URSS. <b>Camp de concentration</b> : camp où l’on enferme les opposants (nazis).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>les régimes totalitaires ne se ressemblent pas en tout (idéologies différentes), mais ils partagent les mêmes méthodes : parti unique, chef adulé, propagande, terreur.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -148,14 +160,31 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel événement marque le début de la crise de 1929 ?",o:["Le krach de Wall Street, en octobre 1929","L’arrivée de Hitler au pouvoir","Le traité de Versailles"],a:0,w:"Le krach boursier de Wall Street a lieu le 24 octobre 1929."},
-{q:"Quelle est l’une des principales conséquences de la crise dans le monde ?",o:["Une forte croissance","Le chômage de masse et les faillites","La fin des échanges de marchandises"],a:1,w:"La crise provoque faillites, chômage de masse et misère."},
-{q:"Quelle caractéristique n’appartient pas à un régime totalitaire ?",o:["Le parti unique","La police politique","La liberté de la presse"],a:2,w:"Les régimes totalitaires contrôlent l’information : la presse est censurée."},
-{q:"Qui dirige l’URSS à partir de la fin des années 1920 ?",o:["Lénine","Staline","Mussolini"],a:1,w:"Lénine meurt en 1924 ; Staline s’impose ensuite comme chef absolu."},
-{q:"Que désigne le goulag ?",o:["Un parti politique","Un système de camps de travail forcé","Un plan économique"],a:1,w:"Le goulag est le système de camps de travail forcé de l’URSS."},
-{q:"Qui est le « Duce » ?",o:["Hitler","Mussolini","Staline"],a:1,w:"Le Duce est le titre de Mussolini, chef de l’Italie fasciste."},
-{q:"Quelle est la date de la nomination d’Hitler comme chancelier ?",o:["30 janvier 1933","9 novembre 1938","1er septembre 1939"],a:0,w:"Hitler est nommé chancelier le 30 janvier 1933."},
-{q:"Que désigne la Nuit de Cristal ?",o:["L’incendie du Reichstag","Un pogrom contre les Juifs en novembre 1938","Un discours d’Hitler"],a:1,w:"Dans la nuit du 9 au 10 novembre 1938, synagogues et magasins juifs sont attaqués dans toute l’Allemagne."}
+{q:"Quel événement marque le début de la crise de 1929 ?",o:["Le krach de Wall Street, en octobre 1929", "L’arrivée de Hitler au pouvoir", "Le traité de Versailles"],a:0,w:"Le krach boursier de Wall Street a lieu le 24 octobre 1929.",l:1,t:"Crise de 1929"},
+{q:"Quelle est l’une des principales conséquences de la crise dans le monde ?",o:["Une forte croissance", "Le chômage de masse et les faillites", "La fin des échanges de marchandises"],a:1,w:"La crise provoque faillites, chômage de masse et misère.",l:1,t:"Crise de 1929"},
+{q:"Quelle caractéristique n’appartient pas à un régime totalitaire ?",o:["Le parti unique", "La police politique", "La liberté de la presse"],a:2,w:"Les régimes totalitaires contrôlent l’information : la presse est censurée.",l:2,t:"Totalitarismes"},
+{q:"Qui dirige l’URSS à partir de la fin des années 1920 ?",o:["Lénine", "Staline", "Mussolini"],a:1,w:"Lénine meurt en 1924 ; Staline s’impose ensuite comme chef absolu.",l:1,t:"URSS"},
+{q:"Que désigne le goulag ?",o:["Un parti politique", "Un système de camps de travail forcé", "Un plan économique"],a:1,w:"Le goulag est le système de camps de travail forcé de l’URSS.",l:2,t:"URSS"},
+{q:"Qui est le « Duce » ?",o:["Hitler", "Mussolini", "Staline"],a:1,w:"Le Duce est le titre de Mussolini, chef de l’Italie fasciste.",l:1,t:"Italie fasciste"},
+{q:"Quelle est la date de la nomination d’Hitler comme chancelier ?",o:["30 janvier 1933", "9 novembre 1938", "1er septembre 1939"],a:0,w:"Hitler est nommé chancelier le 30 janvier 1933.",l:2,t:"Allemagne nazie"},
+{q:"Que désigne la Nuit de Cristal ?",o:["L’incendie du Reichstag", "Un pogrom contre les Juifs en novembre 1938", "Un discours d’Hitler"],a:1,w:"Dans la nuit du 9 au 10 novembre 1938, synagogues et magasins juifs sont attaqués dans toute l’Allemagne.",l:2,t:"Allemagne nazie"},
+{q:"Comment appelle-t-on le 24 octobre 1929 ?",o:["Le jeudi noir", "Le lundi rouge", "Le vendredi fou"],a:0,w:"Le « jeudi noir » est le jour de l’effondrement des cours à la bourse de New York.",l:1,t:"Crise de 1929"},
+{q:"Quelle politique Roosevelt mène-t-il à partir de 1933 ?",o:["Le New Deal : l’État intervient, grands travaux, aide aux chômeurs", "Le libéralisme total, sans intervention de l’État", "La collectivisation des terres"],a:0,w:"Le New Deal est une politique d’intervention de l’État pour relancer l’économie américaine.",l:2,t:"Crise de 1929"},
+{q:"Pourquoi la crise américaine devient-elle mondiale ?",o:["Parce que les économies sont liées : le commerce s’effondre et les banques font faillite", "Parce que les États-Unis déclarent la guerre au monde", "Parce que le dollar est supprimé"],a:0,w:"Les économies sont interdépendantes : la crise se propage de 1930 à 1933.",l:2,t:"Crise de 1929"},
+{q:"Combien y a-t-il de chômeurs en Allemagne en 1932 environ ? (en millions)",num:6,tol:0.5,u:"millions",w:"Plus de six millions de chômeurs : cette détresse aide les nazis à progresser.",l:2,t:"Crise de 1929"},
+{q:"Quelles sont des caractéristiques d’un régime totalitaire ?",o:["Un parti unique et un chef adulé", "La propagande et la censure", "La séparation des pouvoirs", "L’encadrement de la jeunesse"],a:[0, 1, 3],w:"Un régime totalitaire contrôle toute la société. La séparation des pouvoirs appartient aux démocraties.",l:2,t:"Totalitarismes"},
+{q:"Quel titre prend Hitler à la mort du président Hindenburg en 1934 ?",o:["Le Führer", "Le Duce", "Le Tsar"],a:0,w:"« Führer » signifie « guide » : Hitler cumule tous les pouvoirs.",l:1,t:"Allemagne nazie"},
+{q:"En quelle année l’URSS est-elle créée ?",num:1922,w:"L’URSS est créée en 1922, après la révolution de 1917.",l:1,t:"URSS"},
+{q:"Qu’est-ce que la collectivisation sous Staline ?",o:["La mise en commun forcée des terres paysannes dans de grandes exploitations collectives", "La vente des terres aux paysans", "La distribution des usines aux ouvriers"],a:0,w:"À partir de 1928, l’État force les paysans à rejoindre des fermes collectives.",l:2,t:"URSS"},
+{q:"Que désigne la Grande Terreur (1936-1938) ?",o:["Une vague d’arrestations, de procès truqués, d’exécutions et de déportations", "Une guerre contre l’Allemagne", "Un mouvement de grèves ouvrières"],a:0,w:"Staline élimine ses opposants réels ou supposés ; beaucoup sont envoyés au goulag.",l:3,t:"URSS"},
+{q:"Comment Mussolini arrive-t-il au pouvoir en 1922 ?",o:["Après la « marche sur Rome », le roi le nomme chef du gouvernement", "Par un coup d’État militaire contre le roi", "Par une victoire totale aux élections"],a:0,w:"Les Chemises noires marchent sur Rome en octobre 1922 et le roi appelle Mussolini au gouvernement.",l:2,t:"Italie fasciste"},
+{q:"Quel pays l’Italie de Mussolini conquiert-elle en 1935-1936 ?",o:["L’Éthiopie", "L’Égypte", "La Grèce"],a:0,w:"La conquête de l’Éthiopie rapproche l’Italie de l’Allemagne nazie (l’Axe).",l:2,t:"Italie fasciste"},
+{q:"Quelles lois de 1935 retirent aux Juifs leurs droits de citoyens ?",o:["Les lois de Nuremberg", "Les accords de Munich", "Les lois de Matignon"],a:0,w:"Les lois de Nuremberg organisent la discrimination et la persécution légales des Juifs.",l:2,t:"Allemagne nazie"},
+{q:"Comment Hitler établit-il sa dictature en 1933 ?",o:["Nommé chancelier légalement, il suspend les libertés après l’incendie du Reichstag puis obtient les pleins pouvoirs", "Par un coup d’État militaire contre Hindenburg", "Par une révolution armée"],a:0,w:"Les nazis arrivent au pouvoir par des moyens légaux, puis suppriment la démocratie en quelques mois.",l:3,t:"Allemagne nazie"},
+{q:"Qui dirige la propagande nazie ?",o:["Goebbels", "Göring", "Staline"],a:0,w:"Joseph Goebbels dirige la propagande : radio, cinéma, affiches, grandes cérémonies.",l:2,t:"Allemagne nazie"},
+{q:"Quel livre d’Hitler expose son idéologie raciste et antisémite ?",o:["Mein Kampf", "Le Capital", "Le Manifeste du parti communiste"],a:0,w:"Dans Mein Kampf, Hitler expose sa haine des Juifs et son projet de conquérir un « espace vital ».",l:2,t:"Allemagne nazie"},
+{q:"Que sont les premiers camps comme Dachau, ouverts en 1933 ?",o:["Des camps de concentration pour les opposants", "Des centres d’extermination", "Des camps de prisonniers de guerre"],a:0,w:"Dachau (1933) enferme d’abord les opposants politiques, puis les Juifs, les Tsiganes et d’autres persécutés.",l:2,t:"Allemagne nazie"},
+{q:"Sur une affiche, un chef est entouré d’enfants en uniforme et de drapeaux. Quelles caractéristiques totalitaires illustre-t-elle ?",o:["Le culte du chef et l’encadrement de la jeunesse", "La liberté de la presse", "L’alternance politique"],a:0,w:"Culte du chef, uniformes, organisations de jeunesse : la propagande montre une société encadrée.",l:3,t:"Totalitarismes"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

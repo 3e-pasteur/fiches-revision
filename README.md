@@ -5,10 +5,12 @@ Site statique : un classeur (`public/index.html`) qui répertorie des fiches de 
 ## Structure
 
 ```
+tools/build-search.py  génère public/search.js
 render.yaml            configuration Render (site statique)
 public/
   index.html           le classeur (recherche, onglets par matière, suivi)
   data.js              la liste des fiches
+  search.js            index de recherche plein texte (généré, voir ci-dessous)
   404.html             page affichée si l'adresse n'existe pas
   fiches/              une page HTML par fiche
   assets/              moteur de quiz partagé (quiz.js) et ses styles (quiz.css)
@@ -28,7 +30,12 @@ public/
 1. Copiez une fiche existante dans `public/fiches/` et modifiez-la (le cours, le tableau `QS` du quiz, le titre).
 2. Ajoutez une entrée dans `public/data.js` (identifiant unique, titre, matière, niveau, date, description, `url: "fiches/mon-fichier.html"`).
 3. Les matières reconnues, avec leur couleur : Français, Maths, Histoire, Géographie, EMC, SVT, Physique-chimie, Technologie, Général.
-4. Envoyez la modification sur le dépôt.
+4. Regénérez l’index de recherche : `python3 tools/build-search.py` (Python 3 suffit, rien à installer).
+5. Envoyez la modification sur le dépôt, **y compris `public/search.js`**.
+
+## La recherche
+
+La barre de recherche cherche dans le titre, la description, tout le cours et les questions de chaque fiche. Elle ignore les accents et les majuscules, accepte plusieurs mots (tous doivent apparaître) et affiche l’extrait où le mot a été trouvé. L’index `public/search.js` est chargé au premier clic dans la barre ; il faut le regénérer après toute modification d’une fiche.
 
 ## À savoir
 
@@ -46,5 +53,7 @@ Chaque fiche définit une constante `QS` (la liste de ses questions) ; le moteur
 {q:"Énoncé", o:["A","B","C","D"], a:[0,2], w:"…", l:3, t:"Thème"}            plusieurs bonnes réponses
 {q:"Énoncé", num:12.5, tol:0.1, u:"cm", w:"…", l:2, t:"Thème"}              réponse numérique
 ```
+
+Dans un énoncé, `[[mot]]` s’affiche souligné (utile en français pour désigner le mot à analyser).
 
 `l` vaut 1 (facile), 2 (moyen) ou 3 (difficile). Les fiches marquées « Pour aller plus loin » contiennent des notions hors programme du cycle 4 (signalées comme telles).

@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Géographie : les dynamiques territoriales de la France</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="urbain" class="on">Aires urbaines</button><button data-t="productifs">Espaces productifs</button><button data-t="ruraux">Espaces ruraux</button><button data-t="outremer">Outre-mer</button><button data-t="europe">UE et monde</button><button data-t="quiz">Quiz</button>
+<button data-t="urbain" class="on">Aires urbaines</button><button data-t="productifs">Espaces productifs</button><button data-t="ruraux">Espaces ruraux</button><button data-t="outremer">Outre-mer</button><button data-t="europe">UE et monde</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="urbain">
@@ -127,8 +127,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>6. Notions à connaître</h2>
+<ul>
+<li><b>Aire urbaine</b> : pôle urbain + couronne périurbaine dont les habitants travaillent surtout dans le pôle.</li>
+<li><b>Métropolisation</b> : concentration des richesses, emplois et fonctions de commandement dans les grandes villes.</li>
+<li><b>Pôle de compétitivité / technopôle</b> : lieu où entreprises, laboratoires et universités travaillent ensemble.</li>
+<li><b>Désindustrialisation</b> : recul de l’emploi industriel traditionnel.</li>
+<li><b>Zone économique exclusive (ZEE)</b> : espace maritime, jusqu’à 200 milles marins (environ 370 km) des côtes, où l’État dispose des ressources.</li>
+<li><b>DROM</b> : départements et régions d’outre-mer (5). <b>COM</b> : collectivités d’outre-mer (ex. Polynésie française).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>les territoires français se transforment : métropoles puissantes, espaces ruraux très divers, outre-mer à la fois atouts et défis.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -136,14 +149,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"De quoi une aire urbaine est-elle composée ?",o:["D’un pôle urbain et d’une couronne périurbaine","D’une seule ville","D’une capitale et d’un port"],a:0,w:"Elle regroupe un pôle urbain et la couronne périurbaine dont les habitants travaillent en grande partie dans le pôle."},
-{q:"Que désigne la métropolisation ?",o:["La disparition des villes","La concentration des hommes, des richesses et des fonctions de commandement dans les grandes villes","Le retour à la campagne"],a:1,w:"Les métropoles concentrent population, emplois, sièges d’entreprises, recherche et culture."},
-{q:"Quelle ville est la première métropole française ?",o:["Lyon","Marseille","Paris"],a:2,w:"Paris concentre de nombreuses fonctions de commandement et est très reliée au monde."},
-{q:"Qu’appelle-t-on mobilités pendulaires ?",o:["Les départs en vacances","Les déplacements quotidiens entre le domicile et le travail","Les migrations vers les DROM"],a:1,w:"Ce sont les trajets domicile-travail, très liés à l’étalement urbain."},
-{q:"Quel est un grand port industriel français ?",o:["Fos-sur-Mer","Kourou","Grenoble"],a:0,w:"Fos-sur-Mer, avec Dunkerque et Le Havre, est un grand port industriel."},
-{q:"Que désigne la « diagonale des faibles densités » ?",o:["Une ligne de TGV","Un espace rural peu peuplé du Sud-Ouest au Nord-Est de la France","Une frontière"],a:1,w:"C’est un espace rural où la population est peu nombreuse et vieillissante."},
-{q:"Lequel de ces territoires est un département et région d’outre-mer (DROM) ?",o:["La Polynésie française","La Réunion","La Corse"],a:1,w:"La Réunion est un DROM. La Polynésie française est une collectivité d’outre-mer et la Corse est en métropole."},
-{q:"Pourquoi la France possède-t-elle le deuxième espace maritime mondial ?",o:["Grâce à ses territoires d’outre-mer","Grâce à la Manche","Grâce à ses ports"],a:0,w:"Les nombreux territoires ultramarins étendent considérablement la zone économique exclusive."}
+{q:"De quoi une aire urbaine est-elle composée ?",o:["D’un pôle urbain et d’une couronne périurbaine", "D’une seule ville", "D’une capitale et d’un port"],a:0,w:"Elle regroupe un pôle urbain et la couronne périurbaine dont les habitants travaillent en grande partie dans le pôle.",l:1,t:"Aires urbaines"},
+{q:"Que désigne la métropolisation ?",o:["La disparition des villes", "La concentration des hommes, des richesses et des fonctions de commandement dans les grandes villes", "Le retour à la campagne"],a:1,w:"Les métropoles concentrent population, emplois, sièges d’entreprises, recherche et culture.",l:2,t:"Aires urbaines"},
+{q:"Quelle ville est la première métropole française ?",o:["Lyon", "Marseille", "Paris"],a:2,w:"Paris concentre de nombreuses fonctions de commandement et est très reliée au monde.",l:1,t:"Aires urbaines"},
+{q:"Qu’appelle-t-on mobilités pendulaires ?",o:["Les départs en vacances", "Les déplacements quotidiens entre le domicile et le travail", "Les migrations vers les DROM"],a:1,w:"Ce sont les trajets domicile-travail, très liés à l’étalement urbain.",l:1,t:"Aires urbaines"},
+{q:"Quel est un grand port industriel français ?",o:["Fos-sur-Mer", "Kourou", "Grenoble"],a:0,w:"Fos-sur-Mer, avec Dunkerque et Le Havre, est un grand port industriel.",l:2,t:"Espaces productifs"},
+{q:"Que désigne la « diagonale des faibles densités » ?",o:["Une ligne de TGV", "Un espace rural peu peuplé du Sud-Ouest au Nord-Est de la France", "Une frontière"],a:1,w:"C’est un espace rural où la population est peu nombreuse et vieillissante.",l:2,t:"Espaces ruraux"},
+{q:"Lequel de ces territoires est un département et région d’outre-mer (DROM) ?",o:["La Polynésie française", "La Réunion", "La Corse"],a:1,w:"La Réunion est un DROM. La Polynésie française est une collectivité d’outre-mer et la Corse est en métropole.",l:1,t:"Outre-mer"},
+{q:"Pourquoi la France possède-t-elle le deuxième espace maritime mondial ?",o:["Grâce à ses territoires d’outre-mer", "Grâce à la Manche", "Grâce à ses ports"],a:0,w:"Les nombreux territoires ultramarins étendent considérablement la zone économique exclusive.",l:2,t:"Outre-mer"},
+{q:"Où travaille le plus souvent un habitant de la couronne périurbaine ?",o:["Dans le pôle urbain", "Dans l’espace rural isolé", "À l’étranger"],a:0,w:"C’est ce qui définit la couronne périurbaine d’une aire urbaine.",l:2,t:"Aires urbaines"},
+{q:"Quels sont des effets de la métropolisation ?",o:["Création de richesses", "Inégalités", "Congestion", "Disparition des villes"],a:[0, 1, 2],w:"La métropolisation concentre aussi la consommation d’espace.",l:2,t:"Aires urbaines"},
+{q:"Qu’est-ce que la périurbanisation ?",o:["L’extension des villes sur les espaces ruraux voisins", "Le retour des habitants au centre-ville", "La disparition des banlieues"],a:0,w:"Les couronnes périurbaines accueillent beaucoup de nouveaux habitants.",l:2,t:"Aires urbaines"},
+{q:"Quelle métropole est liée à l’industrie aéronautique ?",o:["Toulouse", "Lille", "Nantes"],a:0,w:"Toulouse est un pôle de l’aéronautique et du spatial.",l:2,t:"Aires urbaines"},
+{q:"Qu’appelle-t-on désindustrialisation ?",o:["Le recul de l’emploi industriel traditionnel", "La création d’usines partout", "L’arrivée de l’agriculture bio"],a:0,w:"Elle s’accompagne du développement d’activités innovantes dans certains territoires.",l:2,t:"Espaces productifs"},
+{q:"À quoi servent les pôles de compétitivité et les technopôles ?",o:["À rapprocher entreprises, laboratoires et universités pour innover", "À remplacer les écoles", "À protéger les forêts"],a:0,w:"Saclay, Grenoble, Toulouse ou Sophia-Antipolis en sont des exemples.",l:3,t:"Espaces productifs"},
+{q:"Quel secteur est la première source d’emplois en France ?",o:["Les services", "L’industrie", "L’agriculture"],a:0,w:"Commerce, transports, santé, finance, numérique : les services dominent l’emploi.",l:1,t:"Espaces productifs"},
+{q:"Quelle place occupe l’agriculture française en Europe ?",o:["Elle est l’une des premières puissances agricoles", "Elle est marginale", "Elle n’existe plus"],a:0,w:"Céréales, vin, élevage : l’agriculture est soutenue par la PAC.",l:2,t:"Espaces productifs"},
+{q:"Quelle place occupe la France parmi les destinations touristiques du monde ?",o:["Elle est l’une des premières", "Elle est très peu visitée", "Elle n’est pas touristique"],a:0,w:"Littoraux, montagne, patrimoine et grandes villes attirent des millions de visiteurs.",l:1,t:"Espaces productifs"},
+{q:"Quels sont des types d’espaces ruraux ?",o:["Les ruraux périurbains", "Les ruraux touristiques", "Les ruraux à faible densité", "Les ruraux hyper-métropolitains"],a:[0, 1, 2],w:"Les espaces ruraux sont très divers.",l:2,t:"Espaces ruraux"},
+{q:"Que remarque-t-on dans certains espaces ruraux aujourd’hui ?",o:["Certains gagnent des habitants (télétravail, nouveaux arrivants), d’autres se vident", "Tous perdent des habitants", "Tous gagnent des habitants"],a:0,w:"On parle de multifonctionnalité mais aussi de fragmentation des espaces ruraux.",l:3,t:"Espaces ruraux"},
+{q:"Dans quel DROM se trouve le centre spatial de Kourou ?",o:["La Guyane", "La Martinique", "La Réunion"],a:0,w:"Kourou est un atout stratégique pour l’accès à l’espace.",l:1,t:"Outre-mer"},
+{q:"Combien la France compte-t-elle de DROM (départements et régions d’outre-mer) ?",num:5,w:"Guadeloupe, Martinique, Guyane, La Réunion et Mayotte.",l:2,t:"Outre-mer"},
+{q:"Quel est un atout des territoires ultramarins ?",o:["Une grande zone économique exclusive et une biodiversité exceptionnelle", "L’absence de risques naturels", "La proximité avec la métropole"],a:0,w:"Ils offrent aussi une position stratégique dans plusieurs océans.",l:2,t:"Outre-mer"},
+{q:"Quelles sont des difficultés des territoires ultramarins ?",o:["L’éloignement de la métropole", "Un chômage élevé", "Les risques naturels", "L’absence totale de biodiversité"],a:[0, 1, 2],w:"La vie chère est aussi un enjeu important.",l:2,t:"Outre-mer"},
+{q:"Qu’est-ce qu’une collectivité d’outre-mer (COM) ?",o:["Un territoire ultramarin avec un statut particulier, comme la Polynésie française", "Une région de métropole", "Un pays étranger"],a:0,w:"Les COM ont un statut différent des DROM.",l:2,t:"Outre-mer"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

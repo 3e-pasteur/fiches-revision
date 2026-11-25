@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : de la IVe à la Ve République, la société française</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="ive" class="on">IVe République</button><button data-t="ve">Ve République</button><button data-t="societe">Société</button><button data-t="crise">Crise</button><button data-t="quiz">Quiz</button>
+<button data-t="ive" class="on">IVe République</button><button data-t="ve">Ve République</button><button data-t="societe">Société</button><button data-t="crise">Crise</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="ive">
@@ -120,8 +120,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Constitution</b> : texte qui organise les pouvoirs. <b>Référendum</b> : vote direct des citoyens sur une question.</li>
+<li><b>Dissolution</b> : le président met fin au mandat des députés et organise de nouvelles élections.</li>
+<li><b>Alternance</b> : un camp politique en remplace un autre au pouvoir. <b>Cohabitation</b> : président et majorité de l’Assemblée de camps opposés.</li>
+<li><b>Droits des femmes</b> : 1944 (droit de vote), 1965 (régimes matrimoniaux), 1967 (contraception), 1975 (IVG).</li>
+<li><b>Trente Glorieuses</b> : croissance et plein emploi de 1945 à 1975 environ.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la Ve République renforce le pouvoir du président, élu par tous les Français depuis 1962. La société se transforme profondément : consommation, villes, droits des femmes.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -129,14 +141,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"En quelle année débute la Ve République ?",o:["1946","1958","1968"],a:1,w:"La Constitution de la Ve République est adoptée en 1958."},
-{q:"Quel dirigeant est à l’origine de la Constitution de 1958 ?",o:["De Gaulle","Mitterrand","Pétain"],a:0,w:"Le général de Gaulle revient au pouvoir en 1958 et fait adopter la nouvelle Constitution."},
-{q:"Que décide le référendum de 1962 ?",o:["Le droit de vote des femmes","L’élection du président au suffrage universel direct","La création de l’Union européenne"],a:1,w:"Depuis 1962, le président est élu directement par les citoyens."},
-{q:"Quelle est aujourd’hui la durée du mandat du président de la République ?",o:["Cinq ans","Sept ans","Dix ans"],a:0,w:"Le quinquennat, voté en 2000, est appliqué depuis 2002."},
-{q:"Que sont les Trente Glorieuses ?",o:["Une période de forte croissance après 1945","Les trente jours de mai 1968","Les trente premières années de la Ve République"],a:0,w:"C’est la période de croissance, de plein emploi et de consommation de masse, de 1945 à 1973-1975 environ."},
-{q:"Que désigne Mai 1968 ?",o:["Un mouvement étudiant et une grève générale","La fin de la guerre d’Algérie","Le début de la IVe République"],a:0,w:"Mai 1968 est une contestation massive de l’autorité et des traditions."},
-{q:"Quelle loi de 1975 autorise l’IVG ?",o:["La loi Veil","La loi Neuwirth","La loi Schuman"],a:0,w:"La loi Veil de 1975 autorise l’IVG. La loi Neuwirth, de 1967, concerne la contraception."},
-{q:"Quelle conséquence a le choc pétrolier de 1973 ?",o:["Le ralentissement de l’économie et le chômage de masse","Une croissance plus rapide","La fin du chômage"],a:0,w:"Le choc pétrolier met fin aux Trente Glorieuses et fait apparaître le chômage de masse."}
+{q:"En quelle année débute la Ve République ?",o:["1946", "1958", "1968"],a:1,w:"La Constitution de la Ve République est adoptée en 1958.",l:1,t:"La Ve République"},
+{q:"Quel dirigeant est à l’origine de la Constitution de 1958 ?",o:["De Gaulle", "Mitterrand", "Pétain"],a:0,w:"Le général de Gaulle revient au pouvoir en 1958 et fait adopter la nouvelle Constitution.",l:1,t:"La Ve République"},
+{q:"Que décide le référendum de 1962 ?",o:["Le droit de vote des femmes", "L’élection du président au suffrage universel direct", "La création de l’Union européenne"],a:1,w:"Depuis 1962, le président est élu directement par les citoyens.",l:2,t:"La Ve République"},
+{q:"Quelle est aujourd’hui la durée du mandat du président de la République ?",o:["Cinq ans", "Sept ans", "Dix ans"],a:0,w:"Le quinquennat, voté en 2000, est appliqué depuis 2002.",l:1,t:"La Ve République"},
+{q:"Que sont les Trente Glorieuses ?",o:["Une période de forte croissance après 1945", "Les trente jours de mai 1968", "Les trente premières années de la Ve République"],a:0,w:"C’est la période de croissance, de plein emploi et de consommation de masse, de 1945 à 1973-1975 environ.",l:1,t:"La société"},
+{q:"Que désigne Mai 1968 ?",o:["Un mouvement étudiant et une grève générale", "La fin de la guerre d’Algérie", "Le début de la IVe République"],a:0,w:"Mai 1968 est une contestation massive de l’autorité et des traditions.",l:2,t:"La société"},
+{q:"Quelle loi de 1975 autorise l’IVG ?",o:["La loi Veil", "La loi Neuwirth", "La loi Schuman"],a:0,w:"La loi Veil de 1975 autorise l’IVG. La loi Neuwirth, de 1967, concerne la contraception.",l:2,t:"La société"},
+{q:"Quelle conséquence a le choc pétrolier de 1973 ?",o:["Le ralentissement de l’économie et le chômage de masse", "Une croissance plus rapide", "La fin du chômage"],a:0,w:"Le choc pétrolier met fin aux Trente Glorieuses et fait apparaître le chômage de masse.",l:2,t:"La fin des Trente Glorieuses"},
+{q:"Quelle caractéristique marque la IVe République ?",o:["Une grande instabilité : les gouvernements changent très souvent", "Un président tout-puissant", "Une monarchie parlementaire"],a:0,w:"L’Assemblée a beaucoup de pouvoir et les gouvernements tombent souvent.",l:2,t:"La IVe République"},
+{q:"Qui nomme le Premier ministre sous la Ve République ?",o:["Le président de la République", "Le Sénat", "Les électeurs directement"],a:0,w:"Le président nomme le Premier ministre, qui dirige le gouvernement.",l:1,t:"La Ve République"},
+{q:"Quel pouvoir le président possède-t-il sur l’Assemblée nationale ?",o:["Il peut la dissoudre", "Il peut la supprimer", "Il peut voter les lois à sa place"],a:0,w:"La dissolution renvoie les députés devant les électeurs.",l:2,t:"La Ve République"},
+{q:"Quelles assemblées composent le Parlement ?",o:["L’Assemblée nationale et le Sénat", "Le Conseil constitutionnel et le Sénat", "L’Assemblée nationale et le Conseil d’État"],a:0,w:"Le Parlement vote les lois et contrôle le gouvernement.",l:1,t:"La Ve République"},
+{q:"Qu’est-ce qu’une cohabitation ?",o:["Quand le président et la majorité de l’Assemblée appartiennent à des camps opposés", "Quand deux présidents gouvernent ensemble", "Quand le Parlement est dissous"],a:0,w:"En cohabitation, le Premier ministre est issu de la majorité de l’Assemblée.",l:3,t:"La Ve République"},
+{q:"En quelle année a lieu la première alternance de la Ve République, avec l’élection de Mitterrand ?",num:1981,w:"En 1981, un camp politique opposé arrive au pouvoir : c’est l’alternance.",l:2,t:"La Ve République"},
+{q:"Quelle était la durée du mandat présidentiel avant 2000 ?",o:["Sept ans", "Quatre ans", "Six ans"],a:0,w:"Le septennat est remplacé par le quinquennat (appliqué depuis 2002).",l:2,t:"La Ve République"},
+{q:"Qu’est-ce que l’exode rural ?",o:["Le départ des habitants des campagnes vers les villes", "Le départ des Français vers l’étranger", "La construction de villages"],a:0,w:"Pendant les Trente Glorieuses, les villes grandissent et l’agriculture emploie moins de monde.",l:2,t:"Les Trente Glorieuses"},
+{q:"Quels éléments marquent la société de consommation des Trente Glorieuses ?",o:["La voiture", "L’électroménager", "La télévision", "Internet généralisé"],a:[0, 1, 2],w:"Internet se diffuse beaucoup plus tard, à partir des années 1990.",l:2,t:"Les Trente Glorieuses"},
+{q:"Pourquoi la France fait-elle appel à des travailleurs immigrés après 1945 ?",o:["Pour répondre aux besoins de main-d’œuvre de l’industrie et du bâtiment", "Pour réduire le chômage", "Pour remplacer les fonctionnaires"],a:0,w:"La forte croissance crée de nombreux emplois : l’immigration de travail se développe.",l:3,t:"Les Trente Glorieuses"},
+{q:"Quelle loi de 1967 autorise la contraception ?",o:["La loi Neuwirth", "La loi Veil", "La loi Roudy"],a:0,w:"La loi Neuwirth de 1967 est suivie par la loi Veil sur l’IVG en 1975.",l:2,t:"Les femmes et les hommes"},
+{q:"Quelle réforme de 1965 permet aux femmes mariées de travailler et d’ouvrir un compte sans l’accord de leur mari ?",o:["La réforme des régimes matrimoniaux", "La loi Veil", "Les accords de Matignon"],a:0,w:"Cette réforme (1965) fait progresser l’égalité entre hommes et femmes dans le couple.",l:3,t:"Les femmes et les hommes"},
+{q:"Que revendique le mouvement de Mai 1968 ?",o:["Plus de liberté, la contestation de l’autorité et des traditions", "Le retour de la monarchie", "La fin de la Ve République uniquement"],a:0,w:"Mai 68 est un mouvement étudiant puis social qui fait évoluer les mœurs.",l:2,t:"Les femmes et les hommes"},
+{q:"Quel est le lien entre le choc pétrolier de 1973 et le chômage ?",o:["La hausse du prix du pétrole ralentit l’économie, ce qui fait monter le chômage", "Le pétrole devient gratuit, ce qui supprime des emplois", "Il n’y a aucun lien"],a:0,w:"Le chômage de masse apparaît dans les années 1970 et reste élevé ensuite.",l:3,t:"La fin des Trente Glorieuses"},
+{q:"Qu’est-ce que le « baby-boom » ?",o:["Une forte hausse des naissances après 1945", "Une baisse des naissances", "Une hausse de l’immigration"],a:0,w:"Le baby-boom accompagne la reconstruction et la croissance.",l:2,t:"Les Trente Glorieuses"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la Guerre froide</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="bipolaire" class="on">Monde bipolaire</button><button data-t="crises">Grandes crises</button><button data-t="fin">Détente et fin</button><button data-t="depuis89">Depuis 1989</button><button data-t="quiz">Quiz</button>
+<button data-t="bipolaire" class="on">Monde bipolaire</button><button data-t="crises">Grandes crises</button><button data-t="fin">Détente et fin</button><button data-t="depuis89">Depuis 1989</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="bipolaire">
@@ -119,8 +119,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Bloc de l’Ouest</b> (États-Unis, capitalisme, démocraties) et <b>bloc de l’Est</b> (URSS, communisme, parti unique).</li>
+<li><b>Rideau de fer</b> : frontière imaginaire entre les deux blocs en Europe.</li>
+<li><b>Guerre indirecte</b> : les deux grands soutiennent des camps opposés sans s’affronter directement (Corée, Vietnam).</li>
+<li><b>Équilibre de la terreur</b> : la menace nucléaire dissuade les deux camps de s’attaquer.</li>
+<li><b>Détente</b> : baisse des tensions (années 1970). <b>Multipolaire</b> : plusieurs puissances comptent.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la Guerre froide divise le monde en deux blocs de 1947 à 1991. Elle se termine par la chute du mur de Berlin et la disparition de l’URSS.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -128,14 +140,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelles sont les deux superpuissances de la Guerre froide ?",o:["États-Unis et URSS","France et Allemagne","Chine et Japon"],a:0,w:"Les États-Unis et l’URSS dominent le monde et s’opposent par leurs systèmes et leurs alliances."},
-{q:"Qu’est-ce que le plan Marshall ?",o:["Une alliance militaire","Une aide économique américaine à l’Europe occidentale","Un mur entre deux États"],a:1,w:"Lancé en 1947, le plan Marshall aide à reconstruire l’Europe occidentale."},
-{q:"Quel est le nom de l’alliance militaire du bloc de l’Ouest, créée en 1949 ?",o:["Le pacte de Varsovie","L’ONU","L’OTAN"],a:2,w:"L’OTAN est l’alliance de l’Ouest. Le pacte de Varsovie est celle de l’Est, créée en 1955."},
-{q:"En quelle année est construit le mur de Berlin ?",o:["1948","1961","1989"],a:1,w:"Le mur est construit en août 1961 et tombe en novembre 1989."},
-{q:"Pourquoi la crise de Cuba (1962) est-elle si grave ?",o:["Des missiles soviétiques sont installés près des États-Unis, avec un risque de guerre nucléaire","Cuba envahit la Floride","Les États-Unis quittent l’ONU"],a:0,w:"La crise de Cuba est le moment où le monde frôle la guerre nucléaire."},
-{q:"Quel dirigeant soviétique lance la glasnost et la perestroïka ?",o:["Staline","Gorbatchev","Khrouchtchev"],a:1,w:"Gorbatchev dirige l’URSS à partir de 1985."},
-{q:"Quelle est la date de la chute du mur de Berlin ?",o:["13 août 1961","9 novembre 1989","3 octobre 1990"],a:1,w:"Le mur tombe le 9 novembre 1989. La réunification de l’Allemagne a lieu le 3 octobre 1990."},
-{q:"Quel événement met fin à la Guerre froide en 1991 ?",o:["La chute du mur de Berlin","La disparition de l’URSS","La guerre du Vietnam"],a:1,w:"L’URSS disparaît en 1991, ce qui met fin à la Guerre froide."}
+{q:"Quelles sont les deux superpuissances de la Guerre froide ?",o:["États-Unis et URSS", "France et Allemagne", "Chine et Japon"],a:0,w:"Les États-Unis et l’URSS dominent le monde et s’opposent par leurs systèmes et leurs alliances.",l:1,t:"Un monde bipolaire"},
+{q:"Qu’est-ce que le plan Marshall ?",o:["Une alliance militaire", "Une aide économique américaine à l’Europe occidentale", "Un mur entre deux États"],a:1,w:"Lancé en 1947, le plan Marshall aide à reconstruire l’Europe occidentale.",l:1,t:"Un monde bipolaire"},
+{q:"Quel est le nom de l’alliance militaire du bloc de l’Ouest, créée en 1949 ?",o:["Le pacte de Varsovie", "L’ONU", "L’OTAN"],a:2,w:"L’OTAN est l’alliance de l’Ouest. Le pacte de Varsovie est celle de l’Est, créée en 1955.",l:1,t:"Un monde bipolaire"},
+{q:"En quelle année est construit le mur de Berlin ?",o:["1948", "1961", "1989"],a:1,w:"Le mur est construit en août 1961 et tombe en novembre 1989.",l:1,t:"Les grandes crises"},
+{q:"Pourquoi la crise de Cuba (1962) est-elle si grave ?",o:["Des missiles soviétiques sont installés près des États-Unis, avec un risque de guerre nucléaire", "Cuba envahit la Floride", "Les États-Unis quittent l’ONU"],a:0,w:"La crise de Cuba est le moment où le monde frôle la guerre nucléaire.",l:2,t:"Les grandes crises"},
+{q:"Quel dirigeant soviétique lance la glasnost et la perestroïka ?",o:["Staline", "Gorbatchev", "Khrouchtchev"],a:1,w:"Gorbatchev dirige l’URSS à partir de 1985.",l:2,t:"La fin"},
+{q:"Quelle est la date de la chute du mur de Berlin ?",o:["13 août 1961", "9 novembre 1989", "3 octobre 1990"],a:1,w:"Le mur tombe le 9 novembre 1989. La réunification de l’Allemagne a lieu le 3 octobre 1990.",l:1,t:"La fin"},
+{q:"Quel événement met fin à la Guerre froide en 1991 ?",o:["La chute du mur de Berlin", "La disparition de l’URSS", "La guerre du Vietnam"],a:1,w:"L’URSS disparaît en 1991, ce qui met fin à la Guerre froide.",l:2,t:"La fin"},
+{q:"Qu’appelle-t-on « rideau de fer » ?",o:["La frontière qui divise l’Europe entre Est et Ouest", "Un mur autour de Berlin", "Une arme nucléaire"],a:0,w:"L’expression est employée par Churchill en 1946.",l:1,t:"Un monde bipolaire"},
+{q:"Quelle alliance militaire regroupe les pays communistes en 1955 ?",o:["Le pacte de Varsovie", "L’OTAN", "La CECA"],a:0,w:"Le pacte de Varsovie est la réponse de l’Est à l’OTAN.",l:1,t:"Un monde bipolaire"},
+{q:"Pourquoi parle-t-on de « guerre froide » ?",o:["Parce que les deux superpuissances s’affrontent sans combat direct entre elles", "Parce que la guerre se déroule dans des pays froids", "Parce qu’elle est très courte"],a:0,w:"La rivalité se joue par des crises, la course aux armements et des guerres indirectes.",l:2,t:"Un monde bipolaire"},
+{q:"Que prévoit la doctrine Truman (1947) ?",o:["Aider les pays menacés par le communisme", "Négocier avec Staline", "Retirer les troupes d’Europe"],a:0,w:"La doctrine Truman et le plan Marshall visent à contenir le communisme.",l:2,t:"Un monde bipolaire"},
+{q:"Comment est divisée l’Allemagne en 1949 ?",o:["En RFA à l’Ouest et RDA à l’Est", "En trois États", "Elle reste unie"],a:0,w:"La division de l’Allemagne symbolise celle de l’Europe.",l:2,t:"Un monde bipolaire"},
+{q:"Comment les Occidentaux répondent-ils au blocus de Berlin (1948-1949) ?",o:["Par un pont aérien pour ravitailler la ville", "Par une guerre contre l’URSS", "En abandonnant la ville"],a:0,w:"Berlin-Ouest est ravitaillée par avion pendant des mois.",l:2,t:"Les grandes crises"},
+{q:"Quelle ligne divise la Corée en 1953 ?",o:["Le 38e parallèle", "Le Rhin", "Le 17e parallèle"],a:0,w:"La guerre de Corée (1950-1953) oppose le Nord communiste et le Sud soutenu par les États-Unis.",l:2,t:"Les grandes crises"},
+{q:"Pourquoi le mur de Berlin est-il construit en 1961 ?",o:["Pour empêcher les Allemands de l’Est de fuir vers l’Ouest", "Pour protéger Berlin d’une invasion", "Pour séparer deux quartiers"],a:0,w:"Il devient le symbole de la division du monde.",l:2,t:"Les grandes crises"},
+{q:"Que désigne l’« équilibre de la terreur » ?",o:["Chaque camp possède assez d’armes nucléaires pour détruire l’autre, ce qui dissuade d’attaquer", "La paix totale entre les deux blocs", "La disparition des armes nucléaires"],a:0,w:"La peur d’une destruction mutuelle empêche l’affrontement direct.",l:3,t:"Les grandes crises"},
+{q:"Qui est le premier homme dans l’espace (1961) ?",o:["Gagarine", "Armstrong", "Spoutnik"],a:0,w:"La course à l’espace oppose États-Unis et URSS ; les Américains marchent sur la Lune en 1969.",l:2,t:"Les grandes crises"},
+{q:"Quelles guerres sont des conflits indirects de la Guerre froide ?",o:["La guerre de Corée", "La guerre du Vietnam", "Le blocus de Berlin", "La crise de Cuba"],a:[0, 1],w:"Berlin et Cuba sont de grandes crises, non des guerres indirectes.",l:3,t:"Les grandes crises"},
+{q:"Que signifie la « détente » dans les années 1970 ?",o:["Une période de réduction des tensions et de limitation des armes nucléaires", "La fin de la Guerre froide", "Une guerre nucléaire"],a:0,w:"La détente est suivie d’une nouvelle phase de tensions puis de la fin de la Guerre froide.",l:3,t:"La fin"},
+{q:"Que signifient « glasnost » et « perestroïka » ?",o:["Transparence et restructuration", "Liberté et égalité", "Pain et paix"],a:0,w:"Ces réformes de Gorbatchev ouvrent l’URSS mais précipitent sa chute.",l:3,t:"La fin"},
+{q:"En quelle année l’Allemagne est-elle réunifiée ?",num:1990,w:"La réunification a lieu le 3 octobre 1990, après la chute du mur de Berlin.",l:2,t:"La fin"},
+{q:"Quels pays émergent dans un monde devenu multipolaire ?",o:["La Chine", "L’Inde", "Le Brésil", "La Yougoslavie"],a:[0, 1, 2],w:"La Yougoslavie a éclaté dans les années 1990.",l:2,t:"La fin"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

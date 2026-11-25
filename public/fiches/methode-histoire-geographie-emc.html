@@ -67,7 +67,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Méthodes : réussir l’épreuve d’histoire-géographie-EMC</h1>
-<p class="meta">Brevet · méthodes · lecture 10 min, puis quiz de 8 questions sur les repères</p>
+<p class="meta">Brevet · méthodes · lecture 10 min, puis quiz de 22 questions sur les repères</p>
 
 <nav id="nav" aria-label="Sections">
 <button data-t="document" class="on">Analyser un document</button><button data-t="developpement">Développement construit</button><button data-t="graphique">Croquis et frise</button><button data-t="emc">Épreuve d’EMC</button><button data-t="reperes">Repères</button><button data-t="quiz">Quiz</button>
@@ -135,14 +135,28 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"En quelle année est signé le traité de Versailles ?",o:["1919","1914","1945"],a:0,w:"Le traité de Versailles est signé le 28 juin 1919."},
-{q:"En quelle année a lieu le krach de Wall Street ?",o:["1929","1917","1933"],a:0,w:"Le krach de Wall Street a lieu en octobre 1929."},
-{q:"En quelle année Hitler devient-il chancelier ?",o:["1933","1929","1939"],a:0,w:"Hitler est nommé chancelier le 30 janvier 1933."},
-{q:"En quelle année a lieu le Front populaire en France ?",o:["1936","1929","1944"],a:0,w:"Le Front populaire arrive au pouvoir en 1936."},
-{q:"En quelle année Paris est-elle libérée ?",o:["1944","1940","1945"],a:0,w:"Paris est libérée le 25 août 1944."},
-{q:"En quelle année est signé le traité de Rome ?",o:["1957","1951","1992"],a:0,w:"Le traité de Rome, qui crée la CEE, est signé en 1957."},
-{q:"En quelle année débute la Ve République ?",o:["1958","1946","1962"],a:0,w:"La Constitution de la Ve République date de 1958."},
-{q:"En quelle année tombe le mur de Berlin ?",o:["1989","1961","1991"],a:0,w:"Le mur de Berlin tombe le 9 novembre 1989."}
+{q:"En quelle année est signé le traité de Versailles ?",o:["1919", "1914", "1945"],a:0,w:"Le traité de Versailles est signé le 28 juin 1919.",l:1,t:"Repères"},
+{q:"En quelle année a lieu le krach de Wall Street ?",o:["1929", "1917", "1933"],a:0,w:"Le krach de Wall Street a lieu en octobre 1929.",l:1,t:"Repères"},
+{q:"En quelle année Hitler devient-il chancelier ?",o:["1933", "1929", "1939"],a:0,w:"Hitler est nommé chancelier le 30 janvier 1933.",l:1,t:"Repères"},
+{q:"En quelle année a lieu le Front populaire en France ?",o:["1936", "1929", "1944"],a:0,w:"Le Front populaire arrive au pouvoir en 1936.",l:1,t:"Repères"},
+{q:"En quelle année Paris est-elle libérée ?",o:["1944", "1940", "1945"],a:0,w:"Paris est libérée le 25 août 1944.",l:1,t:"Repères"},
+{q:"En quelle année est signé le traité de Rome ?",o:["1957", "1951", "1992"],a:0,w:"Le traité de Rome, qui crée la CEE, est signé en 1957.",l:1,t:"Repères"},
+{q:"En quelle année débute la Ve République ?",o:["1958", "1946", "1962"],a:0,w:"La Constitution de la Ve République date de 1958.",l:1,t:"Repères"},
+{q:"En quelle année tombe le mur de Berlin ?",o:["1989", "1961", "1991"],a:0,w:"Le mur de Berlin tombe le 9 novembre 1989.",l:1,t:"Repères"},
+{q:"En quelle année commence la Première Guerre mondiale ?",num:1914,w:"La guerre commence à l’été 1914.",l:1,t:"Repères"},
+{q:"En quelle année la Seconde Guerre mondiale se termine-t-elle ?",num:1945,w:"Elle s’achève en Europe en mai 1945 et en Asie en septembre 1945.",l:1,t:"Repères"},
+{q:"En quelle année les femmes françaises obtiennent-elles le droit de vote ?",num:1944,w:"Le droit de vote est accordé en 1944 ; elles votent pour la première fois en 1945.",l:2,t:"Repères"},
+{q:"En quelle année la guerre d’Algérie prend-elle fin (accords d’Évian) ?",num:1962,w:"Les accords d’Évian sont signés en mars 1962.",l:2,t:"Repères"},
+{q:"En quelle année le traité de Maastricht crée-t-il l’Union européenne ?",num:1992,w:"Il est signé en 1992 et entre en vigueur en 1993.",l:2,t:"Repères"},
+{q:"Quel événement a lieu en 1991 ?",o:["La disparition de l’URSS", "La chute du mur de Berlin", "La signature du traité de Rome"],a:0,w:"Le mur de Berlin tombe en 1989 ; l’URSS disparaît en 1991.",l:2,t:"Repères"},
+{q:"Quel événement du 11 septembre 2001 marque un tournant du monde actuel ?",o:["Les attentats contre les États-Unis", "La chute du mur de Berlin", "L’indépendance de l’Algérie"],a:0,w:"Ils ouvrent une période de « guerre contre le terrorisme ».",l:2,t:"Repères"},
+{q:"Que faut-il faire avant de répondre à une question sur un document ?",o:["Identifier sa nature, son auteur, sa date et son idée principale", "Recopier le document", "Répondre sans le lire"],a:0,w:"Identifier le document permet de ne pas faire de contresens.",l:1,t:"Méthode"},
+{q:"Pourquoi ne faut-il pas recopier le document ?",o:["Parce qu’il faut prélever une information et l’expliquer avec ses connaissances", "Parce que c’est interdit", "Parce que le document est faux"],a:0,w:"Une réponse qui ne fait que recopier est insuffisante.",l:2,t:"Méthode"},
+{q:"Quelle est la structure d’un développement construit ?",o:["Introduction, deux ou trois paragraphes, conclusion", "Un seul long paragraphe", "Une liste de dates"],a:0,w:"Chaque paragraphe développe une idée, appuyée sur des repères précis.",l:2,t:"Méthode"},
+{q:"Que doit comporter la légende d’un croquis ?",o:["Un titre et une organisation en parties avec des figurés adaptés", "Seulement des dessins", "Aucune explication"],a:0,w:"Points pour les villes, lignes pour les flux, surfaces pour les zones.",l:2,t:"Méthode"},
+{q:"Que doit respecter une frise chronologique ?",o:["Une échelle régulière et des dates repères bien placées", "Des dates dans le désordre", "Des événements très longs"],a:0,w:"Même longueur pour le même nombre d’années.",l:2,t:"Méthode"},
+{q:"Comment est organisée l’épreuve d’EMC du brevet ?",o:["À partir d’une situation concrète accompagnée de documents, avec des questions", "Par un grand exposé oral", "Par un QCM uniquement"],a:0,w:"L’EMC est notée séparément de l’histoire-géographie.",l:2,t:"Méthode"},
+{q:"Quel est le coefficient de l’EMC au brevet 2027 ?",o:["0,5", "2", "1,5"],a:0,w:"Histoire-géographie : 1,5 ; EMC : 0,5. Vérifiez toujours sur education.gouv.fr.",l:3,t:"Méthode"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

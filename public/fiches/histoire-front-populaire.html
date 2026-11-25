@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : démocraties fragilisées et Front populaire</h1>
-<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 22 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="crise" class="on">Démocraties et crise</button><button data-t="france">France des années 1930</button><button data-t="fp">Front populaire</button><button data-t="bilan">Réformes et limites</button><button data-t="quiz">Quiz</button>
+<button data-t="crise" class="on">Démocraties et crise</button><button data-t="france">France des années 1930</button><button data-t="fp">Front populaire</button><button data-t="bilan">Réformes et limites</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="crise">
@@ -117,8 +117,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <p><b>Les limites :</b> les difficultés économiques persistent, la guerre d’Espagne divise la gauche (la France choisit la non-intervention), et l’opposition des milieux conservateurs est forte. En <b>1937</b>, Léon Blum est remplacé, et en 1938 l’expérience du Front populaire est terminée.</p>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Front populaire</b> : alliance de la gauche (SFIO, PCF, radicaux) en 1935-1936, contre la crise et les ligues.</li>
+<li><b>Accords de Matignon</b> (7-8 juin 1936) : hausse des salaires, délégués du personnel, droit syndical.</li>
+<li><b>Congés payés</b> : deux semaines par an. <b>Semaine de 40 heures</b>. <b>Conventions collectives</b>.</li>
+<li><b>Non-intervention</b> : en 1936, la France ne livre pas d’armes aux républicains espagnols.</li>
+<li><b>Syndicat</b> : association qui défend les droits des salariés. <b>Patronat</b> : employeurs.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>le Front populaire apporte des conquêtes sociales durables, mais il se heurte à la crise économique et aux tensions internationales.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -126,14 +138,28 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Que s’est-il passé le 6 février 1934 à Paris ?",o:["Une manifestation antiparlementaire d’extrême droite dégénère en émeute","La victoire du Front populaire","Le vote des congés payés"],a:0,w:"Cette journée pousse la gauche à s’unir pour défendre la République."},
-{q:"Quels courants forment le Rassemblement populaire ?",o:["Communistes, socialistes et radicaux","Gaullistes et libéraux","Ligues d’extrême droite"],a:0,w:"Le PCF, la SFIO et les radicaux s’unissent en 1934-1935."},
-{q:"Qui forme le gouvernement du Front populaire en juin 1936 ?",o:["Léon Blum","Philippe Pétain","Charles de Gaulle"],a:0,w:"Léon Blum, socialiste, devient président du Conseil."},
-{q:"Que prévoient les accords de Matignon ?",o:["Une hausse des salaires et le droit syndical","L’interdiction des grèves","Le droit de vote des femmes"],a:0,w:"Ils sont signés entre le patronat et les syndicats les 7 et 8 juin 1936."},
-{q:"Combien de semaines de congés payés sont instaurées en 1936 ?",o:["Deux semaines","Quatre semaines","Une semaine"],a:0,w:"Le Front populaire instaure deux semaines de congés payés par an."},
-{q:"Quelle durée hebdomadaire du travail le Front populaire instaure-t-il ?",o:["40 heures","35 heures","48 heures"],a:0,w:"La semaine de 40 heures est adoptée en 1936."},
-{q:"Quelle forme prend le mouvement social de mai-juin 1936 ?",o:["Des grèves avec occupation d’usines","Une guerre civile","Un référendum"],a:0,w:"Plus d’un million de grévistes occupent leurs lieux de travail."},
-{q:"Quel est le slogan du Rassemblement populaire ?",o:["Pain, paix, liberté","Travail, Famille, Patrie","Liberté, Égalité, Fraternité"],a:0,w:"Le programme répond à la crise, à la menace de guerre et à celle des ligues."}
+{q:"Que s’est-il passé le 6 février 1934 à Paris ?",o:["Une manifestation antiparlementaire d’extrême droite dégénère en émeute", "La victoire du Front populaire", "Le vote des congés payés"],a:0,w:"Cette journée pousse la gauche à s’unir pour défendre la République.",l:2,t:"Années 1930"},
+{q:"Quels courants forment le Rassemblement populaire ?",o:["Communistes, socialistes et radicaux", "Gaullistes et libéraux", "Ligues d’extrême droite"],a:0,w:"Le PCF, la SFIO et les radicaux s’unissent en 1934-1935.",l:1,t:"Années 1930"},
+{q:"Qui forme le gouvernement du Front populaire en juin 1936 ?",o:["Léon Blum", "Philippe Pétain", "Charles de Gaulle"],a:0,w:"Léon Blum, socialiste, devient président du Conseil.",l:1,t:"Victoire de 1936"},
+{q:"Que prévoient les accords de Matignon ?",o:["Une hausse des salaires et le droit syndical", "L’interdiction des grèves", "Le droit de vote des femmes"],a:0,w:"Ils sont signés entre le patronat et les syndicats les 7 et 8 juin 1936.",l:2,t:"Victoire de 1936"},
+{q:"Combien de semaines de congés payés sont instaurées en 1936 ?",o:["Deux semaines", "Quatre semaines", "Une semaine"],a:0,w:"Le Front populaire instaure deux semaines de congés payés par an.",l:1,t:"Réformes"},
+{q:"Quelle durée hebdomadaire du travail le Front populaire instaure-t-il ?",o:["40 heures", "35 heures", "48 heures"],a:0,w:"La semaine de 40 heures est adoptée en 1936.",l:1,t:"Réformes"},
+{q:"Quelle forme prend le mouvement social de mai-juin 1936 ?",o:["Des grèves avec occupation d’usines", "Une guerre civile", "Un référendum"],a:0,w:"Plus d’un million de grévistes occupent leurs lieux de travail.",l:1,t:"Victoire de 1936"},
+{q:"Quel est le slogan du Rassemblement populaire ?",o:["Pain, paix, liberté", "Travail, Famille, Patrie", "Liberté, Égalité, Fraternité"],a:0,w:"Le programme répond à la crise, à la menace de guerre et à celle des ligues.",l:2,t:"Années 1930"},
+{q:"En quelle année la gauche unie gagne-t-elle les élections législatives ?",num:1936,w:"La victoire du Front populaire date d’avril-mai 1936.",l:1,t:"Victoire de 1936"},
+{q:"Quel est le parti de Léon Blum ?",o:["La SFIO (socialiste)", "Le Parti communiste", "Le Parti radical"],a:0,w:"Léon Blum, socialiste, est le premier socialiste à diriger un gouvernement en France.",l:2,t:"Victoire de 1936"},
+{q:"Que sont les « ligues » dans la France des années 1930 ?",o:["Des mouvements d’extrême droite hostiles au Parlement", "Des syndicats ouvriers", "Des partis de gauche"],a:0,w:"Les ligues se développent et menacent la République.",l:2,t:"Années 1930"},
+{q:"Que représente la manifestation du 14 juillet 1935 ?",o:["Un grand défilé de l’union de la gauche (le Rassemblement populaire)", "Une émeute d’extrême droite", "Une fête de la monarchie"],a:0,w:"Communistes, socialistes et radicaux s’unissent après la menace du 6 février 1934.",l:3,t:"Années 1930"},
+{q:"Quelle est la situation économique de la France au début des années 1930 ?",o:["Chômage, faillites et instabilité politique", "Forte croissance et plein emploi", "Reconstruction après la guerre"],a:0,w:"La crise arrive en France vers 1931-1932.",l:2,t:"Années 1930"},
+{q:"Quelles réformes sont adoptées en 1936 ?",o:["Les congés payés", "La semaine de 40 heures", "Les conventions collectives", "L’abolition de la peine de mort"],a:[0, 1, 2],w:"L’abolition de la peine de mort n’intervient qu’en 1981.",l:2,t:"Réformes"},
+{q:"Entre qui sont signés les accords de Matignon ?",o:["Le patronat et les syndicats, sous l’égide du gouvernement", "L’Allemagne et la France", "Les communistes et les socialistes"],a:0,w:"Ils mettent fin aux grèves : hausse des salaires, délégués du personnel, droit syndical.",l:2,t:"Réformes"},
+{q:"Jusqu’à quel âge la scolarité devient-elle obligatoire en 1936 ?",num:14,u:"ans",w:"La scolarité obligatoire est prolongée jusqu’à 14 ans.",l:2,t:"Réformes"},
+{q:"Quelle nouveauté marque la place des femmes dans le gouvernement de Blum ?",o:["Trois femmes y entrent comme sous-secrétaires d’État, alors qu’elles ne votent pas encore", "Une femme devient présidente du Conseil", "Elles obtiennent le droit de vote en 1936"],a:0,w:"Les Françaises obtiennent le droit de vote en 1944.",l:2,t:"Réformes"},
+{q:"Quelle guerre divise la gauche en 1936 ?",o:["La guerre d’Espagne", "La guerre d’Indochine", "La guerre d’Algérie"],a:0,w:"La gauche française est partagée sur l’aide à apporter aux républicains espagnols.",l:2,t:"Limites"},
+{q:"Quelle est la position officielle de la France face à la guerre d’Espagne ?",o:["La non-intervention", "L’envoi d’une armée", "L’alliance avec Franco"],a:0,w:"Le gouvernement choisit la non-intervention.",l:3,t:"Limites"},
+{q:"Pourquoi l’expérience du Front populaire s’achève-t-elle en 1937-1938 ?",o:["Difficultés économiques, opposition conservatrice et divisions de la gauche", "Défaite militaire", "Abolition du Parlement"],a:0,w:"Léon Blum quitte le pouvoir en 1937 et l’expérience est terminée en 1938.",l:3,t:"Limites"},
+{q:"Pourquoi dit-on que 1936 est une date importante pour la gauche ?",o:["C’est la première fois que la gauche unie gouverne la France", "C’est la fin de la IIIe République", "C’est le début de la guerre"],a:0,w:"Le Front populaire marque durablement la mémoire sociale de la France.",l:2,t:"Victoire de 1936"},
+{q:"Quel lien existe-t-il entre la crise de 1929 et l’arrivée des nazis au pouvoir ?",o:["Le chômage de masse et la misère aident Hitler à progresser", "Aucun", "La crise fait disparaître le parti nazi"],a:0,w:"La détresse économique fragilise les démocraties.",l:3,t:"Années 1930"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>EMC : l’opinion, les médias et la désinformation</h1>
-<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="opinion" class="on">Opinion publique</button><button data-t="medias">Médias et réseaux</button><button data-t="desinfo">Désinformation</button><button data-t="alerte">Lanceurs d’alerte</button><button data-t="quiz">Quiz</button>
+<button data-t="opinion" class="on">Opinion publique</button><button data-t="medias">Médias et réseaux</button><button data-t="desinfo">Désinformation</button><button data-t="alerte">Lanceurs d’alerte</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="opinion">
@@ -121,8 +121,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>5. Notions à connaître</h2>
+<ul>
+<li><b>Média</b> : moyen de diffuser l’information (presse, radio, télévision, sites). <b>Réseau social</b> : plateforme où chacun peut publier.</li>
+<li><b>Source</b> : origine d’une information (qui l’a produite, quand, comment).</li>
+<li><b>Bulle de filtres</b> : effet des algorithmes qui nous montrent surtout des contenus proches de nos goûts.</li>
+<li><b>Fausse information (« fake news »)</b> : information fausse. Elle devient <b>désinformation</b> lorsqu’elle est diffusée pour tromper.</li>
+<li><b>Esprit critique</b> : vérifier, comparer les sources, distinguer faits et opinions.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>face à une information, posez-vous toujours trois questions : qui parle, d’où vient l’information, qu’en disent d’autres sources fiables ?</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -130,14 +142,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Que désigne l’opinion publique ?",o:["Ce que les citoyens pensent des questions d’intérêt général","Un journal officiel","Un résultat d’élection"],a:0,w:"Elle s’exprime par les médias, les débats, les mobilisations et les sondages."},
-{q:"Comment fonctionne un sondage ?",o:["Il interroge un échantillon représentatif et comporte une marge d’erreur","Il interroge toute la population","Il prévoit toujours le résultat exact"],a:0,w:"Un sondage donne une estimation à un moment donné."},
-{q:"Qu’est-ce que la désinformation ?",o:["La diffusion volontaire d’informations fausses ou trompeuses","Une simple erreur involontaire","Une information vérifiée"],a:0,w:"La désinformation vise à manipuler ou à déstabiliser."},
-{q:"Qu’est-ce que le complotisme ?",o:["La croyance qu’un groupe caché manipule les événements","Une méthode scientifique","Un moyen de vérifier une information"],a:0,w:"Il peut nourrir le racisme et l’antisémitisme."},
-{q:"Qu’est-ce qui caractérise un savoir, par rapport à une opinion ?",o:["Il repose sur des faits établis et vérifiables","Il est personnel et discutable","Il dépend de la popularité"],a:0,w:"Une opinion est un jugement personnel, un savoir repose sur des faits vérifiables."},
-{q:"Quelle loi du 22 décembre 2018 concerne l’information ?",o:["La loi contre la manipulation de l’information","La loi sur la laïcité","La loi sur les associations"],a:0,w:"Elle vise notamment les opérations de désinformation en période électorale."},
-{q:"Qu’est-ce qu’un lanceur d’alerte ?",o:["Une personne qui révèle de bonne foi des informations sur un danger ou une infraction d’intérêt général","Un journaliste d’investigation uniquement","Un influenceur"],a:0,w:"La loi du 21 mars 2022 renforce leur protection."},
-{q:"Quelle est la bonne méthode pour vérifier une information ?",o:["Croiser plusieurs sources fiables et vérifier la date","La partager rapidement","Se fier à son premier réflexe"],a:0,w:"On identifie l’auteur, la source, la date et on compare avec d’autres sources indépendantes."}
+{q:"Que désigne l’opinion publique ?",o:["Ce que les citoyens pensent des questions d’intérêt général", "Un journal officiel", "Un résultat d’élection"],a:0,w:"Elle s’exprime par les médias, les débats, les mobilisations et les sondages.",l:1,t:"Opinion publique"},
+{q:"Comment fonctionne un sondage ?",o:["Il interroge un échantillon représentatif et comporte une marge d’erreur", "Il interroge toute la population", "Il prévoit toujours le résultat exact"],a:0,w:"Un sondage donne une estimation à un moment donné.",l:2,t:"Sondages"},
+{q:"Qu’est-ce que la désinformation ?",o:["La diffusion volontaire d’informations fausses ou trompeuses", "Une simple erreur involontaire", "Une information vérifiée"],a:0,w:"La désinformation vise à manipuler ou à déstabiliser.",l:1,t:"Désinformation"},
+{q:"Qu’est-ce que le complotisme ?",o:["La croyance qu’un groupe caché manipule les événements", "Une méthode scientifique", "Un moyen de vérifier une information"],a:0,w:"Il peut nourrir le racisme et l’antisémitisme.",l:2,t:"Désinformation"},
+{q:"Qu’est-ce qui caractérise un savoir, par rapport à une opinion ?",o:["Il repose sur des faits établis et vérifiables", "Il est personnel et discutable", "Il dépend de la popularité"],a:0,w:"Une opinion est un jugement personnel, un savoir repose sur des faits vérifiables.",l:2,t:"Savoir, opinion, croyance"},
+{q:"Quelle loi du 22 décembre 2018 concerne l’information ?",o:["La loi contre la manipulation de l’information", "La loi sur la laïcité", "La loi sur les associations"],a:0,w:"Elle vise notamment les opérations de désinformation en période électorale.",l:3,t:"Désinformation"},
+{q:"Qu’est-ce qu’un lanceur d’alerte ?",o:["Une personne qui révèle de bonne foi des informations sur un danger ou une infraction d’intérêt général", "Un journaliste d’investigation uniquement", "Un influenceur"],a:0,w:"La loi du 21 mars 2022 renforce leur protection.",l:2,t:"Lanceurs d’alerte"},
+{q:"Quelle est la bonne méthode pour vérifier une information ?",o:["Croiser plusieurs sources fiables et vérifier la date", "La partager rapidement", "Se fier à son premier réflexe"],a:0,w:"On identifie l’auteur, la source, la date et on compare avec d’autres sources indépendantes.",l:2,t:"Vérifier l’information"},
+{q:"Qu’est-ce qu’un média ?",o:["Un moyen de diffuser de l’information (presse, radio, télévision, site)", "Un sondage", "Une loi"],a:0,w:"Les médias informent le public et contrôlent le pouvoir.",l:1,t:"Médias"},
+{q:"Pourquoi la liberté de la presse est-elle un pilier de la démocratie ?",o:["Elle permet d’informer et de contrôler le pouvoir", "Elle permet de tout publier sans limite", "Elle supprime les tribunaux"],a:0,w:"Elle s’exerce dans les limites fixées par la loi.",l:2,t:"Médias"},
+{q:"Quelle est une limite d’un sondage ?",o:["Il donne une photographie à un moment donné et la formulation de la question influence les réponses", "Il est toujours exact", "Il n’interroge personne"],a:0,w:"Un sondage n’est pas une prévision certaine.",l:2,t:"Sondages"},
+{q:"Qu’est-ce qu’un échantillon représentatif ?",o:["Un groupe de personnes qui reflète la population étudiée", "Un groupe d’amis", "Toute la population"],a:0,w:"C’est ce qui permet de généraliser les résultats avec une marge d’erreur.",l:3,t:"Sondages"},
+{q:"Que font les algorithmes des réseaux sociaux ?",o:["Ils proposent des contenus selon nos goûts, au risque de nous enfermer dans des avis qui nous ressemblent", "Ils suppriment les fausses informations automatiquement", "Ils garantissent l’exactitude des informations"],a:0,w:"On parle parfois de « bulle de filtres ».",l:2,t:"Réseaux sociaux"},
+{q:"Que permet l’intelligence artificielle en matière d’information ?",o:["Produire facilement de faux textes, images et vidéos très réalistes", "Supprimer toute désinformation", "Remplacer la loi"],a:0,w:"Il faut donc vérifier les sources.",l:2,t:"Réseaux sociaux"},
+{q:"Quel mouvement a pris de l’ampleur grâce aux réseaux sociaux ?",o:["#MeToo", "La Révolution française", "Mai 68"],a:0,w:"Les réseaux permettent de s’exprimer et de se mobiliser.",l:2,t:"Réseaux sociaux"},
+{q:"Qu’est-ce qui distingue la désinformation d’une simple erreur ?",o:["La volonté de tromper", "Le nombre de personnes qui la lisent", "Le média utilisé"],a:0,w:"La désinformation est volontaire ; l’erreur ne l’est pas.",l:2,t:"Désinformation"},
+{q:"Pourquoi le complotisme est-il dangereux ?",o:["Il peut nourrir le racisme et l’antisémitisme", "Il favorise la liberté de la presse", "Il protège les lanceurs d’alerte"],a:0,w:"Il désigne des boucs émissaires derrière de prétendus complots.",l:3,t:"Désinformation"},
+{q:"Laquelle de ces phrases est un savoir ?",o:["L’eau bout à 100 °C au niveau de la mer", "Ce film est le plus beau de l’année", "Le nombre 13 porte malheur"],a:0,w:"Un savoir repose sur des faits établis et vérifiables.",l:2,t:"Savoir, opinion, croyance"},
+{q:"Laquelle de ces phrases est une opinion ?",o:["Ce film est le plus beau de l’année", "Paris est la capitale de la France", "Le nombre 13 porte malheur"],a:0,w:"Une opinion est un jugement personnel, qu’on peut discuter.",l:3,t:"Savoir, opinion, croyance"},
+{q:"Laquelle de ces phrases relève d’une croyance ?",o:["Le nombre 13 porte malheur", "La Terre tourne autour du Soleil", "Ce plat est trop salé à mon goût"],a:0,w:"Une croyance relève de la conviction, sans preuve vérifiable.",l:3,t:"Savoir, opinion, croyance"},
+{q:"Quelles questions faut-il se poser pour vérifier une information ?",o:["Qui l’a publiée ?", "Quand a-t-elle été publiée ?", "Avec quelles preuves ?", "Combien de personnes l’ont aimée ?"],a:[0, 1, 2],w:"Le nombre de « likes » ne garantit pas l’exactitude.",l:2,t:"Vérifier l’information"},
+{q:"Quelle personne est citée comme lanceuse d’alerte à propos du Mediator ?",o:["Irène Frachon", "Simone Veil", "Marie Curie"],a:0,w:"Elle a alerté sur les dangers de ce médicament.",l:3,t:"Lanceurs d’alerte"},
+{q:"Quelle loi de 2022 améliore la protection des lanceurs d’alerte ?",o:["La loi du 21 mars 2022", "La loi du 22 décembre 2018", "La loi de 1905"],a:0,w:"La loi du 22 décembre 2018 concerne, elle, la manipulation de l’information.",l:3,t:"Lanceurs d’alerte"},
+{q:"Qu’est-ce qu’une démocratie délibérative ?",o:["Une démocratie fondée sur l’échange d’arguments entre citoyens", "Une démocratie sans élections", "Une démocratie sans médias"],a:0,w:"Il faut des informations fiables et un débat respectueux.",l:3,t:"Opinion publique"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

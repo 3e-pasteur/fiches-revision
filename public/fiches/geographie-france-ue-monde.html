@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Géographie : la France et l’Union européenne dans le monde</h1>
-<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="ue" class="on">Union européenne</button><button data-t="france">France puissance</button><button data-t="outremer">Outre-mer et Indopacifique</button><button data-t="amenager">Aménager l’outre-mer</button><button data-t="quiz">Quiz</button>
+<button data-t="ue" class="on">Union européenne</button><button data-t="france">France puissance</button><button data-t="outremer">Outre-mer et Indopacifique</button><button data-t="amenager">Aménager l’outre-mer</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="ue">
@@ -118,8 +118,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>chaque territoire ultramarin a sa spécificité. Pour répondre à une question, citez un exemple précis (La Réunion, la Guyane, la Polynésie française…) plutôt qu’une généralité.</div>
 </section>
 
+<section id="plus">
+<h2>5. Notions à connaître</h2>
+<ul>
+<li><b>Union européenne</b> : 27 États, grand marché ; libre circulation ; politique régionale (FEDER) et agricole (PAC).</li>
+<li><b>Puissance</b> : capacité d’un pays à influencer le monde (politique, économique, culturelle, militaire).</li>
+<li><b>Francophonie</b> : pays et personnes qui parlent français ; <b>OIF</b> : Organisation internationale de la Francophonie.</li>
+<li><b>Indopacifique</b> : espace entre océan Indien et océan Pacifique où la France est présente via ses outre-mer.</li>
+<li><b>ZEE</b> : zone économique exclusive, jusqu’à 200 milles marins des côtes.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la France est à la fois un territoire européen et une puissance mondiale, grâce notamment à ses outre-mer présents dans tous les océans.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -127,14 +139,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Combien d’États membres compte l’Union européenne ?",o:["27","28","15"],a:0,w:"Depuis le départ du Royaume-Uni en 2020, l’Union compte 27 États membres."},
-{q:"À quoi sert l’espace Schengen ?",o:["À permettre la libre circulation des personnes","À fixer une monnaie unique","À créer une armée européenne"],a:0,w:"On peut circuler sans contrôle aux frontières intérieures de cet espace."},
-{q:"À quoi servent les fonds européens de la politique régionale ?",o:["À aider les régions les moins développées à réduire leur retard","À financer les armées","À taxer les entreprises"],a:0,w:"Ils visent la cohésion entre les régions de l’Union."},
-{q:"Quel statut la France a-t-elle à l’ONU ?",o:["Membre permanent du Conseil de sécurité","Observateur","Membre non permanent"],a:0,w:"La France fait partie des cinq membres permanents du Conseil de sécurité."},
-{q:"Que désigne la francophonie ?",o:["L’ensemble des pays et des personnes qui parlent français","Un traité de commerce","Une armée"],a:0,w:"Elle est organisée autour de l’Organisation internationale de la Francophonie."},
-{q:"Pourquoi la France possède-t-elle le deuxième espace maritime mondial ?",o:["Grâce à ses territoires d’outre-mer","Grâce à la Manche","Grâce à l’Union européenne"],a:0,w:"Les territoires ultramarins étendent considérablement la zone économique exclusive."},
-{q:"Lequel de ces territoires français se situe dans l’océan Indien ?",o:["La Réunion","La Guadeloupe","Saint-Pierre-et-Miquelon"],a:0,w:"La Réunion et Mayotte sont dans l’océan Indien. La Guadeloupe est dans la Caraïbe."},
-{q:"Quel est un enjeu d’aménagement dans les territoires ultramarins ?",o:["L’accès aux services et le désenclavement","La suppression des ports","La fermeture des frontières"],a:0,w:"Les territoires éloignés ont des besoins importants en transports, santé, éducation et numérique."}
+{q:"Combien d’États membres compte l’Union européenne ?",o:["27", "28", "15"],a:0,w:"Depuis le départ du Royaume-Uni en 2020, l’Union compte 27 États membres.",l:1,t:"Union européenne"},
+{q:"À quoi sert l’espace Schengen ?",o:["À permettre la libre circulation des personnes", "À fixer une monnaie unique", "À créer une armée européenne"],a:0,w:"On peut circuler sans contrôle aux frontières intérieures de cet espace.",l:1,t:"Union européenne"},
+{q:"À quoi servent les fonds européens de la politique régionale ?",o:["À aider les régions les moins développées à réduire leur retard", "À financer les armées", "À taxer les entreprises"],a:0,w:"Ils visent la cohésion entre les régions de l’Union.",l:2,t:"Union européenne"},
+{q:"Quel statut la France a-t-elle à l’ONU ?",o:["Membre permanent du Conseil de sécurité", "Observateur", "Membre non permanent"],a:0,w:"La France fait partie des cinq membres permanents du Conseil de sécurité.",l:1,t:"La France, puissance mondiale"},
+{q:"Que désigne la francophonie ?",o:["L’ensemble des pays et des personnes qui parlent français", "Un traité de commerce", "Une armée"],a:0,w:"Elle est organisée autour de l’Organisation internationale de la Francophonie.",l:2,t:"La France, puissance mondiale"},
+{q:"Pourquoi la France possède-t-elle le deuxième espace maritime mondial ?",o:["Grâce à ses territoires d’outre-mer", "Grâce à la Manche", "Grâce à l’Union européenne"],a:0,w:"Les territoires ultramarins étendent considérablement la zone économique exclusive.",l:2,t:"Outre-mer"},
+{q:"Lequel de ces territoires français se situe dans l’océan Indien ?",o:["La Réunion", "La Guadeloupe", "Saint-Pierre-et-Miquelon"],a:0,w:"La Réunion et Mayotte sont dans l’océan Indien. La Guadeloupe est dans la Caraïbe.",l:1,t:"Outre-mer"},
+{q:"Quel est un enjeu d’aménagement dans les territoires ultramarins ?",o:["L’accès aux services et le désenclavement", "La suppression des ports", "La fermeture des frontières"],a:0,w:"Les territoires éloignés ont des besoins importants en transports, santé, éducation et numérique.",l:2,t:"Aménager l’outre-mer"},
+{q:"Quelles libertés de circulation existent dans l’Union européenne ?",o:["Des personnes", "Des marchandises", "Des capitaux", "Des armées"],a:[0, 1, 2],w:"Ces libertés fondent le marché commun.",l:2,t:"Union européenne"},
+{q:"Pourquoi l’Union européenne est-elle un grand marché ?",o:["Parce qu’elle compte plusieurs centaines de millions de consommateurs", "Parce qu’elle est la plus petite puissance", "Parce qu’elle n’a pas de frontières avec le monde"],a:0,w:"C’est l’un des premiers marchés du monde.",l:2,t:"Union européenne"},
+{q:"Quel fonds européen soutient les régions les moins développées ?",o:["Le FEDER", "La PAC", "Schengen"],a:0,w:"Le FEDER finance des projets pour réduire les écarts de développement.",l:2,t:"Union européenne"},
+{q:"Quel défi se pose aux frontières de l’Union européenne ?",o:["Le contrôle des frontières extérieures et le débat sur l’élargissement", "L’absence totale de frontières", "La fin du marché commun"],a:0,w:"L’UE est ouverte mais doit gérer ses frontières, ses inégalités régionales et son élargissement.",l:3,t:"Union européenne"},
+{q:"Quelle organisation regroupe les pays francophones ?",o:["L’Organisation internationale de la Francophonie", "L’OTAN", "Le G7"],a:0,w:"La Francophonie est un atout culturel et diplomatique.",l:2,t:"La France, puissance mondiale"},
+{q:"Quels atouts font de la France une puissance ?",o:["Membre permanent du Conseil de sécurité de l’ONU", "Puissance nucléaire", "Membre du G7", "Membre de l’OPEP"],a:[0, 1, 2],w:"La France est aussi une grande puissance culturelle et touristique.",l:2,t:"La France, puissance mondiale"},
+{q:"Qu’est-ce que la zone économique exclusive (ZEE) ?",o:["Un espace maritime où l’État dispose des ressources", "Une zone interdite", "Un port"],a:0,w:"Grâce à l’outre-mer, la France a le deuxième espace maritime mondial.",l:2,t:"Outre-mer"},
+{q:"Jusqu’à combien de milles marins des côtes s’étend la ZEE ?",num:200,u:"milles marins",w:"La ZEE s’étend jusqu’à 200 milles marins (environ 370 km).",l:3,t:"Outre-mer"},
+{q:"Quel territoire français se trouve dans l’océan Pacifique ?",o:["La Polynésie française", "La Guadeloupe", "La Réunion"],a:0,w:"La Nouvelle-Calédonie est aussi dans le Pacifique.",l:1,t:"Outre-mer"},
+{q:"Quel territoire français est situé en Amérique du Sud ?",o:["La Guyane", "La Martinique", "Mayotte"],a:0,w:"La Guyane accueille le centre spatial de Kourou.",l:1,t:"Outre-mer"},
+{q:"Quels enjeux concernent l’Indopacifique ?",o:["La sécurité des routes maritimes", "L’accès aux ressources (pêche, énergie, minerais)", "Les rivalités entre grandes puissances", "L’absence de toute rivalité"],a:[0, 1, 2],w:"La France y maintient des forces armées et coopère avec ses partenaires.",l:3,t:"Outre-mer"},
+{q:"Avec quels pays la France coopère-t-elle dans l’Indopacifique ?",o:["L’Inde, l’Australie, le Japon", "Le Canada, le Mexique, le Brésil", "La Russie, l’Iran, la Corée du Nord"],a:0,w:"Ces accords de coopération renforcent sa présence dans la région.",l:3,t:"Outre-mer"},
+{q:"Quels aménagements répondent à l’éloignement et à l’isolement ?",o:["Aéroports, ports, câbles sous-marins et fibre", "Fermeture des ports", "Suppression des liaisons"],a:0,w:"Le numérique est devenu essentiel pour désenclaver les outre-mer.",l:2,t:"Aménager l’outre-mer"},
+{q:"Quel défi se pose pour les services à Mayotte et en Guyane ?",o:["L’accès à l’eau potable, aux écoles, aux hôpitaux et au logement", "L’excès de logements vides", "L’absence d’habitants"],a:0,w:"Ces territoires ont une population jeune et en forte croissance.",l:2,t:"Aménager l’outre-mer"},
+{q:"Comment répond-on aux risques naturels dans les outre-mer ?",o:["Constructions adaptées, prévention, plans d’évacuation", "En ignorant les risques", "En interdisant tout aménagement"],a:0,w:"Cyclones, séismes et éruptions volcaniques sont des risques majeurs.",l:2,t:"Aménager l’outre-mer"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

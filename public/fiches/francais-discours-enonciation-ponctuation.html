@@ -65,10 +65,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : discours rapporté, énonciation et ponctuation</h1>
-<p class="meta">Brevet · notions du cycle 4 · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · notions du cycle 4 · lecture 10 min, puis quiz de 25 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="direct" class="on">Discours direct</button><button data-t="indirect">Discours indirect</button><button data-t="libre">Discours indirect libre</button><button data-t="enonciation">Énonciation</button><button data-t="ponct">Ponctuation</button><button data-t="quiz">Quiz</button>
+<button data-t="direct" class="on">Discours direct</button><button data-t="indirect">Discours indirect</button><button data-t="libre">Discours indirect libre</button><button data-t="enonciation">Énonciation</button><button data-t="ponct">Ponctuation</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="direct">
@@ -128,8 +128,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>on ne met <b>jamais de virgule entre le sujet et son verbe</b> : « Les élèves révisent leurs cours. »</div>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Direct → indirect</b> : supprimez guillemets et deux-points, ajoutez « que », changez les pronoms.</li>
+<li><b>Après un verbe introducteur au passé</b> : présent → imparfait ; futur → conditionnel ; passé composé → plus-que-parfait.</li>
+<li><b>Repères</b> : aujourd’hui → ce jour-là ; demain → le lendemain ; hier → la veille ; ici → là.</li>
+<li><b>Discours indirect libre</b> : pas de guillemets ni de verbe introducteur ; on entend le personnage dans le récit.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>en cas de doute, écrivez la phrase au discours direct et transformez-la étape par étape.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -137,14 +148,31 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelles marques signalent le discours direct ?",o:["Les deux-points et les guillemets","Une proposition subordonnée sans ponctuation","L’absence de verbe introducteur"],a:0,w:"Le discours direct rapporte les paroles telles quelles, entre guillemets (ou avec des tirets dans un dialogue)."},
-{q:"Comment transformer « Il dit : « J’ai faim. » » au discours indirect ?",o:["Il dit qu’il a faim.","Il dit : j’ai faim.","Il dit que j’ai faim."],a:0,w:"Les pronoms changent (je → il) et on utilise une subordonnée introduite par « que »."},
-{q:"Que devient « demain » au discours indirect après un verbe introducteur au passé ?",o:["Le lendemain","Aujourd’hui","Hier"],a:0,w:"Au discours indirect passé, « demain » devient « le lendemain »."},
-{q:"Que devient le futur au discours indirect après un verbe introducteur au passé ?",o:["Le conditionnel","Le passé simple","Le subjonctif"],a:0,w:"« Je viendrai » devient « qu’elle viendrait »."},
-{q:"Comment reconnaît-on le discours indirect libre ?",o:["Il n’a ni verbe introducteur ni guillemets, et mêle la voix du narrateur et celle du personnage","Il est toujours entre guillemets","Il commence par « que »"],a:0,w:"Le discours indirect libre fait entendre les pensées du personnage dans le récit."},
-{q:"Quels mots appartiennent à un énoncé ancré dans la situation d’énonciation ?",o:["Je, ici, maintenant","Il, là, alors","Elle, le lendemain, ce jour-là"],a:0,w:"Ces mots renvoient directement à la situation de celui qui parle."},
-{q:"Que peut annoncer un deux-points ?",o:["Une explication ou des paroles rapportées","La fin du texte","Une question"],a:0,w:"Le deux-points introduit une explication, une énumération ou un discours direct."},
-{q:"Où ne faut-il pas mettre de virgule ?",o:["Entre le sujet et son verbe","Entre deux éléments d’une énumération","Avant une apposition"],a:0,w:"Le sujet et son verbe ne sont jamais séparés par une virgule seule."}
+{q:"Quelles marques signalent le discours direct ?",o:["Les deux-points et les guillemets", "Une proposition subordonnée sans ponctuation", "L’absence de verbe introducteur"],a:0,w:"Le discours direct rapporte les paroles telles quelles, entre guillemets (ou avec des tirets dans un dialogue).",l:1,t:"Discours direct"},
+{q:"Comment transformer « Il dit : « J’ai faim. » » au discours indirect ?",o:["Il dit qu’il a faim.", "Il dit : j’ai faim.", "Il dit que j’ai faim."],a:0,w:"Les pronoms changent (je → il) et on utilise une subordonnée introduite par « que ».",l:2,t:"Discours indirect"},
+{q:"Que devient « demain » au discours indirect après un verbe introducteur au passé ?",o:["Le lendemain", "Aujourd’hui", "Hier"],a:0,w:"Au discours indirect passé, « demain » devient « le lendemain ».",l:2,t:"Discours indirect"},
+{q:"Que devient le futur au discours indirect après un verbe introducteur au passé ?",o:["Le conditionnel", "Le passé simple", "Le subjonctif"],a:0,w:"« Je viendrai » devient « qu’elle viendrait ».",l:2,t:"Discours indirect"},
+{q:"Comment reconnaît-on le discours indirect libre ?",o:["Il n’a ni verbe introducteur ni guillemets, et mêle la voix du narrateur et celle du personnage", "Il est toujours entre guillemets", "Il commence par « que »"],a:0,w:"Le discours indirect libre fait entendre les pensées du personnage dans le récit.",l:3,t:"Discours indirect libre"},
+{q:"Quels mots appartiennent à un énoncé ancré dans la situation d’énonciation ?",o:["Je, ici, maintenant", "Il, là, alors", "Elle, le lendemain, ce jour-là"],a:0,w:"Ces mots renvoient directement à la situation de celui qui parle.",l:2,t:"Énonciation"},
+{q:"Que peut annoncer un deux-points ?",o:["Une explication ou des paroles rapportées", "La fin du texte", "Une question"],a:0,w:"Le deux-points introduit une explication, une énumération ou un discours direct.",l:1,t:"Ponctuation"},
+{q:"Où ne faut-il pas mettre de virgule ?",o:["Entre le sujet et son verbe", "Entre deux éléments d’une énumération", "Avant une apposition"],a:0,w:"Le sujet et son verbe ne sont jamais séparés par une virgule seule.",l:1,t:"Ponctuation"},
+{q:"Transformez au discours indirect : Léa dit : « Je viendrai demain. »",o:["Léa dit qu’elle viendra demain.", "Léa dit que je viendrai demain.", "Léa dit qu’elle viendrait demain."],a:0,w:"Verbe introducteur au présent : le temps ne change pas, la personne change.",l:2,t:"Discours indirect"},
+{q:"Transformez : Léa a dit : « Je viendrai demain. »",o:["Léa a dit qu’elle viendrait le lendemain.", "Léa a dit qu’elle viendra demain.", "Léa a dit que je viendrai le lendemain."],a:0,w:"Le verbe introducteur est au passé : futur → conditionnel, demain → le lendemain.",l:3,t:"Discours indirect"},
+{q:"Que devient « hier » au discours indirect, après un verbe introducteur au passé ?",o:["La veille", "Le lendemain", "Aujourd’hui"],a:0,w:"Hier → la veille ; aujourd’hui → ce jour-là ; demain → le lendemain.",l:2,t:"Discours indirect"},
+{q:"Que devient « ici » au discours indirect ?",o:["Là", "Ici", "Ailleurs"],a:0,w:"Ici → là.",l:2,t:"Discours indirect"},
+{q:"Transformez : Il me demanda : « Viens-tu ? »",o:["Il me demanda si je venais.", "Il me demanda que je viens.", "Il me demanda viens-tu."],a:0,w:"L’interrogation totale devient une subordonnée introduite par « si ».",l:3,t:"Discours indirect"},
+{q:"Transformez : Il m’ordonna : « Viens ! »",o:["Il m’ordonna de venir.", "Il m’ordonna que je viens.", "Il m’ordonna : venir."],a:0,w:"Un ordre devient un infinitif introduit par « de ».",l:3,t:"Discours indirect"},
+{q:"Transformez : Il a dit : « J’ai fini. »",o:["Il a dit qu’il avait fini.", "Il a dit qu’il a fini.", "Il a dit qu’il finissait."],a:0,w:"Passé composé → plus-que-parfait, après un verbe introducteur au passé.",l:3,t:"Discours indirect"},
+{q:"Qu’est-ce qu’une incise ?",o:["Une proposition qui indique qui parle, placée au milieu ou à la fin des paroles", "Une phrase entre parenthèses", "Une conjonction"],a:0,w:"« Je viendrai demain, dit Léa. » : « dit Léa » est une incise.",l:2,t:"Discours direct"},
+{q:"Quel discours reconnaît-on ici ? « Elle ouvrit la porte. Quelle idée de venir si tard ! »",o:["Le discours indirect libre", "Le discours direct", "Le discours narrativisé"],a:0,w:"Il n’y a ni guillemets ni verbe introducteur ; la voix du personnage se mêle à celle du narrateur.",l:3,t:"Discours indirect libre"},
+{q:"Quel discours est employé ? « Il lui raconta sa journée. »",o:["Le discours narrativisé", "Le discours direct", "Le discours indirect libre"],a:0,w:"Les paroles sont résumées en une phrase du récit.",l:3,t:"Discours narrativisé"},
+{q:"Quels temps caractérisent un énoncé coupé de la situation d’énonciation (récit) ?",o:["Le passé simple et l’imparfait", "Le présent et le futur", "Le présent et le passé composé"],a:0,w:"Dans le récit : il/elle, passé simple, imparfait, plus-que-parfait.",l:2,t:"Énonciation"},
+{q:"Quels repères appartiennent à un récit ?",o:["Là, ce jour-là, le lendemain", "Ici, maintenant, demain", "Je, tu, nous"],a:0,w:"« Ici, maintenant, demain » sont ancrés dans la situation d’énonciation.",l:2,t:"Énonciation"},
+{q:"Que marquent les points de suspension ?",o:["Une phrase inachevée, une hésitation, une suite sous-entendue", "La fin d’une citation", "Une question"],a:0,w:"Ils laissent la phrase en suspens.",l:1,t:"Ponctuation"},
+{q:"Quel est le rôle du point-virgule ?",o:["Séparer deux propositions de sens proches, avec une pause plus forte que la virgule", "Annoncer une énumération", "Marquer la fin du texte"],a:0,w:"Il est plus fort que la virgule, moins que le point.",l:2,t:"Ponctuation"},
+{q:"À quoi servent les tirets dans un dialogue ?",o:["À marquer le changement de locuteur", "À séparer les syllabes", "À indiquer une question"],a:0,w:"On passe à la ligne à chaque réplique.",l:1,t:"Ponctuation"},
+{q:"Quelle phrase est correctement ponctuée ?",o:["Les élèves révisent leurs cours.", "Les élèves, révisent leurs cours.", "Les élèves révisent, leurs cours."],a:0,w:"On ne met jamais de virgule entre le sujet et son verbe.",l:2,t:"Ponctuation"},
+{q:"Pourquoi y a-t-il des virgules dans « Paris, capitale de la France, est grande. » ?",o:["Elles isolent une apposition", "Elles séparent le sujet du verbe", "Elles introduisent une citation"],a:0,w:"Une apposition est séparée du nom par une virgule.",l:3,t:"Ponctuation"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

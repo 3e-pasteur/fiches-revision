@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : enjeux et conflits dans le monde depuis 1989</h1>
-<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme de 3ème · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="monde" class="on">Après la Guerre froide</button><button data-t="moyenorient">Proche et Moyen-Orient</button><button data-t="terrorisme">Terrorisme</button><button data-t="autres">Europe et Afrique</button><button data-t="justice">Justice internationale</button><button data-t="quiz">Quiz</button>
+<button data-t="monde" class="on">Après la Guerre froide</button><button data-t="moyenorient">Proche et Moyen-Orient</button><button data-t="terrorisme">Terrorisme</button><button data-t="autres">Europe et Afrique</button><button data-t="justice">Justice internationale</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="monde">
@@ -115,8 +115,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <p>Pour juger les responsables des crimes les plus graves, des tribunaux internationaux sont créés : le <b>TPIY</b> (ex-Yougoslavie, 1993) et le <b>TPIR</b> (Rwanda, 1994). Le traité de Rome de 1998 crée la <b>Cour pénale internationale (CPI)</b>, qui fonctionne depuis 2002 et juge les <b>génocides</b>, les <b>crimes contre l’humanité</b> et les <b>crimes de guerre</b>.</p>
 </section>
 
+<section id="plus">
+<h2>6. Repères et vocabulaire</h2>
+<ul>
+<li><b>Guerre du Golfe</b> (1990-1991) : l’Irak envahit le Koweït ; une coalition internationale, sous mandat de l’ONU, le libère.</li>
+<li><b>Ex-Yougoslavie</b> : éclatement du pays et guerres de 1991 à 1999 (Croatie, Bosnie, Kosovo).</li>
+<li><b>Génocide des Tutsi</b> (Rwanda, avril-juillet 1994) et <b>génocide de Srebrenica</b> (juillet 1995).</li>
+<li><b>Justice internationale</b> : TPIY, TPIR, puis Cour pénale internationale (créée en 1998, en activité depuis 2002).</li>
+<li><b>Terrorisme</b> : violences contre des civils pour semer la peur.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>depuis 1989, les conflits sont surtout régionaux ou internes, avec de nouveaux acteurs. La justice internationale tente de juger les crimes les plus graves.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -124,14 +136,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Que se passe-t-il le 11 septembre 2001 ?",o:["Des attentats frappent les États-Unis","La chute du mur de Berlin","La fin de la guerre du Golfe"],a:0,w:"Les attentats d’al-Qaïda à New York et à Washington déclenchent la « guerre contre le terrorisme »."},
-{q:"Que sont les accords d’Oslo (1993) ?",o:["Un accord entre Israël et l’OLP de reconnaissance mutuelle","Un traité de paix entre l’Irak et le Koweït","La création de l’ONU"],a:0,w:"Ils ouvrent un processus de paix israélo-palestinien qui n’aboutit pas à un accord durable."},
-{q:"Quelle est la cause de la guerre du Golfe de 1991 ?",o:["L’invasion du Koweït par l’Irak","La chute de l’URSS","Les attentats du 11 septembre"],a:0,w:"Une coalition internationale libère le Koweït avec un mandat de l’ONU."},
-{q:"Que s’est-il passé à Srebrenica en juillet 1995 ?",o:["Un génocide, avec le massacre de milliers de Bosniaques","La signature d’un traité de paix","Un débarquement"],a:0,w:"Ce crime a été qualifié de génocide par la justice internationale."},
-{q:"Où et quand a lieu le génocide des Tutsi ?",o:["Au Rwanda, en 1994","En Ukraine, en 2022","En Syrie, en 2011"],a:0,w:"Entre avril et juillet 1994, plus de 800 000 personnes sont tuées."},
-{q:"Quelle juridiction juge les génocides, les crimes contre l’humanité et les crimes de guerre ?",o:["La Cour pénale internationale","Le Conseil de sécurité","Le Parlement européen"],a:0,w:"La CPI est créée par le traité de Rome de 1998 et fonctionne depuis 2002."},
-{q:"Que s’est-il passé le 24 février 2022 ?",o:["L’invasion à grande échelle de l’Ukraine par la Russie","Le début de la guerre du Golfe","La création de l’Union européenne"],a:0,w:"Cette guerre se déroule au cœur de l’Europe."},
-{q:"Quel est le rôle de l’ONU ?",o:["Maintenir la paix, notamment par le Conseil de sécurité et les casques bleus","Gouverner les États membres","Remplacer les armées nationales"],a:0,w:"Son action dépend de l’accord des membres du Conseil de sécurité."}
+{q:"Que se passe-t-il le 11 septembre 2001 ?",o:["Des attentats frappent les États-Unis", "La chute du mur de Berlin", "La fin de la guerre du Golfe"],a:0,w:"Les attentats d’al-Qaïda à New York et à Washington déclenchent la « guerre contre le terrorisme ».",l:1,t:"Terrorisme"},
+{q:"Que sont les accords d’Oslo (1993) ?",o:["Un accord entre Israël et l’OLP de reconnaissance mutuelle", "Un traité de paix entre l’Irak et le Koweït", "La création de l’ONU"],a:0,w:"Ils ouvrent un processus de paix israélo-palestinien qui n’aboutit pas à un accord durable.",l:2,t:"Proche et Moyen-Orient"},
+{q:"Quelle est la cause de la guerre du Golfe de 1991 ?",o:["L’invasion du Koweït par l’Irak", "La chute de l’URSS", "Les attentats du 11 septembre"],a:0,w:"Une coalition internationale libère le Koweït avec un mandat de l’ONU.",l:2,t:"Proche et Moyen-Orient"},
+{q:"Que s’est-il passé à Srebrenica en juillet 1995 ?",o:["Un génocide, avec le massacre de milliers de Bosniaques", "La signature d’un traité de paix", "Un débarquement"],a:0,w:"Ce crime a été qualifié de génocide par la justice internationale.",l:2,t:"Europe et Afrique"},
+{q:"Où et quand a lieu le génocide des Tutsi ?",o:["Au Rwanda, en 1994", "En Ukraine, en 2022", "En Syrie, en 2011"],a:0,w:"Entre avril et juillet 1994, plus de 800 000 personnes sont tuées.",l:1,t:"Europe et Afrique"},
+{q:"Quelle juridiction juge les génocides, les crimes contre l’humanité et les crimes de guerre ?",o:["La Cour pénale internationale", "Le Conseil de sécurité", "Le Parlement européen"],a:0,w:"La CPI est créée par le traité de Rome de 1998 et fonctionne depuis 2002.",l:2,t:"Justice internationale"},
+{q:"Que s’est-il passé le 24 février 2022 ?",o:["L’invasion à grande échelle de l’Ukraine par la Russie", "Le début de la guerre du Golfe", "La création de l’Union européenne"],a:0,w:"Cette guerre se déroule au cœur de l’Europe.",l:1,t:"Europe et Afrique"},
+{q:"Quel est le rôle de l’ONU ?",o:["Maintenir la paix, notamment par le Conseil de sécurité et les casques bleus", "Gouverner les États membres", "Remplacer les armées nationales"],a:0,w:"Son action dépend de l’accord des membres du Conseil de sécurité.",l:1,t:"Un monde nouveau"},
+{q:"Qu’est-ce qu’un monde « multipolaire » ?",o:["Un monde où plusieurs puissances comptent, et non plus deux superpuissances", "Un monde sans États", "Un monde dirigé par l’ONU"],a:0,w:"Après 1989, les États-Unis restent très puissants mais la Chine, l’Inde, l’Union européenne ou des puissances régionales montent.",l:1,t:"Un monde nouveau"},
+{q:"Quelle organisation est responsable des attentats du 11 septembre 2001 ?",o:["Al-Qaïda", "L’OLP", "Daech"],a:0,w:"Les attentats d’al-Qaïda frappent New York et Washington.",l:2,t:"Terrorisme"},
+{q:"Quelle est la réponse des États-Unis après les attentats de 2001 ?",o:["Une « guerre contre le terrorisme », avec une intervention en Afghanistan", "Un retrait du Moyen-Orient", "Un traité de paix avec al-Qaïda"],a:0,w:"L’intervention en Afghanistan inaugure la « guerre contre le terrorisme ».",l:2,t:"Terrorisme"},
+{q:"Que désigne Daech ?",o:["L’État islamique, un groupe terroriste actif en Syrie et en Irak à partir de 2014", "Un parti politique irakien", "Une force de l’ONU"],a:0,w:"Daech proclame un « califat » sur une partie de la Syrie et de l’Irak.",l:2,t:"Terrorisme"},
+{q:"Combien de personnes sont tuées lors des attentats du 13 novembre 2015 à Paris et à Saint-Denis ?",num:130,w:"Les attentats du 13 novembre 2015 font 130 morts.",l:2,t:"Terrorisme"},
+{q:"Quelle caractéristique distingue l’intervention américaine en Irak de 2003 de la guerre du Golfe de 1991 ?",o:["Elle n’a pas eu l’accord de l’ONU", "Elle a été décidée par l’ONU", "Elle a été menée par la France seule"],a:0,w:"En 1991, la coalition agit avec un mandat de l’ONU ; en 2003, non.",l:2,t:"Proche et Moyen-Orient"},
+{q:"Quel événement de 2011 touche plusieurs pays arabes ?",o:["Les « Printemps arabes », avec le début de la guerre civile en Syrie", "La fin de la guerre froide", "Le traité de Maastricht"],a:0,w:"Des mouvements de contestation éclatent ; en Syrie, ils débouchent sur une longue guerre civile.",l:2,t:"Proche et Moyen-Orient"},
+{q:"Quels enjeux expliquent la durée des conflits au Proche et Moyen-Orient ?",o:["Le contrôle de l’eau", "Les frontières contestées", "L’absence de toute ressource naturelle", "Des enjeux religieux et politiques"],a:[0, 1, 3],w:"Pétrole, eau, frontières, religion et politique s’y mêlent.",l:3,t:"Proche et Moyen-Orient"},
+{q:"Quels pays ou territoires sont concernés par les guerres de l’ex-Yougoslavie ?",o:["La Croatie", "La Bosnie", "Le Kosovo", "La Pologne"],a:[0, 1, 2],w:"Les guerres suivent l’éclatement de la Yougoslavie (1991-1999).",l:2,t:"Europe et Afrique"},
+{q:"Quel État annexe la Crimée en 2014 ?",o:["La Russie", "La Turquie", "La Pologne"],a:0,w:"L’annexion de la Crimée précède l’invasion à grande échelle de l’Ukraine en 2022.",l:2,t:"Europe et Afrique"},
+{q:"Que sont les casques bleus ?",o:["Des soldats envoyés par l’ONU pour maintenir ou rétablir la paix", "Des soldats de l’OTAN", "Des soldats français en Afrique"],a:0,w:"Les casques bleus agissent sous mandat de l’ONU.",l:2,t:"Un monde nouveau"},
+{q:"Quelle juridiction est créée pour juger les crimes commis en ex-Yougoslavie ?",o:["Le TPIY", "Le TPIR", "La CPI"],a:0,w:"Le TPIY (1993) juge les responsables des crimes de l’ex-Yougoslavie ; le TPIR concerne le Rwanda.",l:2,t:"Justice internationale"},
+{q:"Qu’est-ce qu’un génocide ?",o:["La destruction volontaire et organisée d’un groupe humain en raison de ce qu’il est", "Une guerre entre deux États", "Une révolte contre un gouvernement"],a:0,w:"Les génocides de Srebrenica et du Rwanda correspondent à cette définition.",l:2,t:"Justice internationale"},
+{q:"En quelle année le traité de Rome crée-t-il la Cour pénale internationale ?",num:1998,w:"Le traité de Rome de 1998 crée la CPI, qui fonctionne depuis 2002.",l:3,t:"Justice internationale"},
+{q:"Qu’est-ce qu’un acteur « non étatique » dans un conflit ?",o:["Un groupe armé ou terroriste qui n’est pas un État", "Un État neutre", "Un journaliste étranger"],a:0,w:"Après 1989, beaucoup de conflits opposent des États à des groupes armés ou terroristes.",l:3,t:"Un monde nouveau"},
+{q:"Qui a donné son accord à la guerre du Golfe de 1991 ?",o:["L’ONU, avec un mandat pour libérer le Koweït", "L’OTAN seule", "Le Conseil de l’Europe"],a:0,w:"Une coalition menée par les États-Unis agit avec un mandat de l’ONU.",l:2,t:"Proche et Moyen-Orient"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

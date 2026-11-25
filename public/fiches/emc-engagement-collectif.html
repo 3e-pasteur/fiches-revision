@@ -68,10 +68,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>EMC : l’engagement collectif et la citoyenneté active</h1>
-<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet · programme d’EMC de 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="elections" class="on">Élections et référendum</button><button data-t="formes">Formes d’engagement</button><button data-t="loi">Le parcours d’une loi</button><button data-t="quiz">Quiz</button>
+<button data-t="elections" class="on">Élections et référendum</button><button data-t="formes">Formes d’engagement</button><button data-t="loi">Le parcours d’une loi</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="elections">
@@ -111,8 +111,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>la démocratie repose sur l’engagement effectif des citoyens : voter, débattre, s’associer, manifester, s’engager dans les institutions.</div>
 </section>
 
+<section id="plus">
+<h2>4. Notions à connaître</h2>
+<ul>
+<li><b>Suffrage universel direct</b> : tous les électeurs votent directement (présidentielle, législatives). <b>Suffrage indirect</b> : des grands électeurs votent (sénatoriales).</li>
+<li><b>Mandat</b> : durée pendant laquelle un élu exerce ses fonctions.</li>
+<li><b>Promulgation</b> : acte du président de la République qui rend une loi applicable.</li>
+<li><b>Engagement</b> : agir pour une cause ou pour les autres (bénévolat, syndicat, parti, délégué).</li>
+<li><b>Manifestation</b> : rassemblement pour exprimer une opinion ; c’est une liberté.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>l’engagement ne se limite pas au vote : débattre, s’associer, manifester, s’engager au service des autres sont aussi des formes de citoyenneté active.</div>
+</section>
+
 <section id="quiz">
-<h2>4. Quiz d’entraînement</h2>
+<h2>5. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -120,14 +132,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Le vote est-il obligatoire en France ?",o:["Non, c’est un droit","Oui, pour tous les majeurs","Oui, seulement pour la présidentielle"],a:0,w:"Voter est un engagement, mais n’est pas une obligation."},
-{q:"Comment sont élus les sénateurs ?",o:["Par des grands électeurs (suffrage indirect)","Par tous les citoyens (suffrage direct)","Par le président de la République"],a:0,w:"Les sénateurs sont élus au suffrage universel indirect."},
-{q:"Quelle est la durée du mandat des conseillers municipaux ?",o:["6 ans","5 ans","7 ans"],a:0,w:"Les élections municipales ont lieu tous les six ans."},
-{q:"Qu’est-ce qu’un référendum ?",o:["Un vote où les citoyens répondent directement à une question","Une élection de députés","Un débat au Parlement"],a:0,w:"Les citoyens répondent par oui ou par non."},
-{q:"Quelle liberté permet d’exprimer ses opinions dans l’espace public pour faire pression sur le gouvernement ?",o:["La liberté de manifester","La liberté de circulation","La liberté du commerce"],a:0,w:"Manifester est une forme d’engagement collectif."},
-{q:"Lequel est un exemple d’engagement associatif ?",o:["Être bénévole dans une association","Payer ses impôts","Passer le brevet"],a:0,w:"Le bénévolat est une forme d’engagement associatif."},
-{q:"Les délibérations des conseils municipaux sont-elles…",o:["Publiques","Secrètes","Réservées aux élus"],a:0,w:"Les séances sont publiques, ce qui permet aux citoyens de suivre les décisions locales."},
-{q:"Quelle étape suit le vote d’une loi par le Parlement ?",o:["La promulgation","Un référendum obligatoire","Un nouveau vote"],a:0,w:"La loi est promulguée par le président de la République, puis appliquée."}
+{q:"Le vote est-il obligatoire en France ?",o:["Non, c’est un droit", "Oui, pour tous les majeurs", "Oui, seulement pour la présidentielle"],a:0,w:"Voter est un engagement, mais n’est pas une obligation.",l:1,t:"Voter et élire"},
+{q:"Comment sont élus les sénateurs ?",o:["Par des grands électeurs (suffrage indirect)", "Par tous les citoyens (suffrage direct)", "Par le président de la République"],a:0,w:"Les sénateurs sont élus au suffrage universel indirect.",l:2,t:"Voter et élire"},
+{q:"Quelle est la durée du mandat des conseillers municipaux ?",o:["6 ans", "5 ans", "7 ans"],a:0,w:"Les élections municipales ont lieu tous les six ans.",l:2,t:"Voter et élire"},
+{q:"Qu’est-ce qu’un référendum ?",o:["Un vote où les citoyens répondent directement à une question", "Une élection de députés", "Un débat au Parlement"],a:0,w:"Les citoyens répondent par oui ou par non.",l:1,t:"Voter et élire"},
+{q:"Quelle liberté permet d’exprimer ses opinions dans l’espace public pour faire pression sur le gouvernement ?",o:["La liberté de manifester", "La liberté de circulation", "La liberté du commerce"],a:0,w:"Manifester est une forme d’engagement collectif.",l:1,t:"Formes d’engagement"},
+{q:"Lequel est un exemple d’engagement associatif ?",o:["Être bénévole dans une association", "Payer ses impôts", "Passer le brevet"],a:0,w:"Le bénévolat est une forme d’engagement associatif.",l:1,t:"Formes d’engagement"},
+{q:"Les délibérations des conseils municipaux sont-elles…",o:["Publiques", "Secrètes", "Réservées aux élus"],a:0,w:"Les séances sont publiques, ce qui permet aux citoyens de suivre les décisions locales.",l:2,t:"Voter et élire"},
+{q:"Quelle étape suit le vote d’une loi par le Parlement ?",o:["La promulgation", "Un référendum obligatoire", "Un nouveau vote"],a:0,w:"La loi est promulguée par le président de la République, puis appliquée.",l:2,t:"Parcours d’une loi"},
+{q:"À partir de quel âge peut-on voter en France ?",num:18,u:"ans",w:"Il faut être majeur, soit 18 ans, ainsi que de nationalité française (ou citoyen européen pour certains scrutins) et inscrit sur les listes électorales.",l:1,t:"Voter et élire"},
+{q:"Quelles conditions faut-il remplir pour voter ?",o:["Être majeur", "Être de nationalité française (ou citoyen européen pour certains scrutins)", "Être inscrit sur les listes électorales", "Payer l’impôt sur le revenu"],a:[0, 1, 2],w:"Le paiement de l’impôt n’est pas une condition pour voter.",l:2,t:"Voter et élire"},
+{q:"Quelle est la durée du mandat du président de la République (en années) ?",num:5,u:"ans",w:"Depuis le quinquennat, le mandat présidentiel dure 5 ans.",l:1,t:"Voter et élire"},
+{q:"Quelle est la durée du mandat des sénateurs (en années) ?",num:6,u:"ans",w:"Les sénateurs sont élus pour 6 ans, par des grands électeurs.",l:2,t:"Voter et élire"},
+{q:"Qui élit le maire d’une commune ?",o:["Les conseillers municipaux", "Les habitants directement", "Le préfet"],a:0,w:"Les habitants élisent les conseillers municipaux, qui élisent ensuite le maire.",l:2,t:"Voter et élire"},
+{q:"Quelle élection désigne les députés européens ?",o:["Les élections européennes", "Les élections législatives", "Les élections sénatoriales"],a:0,w:"Les députés européens sont élus pour 5 ans.",l:2,t:"Voter et élire"},
+{q:"Qu’est-ce que le suffrage universel direct ?",o:["Les électeurs votent eux-mêmes pour leur représentant", "Seuls des grands électeurs votent", "Le vote est obligatoire"],a:0,w:"À l’inverse, le suffrage indirect passe par des grands électeurs (sénatoriales).",l:2,t:"Voter et élire"},
+{q:"Quelles sont des formes d’engagement ?",o:["L’engagement associatif", "L’engagement syndical", "L’engagement politique", "L’indifférence totale"],a:[0, 1, 2],w:"On peut aussi s’engager dans les institutions (armée, police, justice, éducation).",l:2,t:"Formes d’engagement"},
+{q:"Quel est le rôle d’un délégué de classe ?",o:["Représenter les élèves de sa classe", "Remplacer le professeur", "Noter les élèves"],a:0,w:"La démocratie scolaire permet aux élèves de participer à la vie de l’établissement.",l:1,t:"Formes d’engagement"},
+{q:"À quoi sert un syndicat ?",o:["À défendre les droits des salariés", "À gouverner la commune", "À juger les citoyens"],a:0,w:"Le syndicalisme est une forme d’engagement collectif.",l:2,t:"Formes d’engagement"},
+{q:"Quel est l’ordre correct du parcours d’une loi ?",o:["Texte déposé, débat et vote au Parlement, promulgation, application", "Application, vote, promulgation", "Promulgation, débat, texte déposé"],a:0,w:"La loi naît souvent d’une situation qui provoque des mobilisations et des débats.",l:3,t:"Parcours d’une loi"},
+{q:"Quelle loi de 1975 autorise l’interruption volontaire de grossesse ?",o:["La loi Veil", "La loi Neuwirth", "La loi sur le mariage pour tous"],a:0,w:"La loi Veil (1975) a été précédée de débats et de mobilisations.",l:1,t:"Parcours d’une loi"},
+{q:"Qui promulgue la loi en France ?",o:["Le président de la République", "Le Conseil constitutionnel", "Le maire"],a:0,w:"La promulgation est l’acte qui rend la loi applicable.",l:3,t:"Parcours d’une loi"},
+{q:"Quelle loi de 2013 a été étudiée comme exemple de débat public ?",o:["La loi sur le mariage pour tous", "La loi Veil", "La loi sur le quinquennat"],a:0,w:"Mobilisations, débat public et vote du Parlement ont joué un rôle.",l:3,t:"Parcours d’une loi"},
+{q:"En quoi un référendum diffère-t-il d’une élection ?",o:["Les citoyens répondent par oui ou par non à une question, au lieu d’élire des représentants", "Il est réservé aux députés", "Il n’a aucune valeur"],a:0,w:"Le référendum est une consultation directe des citoyens.",l:2,t:"Voter et élire"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

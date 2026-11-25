@@ -65,10 +65,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : rédaction</h1>
-<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 9 questions</p>
+<p class="meta">Brevet 3ème · lecture 12 min, puis quiz de 25 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="sujet" class="on">Le sujet</button><button data-t="imagination">Imagination</button><button data-t="reflexion">Réflexion</button><button data-t="copie">La copie</button><button data-t="quiz">Quiz</button>
+<button data-t="sujet" class="on">Le sujet</button><button data-t="imagination">Imagination</button><button data-t="reflexion">Réflexion</button><button data-t="copie">La copie</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="sujet">
@@ -151,8 +151,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>répartissez votre temps : un peu pour le plan, le gros du temps pour rédiger, et toujours quelques minutes pour relire. Une copie non terminée coûte plus de points qu’une copie simple et complète.</div>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Temps du récit</b> : imparfait (décor, habitudes), passé simple (actions), plus-que-parfait (avant).</li>
+<li><b>Dialogue</b> : retour à la ligne, tiret ou guillemets, verbes de parole variés.</li>
+<li><b>Argumenter</b> : une idée, une explication, un exemple, un connecteur.</li>
+<li><b>Gestion du temps</b> : plan court, rédaction, puis relecture. Une copie terminée vaut mieux qu’une copie brillante mais inachevée.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>relisez la consigne avant la conclusion pour vérifier que vous n’avez rien oublié.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -160,15 +171,31 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelle étape du schéma narratif déclenche l’action ?",o:["La situation initiale","L’élément perturbateur","Le dénouement"],a:1,w:"L’élément perturbateur rompt l’équilibre de départ et lance les péripéties."},
-{q:"Dans un récit au passé, quel temps sert surtout à décrire le décor ?",o:["Le passé simple","L’imparfait","Le futur"],a:1,w:"L’imparfait décrit le décor et les actions de fond, le passé simple fait avancer l’histoire."},
-{q:"Comment présente-t-on une réplique dans un dialogue ?",o:["En passant à la ligne, avec un tiret ou des guillemets","En l’écrivant en majuscules","Sans aucune ponctuation"],a:0,w:"On va à la ligne à chaque changement de locuteur et on signale la réplique par un tiret ou des guillemets."},
-{q:"Que fait-on dans l’introduction d’un sujet de réflexion ?",o:["On donne la conclusion","On présente le problème et on annonce le plan","On raconte une histoire"],a:1,w:"L’introduction amène le sujet, pose la question et annonce comment on va y répondre."},
-{q:"Comment est construit un paragraphe argumentatif ?",o:["Un exemple seul","Un argument, une explication, un exemple","Un bilan et une ouverture"],a:1,w:"On avance une idée, on l’explique, puis on l’appuie par un exemple précis."},
-{q:"Quel connecteur exprime l’opposition ?",o:["donc","cependant","car"],a:1,w:"« Cependant » oppose deux idées. « Donc » marque la conséquence et « car » la cause."},
-{q:"Quel connecteur exprime la cause ?",o:["car","mais","ainsi"],a:0,w:"« Car » introduit la cause ou l’explication."},
-{q:"« Certes, les écrans sont utiles, mais ils fatiguent. » Que marque l’expression « certes… mais » ?",o:["Une addition","Une concession","Une cause"],a:1,w:"On reconnaît d’abord un argument adverse (certes), puis on le nuance avec « mais » : c’est une concession."},
-{q:"Que faut-il garder pour la fin de l’épreuve de rédaction ?",o:["Du temps pour relire et corriger","Du temps pour changer de sujet","Rien, tout le temps sert à rédiger"],a:0,w:"Une relecture finale permet de corriger accords, orthographe et ponctuation, et de vérifier que la consigne est respectée."}
+{q:"Quelle étape du schéma narratif déclenche l’action ?",o:["La situation initiale", "L’élément perturbateur", "Le dénouement"],a:1,w:"L’élément perturbateur rompt l’équilibre de départ et lance les péripéties.",l:1,t:"Schéma narratif"},
+{q:"Dans un récit au passé, quel temps sert surtout à décrire le décor ?",o:["Le passé simple", "L’imparfait", "Le futur"],a:1,w:"L’imparfait décrit le décor et les actions de fond, le passé simple fait avancer l’histoire.",l:1,t:"Règles du récit"},
+{q:"Comment présente-t-on une réplique dans un dialogue ?",o:["En passant à la ligne, avec un tiret ou des guillemets", "En l’écrivant en majuscules", "Sans aucune ponctuation"],a:0,w:"On va à la ligne à chaque changement de locuteur et on signale la réplique par un tiret ou des guillemets.",l:1,t:"Dialogue"},
+{q:"Que fait-on dans l’introduction d’un sujet de réflexion ?",o:["On donne la conclusion", "On présente le problème et on annonce le plan", "On raconte une histoire"],a:1,w:"L’introduction amène le sujet, pose la question et annonce comment on va y répondre.",l:2,t:"Sujet de réflexion"},
+{q:"Comment est construit un paragraphe argumentatif ?",o:["Un exemple seul", "Un argument, une explication, un exemple", "Un bilan et une ouverture"],a:1,w:"On avance une idée, on l’explique, puis on l’appuie par un exemple précis.",l:2,t:"Sujet de réflexion"},
+{q:"Quel connecteur exprime l’opposition ?",o:["donc", "cependant", "car"],a:1,w:"« Cependant » oppose deux idées. « Donc » marque la conséquence et « car » la cause.",l:2,t:"Connecteurs"},
+{q:"Quel connecteur exprime la cause ?",o:["car", "mais", "ainsi"],a:0,w:"« Car » introduit la cause ou l’explication.",l:2,t:"Connecteurs"},
+{q:"« Certes, les écrans sont utiles, mais ils fatiguent. » Que marque l’expression « certes… mais » ?",o:["Une addition", "Une concession", "Une cause"],a:1,w:"On reconnaît d’abord un argument adverse (certes), puis on le nuance avec « mais » : c’est une concession.",l:3,t:"Connecteurs"},
+{q:"Que faut-il garder pour la fin de l’épreuve de rédaction ?",o:["Du temps pour relire et corriger", "Du temps pour changer de sujet", "Rien, tout le temps sert à rédiger"],a:0,w:"Une relecture finale permet de corriger accords, orthographe et ponctuation, et de vérifier que la consigne est respectée.",l:1,t:"Soigner sa copie"},
+{q:"Quelle étape ouvre le schéma narratif ?",o:["La situation initiale", "Le dénouement", "L’élément perturbateur"],a:0,w:"Elle présente le lieu, l’époque, les personnages et le quotidien.",l:1,t:"Schéma narratif"},
+{q:"Quelle étape marque la résolution du problème ?",o:["Le dénouement", "Les péripéties", "La situation initiale"],a:0,w:"Elle est suivie de la situation finale.",l:1,t:"Schéma narratif"},
+{q:"Quels éléments faut-il souligner dans la consigne ?",o:["Le type d’écrit demandé", "Les contraintes (personnage, lieu, point de vue…)", "Les mots-clés du sujet", "Le nom du surveillant"],a:[0, 1, 2],w:"Un hors-sujet coûte plus cher que quelques fautes d’orthographe.",l:2,t:"Lire le sujet"},
+{q:"Dans un récit au présent, quel temps faut-il garder ?",o:["Le présent, du début à la fin", "L’imparfait puis le passé simple", "Le futur"],a:0,w:"On ne mélange pas les temps de narration.",l:2,t:"Règles du récit"},
+{q:"Que faut-il faire à propos du narrateur ?",o:["Choisir « je » ou « il/elle » et s’y tenir", "En changer à chaque paragraphe", "Ne pas en avoir"],a:0,w:"La cohérence du point de vue est essentielle.",l:2,t:"Règles du récit"},
+{q:"Quels sens peut-on mobiliser dans une description ?",o:["Les cinq sens", "Seulement la vue", "Aucun"],a:0,w:"On peut aussi employer comparaisons et métaphores.",l:2,t:"Règles du récit"},
+{q:"Quel plan commence par les arguments pour, puis présente les limites ?",o:["Le plan dialectique", "Le plan thématique", "Le plan chronologique"],a:0,w:"Il aboutit à une position nuancée.",l:2,t:"Sujet de réflexion"},
+{q:"Que fait un plan thématique ?",o:["Chaque partie traite un aspect différent de la question", "Il oppose deux thèses", "Il raconte une histoire"],a:0,w:"Par exemple : la santé, l’école, les relations.",l:3,t:"Sujet de réflexion"},
+{q:"Quel est le rôle d’un exemple dans un paragraphe argumenté ?",o:["Illustrer et appuyer l’argument", "Remplacer l’argument", "Allonger la copie"],a:0,w:"Chaque argument doit être expliqué, puis illustré.",l:3,t:"Sujet de réflexion"},
+{q:"Que contient une bonne conclusion ?",o:["Un bilan qui répond au sujet, puis une ouverture", "Un nouvel argument", "Une excuse"],a:0,w:"Terminez toujours par un bilan clair.",l:3,t:"Sujet de réflexion"},
+{q:"Quel connecteur sert à ajouter un argument ?",o:["De plus", "Cependant", "Donc"],a:0,w:"De plus, en outre, par ailleurs servent à ajouter.",l:2,t:"Connecteurs"},
+{q:"Quel connecteur exprime la conséquence ?",o:["Donc", "Mais", "Car"],a:0,w:"Donc, ainsi, c’est pourquoi : conséquence.",l:2,t:"Connecteurs"},
+{q:"Que faut-il faire dans les premières minutes ?",o:["Noter ses idées et son plan au brouillon", "Écrire directement la conclusion", "Recopier le sujet"],a:0,w:"Cinq minutes de plan évitent les paragraphes décousus.",l:1,t:"Soigner sa copie"},
+{q:"Dans quel ordre vérifier sa relecture ?",o:["Accords sujet-verbe, participes passés, homophones, ponctuation", "Ponctuation, puis rien", "Au hasard"],a:0,w:"Une chose à la fois.",l:2,t:"Soigner sa copie"},
+{q:"Combien d’idées par paragraphe ?",o:["Une", "Trois", "Aucune"],a:0,w:"Un paragraphe, une idée ; on va à la ligne avec un retrait.",l:1,t:"Soigner sa copie"},
+{q:"Que faut-il éviter dans le vocabulaire ?",o:["Les mots vagues (chose, faire, mettre)", "Les mots précis", "Les connecteurs"],a:0,w:"Cherchez le terme précis et variez les débuts de phrases.",l:2,t:"Soigner sa copie"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

@@ -36,3 +36,5 @@
 .qrev .bad{color:var(--ko);font-weight:600}
 .qactions{display:flex;flex-wrap:wrap;gap:8px}
 @media (max-width:640px){.qrow{grid-template-columns:6.5rem 1fr 3.8rem}}
+
+.q u,.qrev u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;font-weight:700}

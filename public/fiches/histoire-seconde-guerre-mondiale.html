@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la Seconde Guerre mondiale et la Shoah</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 25 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="debut" class="on">1939-1941</button><button data-t="monde">Guerre mondiale</button><button data-t="victoire">Victoire</button><button data-t="shoah">Shoah</button><button data-t="bilan">Bilan</button><button data-t="quiz">Quiz</button>
+<button data-t="debut" class="on">1939-1941</button><button data-t="monde">Guerre mondiale</button><button data-t="victoire">Victoire</button><button data-t="shoah">Shoah</button><button data-t="bilan">Bilan</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="debut">
@@ -137,8 +137,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>6. Repères et vocabulaire</h2>
+<ul>
+<li><b>Guerre éclair (Blitzkrieg)</b> : offensive rapide combinant chars, avions et infanterie.</li>
+<li><b>Anschluss</b> : annexion de l’Autriche par l’Allemagne (mars 1938).</li>
+<li><b>Apaisement</b> : politique des démocraties qui cèdent à Hitler à Munich (1938) pour éviter la guerre.</li>
+<li><b>Génocide</b> : destruction volontaire et organisée d’un groupe humain. <b>Crime contre l’humanité</b> : crime commis contre des populations civiles, notion née à Nuremberg.</li>
+<li><b>Shoah</b> (« catastrophe ») : génocide des Juifs d’Europe. <b>Justes</b> : personnes qui ont sauvé des Juifs.</li>
+<li><b>Capitulation</b> : le vaincu cesse le combat sans conditions (Allemagne, 8 mai 1945 ; Japon, 2 septembre 1945).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la guerre est mondiale, idéologique et raciale. Les civils sont les premières victimes, et les nazis mènent un génocide planifié.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -146,14 +159,31 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel événement marque le début de la guerre en Europe, le 1er septembre 1939 ?",o:["L’invasion de la Pologne","L’attaque de Pearl Harbor","Le débarquement de Normandie"],a:0,w:"L’Allemagne envahit la Pologne le 1er septembre 1939 ; la France et le Royaume-Uni déclarent la guerre le 3."},
-{q:"Qui lance l’appel du 18 juin 1940 depuis Londres ?",o:["Pétain","De Gaulle","Churchill"],a:1,w:"Le général de Gaulle appelle les Français à continuer le combat."},
-{q:"Quel événement a lieu le 22 juin 1941 ?",o:["L’invasion de l’URSS par l’Allemagne","La capitulation de l’Allemagne","La libération de Paris"],a:0,w:"L’Allemagne attaque l’URSS : c’est l’opération Barbarossa."},
-{q:"Quelle conséquence a l’attaque de Pearl Harbor en décembre 1941 ?",o:["Les États-Unis entrent en guerre","Le Japon capitule","L’URSS signe la paix"],a:0,w:"Les États-Unis entrent en guerre contre le Japon puis contre l’Allemagne."},
-{q:"Quelle est la date du débarquement de Normandie ?",o:["6 juin 1944","8 mai 1945","11 novembre 1918"],a:0,w:"Le Jour J est le 6 juin 1944."},
-{q:"Que se passe-t-il le 8 mai 1945 ?",o:["Capitulation de l’Allemagne","Capitulation du Japon","Libération de Paris"],a:0,w:"L’Allemagne capitule le 8 mai 1945. Le Japon capitule le 2 septembre."},
-{q:"Combien de Juifs d’Europe ont été tués pendant la Shoah ?",o:["Environ 600 000","Environ 6 millions","Environ 60 millions"],a:1,w:"On estime à environ six millions le nombre de victimes juives de la Shoah."},
-{q:"Lequel de ces lieux est un centre d’extermination ?",o:["Dachau","Treblinka","Verdun"],a:1,w:"Treblinka a été créé pour tuer. Dachau était un camp de concentration."}
+{q:"Quel événement marque le début de la guerre en Europe, le 1er septembre 1939 ?",o:["L’invasion de la Pologne", "L’attaque de Pearl Harbor", "Le débarquement de Normandie"],a:0,w:"L’Allemagne envahit la Pologne le 1er septembre 1939 ; la France et le Royaume-Uni déclarent la guerre le 3.",l:1,t:"1939-1941"},
+{q:"Qui lance l’appel du 18 juin 1940 depuis Londres ?",o:["Pétain", "De Gaulle", "Churchill"],a:1,w:"Le général de Gaulle appelle les Français à continuer le combat.",l:1,t:"1939-1941"},
+{q:"Quel événement a lieu le 22 juin 1941 ?",o:["L’invasion de l’URSS par l’Allemagne", "La capitulation de l’Allemagne", "La libération de Paris"],a:0,w:"L’Allemagne attaque l’URSS : c’est l’opération Barbarossa.",l:2,t:"1941-1943"},
+{q:"Quelle conséquence a l’attaque de Pearl Harbor en décembre 1941 ?",o:["Les États-Unis entrent en guerre", "Le Japon capitule", "L’URSS signe la paix"],a:0,w:"Les États-Unis entrent en guerre contre le Japon puis contre l’Allemagne.",l:2,t:"1941-1943"},
+{q:"Quelle est la date du débarquement de Normandie ?",o:["6 juin 1944", "8 mai 1945", "11 novembre 1918"],a:0,w:"Le Jour J est le 6 juin 1944.",l:1,t:"1944-1945"},
+{q:"Que se passe-t-il le 8 mai 1945 ?",o:["Capitulation de l’Allemagne", "Capitulation du Japon", "Libération de Paris"],a:0,w:"L’Allemagne capitule le 8 mai 1945. Le Japon capitule le 2 septembre.",l:1,t:"1944-1945"},
+{q:"Combien de Juifs d’Europe ont été tués pendant la Shoah ?",o:["Environ 600 000", "Environ 6 millions", "Environ 60 millions"],a:1,w:"On estime à environ six millions le nombre de victimes juives de la Shoah.",l:1,t:"Shoah"},
+{q:"Lequel de ces lieux est un centre d’extermination ?",o:["Dachau", "Treblinka", "Verdun"],a:1,w:"Treblinka a été créé pour tuer. Dachau était un camp de concentration.",l:2,t:"Shoah"},
+{q:"Quels pays forment l’Axe ?",o:["Allemagne, Italie, Japon", "France, Royaume-Uni, URSS", "États-Unis, Chine, Canada"],a:0,w:"L’Axe réunit l’Allemagne, l’Italie et le Japon. Les Alliés les combattent.",l:1,t:"1939-1941"},
+{q:"Que sont les accords de Munich (septembre 1938) ?",o:["Un accord où la France et le Royaume-Uni cèdent aux exigences d’Hitler pour éviter la guerre", "Une alliance militaire contre l’Allemagne", "Un traité de paix après la guerre"],a:0,w:"C’est la politique d’« apaisement » : elle n’empêche pas la guerre un an plus tard.",l:2,t:"1939-1941"},
+{q:"Que prévoit le pacte germano-soviétique du 23 août 1939 ?",o:["Un accord de non-agression entre l’Allemagne et l’URSS", "Une alliance contre le Royaume-Uni", "La division de la France"],a:0,w:"Hitler et Staline s’engagent à ne pas s’attaquer… jusqu’à l’invasion de l’URSS en 1941.",l:2,t:"1939-1941"},
+{q:"Quelle est la date de l’armistice entre la France et l’Allemagne ?",o:["22 juin 1940", "18 juin 1940", "11 novembre 1918"],a:0,w:"La France, vaincue par la « guerre éclair », signe l’armistice le 22 juin 1940.",l:2,t:"1939-1941"},
+{q:"Quel pays résiste à l’aviation allemande à l’été 1940 ?",o:["Le Royaume-Uni", "L’Espagne", "La Suisse"],a:0,w:"La bataille d’Angleterre empêche l’Allemagne d’envahir le Royaume-Uni.",l:2,t:"1939-1941"},
+{q:"Comment s’appelle l’opération d’invasion de l’URSS par l’Allemagne en 1941 ?",o:["Barbarossa", "Overlord", "Dynamo"],a:0,w:"L’opération Barbarossa ouvre un immense front à l’Est (22 juin 1941).",l:3,t:"1941-1943"},
+{q:"Quelle bataille marque en février 1943 le premier grand recul de l’armée allemande ?",o:["Stalingrad", "Dunkerque", "Pearl Harbor"],a:0,w:"La victoire soviétique de Stalingrad est un tournant de la guerre en Europe.",l:2,t:"1941-1943"},
+{q:"Que représentent Midway et El Alamein en 1942 ?",o:["Des victoires alliées qui marquent un tournant", "Des victoires de l’Axe", "Des armistices"],a:0,w:"Midway (Pacifique, victoire américaine) et El Alamein (Afrique du Nord, victoire britannique) renversent le rapport de forces.",l:3,t:"1941-1943"},
+{q:"Quelles villes japonaises sont détruites par des bombes atomiques en août 1945 ?",o:["Hiroshima et Nagasaki", "Tokyo et Kyoto", "Osaka et Yokohama"],a:0,w:"Les bombes atomiques américaines des 6 et 9 août 1945 précèdent la capitulation du Japon.",l:1,t:"1944-1945"},
+{q:"Combien la guerre a-t-elle fait de morts environ ?",o:["Plus de 50 millions, en majorité des civils", "Environ 10 millions, surtout des militaires", "Environ 1 million"],a:0,w:"La Seconde Guerre mondiale est la plus meurtrière de l’histoire ; les civils sont les premières victimes.",l:2,t:"1944-1945"},
+{q:"Que décide la conférence de Wannsee (20 janvier 1942) ?",o:["L’organisation de la « solution finale », l’extermination des Juifs d’Europe", "L’armistice avec la France", "Le partage de la Pologne"],a:0,w:"À Wannsee, des dirigeants nazis organisent le génocide des Juifs.",l:3,t:"Shoah"},
+{q:"Que sont les Einsatzgruppen ?",o:["Des unités qui fusillent massivement les Juifs en URSS à partir de 1941", "Des unités de la Résistance", "Des tribunaux alliés"],a:0,w:"Ces unités assassinent des centaines de milliers de Juifs par fusillades de masse.",l:3,t:"Shoah"},
+{q:"Quelle phrase distingue correctement camps de concentration et centres d’extermination ?",o:["Les premiers servent à détenir et exploiter, les seconds à tuer", "Ce sont deux noms pour la même chose", "Les premiers sont pour les Juifs, les seconds pour les prisonniers de guerre"],a:0,w:"Dachau et Buchenwald sont des camps de concentration ; Treblinka et Auschwitz-Birkenau comprennent des centres d’extermination.",l:3,t:"Shoah"},
+{q:"Qui sont les « Justes » ?",o:["Des personnes qui ont sauvé des Juifs au péril de leur vie", "Les juges du procès de Nuremberg", "Les résistants fusillés"],a:0,w:"Le titre de « Juste parmi les nations » honore ceux qui ont aidé des Juifs persécutés.",l:2,t:"Shoah"},
+{q:"Quel autre groupe est persécuté et exterminé par les nazis en raison de ce qu’il est ?",o:["Les Tsiganes (Roms et Sintés)", "Les Écossais", "Les agriculteurs"],a:0,w:"Les Tsiganes sont aussi victimes d’un génocide.",l:3,t:"Shoah"},
+{q:"Que juge le procès de Nuremberg (1945-1946) ?",o:["Les principaux dirigeants nazis, pour crimes contre l’humanité notamment", "Les collaborateurs français", "Les généraux soviétiques"],a:0,w:"Ce procès donne naissance à la notion de crime contre l’humanité.",l:2,t:"Bilan"},
+{q:"Quelle organisation est créée en 1945 pour maintenir la paix ?",o:["L’ONU", "La SDN", "L’OTAN"],a:0,w:"L’ONU remplace la SDN, qui avait échoué à empêcher la guerre.",l:1,t:"Bilan"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

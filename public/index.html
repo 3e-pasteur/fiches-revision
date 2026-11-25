@@ -48,6 +48,9 @@ h1{font:700 clamp(2.3rem,6vw,3.4rem)/1 Caveat,"Segoe Script","Bradley Hand",curs
 .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
 .search{flex:1 1 220px;position:relative}
 .search input{width:100%;padding:11px 40px 11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);font:inherit}
+.hit{margin:8px 0 0;font-size:.84rem;line-height:1.45;color:var(--muted)}
+.hit b{font-weight:700;color:var(--ink);margin-right:4px}
+.hit mark{background:rgba(255,205,60,.5);color:inherit;border-radius:3px;padding:0 2px}
 .search kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:600 .75rem Figtree,sans-serif;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 7px;background:var(--sheet)}
 select,.btn{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);font:inherit;cursor:pointer}
 .seg{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -103,7 +106,7 @@ select,.btn{padding:10px 12px;border:1px solid var(--line);border-radius:12px;ba
   <nav class="tabs" id="tabs" aria-label="Matières"></nav>
   <section class="board">
     <div class="tools">
-      <div class="search"><input type="search" id="q" placeholder="Rechercher une fiche" aria-label="Rechercher une fiche"><kbd>/</kbd></div>
+      <div class="search"><input type="search" id="q" placeholder="Rechercher un mot, une notion, une date…" aria-label="Rechercher dans toutes les fiches"><kbd>/</kbd></div>
       <select id="sort" aria-label="Trier">
         <option value="recent">Plus récentes</option>
         <option value="subject">Par matière</option>
@@ -184,11 +187,84 @@ function sorted(list){
   return a;
 }
 
+
+/* Recherche plein texte : l'index (search.js, généré par tools/build-search.py) est chargé au premier usage. */
+let idx = null, idxLoading = false;
+const strip = s => String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+const ACC = { a: "aàâä", c: "cç", e: "eéèêë", i: "iîï", o: "oôöœ", u: "uùûü", y: "yÿ" };
+const termRe = ts => new RegExp(ts.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").split("").map(ch => ACC[ch] ? "[" + ACC[ch] + "]" : ch).join("")).join("|"), "giu");
+function loadIndex(){
+  if (idx || idxLoading) return;
+  idxLoading = true;
+  const sc = document.createElement("script");
+  sc.src = "search.js";
+  sc.onload = () => {
+    idx = {};
+    for (const u in SEARCH) {
+      const segs = SEARCH[u].c.map(t => ({ t: t, k: "Cours" })).concat(SEARCH[u].q.map(t => ({ t: t, k: "Quiz" })));
+      const n = segs.map(g => strip(g.t));
+      idx[u] = { segs: segs, n: n, all: " " + n.join(" ") + " " };
+    }
+    idxLoading = false; render();
+  };
+  sc.onerror = () => { idxLoading = false; };
+  document.head.appendChild(sc);
+}
+function count(hay, t){ let c = 0, i = hay.indexOf(t); while (i !== -1 && c < 5) { c++; i = hay.indexOf(t, i + t.length); } return c; }
+/* Retourne {score, snippet} si la fiche répond à la recherche, sinon null. */
+function matchFiche(f, terms){
+  const title = strip(f.title), head = " " + strip(f.title + " " + f.desc + " " + f.subject) + " ";
+  const body = idx && idx[f.url] ? idx[f.url] : null;
+  let score = 0, inBody = false;
+  for (const t of terms) {
+    const h = head.includes(t), b = body ? body.all.includes(t) : false;
+    if (!h && !b) return null;
+    if (title.includes(t)) score += 6; else if (h) score += 3;
+    if (b) { inBody = true; score += count(body.all, t); }
+  }
+  let snippet = null;
+  if (body && inBody && !terms.every(t => title.includes(t))) {
+    let best = -1, bi = -1;
+    body.n.forEach((n, i) => {
+      const c = terms.filter(t => n.includes(t)).length;
+      const sc = c * 10 + (body.segs[i].k === "Cours" ? 1 : 0);
+      if (c && sc > best) { best = sc; bi = i; }
+    });
+    if (bi >= 0) snippet = { seg: body.segs[bi], re: termRe(terms) };
+  }
+  return { score: score, snippet: snippet };
+}
+function snippetNode(sn){
+  const text = sn.seg.t, first = sn.re.exec(text); sn.re.lastIndex = 0;
+  const at = first ? first.index : 0, from = Math.max(0, at - 70), to = Math.min(text.length, from + 210);
+  const part = text.slice(from, to);
+  const p = document.createElement("p"); p.className = "hit";
+  const lab = document.createElement("b"); lab.textContent = sn.seg.k + " :"; p.appendChild(lab);
+  p.appendChild(document.createTextNode(" " + (from > 0 ? "… " : "")));
+  let last = 0, m;
+  while ((m = sn.re.exec(part)) !== null) {
+    if (m[0] === "") { sn.re.lastIndex++; continue; }
+    p.appendChild(document.createTextNode(part.slice(last, m.index)));
+    const mk = document.createElement("mark"); mk.textContent = m[0]; p.appendChild(mk);
+    last = m.index + m[0].length;
+  }
+  sn.re.lastIndex = 0;
+  p.appendChild(document.createTextNode(part.slice(last) + (to < text.length ? " …" : "")));
+  return p;
+}
+
 function render(){
-  const term = $("q").value.trim().toLowerCase();
-  const list = sorted(FICHES.filter(f =>
-    (subject === "Toutes" || f.subject === subject) &&
-    (!term || (f.title + " " + f.desc + " " + f.subject).toLowerCase().includes(term))));
+  const term = $("q").value.trim();
+  const terms = strip(term).split(" ").filter(Boolean);
+  const hits = new Map();
+  let list = FICHES.filter(f => {
+    if (subject !== "Toutes" && f.subject !== subject) return false;
+    if (!terms.length) return true;
+    const r = matchFiche(f, terms);
+    if (r) hits.set(f.id, r);
+    return !!r;
+  });
+  list = terms.length ? list.sort((x, y) => hits.get(y.id).score - hits.get(x.id).score) : sorted(list);
   const box = $("list");
   box.textContent = "";
   box.className = "list" + (view === "rows" ? " rows" : "");
@@ -207,6 +283,8 @@ function render(){
     const h = document.createElement("h2"); h.textContent = f.title;
     const p = document.createElement("p"); p.textContent = f.desc;
     body.append(top, h, p);
+    const hit = hits.get(f.id);
+    if (hit && hit.snippet) body.appendChild(snippetNode(hit.snippet));
     let qr = null;
     try { qr = JSON.parse(localStorage.getItem("quiz:" + f.url.split("/").pop()) || "null"); } catch(e){}
     if (qr) { const qb = document.createElement("div"); qb.className = "qbadge" + (qr.best < 70 ? " low" : ""); qb.textContent = "Quiz : meilleur score " + qr.best + " %"; body.appendChild(qb); }
@@ -226,7 +304,7 @@ function render(){
     empty.textContent = "";
     const b = document.createElement("b");
     b.textContent = term ? "Aucun résultat" : "Rien dans ce classeur pour l’instant";
-    empty.append(b, document.createTextNode(term ? "Essayez un autre mot, ou choisissez « Toutes »." : "Demandez à Claude de créer une fiche pour cette matière."));
+    empty.append(b, document.createTextNode(term ? "Essayez un autre mot (la recherche ignore les accents), ou choisissez « Toutes »." : "Demandez à Claude de créer une fiche pour cette matière."));
   }
   renderProgress();
 }
@@ -241,7 +319,8 @@ $("vgrid").onclick = () => setView("grid");
 $("vrows").onclick = () => setView("rows");
 $("sort").value = sort;
 $("sort").onchange = e => { sort = e.target.value; store.set("fiches-sort", sort); render(); };
-$("q").addEventListener("input", render);
+$("q").addEventListener("input", () => { loadIndex(); render(); });
+$("q").addEventListener("focus", loadIndex);
 document.addEventListener("keydown", e => {
   if (e.key === "/" && document.activeElement !== $("q")) { e.preventDefault(); $("q").focus(); }
   if (e.key === "Escape" && document.activeElement === $("q")) { $("q").value = ""; $("q").blur(); render(); }

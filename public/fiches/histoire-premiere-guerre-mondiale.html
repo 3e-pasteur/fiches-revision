@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la Première Guerre mondiale</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 25 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="debut" class="on">Début</button><button data-t="totale">Guerre totale</button><button data-t="batailles">Batailles</button><button data-t="fin">Fin et bilan</button><button data-t="armeniens">Arméniens</button><button data-t="quiz">Quiz</button>
+<button data-t="debut" class="on">Début</button><button data-t="totale">Guerre totale</button><button data-t="batailles">Batailles</button><button data-t="fin">Fin et bilan</button><button data-t="armeniens">Arméniens</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="debut">
@@ -143,8 +143,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>c’est le premier génocide du XXe siècle. Un génocide est la destruction volontaire et organisée d’un groupe humain, en raison de ce qu’il est.</div>
 </section>
 
+<section id="plus">
+<h2>6. Repères et vocabulaire</h2>
+<ul>
+<li><b>Poilus</b> : surnom des soldats français. Ils vivent dans les tranchées, sous les bombardements, entre deux assauts.</li>
+<li><b>Verdun</b> (1916) et la <b>Somme</b> (1916) sont des batailles d’usure : on se bat pour de petits gains, au prix de pertes énormes.</li>
+<li><b>Chemin des Dames</b> (avril 1917) : offensive française très coûteuse, suivie de mutineries.</li>
+<li><b>Brest-Litovsk</b> (mars 1918) : traité de paix entre la Russie bolchevique et l’Allemagne.</li>
+<li><b>Rethondes</b> : lieu de signature de l’armistice. <b>Versailles</b> : lieu du traité de paix (1919).</li>
+<li><b>Gueules cassées</b> : soldats défigurés par leurs blessures.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>distinguez bien l’<b>armistice</b> (11 novembre 1918, arrêt des combats) du <b>traité de paix</b> (Versailles, 28 juin 1919).</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -152,14 +165,31 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quel événement déclenche la guerre en 1914 ?",o:["La bataille de la Marne","L’assassinat de l’archiduc François-Ferdinand à Sarajevo","Le traité de Versailles"],a:1,w:"L’assassinat du 28 juin 1914 provoque, par le jeu des alliances, l’entrée en guerre des grandes puissances."},
-{q:"Quels pays forment la Triple-Entente en 1914 ?",o:["Allemagne, Autriche-Hongrie, Italie","France, Royaume-Uni, Russie","France, Allemagne, Russie"],a:1,w:"La Triple-Entente réunit la France, le Royaume-Uni et la Russie."},
-{q:"Quel type de guerre s’installe à partir de la fin de 1914 sur le front de l’Ouest ?",o:["Une guerre de mouvement","Une guerre de tranchées","Une guerre éclair"],a:1,w:"Après la Marne, les armées s’enterrent : c’est une guerre de position, dans les tranchées."},
-{q:"En quelle année a lieu la bataille de Verdun ?",o:["1914","1916","1918"],a:1,w:"La bataille de Verdun dure de février à décembre 1916."},
-{q:"Qu’appelle-t-on « guerre totale » ?",o:["Une guerre qui touche tous les continents","Une guerre qui mobilise l’armée, l’économie, la population et la propagande","Une guerre sans règles"],a:1,w:"Toute la société est mobilisée pour la guerre : soldats, usines, civils, opinion."},
-{q:"Quel grand pays entre en guerre aux côtés des Alliés en avril 1917 ?",o:["La Russie","Les États-Unis","L’Italie"],a:1,w:"Les États-Unis entrent en guerre en 1917. La Russie quitte la guerre en 1917-1918 et l’Italie était entrée en 1915."},
-{q:"Quelle est la date de l’armistice mettant fin aux combats ?",o:["28 juin 1919","11 novembre 1918","8 mai 1945"],a:1,w:"L’armistice est signé à Rethondes le 11 novembre 1918. Le traité de Versailles date, lui, du 28 juin 1919."},
-{q:"Où et quand a lieu le génocide des Arméniens ?",o:["Dans l’Empire ottoman, en 1915","En Allemagne, en 1918","En Pologne, en 1939"],a:0,w:"Le génocide des Arméniens est organisé en 1915 par le gouvernement des Jeunes-Turcs de l’Empire ottoman."}
+{q:"Quel événement déclenche la guerre en 1914 ?",o:["La bataille de la Marne", "L’assassinat de l’archiduc François-Ferdinand à Sarajevo", "Le traité de Versailles"],a:1,w:"L’assassinat du 28 juin 1914 provoque, par le jeu des alliances, l’entrée en guerre des grandes puissances.",l:1,t:"Début"},
+{q:"Quels pays forment la Triple-Entente en 1914 ?",o:["Allemagne, Autriche-Hongrie, Italie", "France, Royaume-Uni, Russie", "France, Allemagne, Russie"],a:1,w:"La Triple-Entente réunit la France, le Royaume-Uni et la Russie.",l:1,t:"Début"},
+{q:"Quel type de guerre s’installe à partir de la fin de 1914 sur le front de l’Ouest ?",o:["Une guerre de mouvement", "Une guerre de tranchées", "Une guerre éclair"],a:1,w:"Après la Marne, les armées s’enterrent : c’est une guerre de position, dans les tranchées.",l:1,t:"Guerre totale"},
+{q:"En quelle année a lieu la bataille de Verdun ?",o:["1914", "1916", "1918"],a:1,w:"La bataille de Verdun dure de février à décembre 1916.",l:1,t:"Batailles"},
+{q:"Qu’appelle-t-on « guerre totale » ?",o:["Une guerre qui touche tous les continents", "Une guerre qui mobilise l’armée, l’économie, la population et la propagande", "Une guerre sans règles"],a:1,w:"Toute la société est mobilisée pour la guerre : soldats, usines, civils, opinion.",l:2,t:"Guerre totale"},
+{q:"Quel grand pays entre en guerre aux côtés des Alliés en avril 1917 ?",o:["La Russie", "Les États-Unis", "L’Italie"],a:1,w:"Les États-Unis entrent en guerre en 1917. La Russie quitte la guerre en 1917-1918 et l’Italie était entrée en 1915.",l:2,t:"Batailles"},
+{q:"Quelle est la date de l’armistice mettant fin aux combats ?",o:["28 juin 1919", "11 novembre 1918", "8 mai 1945"],a:1,w:"L’armistice est signé à Rethondes le 11 novembre 1918. Le traité de Versailles date, lui, du 28 juin 1919.",l:1,t:"Fin et bilan"},
+{q:"Où et quand a lieu le génocide des Arméniens ?",o:["Dans l’Empire ottoman, en 1915", "En Allemagne, en 1918", "En Pologne, en 1939"],a:0,w:"Le génocide des Arméniens est organisé en 1915 par le gouvernement des Jeunes-Turcs de l’Empire ottoman.",l:2,t:"Arméniens"},
+{q:"Comment appelle-t-on les soldats français de la Première Guerre mondiale ?",o:["Les poilus", "Les grognards", "Les maquisards"],a:0,w:"Les « poilus » sont les soldats français de 1914-1918, qui vivent dans les tranchées.",l:1,t:"Guerre totale"},
+{q:"En quelle année commence la Première Guerre mondiale ?",num:1914,w:"La guerre commence à l’été 1914, après l’assassinat de l’archiduc à Sarajevo.",l:1,t:"Début"},
+{q:"Quels pays font partie des Empires centraux (en comptant ceux qui les rejoignent ensuite) ?",o:["L’Allemagne", "L’Autriche-Hongrie", "L’Empire ottoman", "L’Italie"],a:[0, 1, 2],w:"L’Italie, d’abord alliée de l’Allemagne, rejoint en 1915 le camp des Alliés.",l:2,t:"Début"},
+{q:"Qu’appelle-t-on l’« Union sacrée » en France ?",o:["Le rassemblement des partis politiques derrière le gouvernement en 1914", "Une alliance militaire entre la France et la Russie", "La mobilisation des syndicats contre la guerre"],a:0,w:"En 1914, les partis suspendent leurs querelles pour soutenir l’effort de guerre.",l:2,t:"Début"},
+{q:"Quelle bataille arrête l’avance allemande en septembre 1914 ?",o:["La bataille de la Marne", "La bataille de Verdun", "La bataille de la Somme"],a:0,w:"La victoire française de la Marne (septembre 1914) arrête l’offensive allemande : la guerre ne sera pas courte.",l:2,t:"Début"},
+{q:"Quelles armes nouvelles ou massivement employées apparaissent pendant la guerre ?",o:["Les gaz de combat", "Les chars d’assaut", "Les missiles balistiques", "Les bombes atomiques"],a:[0, 1],w:"Gaz, chars, avions, sous-marins : la guerre est industrielle. Missiles balistiques et bombes atomiques apparaissent plus tard.",l:2,t:"Guerre totale"},
+{q:"Quel rôle jouent les femmes en France pendant la guerre ?",o:["Elles remplacent les hommes mobilisés dans les usines et les champs", "Elles sont envoyées dans les tranchées", "Elles obtiennent le droit de vote dès 1915"],a:0,w:"Les femmes travaillent à la place des hommes partis au front. Le droit de vote n’arrive qu’en 1944.",l:2,t:"Guerre totale"},
+{q:"Quel rôle jouent les colonies dans la guerre ?",o:["Elles fournissent des soldats et des travailleurs", "Elles restent à l’écart du conflit", "Elles déclarent l’indépendance"],a:0,w:"Des centaines de milliers d’hommes des colonies sont mobilisés comme soldats ou comme travailleurs.",l:2,t:"Guerre totale"},
+{q:"Pourquoi des mutineries éclatent-elles dans l’armée française en 1917 ?",o:["À cause de l’échec de l’offensive du Chemin des Dames et de la lassitude des soldats", "À cause de l’arrivée des Américains", "À cause de la victoire de Verdun"],a:0,w:"L’offensive d’avril 1917 échoue avec de très lourdes pertes : des soldats refusent de monter à l’assaut.",l:3,t:"Batailles"},
+{q:"Quelle est la conséquence des révolutions russes de 1917 sur la guerre ?",o:["La Russie quitte la guerre (paix de Brest-Litovsk, 1918)", "La Russie renforce son offensive", "La Russie change de camp"],a:0,w:"Le nouveau pouvoir bolchevique signe la paix avec l’Allemagne en mars 1918.",l:2,t:"Batailles"},
+{q:"Où est signé l’armistice du 11 novembre 1918 ?",o:["À Rethondes, dans la forêt de Compiègne", "À Versailles, dans la galerie des Glaces", "À Verdun"],a:0,w:"L’armistice est signé à Rethondes. Le traité de Versailles est signé plus tard, en 1919.",l:3,t:"Fin et bilan"},
+{q:"Que prévoit le traité de Versailles (1919) pour l’Allemagne ?",o:["Elle perd l’Alsace-Lorraine", "Elle doit payer des réparations", "Son armée est limitée", "Elle est divisée en deux États"],a:[0, 1, 2],w:"L’Allemagne est déclarée responsable de la guerre. Sa division en deux États n’a lieu qu’après 1945.",l:2,t:"Fin et bilan"},
+{q:"Quelle organisation est créée en 1919 pour préserver la paix ?",o:["La Société des Nations (SDN)", "L’ONU", "L’OTAN"],a:0,w:"La SDN est créée en 1919. L’ONU lui succède en 1945.",l:2,t:"Fin et bilan"},
+{q:"Quels empires disparaissent à la suite de la guerre ?",o:["L’empire allemand", "L’empire austro-hongrois", "L’empire français", "L’empire ottoman", "L’empire russe"],a:[0, 1, 3, 4],w:"Quatre empires s’effondrent ; de nouveaux États apparaissent en Europe centrale et orientale.",l:3,t:"Fin et bilan"},
+{q:"Environ combien de Français sont morts pendant la guerre ? (en millions)",num:1.4,tol:0.1,u:"million(s)",w:"Environ 1,4 million de Français sont morts, sur près de 10 millions de morts militaires au total.",l:3,t:"Fin et bilan"},
+{q:"Quelle date commémore-t-on chaque année pour le génocide des Arméniens ?",o:["Le 24 avril", "Le 11 novembre", "Le 27 janvier"],a:0,w:"Le 24 avril 1915, des élites arméniennes sont arrêtées à Constantinople : c’est la date de commémoration.",l:2,t:"Arméniens"},
+{q:"Comment appelle-t-on les soldats gravement blessés au visage ?",o:["Les gueules cassées", "Les poilus", "Les mutins"],a:0,w:"Les « gueules cassées » sont des blessés au visage, symboles des souffrances de la guerre.",l:1,t:"Fin et bilan"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

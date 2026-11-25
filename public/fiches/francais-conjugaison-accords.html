@@ -63,10 +63,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : conjugaison et accords</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 9 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 26 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="temps" class="on">Les temps</button><button data-t="sujet">Sujet et verbe</button><button data-t="pp">Participe passé</button><button data-t="methode">Méthode</button><button data-t="quiz">Quiz</button>
+<button data-t="temps" class="on">Les temps</button><button data-t="sujet">Sujet et verbe</button><button data-t="pp">Participe passé</button><button data-t="methode">Méthode</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="temps">
@@ -128,8 +128,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>relisez chaque verbe et chaque participe. Cherchez aussi les pronoms et les déterminants (<i>lui, son, sa</i> deviennent <i>eux, leur, leurs</i>), qui changent eux aussi au pluriel.</div>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Sujet éloigné ou inversé</b> : barrez mentalement les groupes intercalés, retrouvez le vrai sujet avec « qui est-ce qui ? ».</li>
+<li><b>Participe passé avec avoir</b> : cherchez le COD (« quoi ? »). S’il est avant le verbe, accord ; sinon, pas d’accord.</li>
+<li><b>Pronominal</b> : « se » COD → accord avec le sujet ; « se » COI (parler, écrire, téléphoner à quelqu’un) → invariable.</li>
+<li><b>Futur ou conditionnel ?</b> Remplacez par « hier » : si le verbe est à l’imparfait, c’est un conditionnel (« -rais »).</li>
+</ul>
+<div class="keep"><b>À retenir : </b>pour chaque verbe, posez trois questions : quel sujet ? quel temps ? y a-t-il un participe passé ?</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -137,15 +148,32 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelle est la bonne forme ? « Ils [[___]] le livre sur la table. » (prendre, passé simple)",o:["prenèrent","prirent","prenaient"],a:1,w:"Le passé simple de « prendre » à la 3ème personne du pluriel est « prirent »."},
-{q:"« Il pleuvait quand elle ouvrit la porte. » Quel verbe exprime l’action de premier plan ?",o:["pleuvait","ouvrit"],a:1,w:"Le passé simple « ouvrit » fait avancer l’histoire. L’imparfait « pleuvait » décrit le décor."},
-{q:"Quelle est la bonne forme ? « Si j’avais le temps, je [[___]] au cinéma. »",o:["irais","irai","allais"],a:0,w:"Après « si » + imparfait, on emploie le conditionnel présent : « irais »."},
-{q:"Quelle est la bonne forme ? « Il faut que tu [[___]] attentif. »",o:["es","sois","seras"],a:1,w:"« Il faut que » est suivi du subjonctif : « que tu sois »."},
-{q:"Quelle est la bonne forme ? « Les élèves que le professeur interroge [[___]] bien. »",o:["répond","répondent","réponds"],a:1,w:"Le sujet est « les élèves » (pluriel). Le groupe « que le professeur interroge » ne commande pas l’accord."},
-{q:"Quelle est la bonne forme ? « C’est toi qui [[___]] gagné. »",o:["a","as","ai"],a:1,w:"« qui » a pour antécédent « toi », donc le verbe se met à la 2ème personne du singulier : « as »."},
-{q:"Quelle est la bonne forme ? « Elles sont [[___]] hier. » (partir)",o:["parti","partis","parties"],a:2,w:"Avec « être », le participe s’accorde avec le sujet « elles » (féminin pluriel) : « parties »."},
-{q:"Quelle est la bonne forme ? « Les fleurs qu’il a [[___]] sont belles. » (cueillir)",o:["cueilli","cueillies","cueillis"],a:1,w:"Avec « avoir », le COD « que » (= les fleurs) est avant le verbe : accord au féminin pluriel, « cueillies »."},
-{q:"Quelle est la bonne forme ? « Elles se sont [[___]] les mains. » (laver)",o:["lavé","lavées","lavés"],a:0,w:"Le COD « les mains » est après le verbe, donc le participe est invariable : « lavé »."}
+{q:"Quelle est la bonne forme ? « Ils [[___]] le livre sur la table. » (prendre, passé simple)",o:["prenèrent", "prirent", "prenaient"],a:1,w:"Le passé simple de « prendre » à la 3ème personne du pluriel est « prirent ».",l:2,t:"Passé simple"},
+{q:"« Il pleuvait quand elle ouvrit la porte. » Quel verbe exprime l’action de premier plan ?",o:["pleuvait", "ouvrit"],a:1,w:"Le passé simple « ouvrit » fait avancer l’histoire. L’imparfait « pleuvait » décrit le décor.",l:1,t:"Valeur des temps"},
+{q:"Quelle est la bonne forme ? « Si j’avais le temps, je [[___]] au cinéma. »",o:["irais", "irai", "allais"],a:0,w:"Après « si » + imparfait, on emploie le conditionnel présent : « irais ».",l:2,t:"Conditionnel"},
+{q:"Quelle est la bonne forme ? « Il faut que tu [[___]] attentif. »",o:["es", "sois", "seras"],a:1,w:"« Il faut que » est suivi du subjonctif : « que tu sois ».",l:2,t:"Subjonctif"},
+{q:"Quelle est la bonne forme ? « Les élèves que le professeur interroge [[___]] bien. »",o:["répond", "répondent", "réponds"],a:1,w:"Le sujet est « les élèves » (pluriel). Le groupe « que le professeur interroge » ne commande pas l’accord.",l:2,t:"Accord sujet-verbe"},
+{q:"Quelle est la bonne forme ? « C’est toi qui [[___]] gagné. »",o:["a", "as", "ai"],a:1,w:"« qui » a pour antécédent « toi », donc le verbe se met à la 2ème personne du singulier : « as ».",l:2,t:"Accord sujet-verbe"},
+{q:"Quelle est la bonne forme ? « Elles sont [[___]] hier. » (partir)",o:["parti", "partis", "parties"],a:2,w:"Avec « être », le participe s’accorde avec le sujet « elles » (féminin pluriel) : « parties ».",l:1,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Les fleurs qu’il a [[___]] sont belles. » (cueillir)",o:["cueilli", "cueillies", "cueillis"],a:1,w:"Avec « avoir », le COD « que » (= les fleurs) est avant le verbe : accord au féminin pluriel, « cueillies ».",l:3,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Elles se sont [[___]] les mains. » (laver)",o:["lavé", "lavées", "lavés"],a:0,w:"Le COD « les mains » est après le verbe, donc le participe est invariable : « lavé ».",l:3,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Quand j’étais petit, je [[___]] au parc tous les jours. » (aller)",o:["allais", "irais", "allai"],a:0,w:"L’imparfait exprime une habitude dans le passé : j’allais.",l:1,t:"Temps"},
+{q:"Quelle est la bonne forme ? « Demain, nous [[___]] à la mer. » (aller)",o:["irons", "allons", "irions"],a:0,w:"Futur de « aller » : nous irons.",l:2,t:"Temps"},
+{q:"Quelle est la bonne forme ? « Si j’avais le choix, j’[[___]] partir. » (aimer)",o:["aimerais", "aimerai", "aimais"],a:0,w:"Après « si » à l’imparfait, on emploie le conditionnel : j’aimerais.",l:2,t:"Temps"},
+{q:"Quelle est la bonne forme ? « Il [[___]] la porte. » (ouvrir, passé simple)",o:["ouvrit", "ouvra", "ouvrait"],a:0,w:"Verbes en -ir : il ouvrit.",l:2,t:"Passé simple"},
+{q:"Quelle est la bonne forme ? « Elle [[___]] à Paris. » (venir, passé simple)",o:["vint", "vena", "venit"],a:0,w:"Passé simple de « venir » : elle vint, ils vinrent.",l:2,t:"Passé simple"},
+{q:"Quelle est la bonne forme ? « Ils [[___]] très heureux. » (être, passé simple)",o:["furent", "étaient", "seront"],a:0,w:"Passé simple de « être » : il fut, ils furent.",l:2,t:"Passé simple"},
+{q:"Quel temps exprime une action antérieure à une autre action du passé ?",o:["Le plus-que-parfait", "Le futur", "Le passé simple"],a:0,w:"Il avait déjà mangé quand elle arriva.",l:2,t:"Valeur des temps"},
+{q:"Quelle est la bonne forme ? « Bien qu’il [[___]] fatigué, il travaille. » (être)",o:["soit", "est", "serait"],a:0,w:"« bien que » est suivi du subjonctif : il soit.",l:2,t:"Subjonctif"},
+{q:"Quelle est la bonne forme ? « Il faut que nous [[___]] du courage. » (avoir)",o:["ayons", "avons", "aurions"],a:0,w:"Subjonctif présent de « avoir » : que nous ayons.",l:3,t:"Subjonctif"},
+{q:"Quelle est la bonne forme ? « Léa et Paul [[___]] leurs leçons. » (réviser)",o:["révisent", "révise", "révisons"],a:0,w:"Deux sujets coordonnés par « et » : pluriel.",l:1,t:"Accord sujet-verbe"},
+{q:"Quelle est la bonne forme ? « Dans la cour [[___]] les enfants. » (jouer)",o:["jouent", "joue", "jouons"],a:0,w:"Le sujet « les enfants » est placé après le verbe (sujet inversé).",l:2,t:"Accord sujet-verbe"},
+{q:"Quelle est la bonne forme ? « Les élèves de la classe, malgré le bruit, [[___]] attentifs. » (rester)",o:["restent", "reste", "restez"],a:0,w:"Le sujet est « les élèves » : le groupe intercalé ne commande pas l’accord.",l:2,t:"Accord sujet-verbe"},
+{q:"Quelle est la bonne forme ? « Il a [[___]] des lettres. » (écrire)",o:["écrit", "écrites", "écrite"],a:0,w:"Avec avoir, le COD « des lettres » est après le verbe : le participe reste invariable.",l:2,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Les lettres qu’elle a [[___]] sont arrivées. » (écrire)",o:["écrites", "écrit", "écrite"],a:0,w:"Le COD « que » (les lettres) est placé avant le verbe : le participe s’accorde.",l:3,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Elles se sont [[___]] au téléphone. » (parler)",o:["parlé", "parlées", "parlés"],a:0,w:"« se » est COI (on parle à quelqu’un) : le participe est invariable.",l:3,t:"Participe passé"},
+{q:"Quelle est la bonne forme ? « Elles se sont [[___]]. » (laver)",o:["lavées", "lavé", "lavés"],a:0,w:"« se » est COD et placé avant le verbe : le participe s’accorde avec le sujet.",l:3,t:"Participe passé"},
+{q:"Mettez au pluriel : « La fillette rentra chez elle. »",o:["Les fillettes rentrèrent chez elles.", "Les fillettes rentra chez elles.", "Les fillettes rentrèrent chez elle."],a:0,w:"Il faut accorder le sujet, le verbe (passé simple) et le pronom « elle » qui devient « elles ».",l:3,t:"Réécriture"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

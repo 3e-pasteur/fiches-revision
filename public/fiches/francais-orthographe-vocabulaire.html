@@ -63,10 +63,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Français : orthographe et vocabulaire</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 9 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 30 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="homo" class="on">Homophones</button><button data-t="regles">Règles</button><button data-t="vocab">Vocabulaire</button><button data-t="dictee">Dictée</button><button data-t="quiz">Quiz</button>
+<button data-t="homo" class="on">Homophones</button><button data-t="regles">Règles</button><button data-t="vocab">Vocabulaire</button><button data-t="dictee">Dictée</button><button data-t="plus">Astuces +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="homo">
@@ -133,8 +133,19 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <div class="keep"><b>À retenir : </b>gardez un carnet de vos erreurs fréquentes. En quelques semaines, vous verrez revenir toujours les mêmes, et ce sont celles-là qu’il faut travailler en priorité.</div>
 </section>
 
+<section id="plus">
+<h2>5. Astuces et pièges</h2>
+<ul>
+<li><b>Homophones</b> : testez avec le mot voisin (avait, était, avaient, étaient, ceux-ci, mes…).</li>
+<li><b>-é ou -er ?</b> Remplacez par « mordre » (infinitif) ou « mordu » (participe).</li>
+<li><b>Pluriels</b> : -al → -aux (sauf bals, carnavals, festivals, récitals) ; -ou → -s (sauf 7 mots en -x) ; -eau, -eu → -x (sauf pneus, bleus, landaus).</li>
+<li><b>Décomposer un mot inconnu</b> : préfixe + radical + suffixe, puis vérifier avec le contexte.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>tenez un carnet de vos erreurs fréquentes : ce sont toujours les mêmes qui reviennent.</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -142,15 +153,37 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelle est la bonne forme ? « Elle [[___]] fini son travail. »",o:["a","à"],a:0,w:"On peut dire « elle avait fini » : c’est le verbe avoir, donc « a » sans accent."},
-{q:"Quelle est la bonne forme ? « Ils [[___]] gagné le match. »",o:["on","ont"],a:1,w:"On peut dire « ils avaient gagné » : c’est le verbe avoir, donc « ont »."},
-{q:"Quelle est la bonne forme ? « [[___]] vrai. »",o:["C’est","S’est","Ces"],a:0,w:"On peut dire « cela est vrai » : « c’est »."},
-{q:"Quelle est la bonne forme ? « Je [[___]] parle demain. »",o:["leur","leurs"],a:0,w:"Ici, « leur » remplace « à eux » : c’est un pronom, donc invariable."},
-{q:"Quelle est la bonne forme ? « [[___]] belle journée ! »",o:["Quelle","Qu’elle"],a:0,w:"On ne peut pas remplacer par « que elle » : c’est le déterminant « quelle »."},
-{q:"Quelle est la bonne terminaison ? « Elle a décid[[__]] de partir. »",o:["é","er","ée"],a:0,w:"Avec « mordu » ça marche (elle a mordu) : participe en « é », invariable car pas de COD avant le verbe."},
-{q:"Quel préfixe forme le contraire de « possible » ?",o:["im-","in-","dé-"],a:0,w:"On dit « impossible » : devant un « p », « in- » devient « im- »."},
-{q:"Quel registre de langue ? « Il a une super bagnole. »",o:["Familier","Courant","Soutenu"],a:0,w:"« Bagnole » est un mot familier. Les équivalents sont « voiture » (courant) et « automobile » (soutenu)."},
-{q:"Quel champ lexical domine ? « Il trembla, un frisson le saisit, l’effroi l’envahit. »",o:["La peur","La joie","La colère"],a:0,w:"« Trembla », « frisson » et « effroi » appartiennent tous au champ lexical de la peur."}
+{q:"Quelle est la bonne forme ? « Elle [[___]] fini son travail. »",o:["a", "à"],a:0,w:"On peut dire « elle avait fini » : c’est le verbe avoir, donc « a » sans accent.",l:1,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Ils [[___]] gagné le match. »",o:["on", "ont"],a:1,w:"On peut dire « ils avaient gagné » : c’est le verbe avoir, donc « ont ».",l:1,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « [[___]] vrai. »",o:["C’est", "S’est", "Ces"],a:0,w:"On peut dire « cela est vrai » : « c’est ».",l:1,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Je [[___]] parle demain. »",o:["leur", "leurs"],a:0,w:"Ici, « leur » remplace « à eux » : c’est un pronom, donc invariable.",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « [[___]] belle journée ! »",o:["Quelle", "Qu’elle"],a:0,w:"On ne peut pas remplacer par « que elle » : c’est le déterminant « quelle ».",l:2,t:"Homophones"},
+{q:"Quelle est la bonne terminaison ? « Elle a décid[[__]] de partir. »",o:["é", "er", "ée"],a:0,w:"Avec « mordu » ça marche (elle a mordu) : participe en « é », invariable car pas de COD avant le verbe.",l:2,t:"Règles"},
+{q:"Quel préfixe forme le contraire de « possible » ?",o:["im-", "in-", "dé-"],a:0,w:"On dit « impossible » : devant un « p », « in- » devient « im- ».",l:1,t:"Vocabulaire"},
+{q:"Quel registre de langue ? « Il a une super bagnole. »",o:["Familier", "Courant", "Soutenu"],a:0,w:"« Bagnole » est un mot familier. Les équivalents sont « voiture » (courant) et « automobile » (soutenu).",l:1,t:"Vocabulaire"},
+{q:"Quel champ lexical domine ? « Il trembla, un frisson le saisit, l’effroi l’envahit. »",o:["La peur", "La joie", "La colère"],a:0,w:"« Trembla », « frisson » et « effroi » appartiennent tous au champ lexical de la peur.",l:2,t:"Vocabulaire"},
+{q:"Quelle est la bonne forme ? « Il va [[___]] Paris. »",o:["à", "a", "as"],a:0,w:"« à » est une préposition. Test : on ne peut pas dire « il va avait Paris ».",l:1,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Ils [[___]] contents. »",o:["sont", "son", "sons"],a:0,w:"« sont » = « étaient ».",l:1,t:"Homophones"},
+
+{q:"Quelle est la bonne forme ? « Je ne sais pas [[___]] il habite. »",o:["où", "ou", "ous"],a:0,w:"« où » indique le lieu.",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Léa range [[___]] affaires. »",o:["ses", "ces", "c’est"],a:0,w:"« ses » = « les siennes » (ses affaires).",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Regarde [[___]] oiseaux, là-bas ! »",o:["ces", "ses", "c’est"],a:0,w:"« ces » = « ceux-ci » : on montre quelque chose.",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Il [[___]] lavé. »",o:["s’est", "c’est", "sait"],a:0,w:"« s’est lavé » : verbe pronominal au passé composé.",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Je crois [[___]] elle vient. »",o:["qu’elle", "quelle", "qu’elles"],a:0,w:"« qu’elle » = « que + elle ».",l:2,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Je [[___]] vue hier. »",o:["l’ai", "là", "la"],a:0,w:"On écrit « je l’ai vue ». Test : « je l’avais vue ».",l:3,t:"Homophones"},
+{q:"Quelle est la bonne forme ? « Il vaut mieux manger [[___]] que de grignoter. »",o:["plutôt", "plus tôt", "plus tot"],a:0,w:"« plutôt » exprime une préférence ; « plus tôt » s’oppose à « plus tard ».",l:3,t:"Homophones"},
+{q:"Quelle est la bonne terminaison ? « Je vais mang[[__]] une pomme. »",o:["er", "é", "ez"],a:0,w:"Test avec « mordre » : « je vais mordre une pomme » : c’est un infinitif en -er.",l:2,t:"Règles"},
+{q:"Quel est le pluriel de « cheval » ?",o:["chevaux", "chevals", "chevales"],a:0,w:"Les noms en -al font leur pluriel en -aux.",l:1,t:"Règles"},
+{q:"Quel est le pluriel de « bal » ?",o:["bals", "baux", "baus"],a:0,w:"« bal » est une exception : bals, carnavals, festivals, récitals.",l:3,t:"Règles"},
+{q:"Quel est le pluriel de « bijou » ?",o:["bijoux", "bijous", "bijoues"],a:0,w:"Les sept exceptions en -ou prennent un x : bijoux, cailloux, choux, genoux, hiboux, joujoux, poux.",l:3,t:"Règles"},
+{q:"Quel est le pluriel de « pneu » ?",o:["pneus", "pneux", "pneues"],a:0,w:"« pneu » est une exception : les noms en -eu prennent -x, sauf pneus, bleus, landaus.",l:3,t:"Règles"},
+{q:"Que signifie le préfixe « re- » dans « relire » ?",o:["La répétition", "Le contraire", "L’absence"],a:0,w:"Le préfixe « re- » indique qu’on recommence l’action.",l:2,t:"Vocabulaire"},
+{q:"Quel est le suffixe du mot « mangeable » ?",o:["-able", "man-", "-ge"],a:0,w:"On le décompose : mange + -able (qui peut être mangé).",l:2,t:"Vocabulaire"},
+{q:"Quels mots appartiennent à la famille de « terre » ?",o:["terrain", "enterrer", "atterrir", "terreur"],a:[0, 1, 2],w:"« terreur » vient d’une autre racine (la peur).",l:3,t:"Vocabulaire"},
+{q:"Quel sens a le mot « brûle » dans « Il brûle d’impatience » ?",o:["Un sens figuré", "Un sens propre", "Un sens technique"],a:0,w:"On parle d’un sentiment, pas d’un feu : c’est un sens figuré.",l:2,t:"Vocabulaire"},
+{q:"Quel mot appartient au registre soutenu ?",o:["automobile", "voiture", "bagnole"],a:0,w:"Bagnole (familier), voiture (courant), automobile (soutenu).",l:2,t:"Vocabulaire"},
+{q:"Dans « noir », l’idée de deuil ou de peur relève de…",o:["La connotation", "La dénotation", "Le sens propre"],a:0,w:"La dénotation est le sens de base (une couleur) ; la connotation, ce qu’il évoque.",l:3,t:"Vocabulaire"},
+{q:"Dans quel ordre fait-on la relecture d’une dictée ?",o:["Accords sujet-verbe, participes passés, homophones et accents", "Accents, homophones, ponctuation", "Au hasard"],a:0,w:"Une chose à la fois, trois passes successives.",l:2,t:"Méthode"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

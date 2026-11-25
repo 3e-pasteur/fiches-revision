@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la décolonisation</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="causes" class="on">Causes</button><button data-t="chrono">Grandes étapes</button><button data-t="exemples">Inde et Algérie</button><button data-t="apres">Après</button><button data-t="quiz">Quiz</button>
+<button data-t="causes" class="on">Causes</button><button data-t="chrono">Grandes étapes</button><button data-t="exemples">Inde et Algérie</button><button data-t="apres">Après</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="causes">
@@ -115,8 +115,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </ul>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Vietminh</b> : mouvement indépendantiste vietnamien (Hô Chi Minh), qui bat la France à Dien Bien Phu (1954).</li>
+<li><b>FLN</b> : Front de libération nationale, qui déclenche la guerre d’Algérie le 1er novembre 1954.</li>
+<li><b>Pieds-noirs</b> : Européens d’Algérie. <b>Harkis</b> : Algériens qui ont combattu aux côtés de l’armée française.</li>
+<li><b>Non-alignés</b> : États qui refusent de choisir un camp pendant la Guerre froide.</li>
+<li><b>Autodétermination</b> : droit d’un peuple à décider de son avenir.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>la décolonisation prend des formes différentes : négociation, lutte non violente (Inde), guerre longue et violente (Indochine, Algérie).</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -124,14 +136,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Que désigne la décolonisation ?",o:["La conquête de nouvelles colonies","L’accès à l’indépendance des anciennes colonies","La fin de la Seconde Guerre mondiale"],a:1,w:"La décolonisation est le processus par lequel les colonies deviennent des États indépendants."},
-{q:"Quel événement de 1955 réunit des pays d’Asie et d’Afrique qui refusent le colonialisme ?",o:["La conférence de Bandung","Le traité de Rome","Le blocus de Berlin"],a:0,w:"La conférence de Bandung, en Indonésie, marque l’affirmation des pays d’Asie et d’Afrique."},
-{q:"Quel leader mène la lutte non violente pour l’indépendance de l’Inde ?",o:["Nelson Mandela","Gandhi","Ho Chi Minh"],a:1,w:"Gandhi est le symbole de la lutte non violente. L’Inde devient indépendante en 1947."},
-{q:"Quelle défaite française marque la fin de la guerre d’Indochine en 1954 ?",o:["Verdun","Dien Bien Phu","Stalingrad"],a:1,w:"La bataille de Dien Bien Phu, en 1954, est une défaite décisive pour la France."},
-{q:"En quelle année commence la guerre d’Algérie ?",o:["1947","1954","1962"],a:1,w:"Elle commence le 1er novembre 1954 et se termine en 1962."},
-{q:"En quelle année l’Algérie devient-elle indépendante ?",o:["1954","1958","1962"],a:2,w:"Après les accords d’Évian de mars 1962, l’indépendance est proclamée le 5 juillet 1962."},
-{q:"Pourquoi 1960 est-elle appelée « l’année de l’Afrique » ?",o:["Une grande partie de l’Afrique y accède à l’indépendance","L’Afrique entre à l’OTAN","Les colonies européennes se multiplient"],a:0,w:"En 1960, de nombreux pays africains deviennent indépendants."},
-{q:"Comment appelle-t-on l’ensemble des pays nouvellement indépendants, souvent pauvres ?",o:["Le bloc de l’Est","Le tiers-monde","L’Union européenne"],a:1,w:"On parle de tiers-monde ou de pays du Sud, souvent non alignés dans la Guerre froide."}
+{q:"Que désigne la décolonisation ?",o:["La conquête de nouvelles colonies", "L’accès à l’indépendance des anciennes colonies", "La fin de la Seconde Guerre mondiale"],a:1,w:"La décolonisation est le processus par lequel les colonies deviennent des États indépendants.",l:1,t:"Définition"},
+{q:"Quel événement de 1955 réunit des pays d’Asie et d’Afrique qui refusent le colonialisme ?",o:["La conférence de Bandung", "Le traité de Rome", "Le blocus de Berlin"],a:0,w:"La conférence de Bandung, en Indonésie, marque l’affirmation des pays d’Asie et d’Afrique.",l:2,t:"Définition"},
+{q:"Quel leader mène la lutte non violente pour l’indépendance de l’Inde ?",o:["Nelson Mandela", "Gandhi", "Ho Chi Minh"],a:1,w:"Gandhi est le symbole de la lutte non violente. L’Inde devient indépendante en 1947.",l:1,t:"Inde"},
+{q:"Quelle défaite française marque la fin de la guerre d’Indochine en 1954 ?",o:["Verdun", "Dien Bien Phu", "Stalingrad"],a:1,w:"La bataille de Dien Bien Phu, en 1954, est une défaite décisive pour la France.",l:2,t:"Indochine"},
+{q:"En quelle année commence la guerre d’Algérie ?",o:["1947", "1954", "1962"],a:1,w:"Elle commence le 1er novembre 1954 et se termine en 1962.",l:1,t:"Algérie"},
+{q:"En quelle année l’Algérie devient-elle indépendante ?",o:["1954", "1958", "1962"],a:2,w:"Après les accords d’Évian de mars 1962, l’indépendance est proclamée le 5 juillet 1962.",l:1,t:"Algérie"},
+{q:"Pourquoi 1960 est-elle appelée « l’année de l’Afrique » ?",o:["Une grande partie de l’Afrique y accède à l’indépendance", "L’Afrique entre à l’OTAN", "Les colonies européennes se multiplient"],a:0,w:"En 1960, de nombreux pays africains deviennent indépendants.",l:2,t:"Étapes"},
+{q:"Comment appelle-t-on l’ensemble des pays nouvellement indépendants, souvent pauvres ?",o:["Le bloc de l’Est", "Le tiers-monde", "L’Union européenne"],a:1,w:"On parle de tiers-monde ou de pays du Sud, souvent non alignés dans la Guerre froide.",l:1,t:"Après les indépendances"},
+{q:"Pourquoi les puissances coloniales européennes sont-elles affaiblies après 1945 ?",o:["À cause de la Seconde Guerre mondiale", "À cause de la crise de 1929", "À cause de la guerre de 1870"],a:0,w:"La France et le Royaume-Uni sortent affaiblis de la guerre, tandis que les mouvements nationalistes se renforcent.",l:2,t:"Définition"},
+{q:"Quelle puissance coloniale domine l’Inde avant 1947 ?",o:["Le Royaume-Uni", "La France", "Le Portugal"],a:0,w:"L’Inde est une colonie britannique jusqu’à son indépendance en 1947.",l:1,t:"Inde"},
+{q:"Quelle est la conséquence de l’indépendance de 1947 pour l’Inde ?",o:["Sa partition en deux États, l’Inde et le Pakistan", "Son rattachement à la Chine", "Sa transformation en monarchie"],a:0,w:"La partition provoque des violences et des déplacements massifs de population.",l:2,t:"Inde"},
+{q:"Quelle méthode de lutte caractérise le mouvement de Gandhi ?",o:["La lutte non violente", "La guérilla", "Le coup d’État militaire"],a:0,w:"Gandhi prône la désobéissance civile et la non-violence.",l:2,t:"Inde"},
+{q:"En quelle année le Maroc et la Tunisie deviennent-ils indépendants ?",num:1956,w:"La France accorde l’indépendance au Maroc et à la Tunisie en 1956.",l:1,t:"Étapes"},
+{q:"Quel mouvement mène la guerre d’indépendance en Algérie ?",o:["Le FLN", "L’OLP", "Le Vietminh"],a:0,w:"Le Front de libération nationale (FLN) lance l’insurrection le 1er novembre 1954.",l:2,t:"Algérie"},
+{q:"Quels accords mettent fin à la guerre d’Algérie ?",o:["Les accords d’Évian (mars 1962)", "Les accords de Genève", "Les accords de Matignon"],a:0,w:"Les accords d’Évian conduisent à l’indépendance proclamée le 5 juillet 1962.",l:2,t:"Algérie"},
+{q:"Qui sont les pieds-noirs ?",o:["Les Européens installés en Algérie, qui partent en France à l’indépendance", "Les soldats algériens du FLN", "Les immigrés algériens en France avant 1954"],a:0,w:"Des centaines de milliers de pieds-noirs quittent l’Algérie en 1962.",l:2,t:"Algérie"},
+{q:"Qui sont les harkis ?",o:["Des Algériens engagés comme supplétifs dans l’armée française", "Des dirigeants du FLN", "Des colons français"],a:0,w:"Après l’indépendance, beaucoup de harkis sont menacés ; certains partent en France.",l:3,t:"Algérie"},
+{q:"Quelle conséquence politique la guerre d’Algérie a-t-elle en France en 1958 ?",o:["La chute de la IVe République et le retour de de Gaulle", "L’abolition de la monarchie", "La naissance de la CEE"],a:0,w:"La crise de mai 1958 met fin à la IVe République : de Gaulle fonde la Ve.",l:3,t:"Algérie"},
+{q:"Quel pays est divisé après les accords de Genève (1954) ?",o:["Le Vietnam", "Le Maroc", "L’Algérie"],a:0,w:"Après Dien Bien Phu, la France quitte l’Indochine ; le Vietnam est provisoirement divisé en deux.",l:3,t:"Indochine"},
+{q:"Quelle ancienne colonie britannique d’Afrique noire devient indépendante en 1957 ?",o:["Le Ghana", "Le Maroc", "La Côte d’Ivoire"],a:0,w:"Le Ghana (1957) est le premier pays d’Afrique noire à accéder à l’indépendance.",l:3,t:"Étapes"},
+{q:"Que signifie « non-aligné » ?",o:["Ne pas s’allier à l’un des deux blocs de la Guerre froide", "Ne pas avoir d’armée", "Refuser l’ONU"],a:0,w:"Les non-alignés refusent de choisir entre États-Unis et URSS.",l:2,t:"Après les indépendances"},
+{q:"Quelles difficultés rencontrent les nouveaux États ?",o:["La pauvreté", "La dépendance économique", "Des frontières héritées de la colonisation", "Une industrie très développée"],a:[0, 1, 2],w:"Beaucoup de nouveaux États doivent se construire dans des frontières tracées par les colonisateurs.",l:3,t:"Après les indépendances"},
+{q:"Qu’affirment les pays réunis à Bandung (1955) ?",o:["Leur volonté d’indépendance et leur refus de choisir entre les deux blocs", "Leur alliance avec l’URSS", "Leur soutien aux puissances coloniales"],a:0,w:"Bandung (Indonésie) réunit des pays d’Asie et d’Afrique : naissance du mouvement des non-alignés.",l:3,t:"Définition"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

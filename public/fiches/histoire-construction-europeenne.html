@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Histoire : la construction européenne</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 23 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="debuts" class="on">Les débuts</button><button data-t="etapes">Grandes étapes</button><button data-t="elargissements">Élargissements</button><button data-t="institutions">Institutions</button><button data-t="quiz">Quiz</button>
+<button data-t="debuts" class="on">Les débuts</button><button data-t="etapes">Grandes étapes</button><button data-t="elargissements">Élargissements</button><button data-t="institutions">Institutions</button><button data-t="plus">Repères +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="debuts">
@@ -116,8 +116,20 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 </table></div>
 </section>
 
+<section id="plus">
+<h2>5. Repères et vocabulaire</h2>
+<ul>
+<li><b>Jean Monnet</b> et <b>Robert Schuman</b> : pères de la construction européenne.</li>
+<li><b>Marché commun</b> : espace où marchandises, personnes et capitaux circulent librement.</li>
+<li><b>Union monétaire</b> : plusieurs États partagent la même monnaie (l’euro).</li>
+<li><b>Élargissement</b> : entrée de nouveaux pays dans l’Union. <b>Brexit</b> : sortie du Royaume-Uni (2020).</li>
+<li><b>Symboles</b> : drapeau bleu à douze étoiles dorées ; Journée de l’Europe le 9 mai.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>l’Union est née pour garantir la paix entre anciens ennemis, puis s’est élargie et approfondie (monnaie, citoyenneté, libre circulation).</div>
+</section>
+
 <section id="quiz">
-<h2>5. Quiz d’entraînement</h2>
+<h2>6. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -125,14 +137,29 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Quelle proposition est faite dans la déclaration Schuman du 9 mai 1950 ?",o:["Créer une armée européenne","Mettre en commun la production de charbon et d’acier","Créer une monnaie unique"],a:1,w:"C’est le point de départ de la construction européenne."},
-{q:"Combien de pays fondent la CECA en 1951 ?",o:["Trois","Six","Douze"],a:1,w:"France, RFA, Italie, Belgique, Pays-Bas et Luxembourg."},
-{q:"Quel traité crée la CEE en 1957 ?",o:["Le traité de Maastricht","Le traité de Rome","Le traité de Versailles"],a:1,w:"Le traité de Rome crée la Communauté économique européenne, avec un marché commun."},
-{q:"Quel traité donne naissance à l’Union européenne ?",o:["Le traité de Rome","Le traité de Maastricht","Le traité de Versailles"],a:1,w:"Le traité de Maastricht est signé en 1992 et entre en vigueur en 1993."},
-{q:"À partir de quand circule-t-on avec des pièces et des billets en euros ?",o:["1992","1999","2002"],a:2,w:"L’euro existe dès 1999 pour les paiements non physiques, et les pièces et billets arrivent le 1er janvier 2002."},
-{q:"À quoi sert l’espace Schengen ?",o:["À créer une armée commune","À permettre la libre circulation des personnes entre les pays signataires","À fixer une monnaie unique"],a:1,w:"Dans l’espace Schengen, on peut circuler sans contrôle aux frontières intérieures."},
-{q:"Comment sont désignés les membres du Parlement européen ?",o:["Ils sont élus par les citoyens européens","Ils sont nommés par les chefs d’État","Ils sont tirés au sort"],a:0,w:"Les députés européens sont élus au suffrage universel direct depuis 1979."},
-{q:"Que s’est-il passé le 31 janvier 2020 ?",o:["Le Royaume-Uni a quitté l’Union européenne","La Croatie est entrée dans l’Union","L’euro est devenu la monnaie unique"],a:0,w:"C’est le Brexit : l’Union passe de 28 à 27 États membres."}
+{q:"Quelle proposition est faite dans la déclaration Schuman du 9 mai 1950 ?",o:["Créer une armée européenne", "Mettre en commun la production de charbon et d’acier", "Créer une monnaie unique"],a:1,w:"C’est le point de départ de la construction européenne.",l:1,t:"Les débuts"},
+{q:"Combien de pays fondent la CECA en 1951 ?",o:["Trois", "Six", "Douze"],a:1,w:"France, RFA, Italie, Belgique, Pays-Bas et Luxembourg.",l:1,t:"Les débuts"},
+{q:"Quel traité crée la CEE en 1957 ?",o:["Le traité de Maastricht", "Le traité de Rome", "Le traité de Versailles"],a:1,w:"Le traité de Rome crée la Communauté économique européenne, avec un marché commun.",l:1,t:"Les débuts"},
+{q:"Quel traité donne naissance à l’Union européenne ?",o:["Le traité de Rome", "Le traité de Maastricht", "Le traité de Versailles"],a:1,w:"Le traité de Maastricht est signé en 1992 et entre en vigueur en 1993.",l:2,t:"Les étapes"},
+{q:"À partir de quand circule-t-on avec des pièces et des billets en euros ?",o:["1992", "1999", "2002"],a:2,w:"L’euro existe dès 1999 pour les paiements non physiques, et les pièces et billets arrivent le 1er janvier 2002.",l:2,t:"Les étapes"},
+{q:"À quoi sert l’espace Schengen ?",o:["À créer une armée commune", "À permettre la libre circulation des personnes entre les pays signataires", "À fixer une monnaie unique"],a:1,w:"Dans l’espace Schengen, on peut circuler sans contrôle aux frontières intérieures.",l:2,t:"Les étapes"},
+{q:"Comment sont désignés les membres du Parlement européen ?",o:["Ils sont élus par les citoyens européens", "Ils sont nommés par les chefs d’État", "Ils sont tirés au sort"],a:0,w:"Les députés européens sont élus au suffrage universel direct depuis 1979.",l:2,t:"Les institutions"},
+{q:"Que s’est-il passé le 31 janvier 2020 ?",o:["Le Royaume-Uni a quitté l’Union européenne", "La Croatie est entrée dans l’Union", "L’euro est devenu la monnaie unique"],a:0,w:"C’est le Brexit : l’Union passe de 28 à 27 États membres.",l:1,t:"Les élargissements"},
+{q:"Quel est le drapeau de l’Union européenne ?",o:["Un fond bleu avec douze étoiles dorées en cercle", "Un fond rouge avec une étoile jaune", "Un fond blanc avec une croix bleue"],a:0,w:"Le drapeau européen a douze étoiles dorées sur fond bleu.",l:1,t:"Les institutions"},
+{q:"Quels pays fondent la CECA en 1951 ?",o:["La France", "L’Italie", "Le Royaume-Uni", "Les Pays-Bas"],a:[0, 1, 3],w:"Les six pays fondateurs : France, RFA, Italie, Belgique, Pays-Bas, Luxembourg. Le Royaume-Uni n’en fait pas partie.",l:2,t:"Les débuts"},
+{q:"Pourquoi la CECA met-elle en commun le charbon et l’acier ?",o:["Pour rendre une nouvelle guerre impossible entre la France et l’Allemagne", "Pour concurrencer les États-Unis", "Pour fermer les mines"],a:0,w:"Charbon et acier servent à fabriquer des armes : les placer sous contrôle commun réconcilie les anciens ennemis.",l:3,t:"Les débuts"},
+{q:"Que permet le « marché commun » créé par le traité de Rome (1957) ?",o:["La libre circulation des marchandises, des personnes et des capitaux entre les États membres", "La création d’une armée européenne", "La suppression des frontières avec le monde entier"],a:0,w:"La CEE vise à supprimer les obstacles aux échanges entre ses membres.",l:2,t:"Les débuts"},
+{q:"En quelle année le Parlement européen est-il élu pour la première fois au suffrage universel direct ?",num:1979,w:"Depuis 1979, les citoyens européens élisent directement leurs députés européens.",l:2,t:"Les étapes"},
+{q:"Que crée le traité de Maastricht (1992-1993) ?",o:["L’Union européenne et la citoyenneté européenne", "La CECA", "L’espace Schengen"],a:0,w:"Maastricht prépare aussi la monnaie unique.",l:3,t:"Les étapes"},
+{q:"Que signifie « citoyenneté européenne » ?",o:["Tout citoyen d’un État membre est aussi citoyen de l’Union, avec des droits comme voter aux élections européennes", "Il faut passer un examen pour être citoyen européen", "Les citoyens européens n’ont plus de nationalité"],a:0,w:"La citoyenneté européenne s’ajoute à la nationalité sans la remplacer.",l:3,t:"Les étapes"},
+{q:"Tous les États membres de l’Union ont-ils adopté l’euro ?",o:["Non, certains ont gardé leur monnaie nationale", "Oui, tous", "Non, aucun"],a:0,w:"L’euro est utilisé par une grande partie, mais pas par tous les États membres.",l:3,t:"Les étapes"},
+{q:"Quels pays rejoignent la CEE en 1973 ?",o:["Le Royaume-Uni", "L’Irlande", "Le Danemark", "L’Espagne"],a:[0, 1, 2],w:"L’Espagne et le Portugal entrent en 1986.",l:3,t:"Les élargissements"},
+{q:"Pourquoi dix nouveaux pays entrent-ils dans l’Union en 2004 ?",o:["Parce que la fin de la Guerre froide permet à des pays d’Europe de l’Est de la rejoindre", "Parce que le Royaume-Uni la quitte", "Parce que l’euro est créé"],a:0,w:"Après la chute du bloc soviétique, les pays d’Europe de l’Est se tournent vers l’Union.",l:3,t:"Les élargissements"},
+{q:"Combien d’États membres compte l’Union européenne après le Brexit ?",num:27,w:"Depuis le 31 janvier 2020, l’Union compte 27 États membres.",l:1,t:"Les élargissements"},
+{q:"Quelle institution propose les lois européennes ?",o:["La Commission européenne", "Le Conseil européen", "La Cour de justice"],a:0,w:"La Commission propose les lois et veille à leur application.",l:2,t:"Les institutions"},
+{q:"Quelle institution réunit les chefs d’État et de gouvernement ?",o:["Le Conseil européen", "Le Parlement européen", "La Cour de justice"],a:0,w:"Le Conseil européen fixe les grandes orientations de l’Union.",l:2,t:"Les institutions"},
+{q:"Quelle institution veille au respect du droit européen ?",o:["La Cour de justice de l’Union européenne", "Le Parlement européen", "L’ONU"],a:0,w:"La Cour de justice vérifie que le droit européen est respecté.",l:2,t:"Les institutions"},
+{q:"Quelle date est la Journée de l’Europe ?",o:["Le 9 mai", "Le 11 novembre", "Le 14 juillet"],a:0,w:"Le 9 mai rappelle la déclaration Schuman de 1950.",l:2,t:"Les débuts"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>

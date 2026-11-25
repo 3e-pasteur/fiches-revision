@@ -67,10 +67,10 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <main>
 <a class="back" href="../index.html">← Retour au classeur</a>
 <h1>Géographie : aménager le territoire</h1>
-<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 8 questions</p>
+<p class="meta">Brevet 3ème · lecture 10 min, puis quiz de 24 questions</p>
 
 <nav id="nav" aria-label="Sections">
-<button data-t="pourquoi" class="on">Pourquoi</button><button data-t="acteurs">Acteurs</button><button data-t="exemples">Exemples</button><button data-t="durable">Durable</button><button data-t="methode">Méthode</button><button data-t="quiz">Quiz</button>
+<button data-t="pourquoi" class="on">Pourquoi</button><button data-t="acteurs">Acteurs</button><button data-t="exemples">Exemples</button><button data-t="durable">Durable</button><button data-t="methode">Méthode</button><button data-t="plus">Notions +</button><button data-t="quiz">Quiz</button>
 </nav>
 
 <section id="pourquoi">
@@ -134,8 +134,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 <p>Identifier sa nature (carte, photo, texte, graphique), sa date, sa source, puis relever les informations utiles et les expliquer avec vos connaissances.</p>
 </section>
 
+<section id="plus">
+<h2>6. Notions à connaître</h2>
+<ul>
+<li><b>Aménagement du territoire</b> : ensemble des actions qui organisent et équipent un espace pour réduire les inégalités.</li>
+<li><b>Désenclavement</b> : améliorer l’accessibilité d’un territoire isolé (route, train, numérique).</li>
+<li><b>Collectivités territoriales</b> : communes, départements, régions (et intercommunalités).</li>
+<li><b>Décentralisation</b> : transfert de compétences de l’État vers les collectivités (lois de 1982-1983).</li>
+<li><b>Étalement urbain</b> : extension de la ville sur les espaces ruraux. <b>Friche</b> : terrain abandonné, souvent industriel.</li>
+<li><b>Développement durable</b> : économie, société, environnement, pour les générations présentes et futures.</li>
+</ul>
+<div class="keep"><b>À retenir : </b>aménager, c’est faire des choix : il faut mesurer les effets positifs et négatifs, et associer les habitants.</div>
+</section>
+
 <section id="quiz">
-<h2>6. Quiz d’entraînement</h2>
+<h2>7. Quiz d’entraînement</h2>
 <div class="row"><span id="qn" class="meta"></span><div class="bar"><i id="pb"></i></div></div>
 <div id="qbox"></div>
 </section>
@@ -143,14 +156,30 @@ button:focus-visible,a:focus-visible{outline:3px solid #3b5bdb;outline-offset:2p
 
 <script>
 const QS = [
-{q:"Qu’est-ce qu’aménager un territoire ?",o:["L’organiser et l’équiper (transports, logements, services, activités)","Le préserver sans y toucher","Le vendre à des entreprises"],a:0,w:"L’aménagement consiste à organiser et équiper un espace pour répondre aux besoins de ses habitants."},
-{q:"Quel est l’un des objectifs principaux de l’aménagement du territoire ?",o:["Réduire les inégalités entre territoires","Supprimer les villes","Fermer les frontières"],a:0,w:"Il vise à réduire les inégalités, à désenclaver et à rendre les territoires plus attractifs."},
-{q:"Quel acteur gère les collèges ?",o:["La commune","Le département","La région"],a:1,w:"Les départements gèrent les collèges, les régions gèrent les lycées."},
-{q:"Quel acteur gère les lycées et les trains régionaux (TER) ?",o:["La commune","Le département","La région"],a:2,w:"La région a pour compétences les lycées, les TER et le développement économique."},
-{q:"Que signifie la décentralisation ?",o:["Le transfert de compétences de l’État vers les collectivités territoriales","La concentration du pouvoir à Paris","La suppression des communes"],a:0,w:"Depuis 1982-1983, l’État a transféré de nombreuses compétences aux communes, départements et régions."},
-{q:"Quelles sont les trois dimensions du développement durable ?",o:["Économique, sociale, environnementale","Politique, militaire, culturelle","Urbaine, rurale, maritime"],a:0,w:"Le développement durable associe économie, société et environnement."},
-{q:"À quoi sert le déploiement de la fibre optique dans les territoires isolés ?",o:["À les désenclaver sur le plan numérique","À réduire leur population","À construire des routes"],a:0,w:"Un accès au numérique permet aux habitants et aux entreprises d’être mieux reliés."},
-{q:"À quoi servent les fonds européens (comme le FEDER) ?",o:["À réduire les écarts de développement entre régions","À financer l’armée européenne","À supprimer les communes"],a:0,w:"Ces fonds soutiennent les régions les moins favorisées de l’Union européenne."}
+{q:"Qu’est-ce qu’aménager un territoire ?",o:["L’organiser et l’équiper (transports, logements, services, activités)", "Le préserver sans y toucher", "Le vendre à des entreprises"],a:0,w:"L’aménagement consiste à organiser et équiper un espace pour répondre aux besoins de ses habitants.",l:1,t:"Définition"},
+{q:"Quel est l’un des objectifs principaux de l’aménagement du territoire ?",o:["Réduire les inégalités entre territoires", "Supprimer les villes", "Fermer les frontières"],a:0,w:"Il vise à réduire les inégalités, à désenclaver et à rendre les territoires plus attractifs.",l:1,t:"Objectifs"},
+{q:"Quel acteur gère les collèges ?",o:["La commune", "Le département", "La région"],a:1,w:"Les départements gèrent les collèges, les régions gèrent les lycées.",l:1,t:"Acteurs"},
+{q:"Quel acteur gère les lycées et les trains régionaux (TER) ?",o:["La commune", "Le département", "La région"],a:2,w:"La région a pour compétences les lycées, les TER et le développement économique.",l:1,t:"Acteurs"},
+{q:"Que signifie la décentralisation ?",o:["Le transfert de compétences de l’État vers les collectivités territoriales", "La concentration du pouvoir à Paris", "La suppression des communes"],a:0,w:"Depuis 1982-1983, l’État a transféré de nombreuses compétences aux communes, départements et régions.",l:2,t:"Acteurs"},
+{q:"Quelles sont les trois dimensions du développement durable ?",o:["Économique, sociale, environnementale", "Politique, militaire, culturelle", "Urbaine, rurale, maritime"],a:0,w:"Le développement durable associe économie, société et environnement.",l:2,t:"Développement durable"},
+{q:"À quoi sert le déploiement de la fibre optique dans les territoires isolés ?",o:["À les désenclaver sur le plan numérique", "À réduire leur population", "À construire des routes"],a:0,w:"Un accès au numérique permet aux habitants et aux entreprises d’être mieux reliés.",l:2,t:"Exemples d’aménagements"},
+{q:"À quoi servent les fonds européens (comme le FEDER) ?",o:["À réduire les écarts de développement entre régions", "À financer l’armée européenne", "À supprimer les communes"],a:0,w:"Ces fonds soutiennent les régions les moins favorisées de l’Union européenne.",l:2,t:"Acteurs"},
+{q:"Quel acteur gère les écoles maternelles et primaires ?",o:["La commune", "La région", "L’État seul"],a:0,w:"Les communes gèrent les écoles maternelles et primaires ; le département, les collèges ; la région, les lycées.",l:1,t:"Acteurs"},
+{q:"Quelle collectivité s’occupe des routes départementales ?",o:["Le département", "La région", "La commune"],a:0,w:"Le département gère aussi l’aide sociale et les collèges.",l:2,t:"Acteurs"},
+{q:"Quelles compétences relèvent d’une intercommunalité ?",o:["Les transports urbains et la collecte des déchets", "Les lycées", "La justice"],a:0,w:"L’intercommunalité regroupe des communes pour mutualiser des services.",l:2,t:"Acteurs"},
+{q:"Qui est responsable des grandes infrastructures et de la sécurité ?",o:["L’État", "La commune", "L’intercommunalité"],a:0,w:"L’État conserve la sécurité, la justice et la politique nationale.",l:2,t:"Acteurs"},
+{q:"Que signifie « désenclaver » un territoire ?",o:["Le rendre plus accessible (routes, trains, numérique)", "Le fermer aux visiteurs", "Le déplacer"],a:0,w:"Désenclaver, c’est mieux relier un espace isolé au reste du territoire.",l:2,t:"Définition"},
+{q:"Quels sont des objectifs de l’aménagement du territoire ?",o:["Réduire les inégalités entre territoires", "Désenclaver les espaces isolés", "Rendre les territoires plus attractifs", "Augmenter les inégalités"],a:[0, 1, 2],w:"L’aménagement vise aussi la protection de l’environnement.",l:2,t:"Objectifs"},
+{q:"Que cherche le développement durable ?",o:["Répondre aux besoins d’aujourd’hui sans compromettre ceux des générations futures", "Développer l’économie sans limite", "Protéger la nature en arrêtant toute activité"],a:0,w:"Il associe économie, société et environnement.",l:3,t:"Développement durable"},
+{q:"Qu’est-ce que l’étalement urbain ?",o:["L’extension des villes sur les espaces ruraux voisins", "La construction de tours en centre-ville", "La fermeture de quartiers"],a:0,w:"Il consomme des terres agricoles et naturelles, et augmente les déplacements.",l:2,t:"Développement durable"},
+{q:"Quelles mesures relèvent d’un aménagement durable ?",o:["Réhabiliter les friches industrielles", "Développer les transports en commun", "Multiplier les autoroutes sans limite", "Produire des énergies renouvelables"],a:[0, 1, 3],w:"On cherche à limiter l’étalement urbain et la consommation d’espace.",l:3,t:"Développement durable"},
+{q:"À quoi sert la politique de la ville ?",o:["Rénover les quartiers défavorisés et réduire les inégalités", "Fermer les centres-villes", "Construire des autoroutes"],a:0,w:"Elle agit sur le logement, l’emploi, les services dans certains quartiers.",l:2,t:"Exemples d’aménagements"},
+{q:"Que désigne le Grand Paris Express ?",o:["Un projet de transports en commun autour de Paris", "Une autoroute", "Un aéroport"],a:0,w:"C’est un grand réseau de métro automatique en banlieue parisienne.",l:2,t:"Exemples d’aménagements"},
+{q:"À partir de quelles années débute la décentralisation en France ?",o:["1982-1983", "1958", "2010"],a:0,w:"Les lois de 1982-1983 transfèrent des compétences de l’État aux collectivités.",l:2,t:"Acteurs"},
+{q:"Quel est le rôle de la PAC européenne ?",o:["Soutenir l’agriculture", "Financer les écoles", "Construire des routes"],a:0,w:"La PAC est la politique agricole commune de l’Union européenne.",l:2,t:"Acteurs"},
+{q:"Que faut-il faire pour chaque idée d’un paragraphe argumenté ?",o:["L’illustrer par un exemple précis", "La recopier plusieurs fois", "La laisser sans exemple"],a:0,w:"Un paragraphe argumenté situe le sujet, développe deux ou trois idées avec exemples, puis conclut.",l:2,t:"Méthode"},
+{q:"Quels éléments un croquis doit-il comporter ?",o:["Un titre", "Une légende organisée", "Une orientation (nord) si besoin", "Une photographie collée"],a:[0, 1, 2],w:"Utilisez des figurés adaptés (points, lignes, surfaces) et des couleurs lisibles.",l:2,t:"Méthode"},
+{q:"Pourquoi faut-il présenter effets positifs et négatifs d’un aménagement ?",o:["Parce qu’un aménagement apporte des avantages (emplois, accessibilité) mais aussi des nuisances et une consommation d’espace", "Parce que tous les aménagements sont mauvais", "Parce que seuls les effets positifs comptent"],a:0,w:"Une réponse argumentée montre les deux côtés.",l:3,t:"Développement durable"}
 ];
 </script>
 <script src="../assets/quiz.js"></script>
